@@ -6,3 +6,4 @@ pics
 images
 error_log
 *.log
+/vendor
