@@ -1,0 +1,45 @@
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+
+                    <h3 class="cart-title">Update E-mail</h3>
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <p>Change your currently saved e-mail address.</p>
+                    <hr>
+                    <!--END  section -->
+
+				<form id="memberModify"  method="post" action="" name="regform" >
+
+                        <table  class="table-st2">
+                        <tr>
+                                <td style="width: 200px">Your current e-mail address</td>
+                                <td style="width: 300px">
+                                    {#email#}
+                                </td>
+                                <td><span class="pull-right">* Must fill in</span></td>
+                            </tr>
+                            <tr>
+                                <td>Enter your password*</td>
+                                <td colspan="2">
+                                    <input type="password" name="password" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>New e-mail address*</td>
+                                <td colspan="2">
+                                    <input type="text" name="newemail" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Check new e-mail address*</td>
+                                <td colspan="2">
+                                    <input type="text" name="renewemail" class="form-control">
+                                </td>
+                            </tr>
+                        </table>
+					
+                    <div class="clearfix m-b-30"></div>
+					<div  id="notice" class="alert alert-danger" style="display:none;"></div>
+   					<input type="hidden" name="act" value="memberaccountm" />
+                    <button type="submit" class="btn btn-black btn-lg pull-left">Confirm and Save</button>
+
+				</form>

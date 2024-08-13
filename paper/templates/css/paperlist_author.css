@@ -1,0 +1,43 @@
+/* ============΄ՂP᭽============= */
+
+ul.paperlist_author{
+margin:0px;
+padding:0px;
+}
+
+li.paperlist_author {
+margin:0;
+padding-left:16px;
+list-style-type: none;
+background: transparent url(../images/78.gif) left no-repeat;
+}
+
+li.paperlist_author div.author{
+float:right;
+}
+
+li.paperlist_author a.author:link,li.paperlist_author a.author:visited,li.paperlist_author a.author:active{
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+color:#999;
+text-decoration: none;
+}
+
+li.paperlist_author a.author:hover{
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+color:#ff0000;
+text-decoration: underline;
+}
+
+
+
+a.paperlist_author:link,a.paperlist_author:visited,a.paperlist_author:active{
+color:#505050;
+text-decoration: none;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+}
+
+a.paperlist_author:hover{
+color:#ff0000;
+text-decoration: underline;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+}

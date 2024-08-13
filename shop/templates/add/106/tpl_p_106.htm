@@ -1,0 +1,199 @@
+<!-start->
+<script type=text/javascript src="{#CP#}js/orderpay.js"></script>
+
+<div id="orderpay">
+<!-start->
+
+<!-m0->
+<div class="orderpay_cap">訂單付款 - 會員帳戶扣款</div>
+<div class="orderpay_txt">
+訂單號：{#OrderNo#}<br />
+訂單總金額：<span class="money">{#paytotal#}</span> 元<br />
+會員帳戶餘額：<span class="money">{#account#}</span> 元<br /><br />
+{#payntc#}
+<input name="orderid" type="hidden" id="orderid" value="{#orderid#}">
+
+</div>
+<!-m0->
+
+<!-m1->
+
+    <div class="top-status">
+        <a href="{#RP#}index.php"> <i class="icon-cross"></i></a>
+        <div class="top-status-title">訂單成立</div>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in4">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <!-- section -->
+                    <div class="total-sum">
+                        <p>訂單編號</p>
+                        <p class="money">{#OrderNo#}</p>
+                    </div>
+                    <!-- /section -->
+                        <div class="col-xs-12 coc-hr1">
+                            <hr class="hr-10">
+                        </div>
+                    <!-- section -->
+                    <div class="row two-col">
+                        <div class="col-xs-6">
+                            <p class="title title22">寄送地址</p>
+                            <ul class="info cpc-note2">
+                                <li>{#s_name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#s_postcode#}</li>
+                                <li>{#s_country#}</li>
+                                <li>行動電話：{#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 coc-hr1">
+                            <hr class="hr-10">
+                        </div>
+                    </div>
+                    <!-- /section -->
+              		<!-- section -->
+                    <div class="total-sum st2">
+                        <p>金額總計</p>
+                        <p class="money">{#pricesymbol#} {#showpaytotal#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                    <div class="col-xs-12 coc-hr1">
+                        <hr class="hr-10">
+                    </div>
+                        
+                    <p class="coc-note2">感謝您的訂購，我們會儘快<br>處理您訂購的商品並儘速安排出貨。</p>
+                    <!-- /section -->
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+
+<!-m1->
+
+<!-m2->
+    <div class="top-status">
+        <a href="{#RP#}index.php"> <i class="icon-cross"></i></a>
+        <div class="top-status-title">線上付款</div>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in4">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                
+                
+<div class="col-xs-12 orderpay_cap">訂單線上付款 - {#pcenter#}</div>
+<div class="col-xs-12 orderpay_txt">
+訂單號：{#OrderNo#}<br />
+訂單總金額：<span class="money">{#pricesymbol#} {#showpaytotal#} {#paytotal#}</span> 元<br />
+付款方式：{#pcenter#}<br />
+<div class="col-xs-12 coc-hr1">
+    <hr class="hr-10">
+</div>
+{#intro#}<br /><br />
+{#hiddenString#}
+</div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+<!-m2->
+
+
+
+<!-ok1->
+    <div class="top-status">
+        <a href="{#RP#}index.php"> <i class="icon-cross"></i></a>
+        <div class="top-status-title">訂單成立 - 付款成功</div>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in4">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <!-- section -->
+                    <div class="total-sum">
+                        <p>訂單編號</p>
+                        <p class="money">{#OrderNo#}</p>
+                    </div>
+                    <!-- /section -->
+                        <div class="col-xs-12 coc-hr1">
+                            <hr class="hr-10">
+                        </div>
+                    <!-- section -->
+                    <div class="row two-col">
+                        <div class="col-xs-6">
+                            <p class="title title22">寄送地址</p>
+                            <ul class="info cpc-note2">
+                                <li>{#s_name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#s_postcode#}</li>
+                                <li>{#s_country#}</li>
+                                <li>行動電話：{#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 coc-hr1">
+                            <hr class="hr-10">
+                        </div>
+                    </div>
+                    <!-- /section -->
+              		<!-- section -->
+                    <div class="total-sum st2">
+                        <p>金額總計</p>
+                        <p class="money">{#pricesymbol#} {#showpaytotal#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                    <div class="col-xs-12 coc-hr1">
+                        <hr class="hr-10">
+                    </div>
+                        
+                    <p class="coc-note2">感謝您的訂購，我們會儘快<br>處理您訂購的商品並儘速安排出貨。</p>
+                    <!-- /section -->
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+<!-ok1->
+
+<!-err1-><div class="ordererr">{#ntc#}</div><!-err1->
+<!-end->
+</div>
+<!-end->

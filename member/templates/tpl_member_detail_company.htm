@@ -1,0 +1,193 @@
+<script language="javascript" src="{#CP#}js/zone.js"></script>
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+
+<div  id="notice" class="noticediv"></div>
+						<div class="row menber-register-hold fix-padding15 style-toggle" id="reg">
+                               <form id="memberModify"  method="post" action="" name="regform" >
+                                <div class="clearfix m-b-30"></div>
+                                <!-- ///////////////////////////////////////////////////////////// -->
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn active fix-padding"  id="membertypeid1" style="margin-right: 20px;">
+                                        <input type="radio" name='choice' {#memberchk1#} value="1"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  個人</span>
+                                    </label>
+                                    <label class="btn active fix-padding"  id="membertypeid2">
+                                        <input type="radio" name='choice' {#memberchk2#} value="2"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  公司</span>
+                                    </label>
+                                </div>
+                                <span class="pull-right">* 必填欄位</span>
+                                <div class="tab-content">
+                                	{#ZoneList#}
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
+                                        <div class="clearfix m-b-30"></div>
+                                        <div class="row">
+                                        <!-- list -->
+                                            <div class="col-xs-5 forc">統一編號*</div>
+                                            <div class="col-xs-7 forc">
+                                                <input type="text" name="passcode" id="passcode" value="{#passcode#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15 forc"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 forc">公司名稱*</div>
+                                            <div class="col-xs-7 forc">
+                                                <input type="text" name="company" id="company" value="{#company#}" class="form-control forc">
+                                            </div>
+                                            <div class="clearfix m-b-15 forc"></div>
+                                            <!-- / list -->
+                                         <!-- list -->
+                                            <div class="col-xs-5 forp">性別*</div>
+                                            <div class="col-xs-7 forp">
+                                                 <select name="sex" id="sex" class="selectpicker form-control">
+                                                            <option value="1" {#chksex1#}>男性</option>
+                                                            <option value="2" {#chksex2#}>女性</option>
+                                                        </select>
+                                            </div>
+                                            <div class="clearfix m-b-15 forp"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5">姓名*</div>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="name" id="name" value="{#name#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 forp">生日*</div>
+                                            <div class="col-xs-7 forp">
+                                                <div class="row fix-padding10">
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select name="Year_ID" id="Year_ID" class="selectpicker form-control">
+                                                            <option value="0">年</option>
+                                                            {#showyear#}
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select name="Month_ID" id="Month_ID" class="selectpicker form-control">
+                                                            <option value="0">月</option>
+                                                            {#showmonth#}
+														    <option value="01">01月</option>
+														    <option value="02">02月</option>
+														    <option value="03">03月</option>
+														    <option value="04">04月</option>
+														    <option value="05">05月</option>
+														    <option value="06">06月</option>
+														    <option value="07">07月</option>
+														    <option value="08">08月</option>
+														    <option value="09">09月</option>
+														    <option value="10">10月</option>
+														    <option value="11">11月</option>
+														    <option value="12">12月</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select  name="Day_ID" id="Day_ID" class="selectpicker form-control">
+                                                            <option value="0">日</option>
+                                                            {#showdays#}
+														    <option value="01">01日</option>
+														    <option value="02">02日</option>
+														    <option value="03">03日</option>
+														    <option value="04">04日</option>
+														    <option value="05">05日</option>
+														    <option value="06">06日</option>
+														    <option value="07">07日</option>
+														    <option value="08">08日</option>
+														    <option value="09">09日</option>
+														    <option value="10">10日</option>
+														    <option value="11">11日</option>
+														    <option value="12">12日</option>
+														    <option value="13">13日</option>
+														    <option value="14">14日</option>
+														    <option value="15">15日</option>
+														    <option value="16">16日</option>
+														    <option value="17">17日</option>
+														    <option value="18">18日</option>
+														    <option value="19">19日</option>
+														    <option value="20">20日</option>
+														    <option value="21">21日</option>
+														    <option value="22">22日</option>
+														    <option value="23">23日</option>
+														    <option value="24">24日</option>
+														    <option value="25">25日</option>
+														    <option value="26">26日</option>
+														    <option value="27">27日</option>
+														    <option value="28">28日</option>
+														    <option value="29">29日</option>
+														    <option value="30">30日</option>
+														    <option value="31">31日</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix m-b-15 forp"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5">國家*</div>
+                                            <div class="col-xs-7">
+                                                台灣
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5">城市*</div>
+                                            <div class="col-xs-7">
+                                                <select class="form-control" id="Province" onKeyUp='if(window.event.keyCode==13) document.regform.zoneid.focus();'  onChange="provinceSelChange(regform.zoneid,regform.Province.value,'{#zoneid#}',regform.postcode,regform.addr)" name="Province">
+	 	 											<script language=javascript>document.write(pList.getOptionString('{#Province#}'));</script>
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5">鄉鎮區*</div>
+                                            <div id="zonediv" class="col-xs-7">
+                                                <select onKeyUp='if(window.event.keyCode==13) document.regform.regCardNum.focus();' name="zoneid"  class="form-control" onChange="postSelChange(regform.Province.value,regform.zoneid.value,regform.postcode,regform.addr)">
+													<script language=javascript>
+														document.write(pList.getOptionAreasString(regform.Province.value,regform.zoneid,'{#zoneid#}',1));
+													</script>
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5">地址*</div>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="addr" id="addr" value="{#addr#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5">郵遞區號</div>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="postcode" id="postcode" value="{#postcode#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5">電話號碼 (行動電話)</div>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="mov" id="mov" value="{#mov#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5">電話號碼 (其他)</div>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="tel" id="tel" value="{#tel#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                        </div>
+                                        <!-- row -->
+                                        <div class="clearfix m-b-15"></div>
+                                    </div>
+                                </div>
+                                <!-- tab-content -->
+                                ※ 請至少輸入一個電話號碼來接收訂單狀態的通知，並請核對號碼是否正確。
+                                <div class="clearfix m-b-30"></div>
+                                <!-- //////////////////////////////////////////////////////////// -->
+                            </div>
+                            <!-- /section -->
+                               <div class="clearfix"></div>
+                                <div class="clearfix m-b-20"></div>
+							    <input type="hidden" name="act" value="memberdetail" />
+                                <a href="javascript:;" data-dismiss="modal" class="btn btn-black btn-lg" style="width:150px">更新個人資料</a>
+                                </form>

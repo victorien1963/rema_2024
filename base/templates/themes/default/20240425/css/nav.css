@@ -1,0 +1,20 @@
+/* ==============================
+ *
+ *	topaudio variables, font-face
+ *
+ * ============================== */
+/*== Color ==*/
+/*== Screen Size ==*/
+.breadcrumb {
+  background: none;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+.breadcrumb li.active {
+  color: #000;
+  font-weight: 600;
+}
+.breadcrumb .breadcrumb-item {
+  color: #ccc;
+  cursor: pointer;
+}/*# sourceMappingURL=nav.css.map */

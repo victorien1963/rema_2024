@@ -1,0 +1,20 @@
+<!-start->
+<link href="css/newspiclb_dolphin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{#CP#}js/newspiclb_dolphin.js"></script>
+<div id=imgADPlayer></div>		
+<!-start->
+<!-list->
+<div class="picFit">
+<script> 
+PImgPlayer.addItem( "", "{#link#}", "{#src#}"); 
+
+ </script></div>
+<!-list->
+<!-end->
+<script>
+PImgPlayer.init( "imgADPlayer", {#picw#}, {#pich#} );
+$(function() {
+$().picFit("{#fittype#}");
+});
+</script>
+<!-end->

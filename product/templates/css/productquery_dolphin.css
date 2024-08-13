@@ -1,0 +1,113 @@
+/* ============产品图片列表============== */
+
+div.productquery_dolphin{
+padding:0px;
+margin:0px 15px 17px 0px;
+float:left;
+}
+
+div.productquery_dolphin div.fang{
+margin:0px;
+text-align:center;
+padding:0px;
+border:0px #d4d4d4 solid;
+}
+
+div.productquery_dolphin div.picFit{
+overflow: hidden;
+}
+
+div.productquery_dolphin div.picFit img{
+}
+
+div.productquery_dolphin a.prodtitle:link,div.productquery_dolphin a.prodtitle:visited,div.productquery_dolphin a.prodtitle:active{
+font:12px/31px simsun;
+color:#505050;
+text-decoration: none;
+}
+
+div.productquery_dolphin a.prodtitle:hover{
+font:12px/31px simsun;
+color:#505050;
+text-decoration: underline;
+}
+
+div.productquery_dolphin div.title{
+white-space: nowrap;
+overflow: hidden;
+text-align:center;
+margin:1px 0px 0px;
+background:#cdcac7;
+width:200px;
+}
+/* ============翻页============== */
+
+div#showpages {
+clear:both;
+padding:0px;
+margin:20px 0px;
+width:100%;
+height:30px;
+white-space: nowrap;
+}
+
+div#pagesinfo {
+float:left;
+padding:3px 8px;
+white-space: nowrap;
+}
+
+div#pages {
+float:right;
+padding-right:8px;
+white-space: nowrap;
+}
+
+div#pages ul{
+margin:0;
+padding:0;
+}
+
+div#pages a:link,div#pages a:visited,div#pages a:active{
+color:#303030;
+text-decoration: none;
+}
+
+div#pages a:hover{
+color:#ff0000;
+text-decoration: none;
+}
+
+div#pages li{
+margin:3px;
+padding:2px 5px;
+list-style-type: none;
+float:left;
+background:#dcd9d4;
+color:#303030;
+border:1px #dcd9d4 solid;
+white-space: nowrap;
+}
+
+div#pages li.pagesnow{
+color:#303030;
+background-color:#eee;
+white-space: nowrap;
+border:1px #dcd9d4 solid;
+}
+
+div#pages li.pbutton{
+color:#303030;
+background-color:#dcd9d4;
+padding:3px 5px 1px 5px;
+white-space: nowrap;
+border:1px #dcd9d4 solid;
+}
+
+
+div#pages li.opt{
+color:#303030;
+padding:0px;
+white-space: nowrap;
+border:0px;
+}

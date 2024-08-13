@@ -1,0 +1,275 @@
+<!-start->
+                <div class="scenario-img-con rema-col">
+					<div class="owl-carousel scenario-block owl-theme auto-owl-carousel">
+						{#a_body#}
+					</div>
+				</div>
+				<div class="product-img-con">
+					<div class="product-img-block rema-col l12">
+						<div class="product-big-img rema-col l6" style="float:right;">
+							<div class="img-border-left">
+								<img class="rema-col" loading="lazy" src="{#srcL#}" id="srcL">
+							</div>
+						</div>
+						<div class="product-big-img rema-col l6" style="float:left;">
+							<div class="img-border-right">
+								<img class="rema-col" loading="lazy" src="{#srcR#}" id="srcR">
+							</div>
+						</div>
+					</div>
+					<div class="product-small-img-con rema-col l12">
+						<div class="owl-carousel product-small-img owl-theme" id="subpic">
+							{#subpic#}
+						</div>
+						<div class="superbig-product-img">
+							<div class="superbig-product-img-con">
+								<div class="icon-close-con">
+									<div class="icon icon-close close-img"></div>
+								</div>
+								<!--<img class="superbig-img" src="">-->
+								<div>
+									<div class="owl-carousel product-superbig-img owl-theme" id="zoomlist">
+										{#zoomlist#}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-color-con">
+					<div class="mobile-color-img-con rema-col l12">
+						<div class="owl-carousel mobile-color-img owl-theme">
+							{#selcolor_mobile#}
+						</div>
+					</div>
+				</div>
+				<div class="interduce rema-col l12">
+					<div class="interduce-word-con">
+						<div class="title font-xxxl font-w-l">{#title#}</div>
+						<div class="word font-l">{#memotext#}</div>
+					</div>
+				</div>
+				<div class="rema-col l12 detail-part" style="display:{#show_b_body#};">
+					<div class="owl-carousel owl-theme detail-carousel">
+						{#b_body#}
+					</div>
+				</div>
+				<div class="size-conut rema-col">
+					<div class="size-conut-co rema-col l12" style="display:{#showsize_A#};">
+						<img src="{#canshu#}" loading="lazy" class="img-responsive center-block" alt="">
+					</div>
+					<div class="size-conut-co rema-col l12" style="display:{#showsize_B#};">
+						<div class="size-count-img-con">
+							<div class="size-conut-img"><img class="size-conut-img" src="{#TM#}img/sp_15224843852067758396-01.png"></div>
+							<div class="cart-word-con">
+								<div class="chest-word">
+									<div class="title">胸圍</div>
+									<div class="paragraph">測量胸部最高處</div>
+								</div>
+								<div class="waist-word">
+									<div class="title">腰圍</div>
+									<div class="paragraph">測量腰部最細處</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="size-conut-form">
+							<div class="title font-xl font-w-m">幫助您找到合適的尺碼</div>
+							<div class="paragraph font-s">(胸)腰圍尺寸為附加選項，可得知精確之建議尺碼。</div>
+							<form action="" method="post" id="acton_form">
+								<div class="size-count-selecter">
+									<div class="custom-select font-xs">
+										<input type="tel" name="tall" min="100" max="220" placeholder="身高cm*" style="padding: 7px 10px;margin:0;" />
+										<!--select name="tall">
+											<option value="0">身高</option>
+											{#select_tall#}
+										</select-->
+									</div>
+									<div class="custom-select font-xs">
+										<input type="tel" name="weight" min="30" max="150" placeholder="體重kg*" style="padding: 7px 10px;margin:0;" />
+										<!--select name="weight">
+											<option value="0">體重</option>
+											{#select_weight#}
+										</select-->
+									</div>
+									<div class="custom-select font-xs">
+										<input type="tel" name="hips" min="50" max="135" placeholder="腰圍cm" style="padding: 7px 10px;margin:0;" />
+										<!--select  name="hips">
+											<option value="0">腰圍</option>
+											{#select_hips#}
+										</select-->
+									</div>
+									<button type="button" class="shop-bn size-bn">尋找尺寸</button>
+									<input type="hidden" name="act" value="getSize">
+									<input type="hidden" name="inacc" value="{#inacc#}" />
+									<input type="hidden" name="gid" value="{#gid#}" />
+								</div>
+							</form>
+						</div>
+						<div class="size-conut-fin-con" id="showsizeinfo">
+							
+						</div>
+					</div>
+				</div>
+				<div class="product-detail rema-col l12">
+					<div class="rema-col l6 m12 ">
+						<div class="right-line">
+							<div class="detail-word-con composition">
+								{#c_body#}
+							</div>
+						</div>
+					</div>
+					<div class="rema-col l6 m12">
+						<div class="detail-word-con">
+							<div class="maintenance-word-con">
+								{#d_body#}
+							</div>
+						</div>
+					</div>
+				</div>
+				<section id="introduce">
+					<div  class="introduce-carousel-con rema-col l12">
+						<div class="introduce-carousel">
+							<div class="introduce-title font-xxl font-w-m">推  薦  商  品</div>
+							<div class="owl-carousel introduce owl-theme" id="hotlist1">
+								{#HOTLIST1#}
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+		<section id="shopping-cart">
+			<div class="sticky-height shopping-cart-con rema-col f4 s12">
+				<div class="shoping-cart-block sticky">
+					<div class="shopping-cart-title-con">
+						<div class="shopping-cart-title font-l font-w-l"><span id="ptitle"><span class="titlebn">{#bn#}</span> {#title#}</span></div>
+						<div class="shoppimg-cart-price font-m font-w-m"><span id="money">{#pricesymbol#} {#price#}</span> <sup style="display:{#showprice0#};"><del>{#price0#}</del></sup></div>
+						<div class="shoppimg-cart-word font-s ">{#memo#}</div>
+						<div class="mobile-nav">
+							<div class = "mobile-color mobile-select-border-style" >
+								<p class="mobile-sixe-show font-xs">COLOR</p>
+							</div>
+						</div>
+						<div class="mobile-nav">
+							<div class = "mobile-size mobile-select-border-style" >
+								<p class="mobile-sixe-show sizein  font-xs">SIZE</p>
+							</div>
+						</div>
+						
+					</div>
+					<div class="color-selecter">
+						<div class="color-name">
+							<div>請選擇顏色</div>
+							<div>/</div>
+							<div><span id="colorname">{#colorname#}</span></div>
+						</div>
+						<div class="color-img-con  select-nav">
+							{#selcolor#}
+						</div>
+					</div>
+					<div class="size-selecter">
+						<div class="size-title font-s">請選擇尺寸</div>
+						<div class="size-nav  select-nav " id="selsize">
+							{#selsize#}
+						</div>
+						<div class="font-s advice-bn">選購尺寸建議 &#10095;</div>
+					</div>
+					<div class="buy-bn-con">
+						<button class="shop-bn add-cart" id="addtocart" onclick="">加入購物車</button>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-add-car">
+				<div class="mobile-add-car-title">已加入購物車</div>
+				<div class="mobile-cart-item">
+					<div class="rema-col s3"><img id="m-src" src="{#m_src#}"></div>
+					<div class="cart-word rema-col s8">
+						<div class="name font-xs" >{#title#}</div>
+						<div class="size font-xs"><span id="m-color">{#colorname#}</span> <span id="m-size"></span></div>
+						<div class=" font-xs" id="m-price">{#pricesymbol#} {#price#}</div>
+					</div>
+				</div>
+                            <input name="gid" type="hidden" id="gid" value="{#gid#}" />
+                            <input name="shopid" type="hidden" id="shopid" value="{#id#}">
+                            <input name="subpicid" type="hidden" id="subpicid" value="{#subpicid#}" />
+                            <input name="buyspecid" type="hidden" id="buyspecid" value="">
+                            <input name="buysize" type="hidden" id="buysize" value="">
+                            <input name="buyprice" type="hidden" id="buyprice" value="{#oriprice#}">
+                            <input name="buynums" name="buynums" type="hidden" id="buynums" value="1" />
+                            <input name="fz" type="hidden" id="fz" value="" />
+                            
+                            <input name="discat" type="hidden" id="discat" value="">
+                            <input name="distype" type="hidden" id="distype" value="">
+                            <input name="disnum" type="hidden" id="disnum" value="">
+                            <input name="disrate" type="hidden" id="disrate" value="">
+                            <input name="disprice" type="hidden" id="disprice" value="">
+<!-start->
+<!-list->
+{#propname#}：{#prop#}<br>
+<!-list->
+
+<!-m0000->
+										<div class="item" data-hash="img{#n#}">
+											<div class="product-superbig-img-item"><img loading="lazy" class="superbig-src" src="{#src#}"></div>
+										</div>
+<!-m0000->
+
+<!-m0->
+										<div class="item">
+											<div class="product-superbig-img-item"><img loading="lazy" class="superbig-src" src="{#src#}"></div>
+										</div>
+<!-m0->
+
+<!-m1->
+							<div class="item">
+								<div class="product-small-img-item"><a href="javascript:;"><img class="superbig-src" src="{#srcs#}"></a></div>
+							</div>
+<!-m1->
+
+<!-m1111->
+							<div class="item">
+								<div class="product-small-img-item"><a href="#img{#n#}"><img class="superbig-src" src="{#srcs#}"></a></div>
+							</div>
+<!-m1111->
+
+<!-m2->
+<!-m2->
+
+<!-menu->
+
+							<div class="color-img bgimg selcolor {#active#}" id="selcolor_{#id#}" style="background-image: url('{#src#}');cursor: pointer;"></div>
+<!-menu->
+
+<!-more->
+							<div class="item">
+								<div class="">
+									<img class="selcolor mobile-color-select {#act#}" id="mobcolor_{#id#}" src="{#srcs#}" loading="lazy">
+								</div>
+							</div>
+<!-more->
+
+<!-text->
+
+							<label class="size-nav-item font-w-s font-s selsize" id="{#size#}-{#specid#}">
+								<input type="hidden" name="size" value="{#size#}-{#specid#}" autocomplete="off">{#size#}
+                            </label>
+<!-text->
+
+<!-col->
+
+<!-col->
+
+<!-m3->
+			<script>
+				{#checkInput#}
+			</script>
+<!-m3->
+
+<!-end->
+<!-end->
+
+<!-err1-><div class="scenario-img-con rema-col">目前商品已無庫存 或 該商品尚未發佈</div><!-err1->
+<!-err2-><div class="notice">對不起,本內容設置了閱讀權限,您無權瀏覽目前內容</div><!-err2->
+
+

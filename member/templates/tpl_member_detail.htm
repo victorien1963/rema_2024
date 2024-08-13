@@ -1,0 +1,17 @@
+<script language="javascript" src="{#CP#}js/memberset.js?2"></script>
+<form id="memberModify" method="post" action="" name="regform" >
+	<div class="profile-con" style="display:flex">
+		<div class="font-s profile-block">{#name#}</div>
+		<div class="font-s profile-block" style="padding-left:25px">{#gender#}</div>
+	</div>
+	<div class="font-s profile-block">生日 {#yy#} / {#mm#} / {#dd#}</div>
+	<div class="font-s profile-block">電話 <span id="showmov">{#mov#}</span></div>
+	<input class="inputsy" type="tel" id="mov" name="mov" placeholder="電話號碼(行動電話)">
+	<div class="font-xs">※ 請至少輸入一個電話號碼來接收訂單狀態的通知，並請核對號碼是否正確。</div>
+	<div class="font-xs">※ 如要更改姓名與生日，請提供相關證明文件並來信客服。</div>
+	<div class="buy-bn-con">
+		<button class="shop-bn member-change">更新基本資料</button>
+	</div>
+	<input type="hidden" name='membertypeid' value="1" />
+	<input type="hidden" name="act" value="memberdetail" />
+</form>

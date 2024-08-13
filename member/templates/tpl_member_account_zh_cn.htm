@@ -1,0 +1,43 @@
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+
+                    <h3 class="cart-title">变更密码</h3>
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <p>变更您目前储存使用的帐户密码。</p>
+                    <hr>
+                    <!--END  section -->
+
+				<form id="memberModify"  method="post" action="" name="regform" >
+
+                        <table  class="table-st2">
+                        <tr>
+                                <td colspan="2" >
+                                <span class="pull-right">* 必填栏位</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px">原本的密码*</td>
+                                <td style="width: 350px">
+                                    <input type="password" name="password" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>输入新密码*</td>
+                                <td>
+                                    <input type="password" name="newpassword" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>确认新密码*</td>
+                                <td>
+                                    <input type="password" name="renewpass" class="form-control">
+                                </td>
+                            </tr>
+                        </table>
+					
+                    <div class="clearfix m-b-30"></div>
+					<div  id="notice" class="alert alert-danger" style="display:none;"></div>
+   					<input type="hidden" name="act" value="memberaccount" />
+                    <button type="submit" class="btn btn-black btn-lg pull-left">确定并储存</button>
+
+				</form>

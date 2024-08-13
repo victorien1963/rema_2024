@@ -1,0 +1,60 @@
+.shoptwoclass_2{
+padding:12px 6px 4px 6px;
+}
+
+.shoptwoclass_2 .shoptwoclass_2_top{ 
+clear:both;
+height:25px;
+color: #999999;
+background-color:#eee;
+font:12px/23px Verdana, Arial, Helvetica, sans-serif;
+cursor: pointer;
+}
+
+.shoptwoclass_2 .shoptwoclass_2_top a{
+color: #b63d70;
+font:14px/24px Verdana, Arial, Helvetica, sans-serif;
+padding-left:12px;
+text-decoration: none;
+}
+
+.shoptwoclass_2 .shoptwoclass_2_top a:visited{
+color: #7aa424;
+}
+
+.shoptwoclass_2 .shoptwoclass_2_top a:hover{ 
+color: #72674c;
+}
+
+
+.shoptwoclass_2 ul{ 
+margin:13px 0px 13px 9px;
+width:202px;
+}
+
+.shoptwoclass_2 ul li{
+list-style-type: none;
+float:left;
+height:20px;
+font:11px/20px Verdana, Arial, Helvetica, sans-serif;
+margin:0px; 
+padding:0px;
+color: #999999;
+white-space:nowrap;
+}
+
+.shoptwoclass_2 ul li a{
+color: #707070;
+font:12px/20px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+margin:0px 3px 0px 3px;
+}
+
+.shoptwoclass_2 ul li a:visited{
+color: #707070;
+}
+
+.shoptwoclass_2 ul li a:hover{ 
+color: #72674c;
+}
+

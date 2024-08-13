@@ -1,0 +1,37 @@
+					<form id="memberModifyEmail"  method="post" action="" name="regform" >
+						<div class="rema-col f6 s4 xs12">
+							<div class="form-block">
+								<div class="font-w-l">電子信箱</div>
+								<div>
+									<div class="font-s  show-email" id="smail">{#email#}</div>
+									<input class="inputsy" type="email" id="newemail" name="newemail" placeholder="新的電子信箱">
+									<input class="inputsy" type="email" name="renewemail" placeholder="重複新的電子信箱">
+									<input class="inputsy" type="password" name="password" placeholder="輸入密碼">
+									<div class="font-xs">※ 此為登入時帳號，變更後請使用新帳號登入。</div>
+									
+									<div class="buy-bn-con">
+										<button class="shop-bn member-change">更新電子信箱</button>
+									</div>
+									<input type="hidden" name="act" value="memberaccountm" />
+								</div>
+							</div>
+						</div>
+					</form>
+					<form id="memberModifyPass"  method="post" action="" name="regform" >
+						<div class="rema-col f6 s4 xs12">
+							<div class="form-block  mobile-border-none">
+								<div class="font-w-l">密碼</div>
+								<div>
+									<div class="font-s  show-email">變更您目前儲存使用的帳戶密碼。</div>
+									<input class="inputsy" type="password" name="password" placeholder="原本的密碼">
+									<input class="inputsy" type="password" name="newpassword" placeholder="輸入新密碼">
+									<input class="inputsy" type="password" name="renewpass" placeholder="確認新密碼">
+
+									<div class="buy-bn-con">
+										<button class="shop-bn member-change">更新密碼</button>
+									</div>
+									<input type="hidden" name="act" value="memberaccount" />
+								</div>
+							</div>
+						</div>
+					</form>

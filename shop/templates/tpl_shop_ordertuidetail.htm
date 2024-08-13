@@ -1,0 +1,221 @@
+<!-start->
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <p>請選擇你想要退貨的訂單。如有任何問題，請與我們的客戶服務中心聯絡。</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <p class="pull-left" style="margin-right:30px">日期 {#dtime#}</p>
+                            <p class="pull-left">訂單編號 {#OrderNo#}</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="btn-group pull-right">
+                                <a href="{#preid#}" class="btn btn-default" style="margin-right:10px"><i class="icon-arrow-left"></i> 上一張</a>
+                                <a href="{#nextid#}" class="btn btn-default">下一張 <i class="icon-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <!--END  section -->
+                    <hr class="hr-15">
+                    <!-- section -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="title">寄送地址</p>
+                            <ul class="info">
+                                <li>{#name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#postcode#}</li>
+                                <li>{#country#}</li>
+                                <li>行動電話：{#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 card-info">
+                        <div class="right-sum m-b-20" style="margin-top: 0">
+                                <table>
+                                    <tbody><tr>
+                                        <td>物流費用(滿{#getsymbol#} {#setyunfei#}元享免運費)</td>
+                                        <td class="fix-padding15">{#pricesymbol#} {#multiyunfei#}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>線上帳戶餘額{#getsymbol#} {#account#}元，本次抵用</td>
+                                        <td class="fix-padding15">{#pricesymbol#} {#disaccount#} </td>
+                                    </tr>
+                                     <tr>
+                                        <td>電子折價券折扣金額</td>
+                                        <td class="fix-padding15">{#pricesymbol#} {#promoprice#} </td>
+                                    </tr>
+                                     <tr>
+                                        <td colspan="2">
+                                        <hr class="hr-10">
+                                           <span class="title">金額總計</span> 
+                                            <p class="money">{#pricesymbol#} {#tjine#}</p>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                            <div class="clearfix m-b-15 visible-sm"></div>
+                        </div>
+                    </div>
+                    <!-- END section -->
+                    <!-- section -->
+                    <div class="row  fix-padding15">
+                        <!-- ///////////////////////////////////////////////////////////// -->
+                        <!-- table -->
+                        <table class="table cart-list line-top a1 style-toggle">
+                            <thead>
+                                <tr>
+                                    <td>品名</td>
+                                    <td>顏色</td>
+                                    <td>尺寸</td>
+                                    <td>數量</td>
+                                    <td>金額</td>
+                                    <td>請勾選欲退貨商品</td>
+                                </tr>
+                                <form action="" method="post">
+                                <input type="hidden" name="orderid" value="{#orderid#}" />
+                                <input type="hidden" name="act" value="sendtui" />
+  <!-start->
+  <!-list->
+
+                                <tr>
+                                    <td>
+                                        <p>{#bn#}</p>
+                                        <p>{#goods#}</p>
+                                    </td>
+                                    <td>{#colorname#}</td>
+                                    <td>{#size#}</td>
+                                    <td>{#nums#}</td>
+                                    <td>{#pricesymbol#} {#jine#}</td>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons" style="{#dischk#}">
+                                        	<label class="btn">
+	                                            <input type="checkbox" name="tuilist[]" value="{#itemid#}">
+	                                            <i class="icon-square-o"></i>
+	                                            <i class="icon-check-square-o"></i>
+                                            </label>
+                                        </div>
+                                        <div class="btn-group" data-toggle="buttons" style="{#distui#}">
+                                        	已申請退貨
+                                        </div>
+                                    </td>
+                                </tr>
+  <!-list->
+  
+  <!-text->
+
+                                <tr>
+                                    <td>
+                                        <p>{#bn#}</p>
+                                        <p>{#goods#}</p>
+                                    </td>
+                                    <td>{#colorname#}</td>
+                                    <td>{#size#}</td>
+                                    <td>{#nums#}</td>
+                                    <td>{#pricesymbol#} {#jine#}</td>
+                                    <td>
+                                        -----
+                                    </td>
+                                </tr>
+  <!-text->
+  
+<!-end->
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <!-- END table -->
+                        <!-- //////////////////////////////////////////////////////////// -->
+                    </div>
+                    <!-- /section -->
+                    <div class="clearfix"></div>
+                    <button type="submit" class="btn btn-black btn-lg pull-left" style="width:150px">確定申請退貨</button>
+                    </form>
+<!-end->
+
+<!-err1->
+<link href="css/shoporderdetail.css" rel="stylesheet" type="text/css" />
+<div class="ordererr">{#ntc#}</div>
+<!-err1->
+
+
+<!-m0->
+<script language="javascript" src="{#CP#}js/ordertuidetail.js"></script>
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <p>您選擇的退貨商品如下。<br>
+請確認吊牌與包裝盒是否完整，將商品放入原紙箱或包裝袋內，快遞人員會在三個工作天內到您府上取件。</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <p class="pull-left">訂單編號 {#OrderNo#}</p>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <!--END  section -->
+                    <div class="clearfix m-b-10"></div>
+                    <!-- section -->
+                    <div class="row  fix-padding15">
+                        <!-- ///////////////////////////////////////////////////////////// -->
+                        <!-- table -->
+                        <table class="table cart-list line-top a1 style-toggle">
+                            <thead>
+                                <tr>
+                                    <td>品名</td>
+                                    <td>顏色</td>
+                                    <td>尺寸</td>
+                                    <td>數量</td>
+                                    <td>金額</td>
+                                    <td class="t-gap"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <input type="hidden" name="orderid" id="orderid" value="{#orderid#}" />
+                            <input type="hidden" name="tuilist" id="tuilist" value="{#tuilist#}" />
+<!-m0->
+
+<!-m1->
+                                <tr>
+                                    <td>
+                                        <p>{#bn#}</p>
+                                        <p>{#goods#}</p>
+                                    </td>
+                                    <td>{#colorname#}</td>
+                                    <td>{#size#}</td>
+                                    <td>{#nums#}</td>
+                                    <td>{#pricesymbol#} {#jine#}</td>
+                                    <td>
+                                    
+                                    </td>
+                                </tr>
+<!-m1->
+
+<!-m2->
+                            </tbody>
+                        </table>
+                        <!-- END table -->
+                        <!-- //////////////////////////////////////////////////////////// -->
+                    </div>
+                    <!-- /section -->
+                    <div class="clearfix"></div>
+                    <div class="btn-group">
+                            <a href="javascript:history.back();" class="btn btn-black-rim btn-lg" style="width:150px; margin-right:10px;"><i class="icon-arrow-left"></i> 返回修改</a>
+                            <a id="sendtui" class="btn btn-black btn-lg" style="width:150px">確定</a>
+                        </div>
+<!-m2->
+
+<!-menu->
+                    <div class="m-b-20"></div>
+                    <p>您的退貨申請已送出。<br>
+請確認吊牌與包裝盒是否完整，將商品放入原紙箱或包裝袋內，<br>
+快遞人員會在三個工作天內到您府上取件。</p>
+                    <!--END  section -->
+                    <div class="clearfix m-b-50"></div>
+                    <div class="clearfix m-b-50"></div>
+                    <div class="clearfix m-b-50"></div>
+                    <div class="clearfix m-b-50"></div>
+                    <div class="clearfix m-b-50"></div>
+                    <div class="clearfix m-b-50"></div>
+                    <div class="clearfix m-b-50"></div>
+<!-menu->

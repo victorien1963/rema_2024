@@ -1,0 +1,144 @@
+<link href="css/productmember.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/productmember.js"></script>
+<script language="javascript" src="{#CP#}js/multicat.js"></script>
+<div  id="notice" class="noticediv"></div>
+
+<form id="productModify" method="post" action="" enctype="multipart/form-data" name="form">
+<table width="100%" border="0" cellspacing="1" cellpadding="2" class="productmodizone">
+  
+         <tr >
+                        <td width="80" align="center" height="24">我的分類</td>
+          <td height="22"  style="color:#666666">
+                          <select  name="pcatid" >
+					    <option value="0">請選擇分類</option>
+							{#pcatlist#}
+                          </select> &nbsp; <a href="product_cat.php">添加自訂分類</a>            
+		   </td>
+    </tr>
+          <tr >
+    <td width="80" height="24" align="center">產品分類</td>
+    <td height="22"  style="color:#666666">
+	<select id="selcatid"  name="catid" >
+	<option value="0">只發佈到個人產品庫</option>
+	{#catlist#}
+     </select>
+    </td>
+  	</tr>
+  		<tr > 
+            <td width="80" align="center" height="24">產品名稱</td>
+          <td height="22"  style="color:#666666"> 
+              <input type="text" name="title"  class="input"  value="{#title#}" style="width:399px" />
+            <span style="color:#ff0000">*</span> </td>
+    </tr>
+  </table>
+	
+	<table width="100%" border="0" cellspacing="1" cellpadding="2" >
+
+	<tr >
+            <td width="80" align="center">產品圖片</td>
+            <td height="22" style="color:#666666">
+						<input type="file" name="jpg" class="input" style='WIDTH: 399px;' /> 
+			<input  type='submit' name='modi'  onClick="KindSubmit();" value='上傳' class='savebutton' />
+						
+			</td>
+    </tr>
+	
+	<tr >
+            <td width="80" align="center" >&nbsp;</td>
+            <td ><div id="productpages"></div></td>
+    </tr>
+	
+	<tr>
+		     <td width="80" align="center" >&nbsp;</td>
+		     <td ><img id="picpriview" src="images/loading.gif" /></td>
+	</tr>
+	
+	
+  </table>
+  
+  
+	<div id="proplist" class="productmodizone"></div>
+	<table width="100%" border="0" cellspacing="1" cellpadding="2" class="productmodizone">
+
+  <tr >
+    <td width="80" align="center">產品簡述</td>
+    <td height="22" style="color:#666666">
+	<textarea name="memo" style="WIDTH: 399px;font-size:12px;" class="textarea" rows="5">{#memo#}</textarea></td>
+  </tr>
+  <tr > 
+                        <td width="80" align="center">產品介紹</td>
+                        <td height="22" style="color:#666666"> 
+                           <input type="hidden" name="body" value="{#body#}" />
+						   <div id="kedit" style="position:relative">
+			<script type="text/javascript" src="{#RP#}kedit/memberEditor.js"></script>
+            <script type="text/javascript">
+            var editor = new KindEditor("editor");
+            editor.hiddenName = "body";
+            editor.editorWidth = "560px";
+            editor.editorHeight = "250px";
+            editor.skinPath = "{#RP#}kedit/skins/default/";
+			editor.uploadPath = "{#RP#}product/upload.php";
+			editor.imageAttachPath="product/pics/";
+            editor.iconPath = "{#RP#}kedit/icons/";
+            editor.show();
+            function KindSubmit() {
+	          editor.data();
+            }
+             </script>
+			 </div>
+						   
+                        </td>
+                      </tr>
+		  
+	
+  </table>
+	
+	
+	
+	<table width="100%" border="0" cellspacing="1" cellpadding="2" class="productmodizone">
+            <td align="center" width="80">自訂標籤</td>
+            <td >
+			<input name="tags[]" type="text" class="input" id="tags"  value="{#tags0#}" size="9" />
+			<input name="tags[]" type="text" class="input" id="tags"  value="{#tags1#}" size="9" />
+			<input name="tags[]" type="text" class="input" id="tags"  value="{#tags2#}" size="9" />
+			<input name="tags[]" type="text" class="input" id="tags"  value="{#tags3#}" size="9" />
+			<input name="tags[]" type="text" class="input" id="tags"  value="{#tags4#}" size="9" />
+			</td>
+          </tr><tr >
+                     <td align="center" >所屬專題</td>
+                       <td  style="color:#666666" >
+						<table cellspacing=0 cellpadding=0><tr><td >
+						<select style="WIDTH: 170px;" multiple size="5" name="spe_funct">
+						{#musellist#}
+						</select></td><td width=20>
+						<input class="button" onClick="JavaScript:AddItem('spe_funct', 'spe_selec[]')" type="button" value="添加" name="Input">
+						<input class="button" onClick="JavaScript:DelItem('spe_selec[]')" type="button" value="刪除" name="Input">
+				</td>
+				<td>
+				  <select  style="WIDTH: 170px" multiple size="5" name="spe_selec[]">
+				  {#munowlist#}
+				  </select>
+				  </td></tr></table>
+				  
+					   </td>
+      </tr>
+		  
+            <td width="80" align="center" >&nbsp;</td>
+            <td  style="color:#666666" > 
+              <input type="submit" name="Submit2"  onClick="KindSubmit();" value="送出" class="submit" />
+              <input type="hidden" id="act" name="act" value="productmodify" />
+              <input type="hidden" id="nowid" name="id" value="{#id#}" />
+              <input id="author" type="hidden" name="author"  value="{#author#}"  />
+              <input id="source"  type="hidden" name="source"  value="{#source#}"  />
+</td>
+          </tr>
+       
+  </table>
+</form>
+<script>
+$(function(){
+$().getPropList();
+$().getProductPages(0);
+$().getContent(0);
+});
+</script>

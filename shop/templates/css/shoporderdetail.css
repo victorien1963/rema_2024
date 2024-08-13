@@ -1,0 +1,99 @@
+div#shoporderdetail .ordertitle{
+height:38px;
+font:bold 20px/35px 微軟正黑體, Verdana,Arial, Helvetica, sans-serif;
+border-bottom:1px #e6e6fa solid;
+margin-bottom:15px;
+color:#333;
+}
+
+
+div#shoporderdetail td{ 
+font:12px/23px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+color:#333;
+}
+
+div#shoporderdetail td.itemname{ 
+font:12px/25px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+background-color:#f8f8ff;
+color:#333;
+}
+
+
+div#shoporderdetail div.tit{ 
+background:url(../images/bar.gif) 0px no-repeat;
+padding-left:20px;
+font:bold 14px/43px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+margin-top:1px;
+color:#333;
+}
+
+div#shoporderdetail div.tit1{ 
+background:url(../images/bar.gif) 0px no-repeat;
+padding-left:20px;
+font:bold 14px/43px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+margin-bottom:1px;
+color:#333;
+}
+
+div#shoporderdetail div.tit2{ 
+padding-left:5px;
+border-top:3px #e6e6fa solid;
+border-bottom:1px #e6e6fa solid;
+margin-bottom:1px;
+margin-top:5px;
+font:bold 14px/50px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+color:#333;
+}
+
+
+
+div#shoporderdetail span#price{
+font:bold 12px/20px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+color:#333;
+}
+
+div#shoporderdetail div.totaldiv{
+margin:0px 0px 10px 0px;
+padding:15px 5px;
+font:12px/25px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+color:#333;
+}
+
+
+
+div#shoporderdetail div.bz{
+border:1px #e6e6fa solid;
+border-bottom:3px #e6e6fa solid;
+padding:20px;
+font:12px/20px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+color:#333;
+}
+
+
+
+div#printout{
+margin:35px 0px 20px 0px;
+border:1px #ddd dotted;
+padding:5px 8px;
+font:12px/20px 微軟正黑體, simsun,Verdana, Arial, Helvetica, sans-serif;
+color:#333;
+background-color:#f5f5f5;
+}
+
+
+div#print_button,div#reget_button{
+float:right;
+cursor:pointer;
+font:12px/20px 微軟正黑體, simsun,Verdana, Arial, Helvetica, sans-serif;
+color:#333;
+}
+
+div.ordererr{
+margin:0;
+border:1px #e6e6fa solid;
+padding:10px 10px 10px 39px;
+font:14px/30px 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+background:#f7fbfe url(../images/alert.png) 15px center no-repeat;
+color:#ff0000;
+}
+

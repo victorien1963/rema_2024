@@ -1,0 +1,113 @@
+<!-start->
+<script type=text/javascript src="{#CP#}js/orderpay.js"></script>
+
+<div id="orderpay">
+<!-start->
+
+<!-m0->
+<div class="orderpay_cap">訂單付款 - 會員帳戶扣款</div>
+<div class="orderpay_txt">
+訂單號：{#OrderNo#}<br />
+訂單總金額：<span class="money">{#paytotal#}</span> 元<br />
+會員帳戶餘額：<span class="money">{#account#}</span> 元<br /><br />
+{#payntc#}
+<input name="orderid" type="hidden" id="orderid" value="{#orderid#}">
+
+</div>
+<!-m0->
+
+<!-m1->
+                    <h3 class="cart-title">Thank You! Order Success!</h3>
+                    <!-- section -->
+                    <div class="total-sum">
+                        <p>Order No.</p>
+                        <p class="money">{#OrderNo#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                    <div class="row two-col">
+                        <div class="col-xs-6">
+                            <p class="title">Delivery Address</p>
+                            <ul class="info">
+                                <li>{#s_name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#s_postcode#}</li>
+                                <li>{#s_country#}</li>
+                                <li>Mobile number: {#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix m-b-20"></div>
+                        <div class="col-xs-12">
+                            <hr class="hr-10">
+                        </div>
+                    </div>
+                    <!-- /section -->
+              		<!-- section -->
+                    <div class="total-sum st2">
+                        <p>Total Amount</p>
+                        <p class="money">{#pricesymbol#} {#showpaytotal#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                        <div class="clearfix m-b-20"></div>
+                    <p>Thank you for your order and purchase, we will process your ordered products and arrange for them to be shipped A.S.A.P.</p>
+                    <!-- /section -->
+<!-m1->
+
+<!-m2->
+<div class="orderpay_cap">Payment - {#pcenter#}</div>
+<div class="orderpay_txt">
+Order No.：{#OrderNo#}<br />
+Total amount for order:<span class="money">{#pricesymbol#} {#showpaytotal#} {#paytotal#}</span> dollars<br />
+Payment Approach:{#pcenter#}<br /><br />
+{#intro#}<br /><br />
+{#hiddenString#}
+</div>
+<!-m2->
+
+
+
+<!-ok1->
+                    <h3 class="cart-title">Thank You! Order & Payment Successful!</h3>
+                    <!-- section -->
+                    <div class="total-sum">
+                        <p>Order No.</p>
+                        <p class="money">{#OrderNo#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                    <div class="row two-col">
+                        <div class="col-xs-6">
+                            <p class="title">Delivery Address</p>
+                            <ul class="info">
+                                <li>{#s_name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#s_postcode#}</li>
+                                <li>{#s_country#}</li>
+                                <li>Mobile number: {#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix m-b-20"></div>
+                        <div class="col-xs-12">
+                            <hr class="hr-10">
+                        </div>
+                    </div>
+                    <!-- /section -->
+              		<!-- section -->
+                    <div class="total-sum st2">
+                        <p>Total Amount</p>
+                        <p class="money">{#pricesymbol#} {#showpaytotal#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                        <div class="clearfix m-b-20"></div>
+                    <p>Thank you for your order and purchase, we will process your ordered products and arrange for them to be shipped A.S.A.P.</p>
+                    <!-- /section -->
+<!-ok1->
+
+<!-err1-><div class="ordererr">{#ntc#}</div><!-err1->
+<!-end->
+</div>
+<!-end->

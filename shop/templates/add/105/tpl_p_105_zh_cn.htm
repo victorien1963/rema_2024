@@ -1,0 +1,728 @@
+<!-start->
+<script type=text/javascript src="{#CP#}js/startorder.js"></script>
+<!-start->
+
+<!-m0->
+<!-m0->
+<!-list->
+<!-list->
+<!-m1->
+    <div class="top-status">
+        <a href="{#CP#}cart.php?act=next"> <i class="icon-arrow-left"></i></a>
+        <div class="top-status-title">处理订单</div>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in">
+        <div class="row fix-padding15 mem-in-a">
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+
+<!-m1->
+<!-m2->
+
+<form id="OrderForm" method="post" action="">
+<input id="noMemberOrder" type="hidden" value="{#nomemberorder#}">
+                    <!-- section -->
+                    <div class="row two-col cpc-addall">
+                        <div class="col-xs-6">
+                            <p class="title">寄送地址</p>
+                            <div class="col-lg-6" style="width:300px;float:left;">
+                            <select name="" class="selectpicker form-control cpc-addc" id="seladdr">
+                                {#seladdr#}
+                            </select>
+                            </div>
+                            <ul class="info cpc-note">
+                                <li id="show_name">{#s_name#}</li>
+                                <li id="show_addr_a">{#s_addr_a#}</li>
+                                <li id="show_addr_b">{#s_addr_b#}</li>
+                                <li id="show_addr_c">{#s_addr_c#} {#s_postcode#}</li>
+                                <li id="show_country">{#s_country#}</li>
+                                <li>行动电话：<span id="show_mobi">{#s_mobi#}</span></li>
+                            </ul>
+                            <a href="#edit-adress" id="modi_0" class="btn btn-default cpc-btn-editadd editaddr">编辑地址</a>
+                            <a href="{#RP#}member/member_contact.php?act=add" class="btn btn-default">新增地址</a>
+                        </div>
+                        <div class="clearfix m-b-10"></div>
+                        <div class="col-xs-12">
+                            <hr>
+                        </div>
+                    </div>
+                    
+                    <input name="s_name" type="hidden" id="s_name" value="{#s_name#}" /> 
+                    <input name="s_addr" type="hidden" id="s_addr" value="{#s_addr#}" />
+                    <input name="s_country" type="hidden" id="s_country" value="{#s_country#}" />
+                    <input name="s_postcode" type="hidden" id="s_postcode" value="{#s_postcode#}" />
+                    <input name="s_mobi" type="hidden" id="s_mobi" value="{#s_mobi#}" />
+                    <input name="s_tel" type="hidden" id="s_tel" value="{#s_tel#}" />
+                    <input type="hidden" id="memberid" value="{#memberid#}" />
+                    <!-- /section -->
+                    {#includeInvoice#}
+
+                </div>
+                <!-- container in -->
+                
+                
+                
+    <div class="cart-main-bottom">
+    	<div class="cart-mab-in">
+        	<div class="cart-mab-num">
+            	<p>金额总计</p>
+                <span>{#pricesymbol#} {#showtjine#}</span>
+            </div>
+        	<div class="cart-mab-btn">
+                <button type="submit" class="btn btn-black btn-lg" style="width:160px;display:{#displaycard#};">进行线上刷卡</button>
+                <button type="submit" class="btn btn-black btn-lg" style="width:130px;display:{#displayyun#};";>确定结帐</button>
+            </div>
+        </div>
+    </div>
+    
+<input name="act" type="hidden" id="act" value="orderformsubmit">
+<input type="hidden" id="tjine" value="{#tjine#}">
+<input type="hidden" name="payid" id="payid" value="{#payid#}">
+<input type="hidden" name="urlstr" id="urlstr" value="{#urlstr#}">
+<input type="hidden" name="postpayname" id="postpayname" value="">
+<input type="hidden" name="addrtnote" id="addrnote" value="">
+<div  id="notice" class="noticediv"></div>
+
+</form>
+<!-m2->
+<!-end->
+
+<!-end->
+
+
+<!-menu->
+                    <!-- section -->
+                    <p class="title">发票资讯</p>
+                    <ul class="m-b-20">
+                        <li class="style-toggle">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn active fix-padding donate-invoice-btn" data-toggle="collapse" data-target="#donate-invoice">
+                                    <input type="radio" name='receiptinfo' value="1">
+                                    <i class="icon-circle-o"></i>
+                                    <i class="icon-dot-circle-o"></i>
+                                    <span>捐赠发票</span>
+                                    <i class="icon-arrow-down" id="cpc-home-wt1"></i>
+                                </label>
+                            </div>
+                            <!-- collapse -->
+                            <div class="row fix-padding30 m-b-30 collapse" id="donate-invoice">
+                                <!-- radio -->
+                                <div class="col-xs-4 left ">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn active fix-padding">
+                                            <input type="radio" name='receipt_info_first' value="1" checked>
+                                            <i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i>
+                                            <span class="small">捐赠单位</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- / radio -->
+                                <!-- select -->
+                                <div class="col-xs-4 center">
+                                    <select name="postpay" id="postpay" class="selectpicker form-control">
+                                    									<option value="0">请选择</option>
+                                                                    	<option value="299299">世界联合保护动物协会</option>
+                                                                        <option value="085">中华传爱社区服务协会</option>
+                                                                        <option value="1314520">中华数位人文关怀协会</option>
+                                                                        <option value="795">中华日月门黄帝内经学会</option>
+                                                                        <option value="861108">中华民国康复之友联盟</option>
+                                                                        <option value="9473">中华民国救世慈善协会</option>
+                                                                        <option value="9958">中华民国溪水旁关怀单亲家庭协会</option>
+                                                                        <option value="888">中华民国无障碍科技发展协会</option>
+                                                                        <option value="8566550">中华民国发展迟缓儿童早期疗育协会</option>
+                                                                        <option value="1207">中华民国红十字会台湾省嘉义县支会</option>
+                                                                        <option value="7777777">中华民国红心字会</option>
+                                                                        <option value="999">中华民国老人福利推动联盟</option>
+                                                                        <option value="330">中华民国声晖联合会</option>
+                                                                        <option value="885885">中华民国脑性麻痹协会</option>
+                                                                        <option value="621">中华民国运动神经元疾病病友协会</option>
+                                                                        <option value="875">中华民国关怀心脏病童协会</option>
+                                                                        <option value="1012833">中华民国关怀脑瘤儿童协会</option>
+                                                                        <option value="7505">中华社会福利联合劝募协会</option>
+                                                                        <option value="1717">中华育幼机构儿童关怀协会</option>
+                                                                        <option value="6647">中华灵宝派道士会</option>
+                                                                        <option value="51688">佛教观音线协会</option>
+                                                                        <option value="860713">保护动物协会</option>
+                                                                        <option value="5979066">内政部委托财团法人台湾省天主教会新竹教区办理台湾省宁园安养院</option>
+                                                                        <option value="1234">公益慈善会</option>
+                                                                        <option value="777777">博爱菁莪爱心会</option>
+                                                                        <option value="1979322">台北市心生活协会</option>
+                                                                        <option value="168168">台湾儿童伊比力斯协会</option>
+                                                                        <option value="17885">台湾公益服务协会</option>
+                                                                        <option value="599">台湾动物不再流浪协会</option>
+                                                                        <option value="99365">台湾向日葵全人关怀协会</option>
+                                                                        <option value="288">台湾宝希望树儿童协会</option>
+                                                                        <option value="329580">台湾少年权益与福利促进联盟</option>
+                                                                        <option value="5218">台湾展翅协会</option>
+                                                                        <option value="54321">台湾排球运动协会</option>
+                                                                        <option value="456789">台湾环境保护联盟</option>
+                                                                        <option value="230">台湾蛮野心足生态协会</option>
+                                                                        <option value="007">台湾障碍者就业服务协会</option>
+                                                                        <option value="1011">台湾青少年性别文教会</option>
+                                                                        <option value="195310">国立台湾海洋大学</option>
+                                                                        <option value="700">城市之光关怀协会</option>
+                                                                        <option value="539">埔基医疗财团法人</option>
+                                                                        <option value="3369">基督教旌旗协会</option>
+                                                                        <option value="789">基督教都市标竿协会</option>
+                                                                        <option value="6256">山海屯脊髓损伤协会</option>
+                                                                        <option value="859480">希望社会服务协会</option>
+                                                                        <option value="7017885">康复之友协会</option>
+                                                                        <option value="1841">彩色页女性愿景协会</option>
+                                                                        <option value="520168">心智障碍关顾协会</option>
+                                                                        <option value="8880064">恒基医疗财团法人恒春基督教医院</option>
+                                                                        <option value="6601">戴德森医疗财团法人嘉义基督教医院</option>
+                                                                        <option value="95940">春阳协会</option>
+                                                                        <option value="1685">智障者家长协会</option>
+                                                                        <option value="1818">有限责任屏东县幸福原住民照顾服务劳动合作社</option>
+                                                                        <option value="0829">柳春春剧社剧团</option>
+                                                                        <option value="5788">乐扶庇护工场</option>
+                                                                        <option value="3450">沐风关怀协会</option>
+                                                                        <option value="172">流浪猫保护协会</option>
+                                                                        <option value="2558">盲人福利协进会</option>
+                                                                        <option value="000">社团法人世界和平会</option>
+                                                                        <option value="620">社团法人中华人权协会</option>
+                                                                        <option value="818">社团法人中华光盐爱盲协会</option>
+                                                                        <option value="708585">社团法人中华励本志身心障碍者技艺创业协会</option>
+                                                                        <option value="725">社团法人中华基督奇迹全人关怀协会</option>
+                                                                        <option value="51919">社团法人中华基督教救助协会</option>
+                                                                        <option value="51990">社团法人中华基督教福音协进会</option>
+                                                                        <option value="1360">社团法人中华基督教赞美宣教协会</option>
+                                                                        <option value="377168">社团法人中华好家庭关怀协会</option>
+                                                                        <option value="786">社团法人中华安得烈慈善协会</option>
+                                                                        <option value="9972">社团法人中华小脑萎缩症病友协会</option>
+                                                                        <option value="9195">社团法人中华乐扶社会服务协会</option>
+                                                                        <option value="7299">社团法人中华民国保护动物协会</option>
+                                                                        <option value="529529">社团法人中华民国动物福利环保协进会</option>
+                                                                        <option value="9888">社团法人中华民国台北效力志工团</option>
+                                                                        <option value="777">社团法人中华民国向阳关怀协会</option>
+                                                                        <option value="2656">社团法人中华民国喜愿协会</option>
+                                                                        <option value="2080">社团法人中华民国多加幸福婚姻促进协会</option>
+                                                                        <option value="235757">社团法人中华民国妇幼关怀成长协会</option>
+                                                                        <option value="580097">社团法人中华民国家庭照顾者关怀总会</option>
+                                                                        <option value="428">社团法人中华民国工作伤害受害人协会</option>
+                                                                        <option value="520080">社团法人中华民国得胜者教育协会</option>
+                                                                        <option value="911">社团法人中华民国恩友爱心协会</option>
+                                                                        <option value="99999">社团法人中华民国爱滋感染者权益促进会</option>
+                                                                        <option value="899">社团法人中华民国星桥爱心服务协会</option>
+                                                                        <option value="5252">社团法人中华民国残障联盟</option>
+                                                                        <option value="980322">社团法人中华民国无犯罪促进会</option>
+                                                                        <option value="0520">社团法人中华民国白化症者关怀协会</option>
+                                                                        <option value="4518">社团法人中华民国红十字会台湾省台中市支会</option>
+                                                                        <option value="5275">社团法人中华民国肌萎缩症病友协会</option>
+                                                                        <option value="6666">社团法人中华民国肯爱社会服务协会</option>
+                                                                        <option value="1577">社团法人中华民国自闭症总会</option>
+                                                                        <option value="8999">社团法人中华民国荒野保护协会</option>
+                                                                        <option value="5680">社团法人中华萱民会</option>
+                                                                        <option value="3399">社团法人中华青少年纯洁运动协会</option>
+                                                                        <option value="2358482">社团法人南投县麻烦小天使协会</option>
+                                                                        <option value="450">社团法人台中市启智协进会</option>
+                                                                        <option value="520580">社团法人台中市盲人福利协进会</option>
+                                                                        <option value="885770">社团法人台中市声晖协进会</option>
+                                                                        <option value="566">社团法人台中市脊髓损伤者协会</option>
+                                                                        <option value="1127">社团法人台中市自闭症教育协进会</option>
+                                                                        <option value="5990">社团法人台中市开怀协会</option>
+                                                                        <option value="2718">社团法人台北市喜愿协会</option>
+                                                                        <option value="0915915">社团法人台北市基督教万芳浸信会</option>
+                                                                        <option value="0096">社团法人台北市晚晴妇女协会</option>
+                                                                        <option value="95958">社团法人台北市生命线协会</option>
+                                                                        <option value="772">社团法人台北市自闭症家长协会</option>
+                                                                        <option value="456">社团法人台北市行无碍资源推广协会</option>
+                                                                        <option value="0422">社团法人台北市双胞胎协会</option>
+                                                                        <option value="8599">社团法人台南市女性权益促进会</option>
+                                                                        <option value="3037980">社团法人台南市新世代社会福利关怀协会</option>
+                                                                        <option value="830">社团法人台南市声晖协进会</option>
+                                                                        <option value="815">社团法人台南市脑性麻痹之友协会</option>
+                                                                        <option value="94168">社团法人台湾优活山林协会</option>
+                                                                        <option value="1111">社团法人台湾公益团体自律联盟</option>
+                                                                        <option value="1001">社团法人台湾动物人文社</option>
+                                                                        <option value="916">社团法人台湾动物辅助活动及治疗协会</option>
+                                                                        <option value="6878">社团法人台湾同志家庭权益促进会</option>
+                                                                        <option value="0609">社团法人台湾同志谘询热线协会</option>
+                                                                        <option value="9009">社团法人台湾善行天下发展协会</option>
+                                                                        <option value="333">社团法人台湾妇女团体全国联合会</option>
+                                                                        <option value="70345">社团法人台湾弱势希望协进会</option>
+                                                                        <option value="199907">社团法人台湾彩虹爱家生命教育协会</option>
+                                                                        <option value="518066">社团法人台湾数位有声书推展学会</option>
+                                                                        <option value="3838">社团法人台湾济公盲人爱心会</option>
+                                                                        <option value="17930">社团法人台湾环境资讯协会</option>
+                                                                        <option value="3886">社团法人台湾省大专青年服务协会</option>
+                                                                        <option value="5845">社团法人台湾社会福利总盟</option>
+                                                                        <option value="52020">社团法人台湾福气社区关怀协会</option>
+                                                                        <option value="0285">社团法人台湾结节硬化症协会</option>
+                                                                        <option value="25985">社团法人台湾关爱之家协会</option>
+                                                                        <option value="7799">社团法人台湾关怀人权与健康协会</option>
+                                                                        <option value="5217">社团法人台湾阿甘精神发展协会</option>
+                                                                        <option value="85885">社团法人台湾阳光妇女协会</option>
+                                                                        <option value="852">社团法人台湾露德协会</option>
+                                                                        <option value="0220">社团法人台湾非营利事业经营管理协会</option>
+                                                                        <option value="16940">社团法人台湾黄丝带爱网关怀协会</option>
+                                                                        <option value="703">社团法人嘉义市正德护生慈善会</option>
+                                                                        <option value="1995">社团法人国际生命线台湾总会</option>
+                                                                        <option value="8858">社团法人基隆市脊髓损伤者协会</option>
+                                                                        <option value="588">社团法人基隆市自闭症家长协会</option>
+                                                                        <option value="135">社团法人宜兰县培德关怀协进会</option>
+                                                                        <option value="94180">社团法人宜兰县得安家庭关怀协会</option>
+                                                                        <option value="1011212">社团法人宜兰县渡安居女性关怀协会</option>
+                                                                        <option value="1313677">社团法人宜兰县自闭症者福利协进会</option>
+                                                                        <option value="1616888">社团法人宜兰县非营利组织联盟</option>
+                                                                        <option value="94352">社团法人屏东县原住民社会公益服务协会</option>
+                                                                        <option value="9898">社团法人屏东县慈善团体联合协会</option>
+                                                                        <option value="7364783">社团法人屏东县社会工作者协会</option>
+                                                                        <option value="7351024">社团法人屏东县自闭症协进会</option>
+                                                                        <option value="5168">社团法人屏东县跃爱全人关怀协会</option>
+                                                                        <option value="006">社团法人彰化县启智协进会</option>
+                                                                        <option value="820">社团法人彰化县喜乐小儿麻痹关怀协会</option>
+                                                                        <option value="500">社团法人彰化县爱邻社会福利协会</option>
+                                                                        <option value="8888">社团法人彰化县脊髓损伤重建协会</option>
+                                                                        <option value="17655">社团法人恩物社会服务推广协会</option>
+                                                                        <option value="021995">社团法人新北市国际生命线协会</option>
+                                                                        <option value="7879">社团法人新北市脊髓损伤者协会</option>
+                                                                        <option value="6684">社团法人新竹市智障福利协进会</option>
+                                                                        <option value="9595">社团法人新竹市生命线协会</option>
+                                                                        <option value="97324">社团法人新竹市声晖协会</option>
+                                                                        <option value="8185">社团法人桃园县失智症关怀协会</option>
+                                                                        <option value="204">社团法人桃园县爱邻舍协会</option>
+                                                                        <option value="2615372">社团法人桃园县拾穗关怀服务协会</option>
+                                                                        <option value="3699135">社团法人桃园县智障者家长协会</option>
+                                                                        <option value="0885">社团法人桃园县社区精神复健协会</option>
+                                                                        <option value="922">社团法人看守台湾协会</option>
+                                                                        <option value="626626">社团法人台中市山海屯启智协会</option>
+                                                                        <option value="52668">社团法人台北市支持流浪猫绝育计划协会</option>
+                                                                        <option value="88749">社团法人台北县康复之友协会</option>
+                                                                        <option value="377">社团法人台北县弥赛亚全人关怀协会</option>
+                                                                        <option value="1205">社团法人台北县志愿服务协会</option>
+                                                                        <option value="1010">社团法人台南市以琳之家关怀协会</option>
+                                                                        <option value="4141">社团法人台东县南回健康促进关怀服务协会</option>
+                                                                        <option value="668">社团法人台东县向日葵关怀协会</option>
+                                                                        <option value="513663">社团法人台东县教育发展协会</option>
+                                                                        <option value="95999">社团法人台湾点一盏灯社会关怀协会</option>
+                                                                        <option value="4997276">社团法人花莲县大比大家庭关怀协会</option>
+                                                                        <option value="7756">社团法人花莲县智障福利协进会</option>
+                                                                        <option value="5577">社团法人花莲县老人暨家庭关怀协会</option>
+                                                                        <option value="1520">社团法人花莲县脊髓损伤福利协进会</option>
+                                                                        <option value="334792">社团法人苗栗县肢体伤残自强协会</option>
+                                                                        <option value="181622">社团法人亲慈慈善会</option>
+                                                                        <option value="5223040">社团法人云林县儿童福利发展协会</option>
+                                                                        <option value="1311">社团法人云林县启智协会</option>
+                                                                        <option value="1313">社团法人云林县老人福利保护协会</option>
+                                                                        <option value="0531026">社团法人云林县老人长期照护协会</option>
+                                                                        <option value="630123">社团法人云林县声晖协进会</option>
+                                                                        <option value="6332675">社团法人云林县虎尾残障福利协会</option>
+                                                                        <option value="6565520">社团法人云林县身心照护协会</option>
+                                                                        <option value="954846">社团法人高雄市向阳自立生活协会</option>
+                                                                        <option value="58938">社团法人高雄市大岗山康复之友协会</option>
+                                                                        <option value="3226666">社团法人高雄市慈善团体联合总会</option>
+                                                                        <option value="88002">社团法人高雄市注意力缺陷过动症协会</option>
+                                                                        <option value="7995">社团法人高雄市生命线协会</option>
+                                                                        <option value="7881155">社团法人高雄市社福慈善团体联合会</option>
+                                                                        <option value="6565">社团法人高雄市超越巅峰关怀协会</option>
+                                                                        <option value="529">社团法人高雄市关怀流浪动物协会</option>
+                                                                        <option value="9016888">社团法人高雄市青少年关怀协会</option>
+                                                                        <option value="7893">社团法人高雄县心理复健家属关怀协会</option>
+                                                                        <option value="17843">社团法人高雄县憨儿就业辅导协会</option>
+                                                                        <option value="3560463">私立希恩之家</option>
+                                                                        <option value="137">私立康宁医护暨管理专科学校</option>
+                                                                        <option value="5281">私立台北医学大学</option>
+                                                                        <option value="17924">绿党</option>
+                                                                        <option value="775885">声晖协会</option>
+                                                                        <option value="33000">声晖协进会</option>
+                                                                        <option value="2013">肢体伤残协进会</option>
+                                                                        <option value="8585885">自闭症协进会</option>
+                                                                        <option value="7688">自闭症服务协进会</option>
+                                                                        <option value="5201314">自闭症肯纳家长协会</option>
+                                                                        <option value="555">台湾基督教门诺会医疗财团法人门诺医院</option>
+                                                                        <option value="0219">艺术创作者职业工会</option>
+                                                                        <option value="209">财团法人一粒麦子社会福利慈善事业基金会</option>
+                                                                        <option value="8828">财团法人中华基督教伯特利会总会</option>
+                                                                        <option value="25163">财团法人中华民国(台湾)安宁照顾基金会</option>
+                                                                        <option value="779">财团法人中华民国佛教慈济慈善事业基金会</option>
+                                                                        <option value="88888">财团法人中华民国儿童癌症基金会</option>
+                                                                        <option value="885521">财团法人中华民国儿童福利联盟文教基金会</option>
+                                                                        <option value="321">财团法人中华民国唐氏症基金会</option>
+                                                                        <option value="7001234">财团法人中华民国消费者文教基金会</option>
+                                                                        <option value="402">财团法人中华民国自闭症基金会</option>
+                                                                        <option value="201314">财团法人主妇联盟环境保护基金会</option>
+                                                                        <option value="7777">财团法人乳癌防治基金会</option>
+                                                                        <option value="918">财团法人人安社会福利慈善事业基金会</option>
+                                                                        <option value="05178">财团法人介惠社会福利慈善基金会</option>
+                                                                        <option value="25885">财团法人伊甸社会福利基金会</option>
+                                                                        <option value="3131">财团法人佛教僧伽医护基金会</option>
+                                                                        <option value="876945">财团法人信望爱脐带血基金会</option>
+                                                                        <option value="120">财团法人全民健康基金会</option>
+                                                                        <option value="9866">财团法人切肤之爱社会福利慈善事业基金会</option>
+                                                                        <option value="2995">财团法人利河伯社会福利基金会</option>
+                                                                        <option value="919">财团法人创世社会福利基金会</option>
+                                                                        <option value="9118595">财团法人励馨社会福利事业基金会</option>
+                                                                        <option value="1010225">财团法人十方启智文教基金会</option>
+                                                                        <option value="885">财团法人千佛山慈善基金会</option>
+                                                                        <option value="85717">财团法人南投县私立德安启智教养院</option>
+                                                                        <option value="545">财团法人南投县私立炫宽爱心教养家园</option>
+                                                                        <option value="131">财团法人博幼社会福利基金会</option>
+                                                                        <option value="1589">财团法人台中市私立宏恩社会福利慈善基金会</option>
+                                                                        <option value="3335">财团法人台中市私立康善社会福利慈善事业基金会</option>
+                                                                        <option value="0303">财团法人台中市私立张秀菊社会福利慈善事业基金会</option>
+                                                                        <option value="1385">财团法人台中市私立甘霖社会福利慈善事业基金会</option>
+                                                                        <option value="2020">财团法人台中市私立真爱社会福利慈善事业基金会</option>
+                                                                        <option value="5678">财团法人台中市私立群园社会福利基金会</option>
+                                                                        <option value="33001">财团法人台中市私立声晖综合知能发展中心</option>
+                                                                        <option value="185">财团法人台中市私立龙眼林社会福利慈善事业基金会</option>
+                                                                        <option value="0770223">财团法人台北市基督徒救世会社会褔利事业基金会</option>
+                                                                        <option value="101">财团法人台北市基督教励友中心</option>
+                                                                        <option value="88472">财团法人台北市失亲儿福利基金会</option>
+                                                                        <option value="81852">财团法人台北市爱慈社会福利基金会</option>
+                                                                        <option value="785785">财团法人台北市私立同舟发展中心</option>
+                                                                        <option value="3060493">财团法人台北市私立爱爱院</option>
+                                                                        <option value="520">财团法人台北市私立双连视障关怀基金会</option>
+                                                                        <option value="52772">财团法人台北市自闭儿社会福利基金会</option>
+                                                                        <option value="399">财团法人台北市赛珍珠基金会</option>
+                                                                        <option value="1013">财团法人台北县私立乐山疗养院</option>
+                                                                        <option value="520999">财团法人台南市私立吾爱吾家老人养护中心</option>
+                                                                        <option value="52088">财团法人台南市私立天主教瑞复益智中心</option>
+                                                                        <option value="52099">财团法人台南市私立天主教瑞复社会福利基金会</option>
+                                                                        <option value="0202">财团法人台南市私立康宁教养院</option>
+                                                                        <option value="788">财团法人台南市私立朝兴社会福利慈善事业基金会</option>
+                                                                        <option value="666">财团法人台南市私立朝兴社会福利慈善事业基金会</option>
+                                                                        <option value="971103">财团法人台南市私立荷园社会福利慈善事业基金会</option>
+                                                                        <option value="8080">财团法人台东基督教医院</option>
+                                                                        <option value="299">财团法人台东基督教医院</option>
+                                                                        <option value="5257999">财团法人台东县私立牧心智能发展中心</option>
+                                                                        <option value="7000">财团法人台湾世界展望会</option>
+                                                                        <option value="68660">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="5900">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="5678585">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="463558">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="8455">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="818585">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="461234">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="8585">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="7885">财团法人台湾儿童暨家庭扶助基金会</option>
+                                                                        <option value="70885">财团法人台湾儿童暨家庭扶助基金会南投分事务所</option>
+                                                                        <option value="024">财团法人台湾儿童暨家庭扶助基金会台中市北区分事务所</option>
+                                                                        <option value="5584">财团法人台湾儿童暨家庭扶助基金会台中市南区分事务所</option>
+                                                                        <option value="176176">财团法人台湾儿童暨家庭扶助基金会台北市北区分事务所</option>
+                                                                        <option value="5520">财团法人台湾儿童暨家庭扶助基金会台北市南区分事务所</option>
+                                                                        <option value="2085">财团法人台湾儿童暨家庭扶助基金会台南市北区分事务所</option>
+                                                                        <option value="6782">财团法人台湾儿童暨家庭扶助基金会台南市南区分事务所</option>
+                                                                        <option value="323804">财团法人台湾儿童暨家庭扶助基金会台东分事务所</option>
+                                                                        <option value="2812085">财团法人台湾儿童暨家庭扶助基金会嘉义分事务所</option>
+                                                                        <option value="33085">财团法人台湾儿童暨家庭扶助基金会基隆分事务所</option>
+                                                                        <option value="078585">财团法人台湾儿童暨家庭扶助基金会宜兰分事务所</option>
+                                                                        <option value="7123">财团法人台湾儿童暨家庭扶助基金会屏东分事务所</option>
+                                                                        <option value="2100">财团法人台湾儿童暨家庭扶助基金会彰化分事务所</option>
+                                                                        <option value="378585">财团法人台湾儿童暨家庭扶助基金会新北市分事务所</option>
+                                                                        <option value="5875">财团法人台湾儿童暨家庭扶助基金会澎湖分事务所</option>
+                                                                        <option value="1785">财团法人台湾儿童暨家庭扶助基金会花莲分事务所</option>
+                                                                        <option value="326139">财团法人台湾儿童暨家庭扶助基金会金门分事务所</option>
+                                                                        <option value="8700">财团法人台湾儿童暨家庭扶助基金会附设南投县私立家扶希望学园</option>
+                                                                        <option value="8300">财团法人台湾儿童暨家庭扶助基金会附设彰化县私立家扶发展学园</option>
+                                                                        <option value="6361712">财团法人台湾儿童暨家庭扶助基金会附设云林县私立家扶希望学园</option>
+                                                                        <option value="6361716">财团法人台湾儿童暨家庭扶助基金会附设云林县私立家扶发展学园</option>
+                                                                        <option value="6323200">财团法人台湾儿童暨家庭扶助基金会云林分事务所</option>
+                                                                        <option value="3100">财团法人台湾儿童暨家庭扶助基金会高雄市北区分事务所</option>
+                                                                        <option value="7261651">财团法人台湾儿童暨家庭扶助基金会高雄市南区分事务所</option>
+                                                                        <option value="2000">财团法人台湾国际奥比斯防盲救盲基金会</option>
+                                                                        <option value="580">财团法人台湾基督教主爱之家辅导中心</option>
+                                                                        <option value="1799">财团法人台湾癌症基金会</option>
+                                                                        <option value="195185">财团法人台湾省私立台湾盲人重建院</option>
+                                                                        <option value="002">财团法人台湾省私立向上社会福利基金会</option>
+                                                                        <option value="175758">财团法人台湾省私立心德慈化教养院</option>
+                                                                        <option value="17934">财团法人台湾省私立景仁残障教养院</option>
+                                                                        <option value="3344">财团法人台湾省私立香园纪念教养院</option>
+                                                                        <option value="252999">财团法人台湾省私立鸿佳启能庇护中心</option>
+                                                                        <option value="8612423">财团法人台湾省花莲县中华基督长老会山宣总会附设花莲县私立原住</option>
+                                                                        <option value="121">财团法人台湾红丝带基金会</option>
+                                                                        <option value="1018">财团法人台湾肯纳自闭症基金会</option>
+                                                                        <option value="2597885">财团法人台湾关爱基金会</option>
+                                                                        <option value="525">财团法人周大观文教基金会</option>
+                                                                        <option value="88432">财团法人喜憨儿社会福利基金会</option>
+                                                                        <option value="220225">财团法人嘉义市私立修缘育幼院</option>
+                                                                        <option value="5656">财团法人嘉义市私立嘉爱启智发展中心</option>
+                                                                        <option value="2390069">财团法人嘉义县私立嘉惠教养院</option>
+                                                                        <option value="5968">财团法人嘉义县私立天主教敏道社会福利慈善事业基金会</option>
+                                                                        <option value="0123">财团法人圆觉宗智敏慧华金刚上师教育基金会</option>
+                                                                        <option value="8524">财团法人地球公民基金会</option>
+                                                                        <option value="276">财团法人基督教宇宙光全人关怀机构</option>
+                                                                        <option value="1720">财团法人基督教爱网全人关怀社会福利慈善事业基金会</option>
+                                                                        <option value="52947">财团法人基督教救世军</option>
+                                                                        <option value="7699">财团法人基督教玛喜乐社会福利基金会</option>
+                                                                        <option value="5200">财团法人基督教台北市私立伯大尼儿少家园</option>
+                                                                        <option value="001">财团法人基督教芥菜种会</option>
+                                                                        <option value="2259">财团法人基督教都市人工作群社会福利事业基金会</option>
+                                                                        <option value="699">财团法人基隆市私立博爱仁爱之家</option>
+                                                                        <option value="20999">财团法人大甲妈社会福利基金会附设台中县私立镇澜儿童家园</option>
+                                                                        <option value="017885">财团法人大众教育基金会</option>
+                                                                        <option value="988">财团法人天主教光仁社会福利基金会</option>
+                                                                        <option value="2020520">财团法人天主教台南县私立芦苇启智中心</option>
+                                                                        <option value="8835">财团法人天主教善牧社会福利基金会</option>
+                                                                        <option value="858">财团法人天主教失智老人社会福利基金会</option>
+                                                                        <option value="1773">财团法人天主教晓明社会福利基金会</option>
+                                                                        <option value="213">财团法人天主教会台中教区</option>
+                                                                        <option value="7885580">财团法人天主教会台中教区</option>
+                                                                        <option value="01985">财团法人天主教会台中教区</option>
+                                                                        <option value="2885">财团法人天主教会台中教区</option>
+                                                                        <option value="025520">财团法人天主教会嘉义教区</option>
+                                                                        <option value="225">财团法人天主教会嘉义教区</option>
+                                                                        <option value="520770">财团法人天主教会嘉义教区</option>
+                                                                        <option value="88742">财团法人天主教会嘉义教区</option>
+                                                                        <option value="855">财团法人天主教会花莲教区附设花莲县私立声远老人养护之家</option>
+                                                                        <option value="1111111">财团法人天主教白永恩神父社会福利基金会</option>
+                                                                        <option value="885288">财团法人天主教福利会</option>
+                                                                        <option value="386">财团法人天主教圣保禄修女会医院</option>
+                                                                        <option value="2025">财团法人天主教台南市私立德兰启智中心</option>
+                                                                        <option value="8861210">财团法人天主教花莲教区附设私立安德启智中心</option>
+                                                                        <option value="1251">财团法人天主教华光社会福利基金会</option>
+                                                                        <option value="011668">财团法人天主教灵医会</option>
+                                                                        <option value="336">财团法人天使心家族社会福利基金会</option>
+                                                                        <option value="580580">财团法人天恒文教基金会</option>
+                                                                        <option value="3899">财团法人妇女新知基金会</option>
+                                                                        <option value="9283880">财团法人宜兰县私立兰阳仁爱之家</option>
+                                                                        <option value="235">财团法人宜兰县私立兰馨妇幼中心</option>
+                                                                        <option value="7366294">财团法人屏东基督教胜利之家</option>
+                                                                        <option value="90061">财团法人屏东县私立基督教伯大尼之家</option>
+                                                                        <option value="080">财团法人屏东县私立屏东启智教养院</option>
+                                                                        <option value="111222">财团法人屏东县私立福慧社会福利慈善事业基金会</option>
+                                                                        <option value="7707097">财团法人屏东县私立迦南身心障碍养护院</option>
+                                                                        <option value="2581">财团法人广青文教基金会</option>
+                                                                        <option value="590">财团法人弘道老人福利基金会</option>
+                                                                        <option value="1980198">财团法人张老师基金会</option>
+                                                                        <option value="5276">财团法人彰化县私立基督教喜乐保育院</option>
+                                                                        <option value="72995">财团法人彰化县私立秀和慈善事业基金会</option>
+                                                                        <option value="8713399">财团法人彰化县私立青山社会福利慈善事业基金会</option>
+                                                                        <option value="876">财团法人心路社会福利基金会</option>
+                                                                        <option value="25999">财团法人忠义社会福利事业基金会</option>
+                                                                        <option value="199185">财团法人惠光导盲犬教育基金会</option>
+                                                                        <option value="921">财团法人愚人之友社会福利慈善事业基金会</option>
+                                                                        <option value="5880">财团法人爱盲基金会</option>
+                                                                        <option value="9331001">财团法人慈怀社会福利基金会</option>
+                                                                        <option value="107765">财团法人新北市私立台湾天主教安老院</option>
+                                                                        <option value="4567988">财团法人新北市私立荣光育幼院</option>
+                                                                        <option value="228">财团法人新竹市天主教仁爱社会福利基金会</option>
+                                                                        <option value="521">财团法人新竹市私立爱恒启能中心</option>
+                                                                        <option value="9955116">财团法人新竹县天主教世光教养院</option>
+                                                                        <option value="0280928">财团法人新竹县天主教世光教养院</option>
+                                                                        <option value="1314">财团法人晨光社会福利基金会附设金门县私立晨光教养家园</option>
+                                                                        <option value="17270">财团法人普仁青年关怀基金会</option>
+                                                                        <option value="1314885">财团法人李胜贤文教基金会</option>
+                                                                        <option value="268">财团法人桃园县真善美社会福利基金会</option>
+                                                                        <option value="295">财团法人桃园县私立仁友爱心家园</option>
+                                                                        <option value="520530">财团法人桃园县私立安康启智教养院</option>
+                                                                        <option value="329">财团法人桃园县私立宝贝潜能发展中心</option>
+                                                                        <option value="4205558">财团法人桃园县私立心灯启智教养院</option>
+                                                                        <option value="4870110">财团法人桃园县私立方舟启智教养院</option>
+                                                                        <option value="518007">财团法人桃园县私立脊髓损伤潜能发展中心</option>
+                                                                        <option value="995">财团法人桃园县私立观音爱心家园</option>
+                                                                        <option value="1000">财团法人桃园县私立路得启智学园</option>
+                                                                        <option value="0916">财团法人桃园县私立龙潭启智教养院</option>
+                                                                        <option value="1961537">财团法人桃园县美好社会福利基金会</option>
+                                                                        <option value="923">财团法人正德社会福利慈善基金会</option>
+                                                                        <option value="8957282">财团法人流浪动物之家基金会</option>
+                                                                        <option value="86129">财团法人济兴长青基金会</option>
+                                                                        <option value="5850">财团法人犯罪被害人保护协会</option>
+                                                                        <option value="5238">财团法人现代妇女教育基金会</option>
+                                                                        <option value="880">财团法人玛利亚社会福利基金会</option>
+                                                                        <option value="2321">财团法人环境品质文教基金会</option>
+                                                                        <option value="711">财团法人环宇国际文化基金会</option>
+                                                                        <option value="16888">财团法人癌症希望基金会</option>
+                                                                        <option value="365">财团法人私立天主教中华圣母社会福利慈善事业基金会</option>
+                                                                        <option value="0818">财团法人私立天主教华光智能发展中心</option>
+                                                                        <option value="51811">财团法人第一社会福利基金会</option>
+                                                                        <option value="161">财团法人粘得纪念教育基金会</option>
+                                                                        <option value="9527">财团法人罕见疾病基金会</option>
+                                                                        <option value="012378">财团法人罗慧夫颅颜基金会</option>
+                                                                        <option value="050">财团法人老五老基金会</option>
+                                                                        <option value="9946959">财团法人耕心莲苑教育基金会</option>
+                                                                        <option value="123999">财团法人圣岛社会福利慈善基金会</option>
+                                                                        <option value="583">财团法人肝病防治学术基金会</option>
+                                                                        <option value="7085">财团法人育成社会福利基金会</option>
+                                                                        <option value="4399">财团法人至善社会福利基金会</option>
+                                                                        <option value="12345">财团法人台中市私立信望爱智能发展中心</option>
+                                                                        <option value="2320">财团法人台中市私立衡山社会福利基金会</option>
+                                                                        <option value="5291">财团法人台北市喜乐家族社会福利基金会</option>
+                                                                        <option value="8595">财团法人台北市妇女救援社会福利事业基金会</option>
+                                                                        <option value="52168">财团法人台南市私立丰德教养院</option>
+                                                                        <option value="6688">财团法人台湾基督教门诺会</option>
+                                                                        <option value="35760">财团法人台湾基督教门诺会</option>
+                                                                        <option value="788595">财团法人台湾更生保护会</option>
+                                                                        <option value="528">财团法人台湾省天主教会新竹教区</option>
+                                                                        <option value="5566">财团法人台湾省天主教会新竹教区</option>
+                                                                        <option value="3675235">财团法人台湾省天主教会新竹教区</option>
+                                                                        <option value="1795">财团法人台湾省天主教会新竹教区</option>
+                                                                        <option value="66666">财团法人台湾省私立光明仁爱之家</option>
+                                                                        <option value="1212">财团法人台湾省花莲县基督教宣教士差会附属花莲毕士大教养院</option>
+                                                                        <option value="2911811">财团法人良显堂社会福利基金会</option>
+                                                                        <option value="212">财团法人花莲县私立博爱居安庐老人安养中心</option>
+                                                                        <option value="527">财团法人花莲县私立慈惠爱心基金会</option>
+                                                                        <option value="823">财团法人花莲县私立美仑启能发展中心</option>
+                                                                        <option value="2595">财团法人苗栗县私立幼安教养院</option>
+                                                                        <option value="520520">财团法人苗栗县私立华严启能中心</option>
+                                                                        <option value="064063">财团法人若竹儿教育基金会</option>
+                                                                        <option value="111">财团法人华山社会福利慈善事业基金会</option>
+                                                                        <option value="785">财团法人蒲公英希望基金会</option>
+                                                                        <option value="96588">财团法人兰智社会福利基金会</option>
+                                                                        <option value="5260">财团法人门诺社会福利慈善事业基金会</option>
+                                                                        <option value="16885">财团法人阿宝教育基金会</option>
+                                                                        <option value="13579">财团法人阳光社会福利基金会</option>
+                                                                        <option value="889881">财团法人雅文儿童听语文教基金会</option>
+                                                                        <option value="2003098">财团法人双福社会福利慈善事业基金会</option>
+                                                                        <option value="2002515">财团法人双福社会福利慈善事业基金会</option>
+                                                                        <option value="515">财团法人靖娟儿童安全文教基金会</option>
+                                                                        <option value="7177">财团法人高雄市小港浸信会</option>
+                                                                        <option value="5586331">财团法人高雄市私立博正儿童发展中心</option>
+                                                                        <option value="6891054">财团法人高雄市私立基督教山地育幼院</option>
+                                                                        <option value="8888888">财团法人高雄市私立慈晖关怀学园</option>
+                                                                        <option value="88772">财团法人高雄市私立星星儿社会福利基金会</option>
+                                                                        <option value="86888">财团法人麦当劳叔叔之家儿童慈善基金会</option>
+                                                                        <option value="59427">财团法人黑潮海洋文教基金会</option>
+                                                                        <option value="0998428">身心障碍服务推展协会</option>
+                                                                        <option value="088999">身心障碍福利促进会</option>
+                                                                        <option value="200938">身心障碍者体育会</option>
+                                                                        <option value="179">医疗财团法人正德癌症医疗基金会</option>
+                                    </select>
+                                </div>
+                                <div class="clearfix"></div>
+                                <!--  ////////////////////////////////////////-->
+                                <!-- radio -->
+                                <div class="col-xs-4 left">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn active fix-padding">
+                                            <input type="radio" name='receipt_info_first' value="2"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  其他社福团体爱心码（限数字）</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- / radio -->
+                                <!-- select -->
+                                <div class="col-xs-4 center">
+                                    <input type="text" class="form-control" name='postnum' id='postnum'>
+                                </div>
+                                <!-- select -->
+                            </div>
+                            <!-- row -->
+                            <!-- / collapse -->
+                        </li>
+                        <hr class="hr-10">
+                        <li class="style-toggle">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn active fix-padding two-invoice-btn" data-toggle="collapse" data-target="#two-invoice">
+                                    <input type="radio" name='receiptinfo' value="2">
+                                    <i class="icon-circle-o"></i>
+                                    <i class="icon-dot-circle-o"></i>
+                                    <span>二联电子发票</span>
+                                    <i class="icon-arrow-down" id="cpc-home-wt2"></i>
+                                </label>
+                            </div>
+                            <!-- collapse2 -->
+                            <div class="row fix-padding30 m-b-30 collapse cpc-2lain" id="two-invoice">
+                                <!-- radio -->
+                                <div class="col-xs-12">
+                                    <div class="btn-group cpc-btna2" data-toggle="buttons">
+                                        <label class="btn active fix-padding">
+                                            <input type="radio" name='receipt_info_second'  value="1" checked><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  锐鎷会员载具</span>
+                                        </label>
+                                    </div>
+                                    <p class="tip">※ 使用会员帐号为载具，发票将存入会员专区，我们将自动为您对奖，中奖后主动通知您。<a href="">（详见说明）</a></p>
+                                </div>
+                                <!-- / radio -->
+                                <div class="clearfix m-b-15"></div>
+                                <!--  ////////////////////////////////////////-->
+                                <!-- radio -->
+                                <div class="col-xs-12">
+                                    <div class="btn-group cpc-btna2" data-toggle="buttons">
+                                        <label class="btn active fix-padding">
+                                            <input type="radio" name='receipt_info_second' value="2"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  手机载具</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- / radio -->
+                                <div class="col-xs-4 left">
+                                    <p>请输入手机载具条码</p>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <input type="text" class="form-control" name="mobicode" id="mobicode"> </div>
+                                <div class="col-xs-12">
+                                    <p>（限大写英数字）</p>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-xs-4 left">
+                                    <p>请再次确认手机载具条码</p>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <input type="text" class="form-control" name="remobicode" id="remobicode"> </div>
+                                <div class="col-xs-12">
+                                    <p>（限大写英数字）</p>
+                                </div>
+                                <!--  ////////////////////////////////////////-->
+                                <!-- radio -->
+                                <!--div class="col-xs-12">
+                                    <div class="btn-group cpc-btna2" data-toggle="buttons">
+                                        <label class="btn active fix-padding">
+                                            <input type="radio" name='donate-invoice1'>
+                                            <i class="icon-circle-o"></i>
+                                            <i class="icon-dot-circle-o"></i>
+                                            <span class="small">自然人凭证</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- / radio -->
+                                <!--div class="col-xs-4 left">
+                                    <p>请输入自然人凭证</p>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <input type="text" class="form-control"> </div>
+                                <div class="col-xs-12">
+                                    <p>（限英数字）</p>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="clearfix m-b-15"></div>
+                                <div class="col-xs-4 left">
+                                    <p>请再次确认自然人凭证</p>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <input type="text" class="form-control"> </div>
+                                <div class="col-xs-12">
+                                    <p>（限英数字）</p>
+                                </div-->
+                                <div class="clearfix m-b-25"></div>
+                                <p class="tip">※您需持有手机载具，详见财政部<a href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/GeneralCarrier/generalCarrier" target="_blank">“电子发票整合服务平台”</a>说明。</p>
+                            </div>
+                            <!-- row -->
+                            <!-- / collapse2 -->
+                        </li>
+                        <hr class="hr-10">
+                        <li class="style-toggle">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn active fix-padding three-invoice-btn" data-toggle="collapse" data-target="#three-invoice">
+                                    <input type="radio" name='receiptinfo'  value="3"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  三联电子发票</span>
+                                </label>
+                            </div>
+                            <!-- collapse3 -->
+                            <div class="row fix-padding30 m-b-30 collapse" id="three-invoice">
+                                <div class="col-xs-4 left">
+                                    <p>统一编号</p>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <input type="text" class="form-control" name="invoicenumber" id="invoicenumber"> </div>
+                                <div class="clearfix"></div>
+                                <div class="col-xs-4 left">
+                                    <p>发票抬头</p>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <input type="text" class="form-control" name="invoicename" id="invoicename"> </div>
+                                <div class="col-xs-12">
+                                    <p>（限22个全形文字）</p>
+                                </div>
+                            </div>
+                            <!-- / collapse3 -->
+                        </li>
+                    </ul>
+                    <p class="cpc-notebot">※ 依统一发票使用办法规定：个人户(二联式)发票一经开立，不得任意更改为公司户(三联式)发票。</p>
+                    <hr>
+                    <!-- /section -->
+<!-menu->
+
+<!-text->
+	<input type="radio" name='receiptinfo' value="2" style="display:none;" checked>
+	<input type="hidden" name='receipt_info_second'  value="1">
+<!-text->

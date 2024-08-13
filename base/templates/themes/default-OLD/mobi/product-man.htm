@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <title>REMA</title>
+    <meta name="description" content="">
+    <meta name="Keywords" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/icomoon/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+     <!-- header -->
+<div class="header">
+    <a class="navbar-brand" href="index.htm" title="Home">
+        <img src="img/index/REMA-logo.png" alt="">
+    </a>
+</div>
+<!-- END header -->
+                <div class="container in-product no-top-nav">
+                <ul class="product-main-toggle" id="accordion">
+                <!-- LIST -->
+                   <li class="cycling">
+                   <a href="#cycling" class="img-hold" data-toggle="collapse">
+                   <h3>單車系列</h3>
+                   <img src="img/product/Cycling_001.jpg">
+                   </a>
+                   <ol class="collapse" id="cycling">
+                       <li><a href="product-list.htm">上衣</a></li>
+                       <li><a href="product-list.htm">褲款</a></li>
+                       <li><a href="product-list.htm">外套</a></li>
+                       <li><a href="product-list.htm">袖腿套</a></li>
+                       <li><a href="product-list.htm">襪子</a></li>
+                   </ol>
+                   </li>
+                <!-- / LIST -->
+                <!-- LIST -->
+                   <li class="compression">
+                    <a href="#compression" class="img-hold" data-toggle="collapse">
+                   <h3>壓縮系列</h3>
+                   <img src="img/product/Compression_001.jpg">
+                   </a>
+                   <ol class="collapse" id="compression">
+                       <li><a href="product-list.htm">上衣</a></li>
+                       <li><a href="product-list.htm">褲款</a></li>
+                       <li><a href="product-list.htm">外套</a></li>
+                       <li><a href="product-list.htm">袖腿套</a></li>
+                       <li><a href="product-list.htm">襪子</a></li>
+                   </ol>
+                   </li>
+                <!-- / LIST -->
+                <!-- LIST -->
+                   <li class="running">
+                   <a href="#running" class="img-hold" data-toggle="collapse">
+                   <h3>慢跑系列</h3>
+                   <img src="img/product/Running_001.jpg">
+                   </a>
+                   <ol class="collapse" id="running">
+                       <li><a href="product-list.htm">上衣</a></li>
+                       <li><a href="product-list.htm">褲款</a></li>
+                       <li><a href="product-list.htm">外套</a></li>
+                       <li><a href="product-list.htm">袖腿套</a></li>
+                       <li><a href="product-list.htm">襪子</a></li>
+                   </ol>
+                   </li>
+                <!-- / LIST -->
+                <!-- LIST -->
+                   <li class="special">
+                   <a href="#special" class="img-hold" data-toggle="collapse">
+                   <h3>特價商品</h3>
+                   <img src="img/product/special.jpg">
+                   </a>
+                   <ol class="collapse" id="special">
+                       <li><a href="product-list.htm">上衣</a></li>
+                       <li><a href="product-list.htm">褲款</a></li>
+                       <li><a href="product-list.htm">外套</a></li>
+                       <li><a href="product-list.htm">袖腿套</a></li>
+                       <li><a href="product-list.htm">襪子</a></li>
+                   </ol>
+                   </li>
+                <!-- / LIST -->
+                </ul>
+                </div>
+                <!-- container in -->
+    <!-- footer -->
+    <div id="footer"> </div>
+    <div id="bottom-nav"></div>
+    <!--/  footer -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="plugins/jqzoom-master/jquery-1.5.js"></script>-->
+    <script type="text/javascript" src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/load-page.js"></script>
+    <!-- owl-carousel -->
+    <script>
+setTimeout(function() { $(".bottom-nav li").eq(0).addClass("active");}, 300 );
+$(document).ready(function() {
+        $(".cycling a").click(function() {
+            $("#compression").collapse('hide');
+            $("#running").collapse('hide');
+            $("#special").collapse('hide');
+            // $('html,body').animate({scrollTop:$('#cycling').offset().top},300);
+        });
+        $(".compression a").click(function() {
+            $("#cycling").collapse('hide');
+            $("#running").collapse('hide');
+            $("#special").collapse('hide');
+            // $('html,body').animate({scrollTop:$('#compression').offset().top},300);
+        });
+        $(".running a").click(function() {
+            $("#cycling").collapse('hide');
+            $("#compression").collapse('hide');
+            $("#special").collapse('hide');
+            // $('html,body').animate({scrollTop:$('#running').offset().top},300);
+        });
+        $(".special a").click(function() {
+            $("#cycling").collapse('hide');
+            $("#compression").collapse('hide');
+            $("#running").collapse('hide');
+            // $('html,body').animate({scrollTop:$('#special').offset().top},300);
+        });
+    });
+    </script>
+    </script>
+</body>
+
+</html>

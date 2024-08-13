@@ -1,0 +1,26 @@
+<!-start->
+<link href="css/productlist_4.css" rel="stylesheet" type="text/css" />
+<!-start->
+<!-list->
+<div class="productlist_4">
+    <div class="productlist_4_left">
+		<div class="fang" style="width:{#picw#}px;height:{#pich#}px">
+		<div class="picFit" style="width:{#picw#}px;height:{#pich#}px">
+		<a href="{#link#}" target="{#target#}" ><img src="{#src#}" style="width:{#picw#}px;height:{#pich#}px" border="0" /></a>
+		</div>
+		</div>
+	</div>
+	<div class="productlist_4_right">
+		<a href="{#link#}" target="{#target#}" class="prodtitle" {#bold#} {#red#} >{#title#}</a>
+		<span class="memo">{#memo#}</span>
+	</div>
+</div>
+<!-list->
+<!-end->
+<script>
+$(function() {
+$().picFit("{#fittype#}");
+});
+</script>
+<!-end->
+

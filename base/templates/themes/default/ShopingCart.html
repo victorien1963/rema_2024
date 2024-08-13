@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{#pagetitle#} {#sitename#}</title>
+    <meta name="description" content="{#metacon#}">
+    <meta name="Keywords" content="{#metakey#}">
+	{#metaimage#}
+	{#addmeta#}
+	{#addscript#}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{#TM#}css/owl.carousel.css">
+    <link rel="stylesheet" href="{#TM#}css/owl.theme.default.css">
+	<link rel="stylesheet" href="{#TM#}css/HeaderAndFoot.css">
+	<link rel="stylesheet" href="{#TM#}css/InputStyle.css?1">
+	<link rel="stylesheet" href="{#TM#}css/PopupWindow.css?2">
+	<link rel="stylesheet" href="{#TM#}css/ShopingCart.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/header.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/apple-fonts.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/product.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/nav.css" />
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+    <script>{#fbtrack#}</script>
+	<script src="{#TM#}js/jquery.min.js"></script>
+    <script src="{#TM#}js/owl.carousel.js"></script>
+	<script src="{#TM#}js/HeaderAndFoot.js"></script>
+	<script src="{#TM#}js/MemberFilter.js"></script>
+	<script src="{#TM#}js/InpuStstyle.js"></script>
+	<script src="{#TM#}js/popupwindow.js?3"></script>
+	<script src="{#TM#}js/ShopingCart.js"></script>
+	<script type="text/javascript" src="{#TM#}js/pinchzoom.min.js"></script>
+	
+	<script type="text/javascript">
+		if ($(window).width() < 700)
+        $(function () {
+            $('.product-small-img-item').each(function () {
+                new RTP.PinchZoom($(this), {});
+            });
+        })
+    </script>
+    <!-- wayhunt -->
+	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
+	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
+	<script type=text/javascript src="{#RP#}shop/js/cart.js?2"></script>
+	
+	<!--YAHOO-->
+	<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"4011993"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+	<script type=text/javascript src="{#TM#}20240425/js/header.js"></script>
+	
+<!-reload-!>
+</head>
+
+<body>
+	<section id="header" class="rema-col l12">
+		<!--跑馬燈部分-->
+		<div class="marquee">
+			<div class="mx-width">
+				<!-- 跑馬燈 -->
+				<div class="owl-carousel owl-theme marquee-con mx-width">
+					{#MARQUEE#}
+				</div>
+				<!-- END跑馬燈 -->
+			</div>
+		</div>
+		<!-- END跑馬燈部分-->
+		<!--頁首選單-->
+		{#CHANNELMENU#}
+	</section>
+	<section  id="content" class="header-top">
+		{#SHOPCART#}
+	</section>
+	<section id="popupwindow-in">
+	</section>
+	<!--頁尾-->
+	<footer>
+		<div class="max-width">
+			<ul class="d-flex flex-wrap">
+			{#footer#}
+			</ul>
+		</div>
+		<div class="copyright d-flex justify-content-center">
+			© 2024 REMA INC.ALL RIGHTS RESERVED
+		</div>
+	</footer>
+	<div id="SelectCountry" style="display:none;">
+		{#LANTYPE#}
+	</div>
+	{#addbtscript#}
+</body>
+</html>

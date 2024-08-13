@@ -1,0 +1,210 @@
+<!-start->
+<div class="top-status">
+        <a href="{#CP#}class/?{#mobicatid#}.html"> <i class="icon-cross"></i>{#bn--#} {#title#}</a>
+       <span id="money">{#pricesymbol#} {#price#}</span>
+    </div>
+                <div class="container product-des">
+            <div class="tab-content">
+            <!-- tab-1 -->
+  <div role="tabpanel" class="tab-pane active" id="color1">
+    <!-- MAIN SLIDER -->
+          <div class="swiper-container" id="swiper-container1">
+            <div class="swiper-wrapper" id="showzoom">
+            	{#zoomlist#}
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <!--div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div-->
+        </div>
+
+
+    <!-- MAIN SLIDER -->
+  </div>
+            <!-- END tab-1 -->
+</div>
+<!-- tab-content -->
+<div class="product-hold" style="clear:both;">
+<h4 class="title2">選擇顏色</h4>
+<ul class="nav nav-tabs">
+	{#selcolor#}
+</ul>
+<!--a href="{#thisurl#}&act=size" class="title3">尺寸表</a-->
+<a href="javascript:;" class="show-measure">選購尺寸建議 <i class="icon-arrow-right"></i></a>
+<div class="clearfix m-b-15"></div>
+<div class="row fix-padding15 m-b-20">
+    <div class="col-xs-6 fix-padding">
+         <select class="selectpicker form-control" data-style="btn-gray" name="size" id="selsize">
+         <option value="" selected>請選擇尺寸</option>
+      	{#selsize#}
+  </select>
+    </div>
+    <div class="col-xs-6 fix-padding">
+        <a href="javascript:;" class="btn btn-black btn-block ibuyit" id="addtocart">購買</a>
+    </div>
+    
+                            <input name="gid" type="hidden" id="gid" value="{#gid#}" />
+                            <input name="shopid" type="hidden" id="shopid" value="{#id#}">
+                            <input name="subpicid" type="hidden" id="subpicid" value="{#subpicid#}" />
+                            <input name="buyspecid" type="hidden" id="buyspecid" value="">
+                            <input name="buysize" type="hidden" id="buysize" value="">
+                            <input name="buyprice" type="hidden" id="buyprice" value="{#oriprice#}">
+                            <input name="buynums" name="buynums" type="hidden" id="buynums" value="1" />
+                            <input name="fz" type="hidden" id="fz" value="" />
+                            
+                            <input name="discat" type="hidden" id="discat" value="">
+                            <input name="distype" type="hidden" id="distype" value="">
+                            <input name="disnum" type="hidden" id="disnum" value="">
+                            <input name="disrate" type="hidden" id="disrate" value="">
+                            <input name="disprice" type="hidden" id="disprice" value="">
+</div>
+  <p class="m-b-20">{#memo#}</p>
+  <hr>
+  <div class="clearfix m-b-20"></div>
+<h4 class="title2">商品細節</h4>
+  <div class="clearfix m-b-20"></div>
+  <div class="clearfix m-b-20"></div>
+<div id="body">{#mbody#}</div>
+</div><!-- product-hold -->
+
+                </div>
+                <!-- container product-list -->
+                       
+<!-start->
+<!-list->
+{#propname#}：{#prop#}<br>
+<!-list->
+
+<!-m0->
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container" data-swiper-zoom="2">
+                    	<img src="{#srcs#}" data-src="{#src#}" class="swiper-lazy">
+                    	<div class="swiper-lazy-preloader"></div>
+                    </div>
+                </div>
+<!-m0->
+
+
+<!-menu->
+                                <li class="{#active#}">
+                                    <a href="javascript:;" id="selcolor_{#id#}" class="selcolor"><img src="{#src#}" alt=""></a>
+                                </li>
+<!-menu->
+
+<!-text->
+	<option value="{#size#}-{#specid#}">{#size#}</option>
+<!-text->
+
+<!-end->
+                </div>
+    <script>
+		setTimeout(function() { $(".bottom-nav li").eq({#nav#}).addClass("active");}, 300 );
+    </script>
+<!-end->
+<!-err1-><div class="notice">目前ID不存在或尚未發佈</div><!-err1->
+<!-err2-><div class="notice">對不起,本內容設置了閱讀權限,您無權瀏覽目前內容</div><!-err2->
+
+<!-m2->
+<script>
+$(document).ready(function() {
+	$("#bottom-nav, #footer").hide();
+});
+</script>
+     <div class="top-status">
+        <a href="javascript:history.back();"> <i class="icon-cross"></i></a>
+        尺寸表
+    </div>
+    <div class="container inpage">
+        <img src="{#mobisize#}" class="img-responsive" alt="">
+        <div class="clearfix m-b-20"></div>
+    </div>
+<!-m2->
+
+<!-col->
+    <link rel="stylesheet" href="{#TM#}css/measure.css">
+    <script src="{#TM#}js/measure-1.js"></script>
+   <div class="measure-back">
+   		<div class="measure">
+			<div class="esc-nav">
+				<div class="esc">
+  				</div>
+			
+			</div>
+			<div class="measure-fin">
+				
+			</div>
+			<div class="loding-con">
+				<div class="loding-gif"></div>
+				<div class="loding-word">請稍候</div>
+			
+			</div>
+  			
+				{#m3#}
+  	    </div>
+   	
+   </div>
+<!-col->
+
+<!-m3->
+			<div class="measure-main-m">
+				<div class="measure-item-pic"></div>
+				<form  action="" method="post" class="slider-bar-m">
+					<div class="measure-con-m">
+						<div class="measure-word1">我們可以幫助您找到適合的尺碼</div>
+						<div class="tall-con-m con-m">
+							<div class="measure-word2">身高</div>
+							<div class="option-bar">
+								<select class="option-form" name="tall" >
+									{#m_tall_list#}
+								</select>
+							</div>
+						</div>
+							
+						<div class="weight-con-m con-m">
+							<div class="measure-word2">體重</div>
+							<div class="option-bar">
+								<select class="option-form" name="weight">
+									{#m_weight_list#}
+								</select>
+							</div>
+						</div>
+							
+						<div class="chest-con-m con-m" style="display:{#sizeitem_a#}">
+							<div class="measure-word2">胸圍(C)</div>
+							<div class="option-bar">
+								<select class="option-form" name="chest">
+									{#m_chest_list#}
+								</select>
+							</div>
+						</div>
+						
+						<div class="waist-con-m con-m" style="display:{#sizeitem_b#}">
+							<div class="measure-word2">腰圍(W)</div>
+							<div class="option-bar">
+								<select class="option-form" name="waist">
+									{#m_waist_list#}
+								</select>
+							</div>
+						</div>
+						
+						<div class="hips-con-m con-m" style="display:{#sizeitem_c#}">
+							<div class="measure-word2">臀圍(H)</div>
+							<div class="option-bar">
+								<select class="option-form" name="hips">
+									{#m_hips_list#}
+								</select>
+							</div>
+						</div>
+							
+						<div class="measure-button-con" >
+							<div class="measure-button">尋找尺寸</div>
+						</div>
+					</div>
+					<input type="hidden" name="act" value="getSize" />
+					<input type="hidden" name="gid" value="{#gid#}" />
+					<input type="hidden" name="inacc" value="{#inacc#}" />
+				</form>
+				<script>button_on();</script>
+			</div>
+<!-m3->

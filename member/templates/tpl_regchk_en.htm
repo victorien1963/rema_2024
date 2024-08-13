@@ -1,0 +1,183 @@
+<script language="javascript" src="{#CP#}js/reg.js"></script>
+<form id="memberReg" method="post" action="" name="regform" >
+<div class="row menber-register-hold fix-padding15 style-toggle">
+                        <p class="title inline">Confirm Your Data</p>
+                       <p>Please make sure the profile and address you entered are correct.<br>If you would like to change the content of the data, click "Back to Modify".</p>
+                        <div class="clearfix m-b-30"></div>
+                        <!-- list -->
+                        <div class="col-xs-5 fix-padding">E-mail address</div>
+                        <div class="col-xs-7 fix-padding">{#email#}</div>
+                        <div class="clearfix m-b-15"></div>
+                        <!-- / list -->
+                        <div class="clearfix m-b-30"></div>
+                          <!-- ///////////////////////////////////////////////////////////// -->
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn active fix-padding" data-toggle="tab" data-target="#tab-1" style="margin-right: 20px;">
+                            <input type="radio" name='choice' {#memberchk1#}><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  Individual</span>
+                        </label>
+                        <!--label class="btn active fix-padding" data-toggle="tab" data-target="#tab-2">
+                            <input type="radio" name='choice' {#memberchk2#}><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  Company</span>
+                        </label-->
+                    </div>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade {#in1#}" id="tab-1">
+                            <div class="clearfix m-b-30"></div>
+                            <div class="row">
+                              <!-- list -->
+                                <div class="col-xs-5">Gender</div>
+                                <div class="col-xs-7"> {#gen#}</div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Name</div>
+                                <div class="col-xs-7"> {#name#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Birthday</div>
+                                <div class="col-xs-7"> {#Year_ID#} / {#Month_ID#} / {#Day_ID#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Country*</div>
+                                <div class="col-xs-7"> {#country#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">City</div>
+                                <div class="col-xs-7"> {#Province#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Town</div>
+                                <div class="col-xs-7"> {#town#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Address</div>
+                                <div class="col-xs-7"> {#addr#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Postal Code</div>
+                                <div class="col-xs-7"> {#postcode#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Telephone No. (Mobile No.)</div>
+                                <div class="col-xs-7"> {#mov#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Telephone No. (Other)</div>
+                                <div class="col-xs-7"> {#tel#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                            </div>
+                            <!-- row -->
+                            <div class="clearfix m-b-15"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade {#in2#}" id="tab-2">
+                            <div class="clearfix m-b-30"></div>
+                            <div class="row">
+                                <!-- list -->
+                                <div class="col-xs-5">Unified Taxation Code</div>
+                                <div class="col-xs-7"> {#passcode#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Business Name</div>
+                                <div class="col-xs-7"> {#company#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                 <!-- list -->
+                                <div class="col-xs-5">Name</div>
+                                <div class="col-xs-7"> {#name#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Country*</div>
+                                <div class="col-xs-7"> {#country#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">City</div>
+                                <div class="col-xs-7"> {#Province#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Town</div>
+                                <div class="col-xs-7"> {#zoneid#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Address</div>
+                                <div class="col-xs-7"> {#addr#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Postal Code</div>
+                                <div class="col-xs-7"> {#postcode#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Telephone No. (Mobile No.)</div>
+                                <div class="col-xs-7"> {#mov#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5">Telephone No. (Other)</div>
+                                <div class="col-xs-7"> {#tel#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                            </div>
+                            <!-- row -->
+                            <div class="clearfix m-b-15"></div>
+                        </div>
+                    </div>
+                    <!-- tab-content -->
+                    <div class="clearfix m-b-30"></div>
+                      <!-- checkbox -->
+                             <div class="btn-group pull-left fix-padding5" data-toggle="buttons">
+                                    <label class="btn active fix-padding">
+                                        <input type="checkbox" name="orderpaper" value="1" {#orderchk#}><i class="icon-square-o"></i><i class="icon-check-square-o"></i> <span class="small"> I agree to subscribe to REMA E-Newsletter to receive the latest product information.</span>
+                                    </label>
+                                </div>
+                                    <div class="clearfix"></div>
+                                
+                            <div class="clearfix m-b-15"></div>
+                            <!-- checkbox -->
+                    <!-- //////////////////////////////////////////////////////////// -->
+                    </div>
+					<div  id="notice" class="noticediv"></div>
+					<input name="act" type="hidden" id="act" value="memberreg" />
+					<input name="nowstep" type="hidden" id="nowstep" value="account" />
+					<input name="nextstep" type="hidden" id="nextstep" value="enter" />
+					<input name="step" type="hidden" id="step" value="fins" />
+					<input name="orderpaper" type="hidden" id="orderpaper" value="{#orderpaper#}" />
+					<input name="membertypeid" type="hidden" id="membertypeid" value="{#membertypeid#}" />
+					<input name="email" type="hidden" id="email" value="{#email#}" />
+					<input name="name" type="hidden" id="name" value="{#name#}" />
+					<input name="sex" type="hidden" id="sex" value="{#sex#}" />
+					<input name="birthday" type="hidden" id="birthday" value="{#birthday#}" />
+					<input name="password" type="hidden" id="password" value="{#password#}" />
+					<input name="repass" type="hidden" id="repass" value="{#repass#}" />
+					<input name="postcode" type="hidden" id="postcode" value="{#postcode#}" />
+					<input name="addr" type="hidden" id="addr" value="{#addr#}" />
+					<input name="mov" type="hidden" id="mov" value="{#mov#}" />
+					<input name="tel" type="hidden" id="tel" value="{#tel#}" />
+					<input name="company" type="hidden" id="company" value="{#company#}" />
+					<input name="passcode" type="hidden" id="passcode" value="{#passcode#}" />
+					<input name="country" type="hidden" id="country" value="{#country#}" />
+					<input name="zoneid" type="hidden" id="zoneid" value="{#zoneid#}" />
+					<input name="countryid" type="hidden" id="countryid" value="{#countryid#}" />
+                    
+                    <!-- /section -->
+                   <hr>
+                   <!-- section -->
+                	<div class="clearfix m-b-30"></div>
+                    <div class="btn-group">
+                        <a href="javascript:history.back();" class="btn btn-black-rim btn-lg" style="width:150px; margin-right:10px;"><i class="icon-arrow-left"></i> Back to modify</a>
+                        <button type="submit" class="btn btn-black btn-lg" style="width:150px">Correct</button>
+                    </div>
+			</form>

@@ -1,0 +1,29 @@
+/* ============¤ÀÃþ¦Cªí============== */
+
+ul.productclass{
+margin:0px;
+padding:0px;
+}
+
+li.productclass {
+float:left;
+margin-right:12px;
+padding-left:16px;
+list-style-type: none;
+white-space: nowrap;
+background: transparent url(../images/li.gif) left no-repeat;
+}
+
+
+
+a.productclass:link,a.productclass:visited,a.productclass:active{
+color:#555;
+text-decoration: none;
+font: 12px/18px mingliu;
+}
+
+a.productclass:hover{
+color:#ff0000;
+text-decoration: underline;
+font: 12px/18px mingliu;
+}

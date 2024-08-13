@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{#pagetitle#} {#sitename#}</title>
+    <meta name="description" content="{#metacon#}">
+    <meta name="Keywords" content="{#metakey#}">
+	{#metaimage#}
+	{#addmeta#}
+	{#addscript#}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="{#TM#}css/bootstrap.min.css">
+	<link rel="stylesheet" href="{#TM#}css/owl.carousel.css">
+	<link rel="stylesheet" href="{#TM#}css/owl.theme.default.css">
+	<link rel="stylesheet" href="{#TM#}css/HeaderAndFoot.css?5">
+	<link rel="stylesheet" href="{#TM#}css/InputStyle.css">
+	<link rel="stylesheet" href="{#TM#}css/Product.css?3">
+	<link rel="stylesheet" href="{#TM#}css/filter.css">
+	<link rel="stylesheet" href="{#TM#}css/SizeChart.css">
+	<link rel="stylesheet" href="{#TM#}css/PopupWindow.css?7">
+	<link rel="stylesheet" href="{#TM#}css/ProductNew.css?20240331">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/header.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/apple-fonts.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/product.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/nav.css" />
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	<script src="{#TM#}js/jquery.min.js"></script>
+	<script src="{#TM#}js/owl.carousel.js"></script>
+	<script src="{#TM#}js/HeaderAndFoot.js"></script>
+	<script src="{#TM#}js/popupwindow.js?8"></script>
+	<script src="{#TM#}js/product.js?1"></script>
+	<script src="{#TM#}js/Filter.js"></script>
+	<script type="text/javascript" src="{#TM#}js/pinchzoom.min.js"></script>
+
+	<script type="text/javascript">
+		if ($(window).width() < 700)
+			$(function () {
+				$('.product-small-img-item').each(function () {
+					new RTP.PinchZoom($(this), {});
+				});
+			})
+	</script>
+    <!-- wayhunt -->
+	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
+	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
+	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
+	<script type=text/javascript src="{#RP#}shop/js/shopcontent.js?1"></script>
+	<script type=text/javascript src="{#TM#}20240425/js/header.js"></script>
+<!-reload-!>
+</head>
+<body>
+	<section id="header" class="rema-col l12">
+		<!--跑馬燈部分-->
+		<div class="marquee">
+			<div class="mx-width">
+				<!-- 跑馬燈 -->
+				<div class="owl-carousel owl-theme marquee-con mx-width">
+					{#MARQUEE#}
+				</div>
+				<!-- END跑馬燈 -->
+			</div>
+		</div>
+		<!-- END跑馬燈部分-->
+		<!--頁首選單-->
+		{#CHANNELMENU#}
+	</section>
+	<section id="content" style="position: relative;" class="header-top">
+		<section id="product-main">
+			<div class="product-main-con">
+				{#SHOPCON#}
+			</div>
+		</section>
+	</section>
+	<section id="popupwindow-in">
+	</section>
+
+	<!--頁尾-->
+	<footer>
+		<div class="max-width">
+			<ul class="d-flex flex-wrap">
+			{#footer#}
+			</ul>
+		</div>
+		<div class="copyright d-flex justify-content-center">
+			© 2024 REMA INC.ALL RIGHTS RESERVED
+		</div>
+	</footer>
+	<div id="SelectCountry" style="display:none;">
+		{#LANTYPE#}
+	</div>
+	{#addbtscript#}
+	
+	<script>
+    $('.auto-owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,   /* 控制列 */
+        // autoWidth:true,   /* 可自行設定輪播寬度 */
+        items:1,  /* 一頁出現的張數 */
+        autoplay:true,  /* 自動輪播 */
+        autoplayTimeout:5000,  /* 輪播速度 */
+        autoplayHoverPause:true
+    });
+	//商品主圖區
+	// if ( $(window).width() < 768 ) {
+		
+	// }
+	$('.owl-product-swiper').owlCarousel({
+		loop:true,
+		dots:true,
+		nav:false,
+		autoWidth:true,
+		center: true,
+	})
+	//距離750px時出現手機版產品頁置底加入購物車區域
+	$(window).scroll(function(){      
+          
+		var $window =  $(window).scrollTop();
+		if ( $(window).width() < 768 ) {
+
+		if($window > 750){
+			$('.fix-nav').fadeIn(300);  
+			
+			} else{
+			$('.fix-nav').fadeOut(300);  
+			}
+		}
+	});
+	//推薦商品輪播
+	// $('.owl-product-recommend').owlCarousel({
+    //     loop:true,
+    //     nav:true,
+    //     dots:false,
+    //     autoWidth:true,
+    //     navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    // });
+
+	$(window).scroll(function(){      
+		var $window =  $(window).scrollTop();
+	
+		if($window > 300){
+		$('a.totop').fadeIn(300);  
+			
+		} else{
+		$('a.totop').fadeOut(300);  
+		}
+	})	
+
+	$(function(){
+		//選尺寸時改Button文字
+		$('.format .btn-circle').on('click',function(){
+			var $this = $(this);
+			var $sib = $this.siblings('.btn-circle');
+			var $btn = $('#addtocart');
+			var $btn_mobile = $('#btn_add_cart_mobile');
+			$sib.removeClass('active');
+
+			if($this.hasClass("disabled")) {
+				$('.stock').html($('.stock').data('out-of-stocks'));
+				$('.btn-box ').addClass('btn-none');
+				$btn.html('請選擇尺寸');
+				$btn_mobile.html('請選擇尺寸');
+				$("#buysize").val('');
+				$("#m-size").html('');
+				$("#buyspecid").val('');
+				$("input#buyprice").val();
+			} else {
+				
+				$('.stock').html($('.stock').data('in-stocks'));
+				$('.btn-box ').removeClass('btn-none');
+				var getsize=this.id.split("-");
+				
+				//已選擇，再次點按Button
+				if ($this.hasClass("active")) {
+
+					$this.removeClass('active');
+					$btn.html('請選擇尺寸');
+					$btn_mobile.html('請選擇尺寸');
+					$("#buysize").val('');
+					$("#m-size").html('');
+					$("#buyspecid").val('');
+					$("input#buyprice").val();
+				} else {
+
+					//沒選擇，點按Button
+					$this.addClass('active');
+					$btn.html('加入購物車');
+					$btn_mobile.html('加入購物車');
+					
+					$("#buysize").val(getsize[0]);
+					$("#m-size").html(getsize[0]);
+					$("#buyspecid").val(getsize[1]);
+					$("input#buyprice").val();
+
+				}
+			}
+			
+
+			// return false;
+		});
+
+			//商品主圖區
+		if ( $(window).width() < 768 ) {
+			$('.owl-product-photo').owlCarousel({
+				loop:true,
+				dots:true,
+				nav:false,
+				autoWidth:true,
+				center: true,
+			})
+		}     
+
+		//推薦商品輪播
+		$('.owl-product-recommend').owlCarousel({
+			loop:true,
+			nav:true,
+			dots:false,
+			autoWidth:true,
+			navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+		});
+		//To top effect   
+		$('a.totop').on('click',function(){
+			$('html, body').animate({scrollTop: 0}, 1500);
+			return false;
+		}) 
+
+
+
+		//表格RWD 收折效果
+		$('.card-info.has-toggle .title').on('click',function(){
+
+			var $this = $(this);
+			var $card = $this.parents('.card-info');
+			var $sib = $card.siblings('.card');
+
+			$card.toggleClass('active');
+			$sib.removeClass('active');
+
+		})
+	})	
+	</script>
+</body>
+</html>

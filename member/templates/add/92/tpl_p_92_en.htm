@@ -1,0 +1,32 @@
+					<script src="{#CP#}js/login.js"></script>
+
+                    <h3 class="cart-title">Login / register to become a member</h3>
+                    <!-- section -->
+                    <form id="memberLogin" method="post" action="" >
+                    <div class="row two-col member">
+                        <div class="col-xs-6 right-line mem-in-d">
+                            <p class="title">I am already a member of REMA</p>
+                            <ul class="info">
+                                <li class="m-b-5">Please enter your e-mail address and code to login to the website.</li>
+                                <li class="m-b-5">E-mail address</li>
+                                <li class="m-b-15"><input id="muser" name="muser" type="text" class="form-control"></li>
+                                <li class="m-b-5">Password</li>
+                                <li class="m-b-5"><input id="mpass" name="mpass" type="password" class="form-control"></li>
+                                <li class="m-b-30"><a href="{#CP#}lostpass.php" class="underline">Forgot your password?</a></li>
+                                <li><button type="submit" class="btn btn-black btn-lg2" style="width:180px">Sign In</button></li>
+                            </ul>
+                            <input name="act" type="hidden" id="act" value="memberlogin" />
+							<div  id="notice" class="alert alert-danger noticediv" style="display:none;"></div>
+                        </div>
+                        <div class="col-xs-6 mem-in-d">
+                            <p class="title">Register to become a member of REMA</p>
+                            <ul class="info">
+                                <li class="m-b-30">Register now to become a member of REMA,enjoy more member exclusive purchase info and discounts.</li>
+                                <li><a href="{#CP#}reg.php" class="btn btn-black btn-lg2" style="width:180px">Register Now</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix m-b-20"></div>
+                    </div>
+                    <input type="hidden" name="from" value="{#REFERER#}">
+                    </form>
+                    <!-- /section -->

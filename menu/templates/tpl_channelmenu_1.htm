@@ -1,0 +1,268 @@
+<!-start->
+<header id="index-header">
+  <div class="nav-box d-flex justify-content-between align-items-start">
+    <div
+      class="max-width header-nav-box d-flex justify-content-between align-items-start"
+    >
+      <div class="nav-items-box d-flex">
+        <a href="/">
+          <img src="{#TM#}20240425/images/logo_b.svg" />
+        </a>
+        <ul class="max-pc-menu-items d-xl-flex d-none justify-content-center">
+          {#pcMenuItems#}
+        </ul>
+      </div>
+      <div
+        class="member-bar d-flex flex-column-reverse flex-md-row align-items-center"
+      >
+        <div class="member-bar-btn search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 35 35"
+            width="35"
+            height="35"
+            fill="none"
+            stroke="currentColor" 
+            stroke-width="1.5"
+          >
+            <g transform="translate(-1 -5)">
+              <circle cx="13.34" cy="18.22" r="9.89" />
+              <rect
+                x="23.91"
+                y="23.62"
+                width="2.58"
+                height="12.9"
+                transform="rotate(-45 25.2 30.07)"
+                fill="currentColor"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div
+          class="member-bar-btn shopping-cart header-icon dropdown-nav d-flex justify-content-center align-items-center"
+        >
+          {#SMALLCART#}
+        </div>
+        <div class="member member-bar-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30"
+            width="30"
+            height="30"
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="1.5"
+          >
+
+            <g transform="translate(-11 -1)">
+              <circle cx="24.94" cy="9" r="7" />
+              <path
+                d="M22.13 16.88h5.7a7 7 0 017 7v6.64h-19.7v-6.64a7 7 0 017-7z"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="member-bar-btn btn-menu">
+          <i class="bi bi-list"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc-menu un-open" style="height: 0;">
+      <div class="box max-width">
+        <div
+          class="pc-menu-nav d-flex justify-content-between align-items-start"
+        >
+          <a href="/">
+            <img src="{#TM#}20240425/images/logo_b.svg" />
+          </a>
+
+          <ul
+            class="pc-menu-items d-flex justify-content-xl-start justify-content-center"
+          >
+            {#pcMenuItems#}
+          </ul>
+          <div class="close-btn d-xl-none d-flex align-items-center">
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+        {#menu1#}
+
+        <form class="input-group" method="get" action="/shop/class/index.php">
+          <input
+            type="text"
+            class="form-control"
+            name="key"
+            placeholder="搜尋商品"
+          />
+        </form>
+      </div>
+    </div>
+    <div class="mobile-menu un-open">
+      <div class="box d-flex flex-column justify-content-between">
+        <div class="mobile-menu-nav">
+          <div class="mobile-menu-head d-flex justify-content-between">
+            <a href="/">
+              <img src="{#TM#}20240425/images/logo_b.svg" />
+            </a>
+
+            <div class="close-btn d-flex align-items-center">
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+
+          <ul class="mobile-menu-items">
+            {#pcMenuItems#}
+          </ul>
+        </div>
+
+        <form
+          class="input-group flex-fill d-flex align-items-center"
+          method="get"
+          action="/shop/class/index.php"
+        >
+          <input
+            type="text"
+            class="form-control"
+            name="key"
+            placeholder="搜尋商品"
+          />
+        </form>
+      </div>
+      <div class="mobile-menu-type un-open">
+        <div class="box d-flex flex-column justify-content-between">
+          <div class="mobile-menu-nav">
+            {#menu2#}
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu-category un-open">
+        <div class="box d-flex flex-column justify-content-between">
+          <div class="mobile-menu-nav">
+            {#menu3#}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-fixed">
+      <div class="search-box">
+        <div class="max-width">
+          <form
+            class="d-flex align-items-center justify-content-between"
+            method="get"
+            action="/shop/class/index.php"
+          >
+            <img src="{#TM#}20240425/images/logo_b.svg" />
+
+            <div class="d-flex align-items-center search-input-block">
+              <button type="submit" class="search-icon search-btn">
+                <i class="bi bi-search"></i>
+              </button>
+              <input placeholder="搜尋商品" name="key" />
+            </div>
+            <p class="search-close-btn">取消</p>
+          </form>
+          <div class="search-link">
+            <label>熱門搜索字詞</label>
+            <ul>
+              <li>
+                <a href="#">AAAAA</a>
+              </li>
+              <li>
+                <a href="#">AAAAA</a>
+              </li>
+              <li>
+                <a href="#">AAAAA</a>
+              </li>
+              <li>
+                <a href="#">AAAAA</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-start->
+<!-menu1->
+<div id="{#id#}" class="type-tag {#active#}">
+  <div class="type-list d-flex flex-wrap">
+    {#m1#}
+  </div>
+</div>
+<!-menu1->
+
+<!-m0->
+<li class="{#menuclass#} {#active#}" data-id="{#id#}">
+  <a href="{#menuurl#}" target="{#target#}">{#menu#}</a>
+</li>
+<!-m0->
+
+<!-m1->
+<ul class="type-item">
+  <li class="title">
+    <a href="{#menuurl#}" target="{#target#}" style="{#active#}"
+      >{#menu#}</a
+    >
+  </li>
+  {#m2#}
+</ul>
+<!-m1->
+
+<!-m2->
+<li>
+  <a href="{#menuurl#}" target="{#target#}" style="{#active#}"
+    >{#menu#}</a
+  >
+</li>
+<!-m2->
+
+<!-menu2->
+<div class="mobile-menu-type-box {#id#}">
+  <div
+    class="mobile-menu-head d-flex justify-content-between align-items-start"
+  >
+    <div class="mobile-menu-type-back">
+      <i class="bi bi-chevron-left"></i> 返回
+    </div>
+    <div class="close-btn d-flex align-items-center">
+      <i class="bi bi-x-lg"></i>
+    </div>
+  </div>
+  <p class="title">{#menu#}</p>
+  <ul class="mobile-menu-type-items">
+    {#m3#}
+  </ul>
+</div>
+<!-menu2->
+
+<!-m3->
+<li data-id="{#id#}">{#menu#}</li>
+<!-m3->
+
+<!-menu3->
+<div class="mobile-menu-category-box {#id#}">
+  <div class="mobile-menu-head d-flex justify-content-between">
+    <div class="mobile-menu-category-back">
+      <i class="bi bi-chevron-left"></i> {#menuName#}
+    </div>
+    <div class="close-btn d-flex align-items-center">
+      <i class="bi bi-x-lg"></i>
+    </div>
+  </div>
+  <p class="title">{#menu#}</p>
+  <ul class="mobile-menu-category-items">
+    {#m2#}
+  </ul>
+</div>
+<!-menu3->
+
+<!-list->
+
+<!-list->
+
+<!-end->
+<!-end->

@@ -1,0 +1,126 @@
+/* ============產品圖片列表============== */
+
+div.productquery_6{
+margin:0px 20px 10px 0px;
+text-align:left;
+float:left;
+overflow:hidden;
+white-space:nowrap;
+}
+
+
+div.productquery_6 div.fang{
+padding:0px;
+text-align:center;
+margin-bottom:10px;
+}
+
+div.productquery_6 div.picFit{
+overflow: hidden;
+}
+
+
+
+div.productquery_6 div.picFit img{
+}
+
+
+div.productquery_6 a.prodtitle:link,div.productquery_6 a.prodtitle:visited,div.productquery_6 a.prodtitle:active{
+display:block;
+color:#393939;
+font:bold 12px/20px 'Microsoft YaHei','mingliu',Arial,Sans-Serif;
+text-decoration: none;
+margin-bottom:5px;
+}
+
+div.productquery_6 a.prodtitle:hover{
+display:block;
+color:#ff0000;
+text-decoration: underline;
+font:bold 12px/20px 'Microsoft YaHei','mingliu',Arial,Sans-Serif;
+margin-bottom:5px;
+}
+
+div.productquery_6 span.memo{
+font:12px/20px 'Microsoft YaHei','mingliu',Arial,Sans-Serif;
+color:#393939;
+word-break:break-all; 
+}
+
+div.productquery_6 span.prop{
+font:12px/20px 'Microsoft YaHei','mingliu',Arial,Sans-Serif;
+color:#393939;
+word-break:break-all; 
+}
+
+
+/* ============翻頁============== */
+
+div#showpages {
+clear:both;
+padding:0px;
+margin:20px 0px;
+width:100%;
+height:30px;
+white-space: nowrap;
+}
+
+div#pagesinfo {
+float:left;
+padding:3px 8px;
+white-space: nowrap;
+}
+
+div#pages {
+float:right;
+padding-right:8px;
+white-space: nowrap;
+}
+
+div#pages ul{
+margin:0;
+padding:0;
+}
+
+div#pages a:link,div#pages a:visited,div#pages a:active{
+color:#505050;
+text-decoration: none;
+}
+
+div#pages a:hover{
+color:#ff0000;
+text-decoration: none;
+}
+
+div#pages li{
+margin:3px;
+padding:2px 5px;
+list-style-type: none;
+float:left;
+background:#fff;
+color:#505050;
+border:1px #cde6ff solid;
+white-space: nowrap;
+}
+
+div#pages li.pagesnow{
+color:#505050;
+background-color:#e4f2ff;
+white-space: nowrap;
+border:1px #cde6ff solid;
+}
+
+div#pages li.pbutton{
+color:#505050;
+background-color:#e4f2ff;
+padding:3px 5px 1px 5px;
+white-space: nowrap;
+border:1px #cde6ff solid;
+}
+
+div#pages li.opt{
+color:#505050;
+padding:0px 2px;
+white-space: nowrap;
+border:0px;
+}

@@ -1,0 +1,131 @@
+<!-start->
+<script language="javascript" src="{#CP#}js/zone.js"></script>
+							<div class="member-connection-mobile">
+								<div class="font-l font-w-l">通訊錄</div>
+								<div class="font-s mobile-underline">您可以登記多個常用地址，方便每次訂購商品時自動填入。</div>
+
+								<div>
+									<div class="address-item-con rema-col">
+										<div class="rema-col l4 s4 font-s">地址</div>
+										<div class="rema-col l2 s3 font-s">收件人</div>
+										<div class="rema-col l2 s3 font-s">聯絡號碼</div>
+										<div class="rema-col l1 s1 font-s">修改</div>
+										<div class="rema-col l1 s1 font-s">刪除</div>
+									</div>
+<!-start->
+
+<!-list->
+									<div class="address-item rema-col" id="ad_{#id#}">
+										<div class="rema-col l4 s4 xs12 font-s address">
+											<div class="cuntry">{#country#}</div>
+											<div class="state">{#addr_a#}</div>
+											<div class="area">{#addr_b#}</div>
+											<div class="locate">{#addr_c#}</div>
+										</div>
+										<div class="rema-col l2 s3 xs12 font-s receiver order">{#name#}</div>
+										<div class="rema-col l2 s3 xs12 font-s phonenumber">{#mov#}</div>
+										<div>
+											<div class="rema-col l1 s1 xs6 font-s">
+												<div class="icon-block">
+													<div class="icon icon-edit address-member-edit modiaddr" id="modi_{#id#}"></div>
+												</div>
+											</div>
+											<div class="rema-col l1 s1 xs6 font-xs ">
+												<div class="icon-block">
+													<div class="icon icon-close deltaddr" id="delt_{#id#}"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+<!-list->
+
+
+<!-end->
+								</div>
+							</div>
+
+							<div class="bn-block rema-col">
+								<div class="buy-bn-con">
+									<button class="shop-bn connection-bn addaddr">新增通訊錄</button>
+								</div>
+							</div>
+    
+<section id="add-adress" style="display:none;">
+	<span id="zonelist">{#ZoneList#}</span>
+        <div class="window-con">
+            <div class="window-block">
+                <div class="close-window ">
+                    <div class="icon icon-close close-window-icon"></div>
+                </div>
+                <div class="title font-xl font-w-l">新增通訊錄</div>
+                <div id="insertaddr">
+                	<form id="AddAddr" method="post" action="" name="newaddform">
+                        <div class="con-3">
+                            <div class="inputsy width-4 width-4-margin">
+                              <select name="country" class="form-control" id="selcountry">{#selcountry#}</select>
+                            </div>
+                              <div class="inputsy width-4 width-4-margin">
+                              <select class="form-control" id="Province" onKeyUp='if(window.event.keyCode==13) document.newaddform.zoneid.focus();'  onChange="provinceSelChange(newaddform.zoneid,newaddform.Province.value,'{#zoneid#}',newaddform.postcode,newaddform.addr,newaddform.Province)" name="Province"></select>
+                            </div>
+                            <div class="inputsy width-4">
+                              <select onKeyUp='if(window.event.keyCode==13) document.newaddform.regCardNum.focus();' id="zoneid" name="zoneid"  class="form-control" onChange="postSelChange(newaddform.Province.value,newaddform.zoneid.value,newaddform.postcode,newaddform.addr,newaddform.Province)"></select>
+                            </div>
+                        </div>
+                        <input class="inputsy" type="text" name="addr" id="addr" value="" placeholder="國家縣市地區" readonly style="width:37%;">
+                        <input class="inputsy" type="text" name="addr2" id="addr2" value="" placeholder="地址" style="width:61%;margin-left:2px;">
+                        <input class="inputsy" type="tel" name="postcode" id="postcode" value="" placeholder="郵遞區號">
+                        <input class="inputsy" type="text" name="name" id="name" value="" placeholder="姓名">
+                        <input class="inputsy" type="tel" name="mov" id="amov" value="" placeholder="手機電話">
+                        <input class="inputsy" type="tel" name="tel" id="tel" value="" placeholder="其他電話">
+                        <div class="buy-bn-con poputwindow-bn">
+                            <button type="submit" class="shop-bn new-connection-bn">確認新增</button>
+                        </div>
+                        
+						<input type="hidden" name="act" value="memberaddr" />
+					</form>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+<section id="edit-adress" style="display:none;">
+        <div class="window-con">
+            <div class="window-block">
+                <div class="close-window ">
+                    <div class="icon icon-close close-window-icon"></div>
+                </div>
+                <div class="title font-xl font-w-l">修改通訊錄</div>
+                <div id="insertaddr">
+                	<form id="memberAddrModify" method="post" action="" name="addrform">
+                        <div class="con-3">
+                            <div class="inputsy width-4 width-4-margin">
+                              <select name="scountry" class="form-control" id="selcountry2"></select>
+                            </div>
+                              <div class="inputsy width-4 width-4-margin">
+                              <select class="form-control" id="sProvince" onKeyUp='if(window.event.keyCode==13) document.addrform.szoneid.focus();'  onChange="provinceSelChange(addrform.szoneid,addrform.sProvince.value,'{#zoneid#}',addrform.spostcode,addrform.saddr,addrform.sProvince)" name="sProvince">
+									</select>
+                            </div>
+                            <div class="inputsy width-4">
+                              <select onKeyUp='if(window.event.keyCode==13) document.addrform.regCardNum.focus();' id="szoneid" name="szoneid"  class="form-control" onChange="postSelChange(addrform.sProvince.value,addrform.szoneid.value,addrform.spostcode,addrform.saddr,addrform.sProvince)">
+									</select>
+                            </div>
+                        </div>
+                        <input class="inputsy" type="text" name="saddr" id="saddr" value="" placeholder="地址">
+                        <input class="inputsy" type="tel" name="spostcode" id="spostcode" value="" placeholder="郵遞區號">
+                        <input class="inputsy" type="text" name="sname" id="sname" value="" placeholder="姓名">
+                        <input class="inputsy" type="tel" name="smov" id="smov" value="" placeholder="手機電話">
+                        <input class="inputsy" type="tel" name="stel" id="stel" value="" placeholder="其他電話">
+                        <div class="buy-bn-con poputwindow-bn">
+                            <button type="submit" class="shop-bn new-connection-bn">確認修改</button>
+                        </div>
+                        
+						<input type="hidden" name="act" value="memberaddrmodi" />
+						<input type="hidden" name="aid" id="aid" value="" />
+					</form>
+                </div>
+            </div>
+        </div>
+</section>
+<!-end->

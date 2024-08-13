@@ -1,0 +1,41 @@
+<!-start->
+<form method="post" action="lostpass.php">
+                    <div class="row two-col member">
+                        <div class="col-xs-12 mem-in-e">
+                            <ul class="info">
+                                <li class="m-b-15">如果您忘記了會員登入密碼，請提供您註冊的電子信箱地址，我們將會寄給您一封電子郵件，提示您如何恢復密碼。</li>
+                                <li  class="m-b-5">E-mail Address</li>
+                                <li class="m-b-30"><input type="text" name="username" class="form-control" style="width:350px"></li>
+                                <li class="blk-btn"><button type="submit" class="btn btn-black btn-lg" style="width:180px">Confirm</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    {#err#}
+                    <input type="hidden" name="step" value="2" />
+</form>
+<!-start->
+
+<!-m0->
+                    <div class="row two-col member">
+                        <div class="col-xs-12 mem-in-e">
+                            <p class="title m-b-15">Password Reseted</p>
+                            <ul class="info">
+                                <li class="m-b-15">System Response:</li>
+                                <li class="m-b-30">{#err#}{#email#}</li>
+                                <li class="blk-btn"><a href="{#CP#}login.php" class="btn btn-black btn-lg" style="width:180px">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+<!-m0->
+
+<!-end->
+                    <div class="row two-col member">
+                        <div class="col-xs-12 mem-in-e">
+                            <p class="title">申請已成功提交</p>
+                            <ul class="info">
+                                <li class="m-b-30">已成功收到找回密碼的申請。<br>你很快就會收到一封電子郵件，請按照其提示操作。</li>
+                                <li class="blk-btn"><a href="{#RP#}" class="btn btn-black btn-lg" style="width:180px">Confirm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+<!-end->

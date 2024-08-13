@@ -1,0 +1,577 @@
+<!-start->
+<!-start->
+
+<!-m0->
+		<div class="rema-col shop-cart-con">
+			<div class="shop-cart-padding">
+				<section class="shop-list">
+					<div class="shop-list-con">
+						<div class="top-space rema-col"></div>
+						<div class="rema-col l8 m12">
+							<div class="padding-right-3vw">
+								<div class="page-title">
+									<div class="rema-col font-l font-w-m">购物篮( {#tnums#} )</div>
+								</div>
+								<div>
+									<div class="shop-cart-block">
+										<div class="shop-cart rema-col ">
+											<div class="product-list align-item-center">
+												<div class="rema-col l2">商品</div>
+												<div class="rema-col l3">
+													<div class="padding-left">名称</div>
+												</div>
+												<div class="rema-col l7 align-center">
+													<div class="rema-col l2">颜色</div>
+													<div class="rema-col l2">尺寸</div>
+													<div class="rema-col l3">件数</div>
+													<div class="rema-col l2">金额</div>
+													<div class="rema-col l2">储存</div>
+													<div class="rema-col l1">删除</div>
+												</div>
+											</div>
+<!-m0->
+
+<!-list->
+											<div class="rema-col product-item border-top align-item-center">
+												<div class="rema-col l2 xss4">
+													<img src="{#srcs#}">
+												</div>
+												<div class="rema-col l3 xss8">
+													<div  class="padding-left">
+														<div class=" font-s title">{#goodsname#}</div>
+														<div class=" font-s mobile-height">{#bn#}</div>
+													</div>
+												</div>
+												<div class="rema-col l7 xss8 align-center">
+													<div class="mobile-padding-left">
+														<div class="rema-col l2 xss3 height-24  moble-text-left  font-s mobile-height">{#colorname#}</div>
+														<div class="rema-col l2 xss3 height-24  font-s mobile-height">{#buysize#}</div>
+														<div class="rema-col l3 xss6 height-24  font-s">
+															<div class="quantity">
+																<div class="quantity-icon">
+																	<span class="quantity-minus icon icon-minus" id="minusaa_{#gid#}{#fzspecid#}{#picgid#}"></span>
+																</div>
+																<input id="cartacc_{#gid#}{#fzspecid#}{#picgid#}" class="quantity-input cartacc" value="{#acc#}" type="text" name="cartacc" 
+																	   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+																	   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+																	   onchange="quantity_chante($(this))"
+																	   maxlength="2">
+																<div class="quantity-icon">
+																	<span class="quantity-plus icon icon-plus" id="plusbbb_{#gid#}{#fzspecid#}{#picgid#}"></span>
+																</div>
+															</div>
+														</div >
+														<div class="rema-col l2 xss6 height-24 mobile-float-right">
+															<div class="product-detail-word detail-align-center mobile-detail-price mobile-padding-top">
+																<div class="font-s title">{#pricesymbol#}<span id="jine_{#gid#}{#fzspecid#}{#picgid#}">{#jine#}</span></div>
+															</div>
+														</div>
+														<div class="rema-col l2 xss4 icon-con height-24 ">
+															<div class="icon-block mobile-none">
+																<div class="icon icon-save product-item order-close additems" id="aaaitem_{#gid#}{#fzspecid#}{#picgid#}" style="cursor:pointer;"></div>
+															</div>
+															<div class="mobile-block  mobile-padding-top">
+																<div class="font-s additems" style="cursor:pointer;" id="bbbitem_{#gid#}{#fzspecid#}{#picgid#}">储存 ❯</div>
+															</div>
+														</div>
+														<div class="rema-col l1 icon-con height-24 mobile-icon-close">
+															<div class="icon-block" style="cursor: pointer;">
+																<div class="icon icon-close order-close cartdel delete" id="cartdel_{#gid#}{#fzspecid#}{#picgid#}"></div>
+																<input type="hidden" id="fz_{#gid#}{#fzspecid#}{#picgid#}" value="{#fz#}">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+<!-list->
+<!-m3->
+											<div class="rema-col product-item border-top align-item-center">购物车中没有商品</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                <!-- END table -->
+							<div class="padding-right-3vw">
+								<div class="page-title">
+									<div class="rema-col font-l font-w-m">储存清单( <span id="addnums">{#addnums#}</span> )</div>
+								</div>
+								<div class="">
+									<div>
+										<div class="wish-list  rema-col">
+											<div class="product-list align-item-center">
+												<div class="rema-col l2">商品</div>
+												<div class="rema-col l3">
+													<div class="padding-left">名称</div>
+												</div>
+												<div  class="rema-col l7 align-center">
+													<div class="rema-col l2">颜色</div>
+													<div class="rema-col l2">尺寸</div>
+													<div class="rema-col l3">件数</div>
+													<div class="rema-col l2">金额</div>
+													<div class="rema-col l2">购物篮</div>
+													<div class="rema-col l1">删除</div>
+												</div>
+											</div>
+												{#additems#}
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+<!-m3->
+
+<!-text->
+											<div class="rema-col product-item border-top align-item-center" id="additem_{#addid#}">
+												<!---->
+												<div class="rema-col l2 xss4">
+													<img src="{#srcs#}">
+												</div>
+												<div class="rema-col l3 xss8">
+													<div  class="padding-left">			
+														<div class=" font-s title">{#goodsname#}</div>
+														<div class=" font-s mobile-height">{#bn#}</div>
+													</div>
+												</div>
+												<div class="rema-col l7 xss8 align-center">
+													<div class="mobile-padding-left">
+														<div class="rema-col l2 xss3 height-24  moble-text-left  font-s mobile-height">{#colorname#}</div>
+														<div class="rema-col l2 xss3 height-24  font-s mobile-height">{#buysize#}</div>
+														<div class="rema-col l3 xss6 height-24  font-s">
+															<div class="quantity">
+																<div class="quantity-icon">
+																	<span class="quantity-minus icon icon-minus"></span>
+																</div>
+																<input class="quantity-input" value="{#nums#}" type="text" name="search" 
+																	   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+																	   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+																	   onchange="quantity_chante($(this))"
+																	   maxlength="2">
+																<div class="quantity-icon">
+																	<span class="quantity-plus icon icon-plus"></span>
+																</div>
+															</div>
+														</div >
+														<div class="rema-col l2 xss6 height-24 mobile-float-right">
+															<div class="product-detail-word detail-align-center mobile-detail-price mobile-padding-top">
+																<div class="font-s title">{#pricesymbol#} {#jine#}</div>
+															</div>
+														</div>
+														<div class="rema-col l2 xss4 icon-con height-24 ">
+															<div class="icon-block mobile-none" onclick="javascript:addtocart('{#gid#}','1','{#fz#}');" style="cursor: pointer;">
+																<div class="icon icon-output order-close"></div>
+															</div>
+															<div class="mobile-block mobile-padding-top" onclick="javascript:addtocart('{#gid#}','1','{#fz#}');" style="cursor: pointer;">
+																<div class=" font-s">购物篮 ❯</div>
+															</div>
+														</div>
+														<div class="rema-col l1 icon-con height-24 mobile-icon-close">
+															<div class="icon-block deladditem"  id="add_{#addid#}" style="cursor: pointer;">
+																<div class="icon icon-close order-close"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!---->
+											</div>
+<!-text->
+
+<!-m1->
+										</div>
+									</div>
+								</div>
+							</div>
+                <!-- END table -->
+							<div class="padding-right-3vw">
+								<div class="page-title">
+									<div class="rema-col font-l font-w-m">储存清单( <span id="addnums">{#addnums#}</span> )</div>
+								</div>
+								<div class="">
+									<div>
+										<div class="wish-list  rema-col">
+											<div class="product-list align-item-center" id="showitems">
+												<div class="rema-col l2">商品</div>
+												<div class="rema-col l3">
+													<div class="padding-left">名称</div>
+												</div>
+												<div  class="rema-col l7 align-center">
+													<div class="rema-col l2">颜色</div>
+													<div class="rema-col l2">尺寸</div>
+													<div class="rema-col l3">件数</div>
+													<div class="rema-col l2">金额</div>
+													<div class="rema-col l2">购物篮</div>
+													<div class="rema-col l1">删除</div>
+												</div>
+											</div>
+												{#additems#}
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+                
+				<section id="order-info">
+					<div class="order-info-con">
+						<div class="rema-col l4 m12 background-gray">
+							<div class="order-info-block">
+								<div class="page-title rema-col">
+									<div class="font-l font-w-m">订单资讯</div>
+									<div class="mobile-order-close">
+										<div class="mobile-checkout-close">
+												<a><div>❮ 返回</div></a>
+										</div>
+									</div>
+								</div>
+								<div class="order-info-flex border-top">
+									<div class="price-count-con">
+										<div class="price-total-con price-row rema-col l12">
+											<div class="rema-col l8 font-w-l  font-m">
+												<div class="">金额总计</div>
+											</div>
+											<div class="rema-col l4  font-w-l">
+												<div class="munber">{#pricesymbol#} <span id="paytotal">{#tjine#}</span></div>
+												<input type="hidden" name="tjine" id="tjine" value="{#nonfotmattjine#}" />
+											</div>
+										</div>
+										<div class="underlin-dash">
+											<div class="price-row rema-col l12">
+												<div class="rema-col l8">
+													<div class="font-s font-m-s">商品金额总计</div>
+												</div>
+												<div class="rema-col l4">
+													<div class="font-s font-m-s munber">{#pricesymbol#} <span id="chg_oritjine">{#oritjine#}</span></div>
+													<input type="hidden" name="oritjine" id="oritjine" value="{#oritjine#}" />
+												</div>
+											</div>
+
+											<div class="price-row rema-col l12">
+												<div class="rema-col l8">
+													<div class="font-s font-m-s">物流费用(满 {#pricesymbol#} {#setyunfei#}元享免运费)</div>
+												</div>
+												<div class="rema-col l4">
+													<div class="font-s font-m-s munber">{#pricesymbol#} <span id="payyunfei">{#yunfei#}</span></div>
+													<input type="hidden" name="yunfei" id="yunfei" value="{#yunfei#}" />
+												</div>
+											</div>
+
+											<div class="price-row rema-col l12">
+												<div class="rema-col l8">
+													<div class="font-s font-m-s">线上帐户余额 {#pricesymbol#} {#account#}元，本次抵用</div>
+												</div>
+												<div class="rema-col l4">
+													<div class="font-s font-m-s munber">{#pricesymbol#} <span id="chg_disaccount">{#disaccount#}</span></div>
+													<input type="hidden" name="disaccount" id="disaccount" value="{#disaccount#}" />
+												</div>
+											</div>
+
+											<div class="price-row rema-col l12">
+												<div class="rema-col l8">
+													<div class="font-s font-m-s">电子折价券折扣金额</div>
+												</div>
+												<div class="rema-col l4">
+													<div class="font-s font-m-s munber">{#pricesymbol#} <span id="groupon">{#promoprice#}</span></div>
+													<input type="hidden" name="promoprice" id="promoprice" value="{#promoprice#}" />
+												</div>
+											</div>
+
+										</div>
+										<div class="rema-col l12 coupon-block">
+											<div class="font-s">欲使用电子折价券请输入编号</div>
+												<form  class="form-inline" id="promoCode" method="post" action="cart.php">
+													<div class="rema-col l7 inline-input">
+														<input class="inputsy" type="text" id="promocode1" name="promocode" value="" placeholder="输入电子票券编号">
+														<!--button class="inputbn coupon-bn-" type="submit">❯</button-->
+														<button class="inputbn coupon-bn-" type="submit">啟用</button>
+														<input type="hidden" name="promochk" value="1" />
+													</div>
+												</form>
+										</div>
+									</div>
+
+<!-m1->
+
+<!-m2->
+									<div class="Pay ">
+										<div class="rema-col pay-title border-top font-w-l font-m">
+											<div class="rema-col">付款方式</div>
+										</div>
+										<div>
+											<div class="rema-col">
+												<div class="input-con ">
+													<label class="radio-container">
+													  <input type="radio" id="payment2" class="payment2" name="payment" value="2" {#checkyun#}>
+													  <span class="checkmark payment2"></span>
+													</label>
+													<div class="checkbox-item font-s font-w-l">宅配货到付款</div>
+												</div>
+												<div class="input-notce font-s">
+													<div>每笔订单将酌收 {#pricesymbol#} {#setyunprice2#}元物流费</div>
+													<div>若单笔购物满 {#pricesymbol#} {#setyunfei#}元，即享有免运费优惠</div>
+												</div>
+											</div>
+											<div class="rema-col padding-top-12">
+												<div class="input-con ">
+													<label class="radio-container">
+													  <input type="radio" id="payment1" class="payment1"name="payment" value="1" {#checkcard#}>
+													  <span class="checkmark payment1"></span>
+													</label>
+													<div class="checkbox-item font-s font-w-l">信用卡线上刷卡</div>
+												</div>
+												<div class="input-notce font-s">
+													每笔订单将酌收 {#pricesymbol#} {#setyunprice#}元物流费 若单笔购物满 {#pricesymbol#} {#setyunfei#}元，即享有免运费优惠 (可接受VISA, Master, JCB信用卡)
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="buy-bn-con rema-col  border-top">
+											<a class="href-sw gostart" id="{#depromocode#}"><button class="shop-bn" >确认购买</button></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						
+					</div>
+				</section>
+			</div>
+			<div class="sticky-height rema-col">
+				<section id="mobile-cart-list">
+					<div class="mobile-cart-list-con">
+						<div class="fixd-bottom sticky rema-col">
+							<div class="mobile-cart-list-block rema-col l12  border-top">
+								<div class="mobile-total">
+									<div class="font-w-l font-m mobile-total-title">
+										<div class="">金额总计</div>
+									</div>
+									<div class="font-w-l font-m mobile-total-munber">
+										<div class="munber">{#pricesymbol#} <span id="paytotal2">{#tjine#}</span></div>
+									</div>
+								</div>
+								<div class="mobile-buy-bn-con">
+									<div class="buy-bn-con rema-col ">
+										<button class="shop-bn" id="mobile-buy-bn1">确认订单</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<input type="hidden" id="setyunprice" value="{#setyunprice#}" />
+		<input type="hidden" id="setyunprice2" value="{#setyunprice2#}" />
+
+<!-m2->
+
+<!-end->
+
+		<input type="hidden" id="promotype" value="{#promotype#}" />
+		<input type="hidden" id="promotypecode" value="{#promotypecode#}" />
+		<input type="hidden" id="promocode2" value="{#promocode2#}" />
+                <!-- END total -->
+<!-end->
+<!-err1-><script>
+$(document).ready(function(){
+			alert('主商品已经清空，加购商品将一并清除！');
+			$.ajax({
+				type: "POST",
+				url:PDV_RP+"post.php",
+				data: "act=setcookie&cookietype=empty&cookiename=SHOPCART",
+				success: function(msg){
+					if(msg=="OK"){
+						window.location=PDV_RP+'shop/cart.php?isre=1';
+					}
+				}
+			});
+});
+</script><!-err1->
+
+
+<!-menu->
+			<div class="Pay ">
+                 <!-- total -->
+                <ul class="cart-total">
+                    <li>
+                        选择购买来源
+                    </li>
+                    <li class="v-top style-toggle">
+                    <div class="btn-group" data-toggle="buttons">
+				        <label class="btn active fix-padding checked">
+				          <input type="radio" name="source" value="0" checked><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  REMA官方网站</span>
+				        </label>
+				      </div>
+                    <!--div class="btn-group" data-toggle="buttons" style="display: block;">
+				        <label class="btn active fix-padding ">
+				          <input type="radio" name="source" value="1-1"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  板桥店</span>
+				        </label>
+				      </div-->
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding ">
+				          <input type="radio" name="source" value="1-2"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  新庄店</span>
+				        </label>
+				      </div>
+                    <!--div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding ">
+				          <input type="radio" name="source" value="1-3"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  内湖店</span>
+				        </label>
+				      </div-->
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding ">
+				          <input type="radio" name="source" value="1-4"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  三重店</span>
+				        </label>
+				      </div>
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding ">
+				          <input type="radio" name="source" value="1-5"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  南屯店</span>
+				        </label>
+				      </div>
+                    <div class="btn-group" data-toggle="buttons" style="display: block;">
+				        <label class="btn active fix-padding ">
+				          <input type="radio" name="source" value="2-1"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  虾皮</span>
+				        </label>
+				      </div>
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding ">
+				          <input type="radio" name="source" value="2-2"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  MOMO</span>
+				        </label>
+				      </div>
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding ">
+				          <input type="radio" name="source" value="2-3"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  Yahoo超级商城</span>
+				        </label>
+				      </div>
+                    </li>
+                </ul>
+                <ul class="cart-total">
+                    <li>
+                        结帐方式
+                    </li>
+                    <li class="v-top style-toggle">
+                    <div class="btn-group" data-toggle="buttons">
+				        <label class="btn active fix-padding checked">
+				          <input type="radio" name="payment" value="3" checked><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  现金结帐</span>
+				        </label>
+				      </div>
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding">
+				          <input type="radio" name="payment" value="4"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  信用卡付款</span>
+				        </label>
+				      </div>
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding">
+				          <input type="radio" name="payment" value="6"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  LINE Pay</span>
+				        </label>
+				      </div>
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+				        <label class="btn active fix-padding">
+				          <input type="radio" name="payment" value="5"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  货到付款</span>
+				        </label>
+				      </div>
+                    </li>
+                </ul>
+                <ul class="cart-total">
+                    <li>
+                        配送方式
+                    </li>
+                    <li class="v-top style-toggle">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn active fix-padding checked">
+								<input type="radio" name="sourceyun" value="8" checked><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  现场购买</span>
+							</label>
+						</div>
+						<div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+							<label class="btn active fix-padding">
+								<input type="radio" name="sourceyun" value="9"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  7-11取货</span>
+							</label>
+						</div>
+						<div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+							<label class="btn active fix-padding">
+								<input type="radio" name="sourceyun" value="10"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  全家取货</span>
+							</label>
+						</div>
+						<div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+							<label class="btn active fix-padding">
+								<input type="radio" name="sourceyun" value="12"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  莱尔富取货</span>
+							</label>
+						</div>
+						<div class="btn-group" data-toggle="buttons" style="margin-left: 20px;">
+							<label class="btn active fix-padding">
+								<input type="radio" name="sourceyun" value="11"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span>  宅配</span>
+							</label>
+						</div>
+                    </li>
+                </ul>
+                <ul class="cart-total">
+                    <li>
+                        运费设定
+                    </li>
+                    <li class="v-top style-toggle">
+                    <div class="btn-group" data-toggle="buttons">
+				          <input type="tel" id="sourceyunfei" class="form-control" value="0">
+				      </div><span style="font-size: 18px;"> 元</span> 
+                    </li>
+                </ul>
+                <ul class="cart-total">
+                    <li>
+                        额外折扣(折价金)
+                    </li>
+                    <li class="v-top style-toggle">
+                    <div class="btn-group" data-toggle="buttons">
+				          <input type="tel" id="sourcediscount" class="form-control" value="0">
+				      </div><span style="font-size: 18px;"> 元</span> 
+                    </li>
+                </ul>
+			</div>
+				<div>
+					<div class="buy-bn-con rema-col  border-top">
+						<a class="href-sw gostart" id="{#depromocode#}"><button class="shop-bn" >确认购买</button></a>
+					</div>
+				</div>
+				
+								</div>
+							</div>
+
+
+						</div>
+						
+					</div>
+				</section>
+			</div>
+			<div class="sticky-height rema-col">
+				<section id="mobile-cart-list">
+					<div class="mobile-cart-list-con">
+						<div class="fixd-bottom sticky rema-col">
+							<div class="mobile-cart-list-block rema-col l12  border-top">
+								<div class="mobile-total">
+									<div class="font-w-l font-m mobile-total-title">
+										<div class="">金额总计</div>
+									</div>
+									<div class="font-w-l font-m mobile-total-munber">
+										<div class="munber">{#pricesymbol#} <span id="paytotal2">{#tjine#}</span></div>
+									</div>
+								</div>
+								<div class="mobile-buy-bn-con">
+									<div class="buy-bn-con rema-col ">
+										<button class="shop-bn" id="mobile-buy-bn1">确认订单</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+				<input type="hidden" id="setyunprice" value="0" />
+				<input type="hidden" id="setyunprice2" value="0" />
+<!-menu->

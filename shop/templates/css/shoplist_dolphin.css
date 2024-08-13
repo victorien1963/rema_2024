@@ -1,0 +1,19 @@
+#shoplist_dolphin{
+margin:4px 0px 0px 24px;
+padding:0;
+}
+
+#shoplist_dolphin div.shoplist_dolphin{
+border:0px #ddd solid;
+background: #fff;
+padding:0px;
+text-align:center;
+display:none;
+}
+
+#shoplist_dolphin div.picFit{
+overflow: hidden;
+}
+
+#shoplist_dolphin div.picFit img{
+}

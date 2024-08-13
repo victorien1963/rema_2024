@@ -1,0 +1,81 @@
+<!-start->
+<script language="javascript" src="{#CP#}js/orderdetail.js"></script>
+    <div class="top-status">
+        <a href="javascript:history.back();" class="top-status-aa"> <i class="icon-arrow-left"></i></a>
+        <div class="top-status-title">編號 {#OrderNo#}</div>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                
+                	<div class="myact-formf">
+                    	<div class="myact-ffleft">{#dtime#}</div>
+                    	<div class="myact-ffright">狀態 {#status#}</div>
+                    </div>
+                	<div class="myact-formfs">
+                        <li>{#name#} </li>
+                        <li>{#s_addr_a#}</li>
+                        <li>{#s_addr_b#}</li>
+                        <li>{#s_addr_c#} {#postcode#}</li>
+                        <li>{#country#}</li>
+                        <li>行動電話：{#s_mobi#}</li>
+                    </div>
+                	<div class="myact-formfbt">
+
+  <!-start->
+  <!-list->
+                		<div class="myact-ftdot">
+                            <div class="myact-ffleft">
+                                {#bn#} {#goods#}<br>
+                                {#colorname#} / {#size#}<br>
+                                數量：{#nums#}
+                            </div>
+                            <div class="myact-ffright">{#pricesymbol#} {#jine#}</div>
+                    	</div>
+  <!-list->
+<!-end->
+                    </div>
+                	<div class="myact-formfoot">
+                    	<div class="myact-footone">
+                            <div class="myact-ffleft">物流費用(滿{#getsymbol#} {#setyunfei#}元享免運費)</div>
+                            <div class="myact-ffright">{#pricesymbol#} {#multiyunfei#}</div>
+                    	</div>
+                    	<div class="myact-footone">
+                            <div class="myact-ffleft">線上帳戶餘額{#getsymbol#} {#account#}元，本次抵用</div>
+                            <div class="myact-ffright">{#pricesymbol#} {#disaccount#}</div>
+                    	</div>
+                    	<div class="myact-footone">
+                            <div class="myact-ffleft">電子折價券折扣金額</div>
+                            <div class="myact-ffright">{#pricesymbol#} {#promoprice#}</div>
+                    	</div>
+                    	<div class="myact-foottwo">
+                            <div class="myact-ffleft">金額總計</div>
+                            <div class="myact-ffright">{#pricesymbol#} {#tjine#}</div>
+                    	</div>
+                        
+                    </div>
+                    
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+<!-end->
+
+<!-err1->
+<link href="css/shoporderdetail.css" rel="stylesheet" type="text/css" />
+<div class="ordererr">{#ntc#}</div>
+<!-err1->
+

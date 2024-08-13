@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+.account-item-list{
+	padding-bottom: 10px;
+	border-bottom: 1px solid hsla(0,0%,60%,1.00);
+	text-align: center;
+}
+.account-item{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed hsla(0,0%,60%,1.00);
+	text-align: center;
+}
+.moneyback-block{
+	margin-left: 1.5vw;
+	padding-left: 1.5vw;
+	border-left: 1px solid hsla(0,0%,60%,1.00);
+	min-height: 280px;
+	width: 14vw;
+	position: fixed;
+}
+.account-con{
+	margin-bottom: 80px;
+}
+.surplus{
+	display: none;
+}
+@media(max-width:1000px){
+.surplus{
+	display: block;
+}
+	.moneyback-block{
+		background-color: hsla(0,0%,100%,1.00);
+		margin-left: 0px;
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-bottom: 30px;
+		padding-top: 10px;
+		position: unset;
+		bottom: 0px;
+		width: 90%;
+		border-left: none;
+		min-height: inherit;
+		z-index: 2;
+	}
+	.buy-bn-con{
+		margin-top: 10px;
+	}
+	.account-mobile{
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.mobile-left{
+		float: left;
+	}
+	.mobile-right{
+		float: right;
+	}
+	.buy-bn-con{
+		float: right;
+	}
+	.fin-surplus-show{
+		font-size: 26px;
+	}
+	.fin-surplus-title{
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+}
+
+@media(max-width:700px){
+	.fin-surplus-show{
+		font-size: 16px;
+		font-weight: 600;
+		float: left;
+		width: 50%
+	}
+	.fin-surplus-title{
+		font-size: 16px;
+		font-weight: 600;
+		float: left;
+		width: 50%;
+	}
+	.account-item{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid hsla(0,0%,60%,1.00);
+		text-align: left;
+	}
+	.mobile-account-item-list{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: left;
+		border-bottom: 1px solid hsla(0,0%,60%,1.00);
+	}
+	.account-item-list{
+		/*display: none;*/
+	}
+	.mobile-left{
+		float: left;
+		width: 95%;
+	}
+	.cellphone-con{
+		width: 100%;
+	}
+	.mobile-right{
+		float: left;
+	}
+	.moneyback-word{
+		font-size: 10px;
+		padding-top: 10px;
+	}
+	.buy-bn-con{
+		float: left;
+	}
+	.moneyback-block{
+		padding-bottom: 30px;
+	}
+	.mobile-account-item-list div{
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+	.account-item div{
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+}
+
+
+
+
+
+
+

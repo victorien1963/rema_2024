@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <title>{#pagetitle#} {#sitename#}</title>
+    <meta name="description" content="{#metacon#}">
+    <meta name="Keywords" content="{#metakey#}">
+	{#metaimage#}
+	{#addmeta#}
+	{#addscript#}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link href="{#TM#}img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="{#TM#}plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{#TM#}css/icomoon/style.css">
+    <link rel="stylesheet" href="{#TM#}plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="{#TM#}css/style.css">
+    <link rel="stylesheet" href="{#TM#}css/index.css">
+    <link rel="stylesheet" href="{#TM#}css/responsive.css">
+    <link rel="stylesheet" href="{#TM#}css/mobile.css">
+    
+    <link rel="stylesheet" href="{#TM#}dist/css/swiper.min.css">
+    <script type="text/javascript" src="{#TM#}js/jquery.min.js"></script>
+    
+    <style>
+    .swiper-container {
+		float:left;
+        width: 100%;
+		height: auto;
+		background-color:black;
+    }
+	.swiper-wrapper{
+		float:left;
+        width: 100%;
+		height: auto;
+	}
+    .swiper-slide {
+		float:left;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img{
+		float:left;
+        width: 100%;
+		height: auto;
+		max-height: 480px;
+    }
+    .swiper-slide h3,h4{
+		position:absolute;
+		width:100%;
+		text-align:center;
+		color:white;
+		margin:0;
+    }
+    .swiper-slide h3{
+		font-size:26px;
+		top:36px;
+    }
+    .swiper-slide h4{
+		font-size:20px;
+		top:68px;
+    }
+    </style>
+<!-reload-!>
+</head>
+
+<body>
+<!-- header -->
+		<div class="top-info">
+		    <div class="container">
+			    <!-- SLIDER -->
+				<div id="top-info-slide" class=" carousel slide" data-ride="carousel">
+				    <div class="carousel-inner" role="listbox">
+				    	{#MARQUEE_109#}
+				    </div>
+				    <!-- arrow -->
+				    <a href="#top-info-slide" class="left carousel-control" data-slide="prev"><i class="icon-arrow-left2"></i></a>
+				    <a href="#top-info-slide" class="right carousel-control" data-slide="next"><i class="icon-arrow-right2"></i></a>
+				    <!-- E/arrow -->
+				</div>
+				<!-- SLIDER -->
+		    </div>
+		</div>
+<div class="header">
+	{#LOGO#}
+</div>
+<!-- END header -->
+    <!-- MAIN SLIDER -->
+    <div class="clearfix"></div>
+    
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        	{#LB_79#}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!--div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div-->
+    </div>
+    
+    <!-- MAIN SLIDER -->
+    <div class="clearfix"></div>
+    <div class="container">
+        <!-- 精选疗程套餐 OWL CAROUSEL -->
+        <div class="index-main-title">
+            <h1><span>最</span><span>新</span><span>商</span><span>品</span>
+    </h1>
+        </div>
+        <div id="owl-V1">
+            <div class="Navigation">
+                <a class="prev v1"><i class="icon-arrow-left"></i></a>
+                <a class="next v1"><i class="icon-arrow-right"></i></a>
+            </div>
+            <div class="owl-carousel owl-theme">
+            	{#SHOPLIST_80#}
+            </div>
+        </div>
+        <!-- owl-V1 -->
+        <!-- END 精选疗程套餐 OWL CAROUSEL -->
+       
+    </div>
+    <!-- container -->
+    <!-- footer -->
+    <div id="footer">
+		<div class="footer-hold">
+		    <div class="pick-language collapse">
+		    <!-- <div class="pick-language"> -->
+		        <h3>选择地区及显示语言</h3>
+		        <ul class="language-list">
+		        	{#LANTYPE_83#}
+		        </ul>
+		        <div class="clearfix"></div>
+		    </div>
+		    <div class="container-foot">
+		        <div class="row fix-padding10">
+		            <div class="col-xs-7 fix-padding">
+		                <ul class="foot-memu">
+		                	{#BTLISTMENU_81#}
+		                </ul>
+		            </div>
+		            <div class="col-xs-5 fix-padding ">
+		                <ul class="foot-memu pull-right">
+		                    <li><a href=".pick-language" data-toggle="collapse" id="lantype">
+		                    <img src="{#TM#}img/index/flag-taiwan.jpg" alt="">
+		                    台湾 NT$/繁体中文</a></li>
+		                </ul>
+		            </div>
+		        </div>
+		        <!-- row -->
+		    </div>
+		    <!-- container -->
+		</div>
+		<div class="copyright">
+		    {#BTINFO#}
+		</div>
+    </div>
+    <div id="bottom-nav">
+		<ul class="bottom-nav">
+			{#BTMENU_82#}
+		</ul>
+		<div class="bottom-nav-gap"></div>
+    </div>
+    <!--/  footer -->
+    <script type="text/javascript" src="{#TM#}plugins/bootstrap/bootstrap.min.js"></script>
+    <!--script type="text/javascript" src="{#TM#}js/load-page.js"></script-->
+    <script type="text/javascript" src="{#TM#}plugins/bootstrap-carousel-swipe-master/carousel-swipe.js"></script>
+    <!-- owl-carousel -->
+    <script type="text/javascript" src="{#TM#}plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script>
+    // very simple to use!
+    $(document).ready(function() {
+        $(".carousel").carousel({
+            // interval: 50
+            interval: false
+        });
+        var owl = $("#owl-V1 .owl-carousel");
+        owl.owlCarousel({
+            items: 3,
+            itemsDesktop: [1170, 2],
+            itemsDesktopSmall: [992, 2],
+            itemsTablet: [768, 2],
+            itemsMobile: [590, 2],
+            slideSpeed: 1000
+        });
+
+        // Custom Navigation Events
+        $(".next.v1").click(function() {
+            owl.trigger('owl.next');
+        })
+        $(".prev.v1").click(function() {
+            owl.trigger('owl.prev');
+        })
+
+    });
+    </script>
+    <script>
+    // $(".carousel").carousel();
+    </script>
+    
+    
+    <!-- Swiper JS -->
+    <script src="{#TM#}dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        //spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 6500,
+        autoplayDisableOnInteraction: false
+    });
+    </script>
+	{#addbtscript#}
+</body>
+
+</html>

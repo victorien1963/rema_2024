@@ -1,0 +1,51 @@
+@import "variable";
+@import "mixin";
+
+footer {
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    padding-top: 50px;
+
+    ul {
+        max-width: 80%;
+        margin: auto;
+        list-style-type: none;
+        padding-left: 0;
+        padding-bottom: 30px;
+        @include rwd($mobile-small) {
+            max-width: none;
+        }
+    }
+    label {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .link-items {
+        width: max-content;
+        margin: auto;
+        font-size: 14px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        @include rwd($mobile-small) {
+            width: 132px;
+        }
+        p {
+            cursor: pointer;
+        }
+    }
+    
+    li:nth-of-type(4) {
+        @include rwd($mobile) {
+            .link-items {
+                width: 132px;
+            }
+        }
+    }
+    .copyright {
+        border-top: 1px solid $grey;
+        padding: 30px 10px;
+        font-size: 12px;
+    }
+}

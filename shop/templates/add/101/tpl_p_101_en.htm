@@ -1,0 +1,29 @@
+<!-start->
+	<script type=text/javascript src="{#CP#}js/order.js"></script>
+<!-start->  
+<!-list->
+                    	<div class="myact-sord-all">
+                        	<span>{#OrderNo#}</span>
+                            <p>
+                            	{#dtime#} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{#pricesymbol#} {#paytotal#}<br>
+                            	Status: {#status#}
+                            </p>
+                            {#payagain#}
+                            {#showtui#}
+                        	<a href="orderdetail.php?orderid={#orderid#}" class="myact-sord-aa8">
+                            	View Order Detail<br>
+                            	<i class="icon-arrow-right"></i>
+                            </a>
+                        </div>
+<!-list->
+
+<!-m0->
+	<p style="display:inline-block;width:105px;margin-top:10px;" class="pull-right"><a href="orderpay.php?orderid={#orderid#}" class="btn btn-default">RE-PAYMENT</a></p>
+<!-m0->
+
+<!-m1->
+    <p style="display:inline-block;width:105px;margin-top:10px;" class="pull-right"><a href="javascript:;" id="delete_{#orderid#}" class="delchk btn btn-default">Cancel Orders</a></p>
+<!-m1->
+
+<!-end->
+<!-end->

@@ -1,0 +1,74 @@
+Options -Indexes
+
+SetEnvIfNoCase User-Agent "(Baidu|spider)" bad_bot
+SetEnvIfNoCase User-Agent "^Baidu" bad_bot
+SetEnvIfNoCase User-Agent "^sogou" bad_bot
+SetEnvIfNoCase User-Agent "^Bloghoo" bad_bot
+SetEnvIfNoCase User-Agent "^Scooter" bad_bot
+Deny from env=bad_bot
+
+RewriteEngine On
+
+RewriteBase / 
+
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^stores([0-9]+) /news/class/?$1.html [QSA,L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^newspost /news/class/?1.html [QSA,L]
+
+RewriteRule ^shop([0-9]+)-([0-9]+)$ /shop/html/?$1-$2.html [QSA,L]
+RewriteRule ^shop([0-9]+)_(.*?)$ /shop/html/?$1.html [QSA,L]
+RewriteRule ^shop([0-9]+)$ /shop/html/?$1.html [QSA,L]
+RewriteRule ^rshop([0-9]+)-([0-9]+)$ /shop/html/$1-$2.html [QSA,L]
+RewriteRule ^rshop([0-9]+)_(.*?)$ /shop/html/$1.html [QSA,L]
+RewriteRule ^rshop([0-9]+)$ /shop/html/$1.html [QSA,L]
+
+RewriteRule ^shopclass([0-9]+)-(.*?)$ /shop/class/?$1.html [QSA,L]
+RewriteRule ^shopclass([0-9]+)_(.*?)$ /shop/class/?$1.html [QSA,L]
+RewriteRule ^shopclass([0-9]+)$ /shop/class/?$1.html [QSA,L]
+RewriteRule ^rshopclass([0-9]+)-(.*?)$ /shop/class/$1.html [QSA,L]
+RewriteRule ^rshopclass([0-9]+)_(.*?)$ /shop/class/$1.html [QSA,L]
+RewriteRule ^rshopclass([0-9]+)$ /shop/class/$1.html [QSA,L]
+RewriteRule ^shoproj([0-9]+)-(.*?)$ /shop/class/$1/ [QSA,L]
+RewriteRule ^shoproj([0-9]+)_(.*?)$ /shop/class/$1/ [QSA,L]
+RewriteRule ^shoproj([0-9]+)$ /shop/class/$1/ [QSA,L]
+
+RewriteRule ^tech-(.*)$ /page/tech/$1.html [QSA,L]
+RewriteRule ^tech(.*)$ /page/tech/?$1.html [QSA,L]
+
+RewriteRule ^crew-(.*)$ /page/crew/$1.html [QSA,L]
+RewriteRule ^crew(.*)$ /page/crew/?$1.html [QSA,L]
+
+RewriteRule ^explore-(.*)$ /page/explore/$1.html [QSA,L]
+RewriteRule ^explore(.*)$ /page/explore/?$1.html [QSA,L]
+
+RewriteRule ^life-(.*)$ /page/life/$1.html [QSA,L]
+RewriteRule ^life(.*)$ /page/life/?$1.html [QSA,L]
+
+RewriteRule ^story-(.*)$ /page/story/$1.html [QSA,L]
+RewriteRule ^story(.*)$ /page/story/?$1.html [QSA,L]
+
+RewriteRule ^experience-(.*)$ /page/experience/$1.html [QSA,L]
+RewriteRule ^experience(.*)$ /page/experience/?$1.html [QSA,L]
+
+RewriteRule ^green-(.*)$ /page/green/$1.html [QSA,L]
+RewriteRule ^green(.*)$ /page/green/?$1.html [QSA,L]
+
+
+RewriteRule ^Vision-(.*)$ /page/Vision/$1.html [QSA,L]
+RewriteRule ^Vision(.*)$ /page/Vision/?$1.html [QSA,L]
+RewriteRule ^vision-(.*)$ /page/Vision/$1.html [QSA,L]
+RewriteRule ^vision(.*)$ /page/Vision/?$1.html [QSA,L]
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 123.125.71.0/24
+deny from 220.181.108.0/24
+deny from 111.206.221.0/24

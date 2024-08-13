@@ -1,0 +1,304 @@
+<!-start->
+<div class="bk-layout">
+	<main>
+		<div class="container-fluid">
+			<ol class="breadcrumb">
+				{#NAV#}
+			</ol>
+			<div class="product-main">
+				<div class="row">
+				<div class="col-md-8">
+					<div class="product-pic">
+						<div class="owl-carousel owl-product-photo owl-product-swiper">
+							{#zoomlist#}
+						</div>    
+						<div class="owl-carousel owl-product-photo owl-product-img-list">
+							{#zoomlist#}
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-4">
+					<div class="product-info position-sticky sticky-top" id="area_product_info">
+					<h1><span>{#bn#}</span>{#title#}</h1>
+					<h2>
+						{#memo#}
+					</h2>
+					<div class="price text-left">
+						<div class="ori">{#price0unit#}</div>
+						<div class="current">{#pricesymbol#} {#price#}</div>
+					</div>
+					<div class="format">
+						<div class="title">尺寸顏色選擇：{#colorname#}</div>
+						<div class="con">
+							{#selsize#}
+						</div>
+					</div>
+					<div class="size">
+						<a href="#area_size" class="link">找到我的尺碼</a>
+						<div class="stock" data-in-stocks="{#instocks#}" data-out-of-stocks="{#outofstocks#}">{#stock_check#}</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="btn-box {#btn_none#}">
+						<a href="#" class="btn btn-block btn-primary add-cart" id="addtocart">請選擇尺寸</a>
+						<!--Sold Out Button Start-->
+						<a href="javascript:;" class="btn btn-block btn-line disabled sold-out">SOLD OUT</a>
+						<!--Sold Out Button End-->
+					</div>
+					
+					<hr>
+					<div class="card card-info has-toggle">
+						<div class="title">產品說明<i class="fa fa-angle-down"></i></div>
+						<div class="con">
+							{#c_body#}
+						</div>
+					</div>
+
+
+					<div class="card card-info has-toggle {#ambience_status#}">
+						<div class="title">溫度範圍＆環境條件<i class="fa fa-angle-down"></i></div>
+						<div class="con">
+							{#temperature#}
+							
+							{#ambience#} 
+						</div>
+					</div>
+					
+
+					<div class="card card-info has-toggle {#after_sales_service_status#}">
+						<div class="title">配送&換貨/退貨<i class="fa fa-angle-down"></i></div>
+						<div class="con">
+							{#after_sales_service#}
+						</div>
+					</div>
+
+					</div>
+				</div>
+				</div>      
+			</div>
+		</div>
+
+		<!--商品介紹 Start-->
+		<section class="area text-center">
+			<div class="container">
+				{#b_body#}
+			</div>
+		</section>
+		<!--商品介紹 End-->
+
+		<!--尺寸區 Start-->
+		<section class="area" id="area_size">
+			<div class="container">
+				<div class="d-flex flex-wrap align-items-center ">
+					<div class="col-md-6 col-12 order-md-2 {#canshu_check#}">
+						<!--<div class="text-center">
+							<h3>尺碼對照表</h3>
+							<div class="text">單位：英吋</div>
+						</div>-->
+						<div class="row justify-content-center">
+						<div class="col-12">
+							<div class="size-chart">
+								<div class="pic mt-4 mb-0"><img src="{#canshu#}"></div>
+							</div>
+						</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-12 order-md-1">
+						<div class="size-tool">
+						<div class="size-ref">
+							<div class="pic pic-size">
+								<img src="{#shape#}">
+							</div>
+
+						</div>
+						
+						
+						</div>
+						
+						<div class="size-conut-fin-con col-12" id="showsizeinfo">
+				
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+		<!--尺寸區 End-->
+
+		<!--保證區 Start-->
+		<section class="area pt-0 pb-0" id="area_promise">
+			<ul class="list-promise">
+			  <li>
+				<div class="heading">
+				  <div class="title">保證修補</div>
+				  <div class="pic"><img src="{#TM#}img/ic_promise_info.svg"></div>
+				</div>
+				<div class="text">
+				  若您購買的衣物出現破損 ，我們提供保證修補到好的服務，以確保您的裝備始終處於最佳狀態。
+				</div>
+			  </li>
+			  <li>
+				<div class="heading">
+				  <div class="title">靈活換貨</div>
+				  <div class="pic"><img src="{#TM#}img/ic_promise_return.svg"></div>
+				</div>
+				<div class="text">
+				  如果您對所購買的商品不完全滿意，無論是尺寸不合，風格不符或其他任何原因，我們提供的換貨服務，讓您能再次選擇。
+				</div>
+			  </li>   
+			  <li>
+				<div class="heading">
+				  <div class="title">免費退貨</div>
+				  <div class="pic"><img src="{#TM#}img/ic_promise_refund.svg"></div>
+				</div>
+				<div class="text">
+				  如果您需要退貨，我們提供免費退貨政策，在10天鑑賞期限內您可以毫無負擔地退回商品。             
+				</div>
+			  </li>
+			  <li>
+				<div class="heading">
+				  <div class="title">除舊換新</div>
+				  <div class="pic"><img src="{#TM#}img/ic_promise_renew.svg"></div>
+				</div>
+				<div class="text">
+				  為鼓勵持續更新您的運動裝備，我們提供除舊換新的服務，將您的舊衣物交回給我們，可以享受購買新衣物的優惠。
+				</div>
+			  </li>                       
+			</ul>
+		</section>
+		<!--保證區 End-->
+
+		<!--推薦商品 Start-->
+		<section class="area" id="area_recommend">
+			<div class="container">
+				<h3>You may also like</h3>
+				<div class="owl-carousel owl-product-recommend">
+					{#HOTLIST1#}
+				</div>
+			</div>
+		</section>
+		<!--推薦商品 End-->
+
+	</main>
+	<!--FB Msg Btn Demo Start-->
+	<div style="position:fixed;z-index:1500;right:24px;bottom:80px;width: 44px; height: 44px; background-color: #7B8894; display: flex; justify-content: center; align-items: center; border-radius:44px"><svg width="24" height="24" viewBox="0 0 36 36"><path fill="white" d="M34.5 17.2554C34.4986 26.4098 27.5895 33.1113 17.9997 33.1113C16.4018 33.1113 14.8796 32.9689 13.4516 32.6202C12.2642 32.3306 11.0245 32.3602 9.86671 32.755L4.3643 34.4437C3.47806 34.7463 2.61794 33.8851 2.9184 32.9648L4.01091 29.3489C4.42 28.095 4.26117 26.7193 3.57432 25.5988C2.12085 23.2265 1.50069 20.3926 1.5 17.2554V17.254V17.2526C1.50138 8.09894 8.41049 1.50537 17.9997 1.50537C27.5895 1.50537 34.4986 8.09894 34.5 17.2526V17.254V17.2554Z"></path></svg></div>
+	<!--FB Msg Btn Demo End-->
+
+
+	<a href="javascript:;" class="totop"><img src="{#TM#}img/ic_arrow_up.svg"></a>
+	<div class="fix-nav">
+		<div class="price">
+		<div class="ori">{#price0unit#}</div>
+		<div class="current">{#pricesymbol#} {#price#}</div>
+		</div>
+		<a href="#area_product_info" class="btn btn-primary" id="btn_add_cart_mobile">請選擇尺寸</a>
+		<!--Sold Out Button Start-->
+		<!--
+		<a href="javascript:;" class="btn btn-line disabled">SOLD OUT</a>
+		-->
+		<!--Sold Out Button End-->
+	</div>
+</div>
+
+<input name="gid" type="hidden" id="gid" value="{#gid#}" />
+<input name="shopid" type="hidden" id="shopid" value="{#id#}">
+<input name="subpicid" type="hidden" id="subpicid" value="{#subpicid#}" />
+<input name="buyspecid" type="hidden" id="buyspecid" value="">
+<input name="buysize" type="hidden" id="buysize" value="">
+<input name="buyprice" type="hidden" id="buyprice" value="{#oriprice#}">
+<input name="buynums" name="buynums" type="hidden" id="buynums" value="1" />
+<input name="fz" type="hidden" id="fz" value="" />
+
+<input name="discat" type="hidden" id="discat" value="">
+<input name="distype" type="hidden" id="distype" value="">
+<input name="disnum" type="hidden" id="disnum" value="">
+<input name="disrate" type="hidden" id="disrate" value="">
+<input name="disprice" type="hidden" id="disprice" value="">
+<!-start->
+<!-list->
+{#propname#}：{#prop#}<br>
+<!-list->
+
+
+<!-m0->
+<div class="item">
+	<div class="pic"><img src="{#src#}"></div>
+</div>
+<!-m0->
+
+<!-m1->
+<div class="scope-area">
+	<div class="title">溫度範圍：{#title#}</div>
+	<div class="scope-degree">
+	<div class="indicator scope{#key#}"></div>
+		<!--
+			indicator共可以加5個Scope class: 
+			scope1: < -10 ~ 0
+			scope2: 0 ~ 10
+			scope3: 10 ~ 20
+			scope4: 20 ~ 30
+			//scope5: 30 ~ 40
+			--->
+	</div>
+		
+	<ul class="scope-degree-des">
+		<li>< -10 °C</li>
+		<li>0 °C</li>
+		<li>10 °C</li>
+		<li>20 °C</li>
+		<li>30 °C</li>
+		<!-- <li>> 40 °C</li> -->
+	</ul>
+</div>
+
+<!-m1->
+
+<!-m4->
+<div class="scope-area mt-4">
+	<div class="title">環境條件：{#title#}</div>
+	<ul class="scope-condition">
+		{#list#}                                        
+	</ul>
+</div>
+<!-m4->
+
+<!-m2->
+
+<!-m2->
+
+<!-menu->
+<div class="color-img bgimg selcolor {#active#}" id="selcolor_{#id#}" style="background-image: url('{#src#}');cursor: pointer;"></div>
+<!-menu->
+
+<!-more->
+<div class="item">
+	<div class="">
+		<img class="selcolor mobile-color-select {#act#}" id="mobcolor_{#id#}" src="{#srcs#}" loading="lazy">
+	</div>
+</div>
+<!-more->
+
+<!-text->
+<label class="btn-circle size-nav-item font-w-s font-s {#status#}" id="{#size#}-{#specid#}">
+	<input type="hidden" name="size" value="{#size#}-{#specid#}" autocomplete="off">{#size#}
+</label>
+<!-text->
+
+<!-col->
+
+<!-col->
+
+<!-m3->
+<script>
+	{#checkInput#}
+</script>
+<!-m3->
+
+<!-end->
+<!-end->
+
+<!-err1-><div class="scenario-img-con rema-col">目前商品已無庫存 或 該商品尚未發佈</div><!-err1->
+<!-err2-><div class="notice">對不起,本內容設置了閱讀權限,您無權瀏覽目前內容</div><!-err2->
+
+

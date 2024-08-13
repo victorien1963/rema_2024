@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{#pagetitle#} {#sitename#}</title>
+    <meta name="description" content="{#metacon#}">
+    <meta name="Keywords" content="{#metakey#}">
+	{#metaimage#}
+	{#addmeta#}
+	{#addscript#}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{#TM#}css/owl.carousel.css">
+    <link rel="stylesheet" href="{#TM#}css/owl.theme.default.css">
+	<link rel="stylesheet" href="{#TM#}css/HeaderAndFoot.css">
+	<link rel="stylesheet" href="{#TM#}css/InputStyle.css">
+	<link rel="stylesheet" href="{#TM#}css/PopupWindow.css">
+	<link rel="stylesheet" href="{#TM#}css/Checkout.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/header.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/apple-fonts.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/product.css" />
+    <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/nav.css" />
+
+	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/homeNew.css" />
+  	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/responsive.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	<script src="{#TM#}js/jquery.min.js"></script>
+    <script src="{#TM#}js/owl.carousel.js"></script>
+	<script src="{#TM#}js/HeaderAndFoot.js"></script>
+	<script src="{#TM#}js/MemberFilter.js"></script>
+	<script src="{#TM#}js/InputStyle.js"></script>
+	<script src="{#TM#}js/popupwindow.js"></script>
+	<script src="{#TM#}js/Checkout.js"></script>
+    <!-- wayhunt -->
+	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
+	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
+	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
+	<script type=text/javascript src="{#TM#}20240425/js/header.js"></script>
+	
+	<script>fbq('track', 'InitiateCheckout');</script>
+	<!-- Event snippet for 結帳 conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-872507826/G7TyCMWNlpMBELLThaAD',
+      'transaction_id': ''
+  });
+</script>
+<!-reload-!>
+</head>
+
+<body>
+	<section id="header" class="rema-col l12">
+		<!--跑馬燈部分-->
+		<div class="marquee">
+			<div class="mx-width">
+				<!-- 跑馬燈 -->
+				<div class="owl-carousel owl-theme marquee-con mx-width">
+					{#MARQUEE#}
+				</div>
+				<!-- END跑馬燈 -->
+			</div>
+		</div>
+		<!-- END跑馬燈部分-->
+		<!--頁首選單-->
+		{#CHANNELMENU#}
+	</section>
+	<section  id="content" class="header-top">
+		<div class="top-space rema-col"></div>
+		{#ORDERPAY#}
+		
+		
+	</section>
+	<section id="popupwindow-in">		
+	</section>
+	<!--頁尾-->
+	<section id="footer">
+		<div class="foot-con">
+			<div class="email rema-col l12">
+				<div class="email-con rema-col s12">
+					<div class="rema-col l2 s5 email-word">
+						<select name="order" id="paperorder">
+							<option value="1">訂閱電子報</option>
+							<option value="0">取消電子報</option>
+						</select>
+					</div>
+
+					{#ORDERPAPER#}
+
+
+				</div>
+			</div>
+			<div class="bottom-info rema-col l12">
+				<div class="footer-info">
+					<div class="contact footer-box">
+						<div class="footer-title">聯絡我們</div>
+						<div class="footer-con">
+							{#聯絡我們#}
+						</div>
+					</div>
+					<div class="location footer-box">
+						<div class="footer-title">選擇地區</div>
+						<div class="location-con footer-con">
+							<div class="country-select-bn">
+
+								<div  class="location-item" id="lantype">台灣 NT$</div>
+
+								<div id="SelectCountry" style="display:none;">
+
+									{#LANTYPE#}
+
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="service footer-box">
+						<div class="footer-title">訂購及售後服務</div>
+						<div class="service-con footer-con">
+
+							{#BTMENUTWO#}
+
+						</div>
+					</div>
+					<div class="service footer-box mobile-hidden">
+						<div class="footer-title">關注Rema</div>
+						<div class="service-con footer-con">
+
+							{#VMENU#}
+
+						</div>
+					</div>
+					<div class="follow footer-box pc-disable">
+						<div class="footer-title pc-disable">關注Rema</div>
+						<div class="follow-con footer-con">
+
+							{#VMENU#}
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="copyright">
+			{#BTINFO#}
+		</div>
+	</section>
+	{#addbtscript#}
+</body>
+</html>

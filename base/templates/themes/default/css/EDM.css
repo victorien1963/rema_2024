@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+.sub-title{
+	margin-bottom: 30px;
+}
+.edm-block{
+	margin-bottom: 30px;
+}
+
+
+@media(max-width:1000px){
+	.edm-block{
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.mobile-dashline{
+		border-bottom: 1px dashed hsla(0,0%,60%,1.00);
+	}
+	.radio-container{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.mobile-dashline-top{
+		border-top: 1px dashed hsla(0,0%,60%,1.00);
+	}
+}

@@ -1,0 +1,108 @@
+<!-start->
+	<script src="{#TM#}js/jquery.color.js"></script>
+	<script src="{#TM#}js/search.js"></script>
+		    <li><form id="searchForm" method="get" action="{#RP#}shop/class/index.php">
+                <fieldset>
+                    <div class="input">
+                        <input type="text" name="key" id="s" value="输入搜索关键字" />
+                    	<input type="submit" id="searchSubmit" value="" />
+                    </div>
+                </fieldset>
+            </form></li>
+<!-start->
+
+<!-menu->
+<li><a href="{#menuurl#}" target="{#target#}" title="{#menu#}">{#menu#}</a></li>
+<!-menu->
+
+<!-m0->
+<li><a href="{#menuurl#}" class="user" target="{#target#}" title="{#menu#}"><div class="login"><!-- 登入 --></div></a></li>
+<!-m0->
+
+<!-m1->
+<li class="dropdown">
+	<a href="{#RP#}shop/cart.php" id="scart"  title="{#menu#}" class="cart -toggle" data-toggle="dropdown"><span id="cartnum">{#cartnum#}</span></a>
+	<!-- dropdown-memu -->
+	<div class="dropdown-menu cart-dropdown">
+		<ul>
+			<div class="cart-scroll" id="cartlist">
+				{#items#}
+			</div>
+		<li class="list">
+			<a>
+				<p>总金额</p>
+				<p>{#pricesymbol#} <span id="cartprice">{#cartprice#}</span></p>
+			</a>
+		</li>
+		</ul>
+		<a href="{#RP#}shop/cart.php"  title="{#menu#}" class="btn btn-block btn-black">检视购物篮</a>
+	</div>
+	<!-- END dropdown-memu -->
+</li>
+<!-m1->
+
+<!-m2->
+<li><a href="{#menuurl#}" target="{#target#}" class="fb" title="{#menu#}"></a></li>
+<!-m2->
+
+<!-end->
+<!-end->
+
+
+		        <li><a href="member.htm" class="user"><div class="login"><!-- 登入 --></div></a></li>
+		        <li class="dropdown">
+		        <a href="product-list.htm" class="cart" class="dropdown-toggle" data-toggle="dropdown"><span>3</span></a>
+		        <!-- dropdown-memu -->
+		        <div class="dropdown-menu cart-dropdown">
+		        <ul>
+		        <div class="cart-scroll">
+		        <!-- list -->
+		            <li class="list"><a href="javascript:;">
+		                    <p>MS06P 一般竞赛短车裤</p>
+		                    <p>NT$2,680</p>
+		                </a></li>
+		        <!-- END list -->
+		        <!-- list -->
+		            <li class="list"><a href="javascript:;" class="list">
+		                    <p>MS07 二级竞赛短车裤</p>
+		                    <p>NT$1,880</p>
+		                </a></li>
+		        <!-- END list -->
+		         <!-- list -->
+		            <li class="list"><a href="javascript:;">
+		                    <p>CP02 重压缩短裤</p>
+		                    <p>NT$1,280</p>
+		                </a></li>
+		        <!-- END list -->
+		        <!-- list -->
+		            <li class="list"><a href="javascript:;">
+		                    <p>CP02 重压缩短裤</p>
+		                    <p>NT$1,280</p>
+		                </a></li>
+		        <!-- END list -->
+		        <!-- list -->
+		            <li class="list"><a href="javascript:;">
+		                    <p>CP02 重压缩短裤</p>
+		                    <p>NT$1,280</p>
+		                </a></li>
+		        <!-- END list -->
+		        <!-- list -->
+		            <li class="list"><a href="javascript:;">
+		                    <p>CP02 重压缩短裤</p>
+		                    <p>NT$1,280</p>
+		                </a></li>
+		        <!-- END list -->
+		        </div><!-- scroll-hold -->
+		        <!-- ////////////////////////////////////////////// -->
+		        <!-- list -->
+		            <li class="list"><a href="javascript:;">
+		                    <p>总金额</p>
+		                    <p>NT$<span>5,840</span></p>
+		                </a></li>
+		        <!-- END list -->
+		                </ul>
+		            <a href="cart.htm" class="btn btn-block btn-black">检视购物篮</a>
+		        </div>
+		        <!-- END dropdown-memu -->
+		        </li>
+		        <li><a href="product-list.htm" class="fb"></a></li>

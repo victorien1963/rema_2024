@@ -1,0 +1,56 @@
+/* ==============================
+ *
+ *	topaudio variables, font-face
+ *
+ * ============================== */
+/*== Color ==*/
+/*== Screen Size ==*/
+footer {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-top: 50px;
+}
+footer ul {
+  max-width: 80%;
+  margin: auto;
+  list-style-type: none;
+  padding-left: 0;
+  padding-bottom: 30px;
+}
+@media only screen and (max-width: 576px) {
+  footer ul {
+    max-width: none;
+  }
+}
+footer label {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+footer .link-items {
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  font-size: 14px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+@media only screen and (max-width: 576px) {
+  footer .link-items {
+    width: 132px;
+  }
+}
+footer .link-items p {
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  footer li:nth-of-type(4) .link-items {
+    width: 132px;
+  }
+}
+footer .copyright {
+  border-top: 1px solid #ccc;
+  padding: 30px 10px;
+  font-size: 12px;
+  margin: 0;
+}/*# sourceMappingURL=footer.css.map */

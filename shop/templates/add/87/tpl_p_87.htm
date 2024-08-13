@@ -1,0 +1,32 @@
+<!-start->
+<!-start->
+<!-menu->
+                <!-- LIST -->
+                   <li class="cat_{#n#}">
+                   <a href="#cat_{#n#}" class="img-hold" data-toggle="collapse">
+                   <h3>{#cat#}</h3>
+                   <img src="{#src#}">
+                   </a>
+                   <ol class="collapse" id="cat_{#n#}">
+                   	{#sublinkstr#}
+                   </ol>
+                   </li>
+                <!-- / LIST -->
+<!-menu->
+
+<!-list->
+<li><a href="{#slink#}" target="{#target#}">{#scat#}</a></li>
+<!-list->
+
+<!-end->
+    <script>
+		setTimeout(function() { $(".bottom-nav li").eq({#nav#}).addClass("active");}, 300 );
+    </script>
+<!-end->
+
+<!-m0->
+<!-m0->
+<!-m1->
+<!-m1->
+<!-m2->
+<!-m2->

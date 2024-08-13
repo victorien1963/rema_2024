@@ -1,0 +1,40 @@
+/* ============產品圖片列表============== */
+
+div.productlist{
+margin:0px 5px 5px 0px;
+text-align:center;
+float:left;
+}
+
+div.productlist div.fang{
+border:1px #ccc solid;
+background: #fff;
+padding:3px;
+text-align:center;
+}
+
+div.productlist div.picFit{
+overflow: hidden;
+}
+
+div.productlist div.picFit img{
+}
+
+
+div.productlist div.title{
+text-align:center;
+overflow: hidden;
+white-space:nowrap;
+}
+
+div.productlist a:link,div.productlist a:visited,div.productlist a:active{
+color:#555;
+font:12px/25px arial,mingliu;
+text-decoration: none;
+}
+
+div.productlist a:hover{
+color:#ff0000;
+text-decoration: underline;
+font:12px/25px arial,mingliu;
+}

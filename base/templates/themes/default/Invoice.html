@@ -1,0 +1,86 @@
+<section id="invoice">
+		<div class="background-black">
+			<div class="window-con invoice-block">
+				<div class="window-block">
+					<div class="close-window ">
+						<div class="icon icon-close close-window-icon"></div>
+					</div>
+					<div>
+						<div class="invoice-con">
+							<div class="invoice-fir">
+								<div class="logo">
+									<img src="{#TM#}img/rema-logo.svg">
+								</div>
+								<div class="invoice-title">電子發票證明聯</div>
+								<div class="invoice-time" id="r_cdate"></div>
+								<div class="invoice-code-word" id="r_inno"></div>
+								<div class="invoice-word-con">
+									<div class="invoice-shoping-time" id="r_date">0000-00-00</div>
+									<div class="" id="r_time">00:00.00</div>
+								</div>
+								<div class="invoice-word-con">
+									<div class="invoice-word-price">隨機碼 : 9224</div>
+									<div>總計:<span id="r_tt">0</span></div>
+								</div>
+								<div class="seller">賣方 24311840</div>
+								<div class="invoice-code">
+									<img src="{#TM#}img/组 461.svg">
+								</div>
+								<div class="invoice-qr-con">
+									<div class="invoice-qr padding-right">
+										<img src="{#TM#}img/组 460.svg">
+									</div>
+									<div class="invoice-qr padding-left">
+										<img src="{#TM#}img/组 460.svg">
+									</div>
+								</div>
+							</div>
+							<div class="invoice-sec">
+								<div class="invoice-title">交易明細</div>
+								<div class="invoice-word-con">
+									<div id="b_date">0000-00-00</div> 
+									<div id="b_time">00:00.00</div>
+								</div>
+								<div class="invoice-word-con invoice-word-gap">TEL 02-27943893</div>
+								<div id="r_itemlist">
+								</div>
+								<div  class="invoice-word-con invoice-price">
+									<div>共<span id="b_num">0</span>項</div>
+									<div>小計:<span id="b_jine">0</span></div>
+								</div>
+								<div class="invoice-total">總計:<span id="b_tjine">0</span></div>
+							</div>
+						</div>
+						<div class="invoice-notice">
+							<div class="invoice-notice-line">
+								<div class="invoice-notice-dot"></div><div class="invoice-notice-word">依財政部令本副本僅供查核，不可直接兌獎。</div>
+							</div>
+							<div class="invoice-notice-line">
+								<div class="invoice-notice-dot"></div><div class="invoice-notice-word">根據財政部台財稅字第 0952400194 號訂定之「電子發票實施作業要點」，我們將為您將發票檔案儲存於您的訂單資料中，並將發票檔上傳到政府的「電子發票整合服務平台」。</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		var r_itemlist = $('#itemlist_{#GETID#}').html();
+			$("#r_itemlist").html(r_itemlist);
+		var r_date = $('#Rdate_{#GETID#}').val();
+			$("#r_date").html(r_date);
+		var r_time = $('#Rtime_{#GETID#}').val();
+			$("#r_time").html(r_time);
+		var r_inno = $('#Rinno_{#GETID#}').val();
+			$("#r_inno").html(r_inno);
+		var r_cdate = $('#Cdate_{#GETID#}').val();
+			$("#r_cdate").html(r_cdate);
+		var b_jine = $('#Jine_{#GETID#}').val();
+			$("#b_jine").html(b_jine);
+		var b_tjine = $('#Tjine_{#GETID#}').val();
+			$("#b_tjine").html(b_tjine);
+			$("#r_tt").html(b_tjine);
+		var b_num = $('#Items_{#GETID#}').val();
+			$("#b_num").html(b_num);
+	</script>

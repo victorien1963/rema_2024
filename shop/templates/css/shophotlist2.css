@@ -1,0 +1,24 @@
+/* ============±Æ¦æº]============== */
+
+div.shophotlist2_all{
+	height:24px;
+	margin:0px;
+	padding:0px;
+}
+
+.shophotlist2_info {
+	color:#b60c6d;
+	font-weight:bold;
+}
+
+a.shophotlist2:link,a.shophotlist2:visited,a.shophotlist2:active{
+	color:#c6034f;
+	text-decoration: none;
+	font:12px/24px mingliu;
+}
+
+a.shophotlist2:hover{
+	color:#c6034f;
+	text-decoration: underline;
+	font:12px/24px mingliu;
+}

@@ -1,0 +1,45 @@
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+
+                    <h3 class="cart-title">更新电子信箱</h3>
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <p>变更您目前储存使用的电子信箱地址。</p>
+                    <hr>
+                    <!--END  section -->
+
+				<form id="memberModify"  method="post" action="" name="regform" >
+
+                        <table  class="table-st2">
+                        <tr>
+                                <td style="width: 200px">您目前使用的电子信箱</td>
+                                <td style="width: 300px">
+                                    {#email#}
+                                </td>
+                                <td><span class="pull-right">* 必填栏位</span></td>
+                            </tr>
+                            <tr>
+                                <td>输入密码*</td>
+                                <td colspan="2">
+                                    <input type="password" name="password" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>新的电子信箱*</td>
+                                <td colspan="2">
+                                    <input type="text" name="newemail" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>重复新的电子信箱*</td>
+                                <td colspan="2">
+                                    <input type="text" name="renewemail" class="form-control">
+                                </td>
+                            </tr>
+                        </table>
+					
+                    <div class="clearfix m-b-30"></div>
+					<div  id="notice" class="alert alert-danger" style="display:none;"></div>
+   					<input type="hidden" name="act" value="memberaccountm" />
+                    <button type="submit" class="btn btn-black btn-lg pull-left">确定并储存</button>
+
+				</form>

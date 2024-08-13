@@ -1,0 +1,29 @@
+/* ============分类列表============== */
+
+div.paperclass_dolphin{
+margin:15px 0px 0px;
+padding:0px;
+width:100%;
+}
+
+
+a.paperclass_dolphin:link,a.paperclass_dolphin:visited,a.paperclass_dolphin:active{
+display:block;
+text-decoration: none;
+font:12px/14px Verdana, Arial, Helvetica, sans-serif;
+height:33px;
+text-align:left;
+background:url(../images/dot2.gif) 0px 2px no-repeat;
+padding-left:51px;
+margin:0px 12px;
+color:#333;
+}
+
+a.paperclass_dolphin:hover{
+display:block;
+color: #ff0000; 
+text-decoration: none;
+height:33px;
+font:12px/14px Verdana, Arial, Helvetica, sans-serif;
+background:url(../images/dot2.gif) 0px 2px no-repeat;
+}

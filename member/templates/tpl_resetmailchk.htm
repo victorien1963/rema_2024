@@ -1,0 +1,50 @@
+<!-start->
+<form method="post" action="lostpass.php?mail=check"  style="display:{#showchk#};">
+	<div class="row two-col member">
+        <div class="col-xs-12">
+            <p class="title">沒有收到信箱驗證信？電子信箱寫錯？</p>
+            <ul class="info">
+                <li>1. 填寫原註冊電子信箱或新的電子信箱</li>
+                <li>2. 進入新的電子信箱收取驗證信</li>
+                <li class="m-b-15">3. 點選郵件中的確認連結，即可啟動會員帳號</li>
+                
+                <li  class="m-b-5">原註冊電子信箱地址</li>
+                <li class="m-b-30"><input type="mail" name="username" class="form-control" style="width:350px"></li>
+                <li  class="m-b-5">登入密碼</li>
+                <li class="m-b-30"><input type="password" name="userpass" class="form-control" style="width:350px"></li>
+                <li  class="m-b-5">新電子信箱(也會一併更改註冊帳號)或再一次輸入原註冊電子信箱</li>
+                <li class="m-b-30"><input type="mail" name="newmail" class="form-control" style="width:350px"></li>
+                <input type="hidden" name="step" value='resetcode' />
+                <li><button type="submit" class="btn btn-black btn-lg" style="width:180px">送出</button></li>
+            </ul>
+        </div>
+    </div>
+      
+</form>
+<!-start->
+
+<!-m0->
+                    <div class="row two-col member">
+                        <div class="col-xs-12">
+                            <p class="title">錯誤！！</p>
+                            <ul class="info">
+                                <li>系統回覆訊息：</li>
+                                <li class="m-b-30">{#say#}</li>
+                                <li><a href="{#url#}" class="btn btn-black btn-lg" style="width:180px">{#link#}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+<!-m0->
+
+<!-m1->
+                    <div class="row two-col member">
+                        <div class="col-xs-12">
+                            <p class="title">成功！！</p>
+                            <ul class="info">
+                                <li>系統回覆訊息：</li>
+                                <li class="m-b-30">{#say#}</li>
+                                <li><a href="{#url#}" class="btn btn-black btn-lg" style="width:180px">{#link#}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+<!-m1->

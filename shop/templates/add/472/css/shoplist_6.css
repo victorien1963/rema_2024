@@ -1,0 +1,135 @@
+.catborders {
+height:38px;
+font:bold 28px/28px "微軟正黑體",'Microsoft JhengHei','Microsoft YaHei','SimSun',Arial,Sans-Serif;
+margin: 0;
+padding: 0 0 0 12px;
+}
+
+.sizespan{
+display:block;
+float:left;
+padding:0px;
+margin-right:3px;
+text-align:center;
+width:20px;
+border:1px #ccc solid;
+}
+
+/* ============列表============== */
+
+div.shoplist_6{
+display:block;
+width:250px;
+height:420px;
+margin: 0 ;
+padding: 0px;
+float:right;
+overflow:hidden;
+}
+
+div.shoplist_6 div.fang{
+border: 0;
+text-align:center;
+padding:0px;
+margin:0px 10px;
+position:relative;
+}
+
+div.shoplist_6 div.picFit{
+overflow: hidden;
+position:absolute;
+top:0;
+left:0;
+z-index:0;
+}
+
+div.shoplist_6 div.picFita{
+overflow: hidden;
+position:absolute;
+top:0;
+left:0;
+z-index:5;
+}
+
+div.shoplist_6 div.picFita a{
+display:block;
+}
+
+div.shoplist_6 div.picFita a img{
+
+}
+
+.pichide{
+display:none;
+}
+
+div.shoplist_6 div.picFit img{
+}
+
+
+div.shoplist_6 a.prodtitle:link,div.shoplist_6 a.prodtitle:visited,div.shoplist_6 a.prodtitle:active{
+display:block;
+width:175px;
+height:36px;
+overflow:hidden;
+color:#393939;
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+margin: 10px 0px 0px 0px;
+}
+
+div.shoplist_6 a.prodtitle:hover{
+display:block;
+color:#ff0000;
+text-decoration: underline;
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.shoplist_6 span.memo{
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+color:#393939;
+word-break:break-all; 
+}
+
+div.shoplist_6 span.prop{
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+color:#393939;
+word-break:break-all;
+}
+
+div.shoplist_6 span.price{
+color:#ff8100;
+font:bold 12px/18px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.shoplist_6 span.marketprice{
+color:#707070;
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+text-decoration:line-through;
+}
+
+div.shoplist_6 div.buttonzone{
+margin:10px 0px 0px 0px;
+}
+
+
+img.addtocart{
+cursor:pointer;
+}
+
+div.shoplist_left{
+float:left;
+width:175px;
+margin-left:10px;
+margin-top:5px;
+border:0px solid #0066ff;
+}
+
+div.shoplist_right{
+float:right;
+width:50px;
+height:50px;
+margin-right:10px;
+margin-top:5px;
+border:0px solid #0066ff;
+}

@@ -1,0 +1,267 @@
+@charset "utf-8";
+/* CSS Document */
+
+.checkout-con{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.page-title{
+	padding-bottom: 10px;
+}
+.background-gray{
+	background-color: hsla(0,0%,96%,1.00);
+	padding-bottom: 30px;
+	margin-bottom: 3vw;
+}
+.checkout-main{
+	padding: 2vw 10px;
+}
+.select-box, .ship-box{
+	padding-left: 30px;
+	padding-bottom: 30px;
+}
+.half-block{
+	padding-right: 2vw;
+	padding-left: 2vw;
+}
+.border-bottom{
+	border-bottom: 1px solid hsla(0,0%,60%,1.00);
+}
+.input-con{
+	margin-bottom: 15px;
+}
+.select-secend{
+	padding-left: 30px;
+}
+.invoice-input{
+	width: 50%;
+}
+.inline div{
+	display: inline-block;
+	padding-right: 5px;
+}
+.address-check-break{
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.address-check-block{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.adress-select-input{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 70%;
+}
+.edit-address{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.edit-address a{
+	display: inline-block;
+	
+}
+.change-address-bn{
+	font-size: 14px;
+	widows: 120px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border:1px solid hsla(0,0%,60%,1.00);
+	margin-right: 30px;
+	cursor: pointer;
+}
+.chose-credit-card-selecter{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.chose-credit-card-selecter div{
+	margin-right: 20px;
+	margin: 15px;
+	padding: 5px 10px;
+	width: 80px;
+}
+.chose-credit-card-selecter img{
+	height: 40px;
+	width: 80px;
+	object-fit: contain;
+}
+.credit-card-pay{
+	display: flex;
+	justify-content: flex-end;
+}
+.credit-card-pay .bn-con{
+	justify-content: flex-end;
+	width: 280px;
+}
+.back-bn{
+    font-weight: 400;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: hsla(0,0%,4%,1.00);
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid hsla(0,0%,60%,1.00);
+    background-color: hsla(0,0%,100%,0.00);
+}
+.credit-card-select-bn{
+	cursor: pointer;
+	border: 1px solid hsla(0,0%,0%,0.00);
+}
+.credit-card-select-bn.selected{
+	border-color: hsla(0,0%,60%,1.00);
+}
+.chose-credit-card-title{
+	padding-top: 10px;
+}
+.checkbox-title {
+    padding-bottom: 15px;
+}
+
+.product-list{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.align-item-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.padding-left{
+	padding-left: 20px;
+}
+.align-center{
+	text-align: center;
+}
+.border-top{
+	border-top: 1px solid hsla(0,0%,60%,1.00);
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.order-info-block .border-top{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.align-item-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.padding-2vw{
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+.price-total-con .munber{
+	line-height: 30px;
+}
+.price-row{
+	display: flex;
+	align-items: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.order-info-block .page-title {
+    padding-bottom: 4px;
+}
+.prduct-list{
+	position: relative;
+	float: left;
+	padding-bottom: 30px;
+}
+.mobile-checkout-close{
+	display: none;
+}
+.order-comp.bn-con{
+	display: flex;
+	justify-content: flex-start;
+}
+.address-recheck{
+	padding-top: 10px;
+}
+.address-recheck-block{
+	padding-bottom: 10px;
+    padding-top: 0px;
+}
+.cash-recheck-bm{
+	padding-bottom: 10px;
+}
+
+@media(max-width:1000px){
+	.checkout-main {
+		padding: 0px 0px;
+		margin-left: -2vw;
+		margin-right: -2vw;
+	}
+	.background-gray {
+		background-color: hsla(0,0%,96%,0.00);
+		border-top: 1px solid hsla(0,0%,60%,1.00);
+		padding-top: 10px;
+	}
+	.page-title {
+		padding-bottom: 0px;
+	}
+	.page-title.font-l {
+		font-size: 20px;
+	}
+	.invoice-input {
+		width: 90%;
+	}
+	.prduct-list{
+		display: none;
+	}
+	.back-con{
+		/*display: none;*/
+	}
+	
+	.mobile-checkout-close{
+		display: block;
+		position: absolute;
+		right: 0px;
+		top: 4px;
+		
+	}
+	.adress-select-input{
+		width: 100%;
+	}
+}
+
+@media(max-width:700px){
+	.mobile-margin-bottom{
+		margin-bottom: 40px;
+	}
+	.mobile-order-margin-bottom{
+		margin-bottom: 15px;
+	}
+	.background-gray {
+		background-color: hsla(0,0%,96%,0.00);
+		border-top: 0px solid hsla(0,0%,60%,1.00);
+		padding-top: 15px;
+	}
+	.padding-top {
+		padding-top: 5px;
+	}
+	.border-bottom {
+		border-bottom: 1px dashed hsla(0,0%,60%,1.00);
+	}
+	.mobile-bottom-line{
+		padding-bottom: 3px;
+		margin-bottom: 5px;
+		border-bottom: 1px solid hsla(0,0%,60%,1.00);
+	}
+	
+	.address-check.border-bottom {
+		border-bottom: 1px dashed hsla(0,0%,60%,0.00);
+	}
+	.address-check.mobile-margin-bottom {
+		margin-bottom: 0px;
+	}
+}
+
+
+
+
+
+

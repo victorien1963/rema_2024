@@ -1,0 +1,159 @@
+<!-start->
+		<div class="">
+			<div class="map-area">
+		
+				<iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCkNT9u6oTgpWI8aF24MWLSA52pT0k0BBo&q={#prop2#}" ></iframe>
+			</div>
+		</div>
+		<div class="store-select">
+			<div class="store-select-block">
+				<div class="select-word-padding">請選擇欲前往的區域</div>
+				<div class="inputsy width-half">
+					<select class="" onchange="window.location.href=this.options[selectedIndex].value">
+                    	{#allcatalog#}
+                    </select>
+				</div>
+			</div>
+			<div class="store-select-block">
+				<div class="select-word-padding">請選擇店面</div>
+				<div class="inputsy width-half">
+					<select class="" onchange="window.location.href=this.options[selectedIndex].value">
+						{#allstores#}
+					</select>
+				</div>
+			</div>
+		</div>
+<!-start->
+
+<!-m0->
+					<div class="item">
+					  <div class="rema-col scenario-img bgimg scenario-img1" style="background-image: url('{#src#}');"></div>
+					</div>
+<!-m0->
+
+<!-list->
+
+		<div class="">
+			<div class="store-img-carousel">
+				<div class="owl-carousel scenario-block owl-theme">
+					{#piclist#}
+				</div>
+			</div>
+			<div class="store-interduce">
+				<div class="store-word-con">
+					<div class="store-descripe-title font-l font-w-m  border-bottom">{#title#}</div>
+					<div class="store-word-block">
+						<div class="half-block">
+							<div class="store-descripe mobile-padding-bottom">
+								<div class=" font-s">{#memo#}</div>
+							</div>
+						</div>
+						<div class="half-block">
+							<div class="store-descripe">
+								<div class="store-address font-s"><span>{#prop2#}</span></div>
+								<div class="store-phone font-s">電話 {#prop3#}</div>
+								<div class="store-opne font-s">
+									<div>{#prop5#}</div>
+									<div>{#prop6#}</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="store-sales-series">
+					<div class="font-l font-w-m border-bottom">販售系列</div>
+					<div class="seles-series-icon">
+						<div {#show1#}>
+							<div class="porduct-icon">
+								<img class="" src="{#TM#}img/IMG_4858-05.svg">
+							</div>
+							<div class="product-icon-word font-s">
+								單車系列
+							</div>
+						</div>
+						<div {#show2#}>
+							<div class="porduct-icon">
+								<img class="" src="{#TM#}img/IMG_4858-02.svg">
+							</div>
+							<div class="product-icon-word font-s">
+								訓練系列
+							</div>
+						</div>
+						<div {#show3#}>
+							<div class="porduct-icon">
+								<img class="" src="{#TM#}img/IMG_4858-07.svg">
+							</div>
+							<div class="product-icon-word font-s">
+								跑步系列
+							</div>
+						</div>
+						<div {#show4#}>
+							<div class="porduct-icon">
+								<img class="" src="{#TM#}img/IMG_4858-03.svg">
+							</div>
+							<div class="product-icon-word font-s">
+								運動配件
+							</div>
+						</div>
+						<div {#show5#}>
+							<div class="porduct-icon">
+								<img class="" src="{#TM#}img/IMG_4858-06.svg">
+							</div>
+							<div class="product-icon-word font-s">
+								襪子
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-list->
+
+<!-end->
+                    <script>
+                    
+	                    $.fn.tinyMapConfigure({	
+						    'key': 'AIzaSyDWM2r4jkaPsvq_KV1X9-aXFUrb9EuG7O0'
+						});
+						var map = $('#map-marker');
+					    map.tinyMap({
+						    'center': [{#firaddr#}],
+						    'zoom':10,
+						    'markerCluster': true,
+						    //'markerFitBounds': true,
+						    'marker': [
+						    	{#addrlist#}
+						    ]
+						});
+						
+						$(document).ready(function() {
+						
+							$(".markerthis").click(function () { 
+								var tid = 'm'+this.id.substr(7);
+								var m = {},
+						        marker = {},
+						        markers = [],
+						        i = 0;   
+								m = map.data('tinyMap');
+								var markers = m._markers;
+								for (i; i < markers.length; i += 1) {
+							        marker = markers[i];
+							        // 關閉所有 infoWindow
+							        marker.infoWindow.close();
+							        // 若標記 id 符合則開啟 infoWindow
+							        if (tid === marker.id) {            
+							            marker.infoWindow.open(m.map, marker);
+							            // 移動地圖
+							            map.tinyMap('modify', {
+										    zoom: 14
+										});
+							            m.map.panTo(marker.position);
+							        } 
+							     }
+							 });
+						});
+
+                    </script>
+<!-end->

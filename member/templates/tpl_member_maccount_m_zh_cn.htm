@@ -1,0 +1,55 @@
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+<form id="memberModify"  method="post" action="" name="regform" >
+    <div class="top-status">
+        <a href="{#CP#}index.php"> <i class="icon-arrow-left"></i></a>
+        <div class="top-status-title">更新电子信箱</div>
+        <span class="top-status-a2" onclick="javascript:$('#memberModify').submit();">储存</span>
+    </div>
+    <div  id="notice" class="alert alert-danger" style="display:none;"></div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <!-- section -->
+                    <p class="myact-headnote">变更您目前储存使用的电子信箱地址。</p>
+                    <hr>
+                    <div class="row22">
+						<span class="myact-emailnow">
+                        	您目前使用的电子信箱<br>
+                            {#email#}
+                        </span>
+						<span class="myact-must">* 必填栏位</span>
+                    	<div class="col-xs-5 mem-in-fom3">输入密码*</div>
+                    	<div class="col-xs-7 mem-in-fom3">
+                    		<input type="password" name="password" class="form-control">
+                    	</div>
+                    	<div class="clearfix m-b-15"></div>
+                    	<div class="col-xs-5 mem-in-fom3">新的电子信箱*</div>
+                    	<div class="col-xs-7 mem-in-fom3">
+                    		<input type="text" name="newemail" class="form-control">
+                    	</div>
+                    	<div class="clearfix m-b-15"></div>
+                    	<div class="col-xs-5 mem-in-fom3">重复新的电子信箱*</div>
+                    	<div class="col-xs-7 mem-in-fom3">
+                    		<input type="text" name="renewemail" class="form-control">
+                    	</div>
+                    </div>
+                    <!--END  section -->
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+            <input type="hidden" name="act" value="memberaccountm" />
+        </div>
+    </div>
+</form>

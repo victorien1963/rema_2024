@@ -1,0 +1,113 @@
+<!-start->
+<script type=text/javascript src="{#CP#}js/orderpay.js"></script>
+
+<div id="orderpay">
+<!-start->
+
+<!-m0->
+<div class="orderpay_cap">订单付款 - 会员帐户扣款</div>
+<div class="orderpay_txt">
+订单号：{#OrderNo#}<br />
+订单总金额：<span class="money">{#paytotal#}</span> 元<br />
+会员帐户余额：<span class="money">{#account#}</span> 元<br /><br />
+{#payntc#}
+<input name="orderid" type="hidden" id="orderid" value="{#orderid#}">
+
+</div>
+<!-m0->
+
+<!-m1->
+                    <h3 class="cart-title">订单成立</h3>
+                    <!-- section -->
+                    <div class="total-sum">
+                        <p>订单编号</p>
+                        <p class="money">{#OrderNo#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                    <div class="row two-col">
+                        <div class="col-xs-6">
+                            <p class="title">寄送地址</p>
+                            <ul class="info">
+                                <li>{#s_name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#s_postcode#}</li>
+                                <li>{#s_country#}</li>
+                                <li>行动电话：{#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix m-b-20"></div>
+                        <div class="col-xs-12">
+                            <hr class="hr-10">
+                        </div>
+                    </div>
+                    <!-- /section -->
+              		<!-- section -->
+                    <div class="total-sum st2">
+                        <p>金额总计</p>
+                        <p class="money">{#pricesymbol#} {#showpaytotal#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                        <div class="clearfix m-b-20"></div>
+                    <p>感谢您的订购，我们会尽快处理您订购的商品并尽速安排出货。</p>
+                    <!-- /section -->
+<!-m1->
+
+<!-m2->
+<div class="orderpay_cap">订单线上付款 - {#pcenter#}</div>
+<div class="orderpay_txt">
+订单号：{#OrderNo#}<br />
+订单总金额：<span class="money">{#pricesymbol#} {#showpaytotal#} {#paytotal#}</span> 元<br />
+付款方式：{#pcenter#}<br /><br />
+{#intro#}<br /><br />
+{#hiddenString#}
+</div>
+<!-m2->
+
+
+
+<!-ok1->
+                    <h3 class="cart-title">订单成立-付款成功</h3>
+                    <!-- section -->
+                    <div class="total-sum">
+                        <p>订单编号</p>
+                        <p class="money">{#OrderNo#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                    <div class="row two-col">
+                        <div class="col-xs-6">
+                            <p class="title">寄送地址</p>
+                            <ul class="info">
+                                <li>{#s_name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#s_postcode#}</li>
+                                <li>{#s_country#}</li>
+                                <li>行动电话：{#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix m-b-20"></div>
+                        <div class="col-xs-12">
+                            <hr class="hr-10">
+                        </div>
+                    </div>
+                    <!-- /section -->
+              		<!-- section -->
+                    <div class="total-sum st2">
+                        <p>金额总计</p>
+                        <p class="money">{#pricesymbol#} {#showpaytotal#}</p>
+                    </div>
+                    <!-- /section -->
+                    <!-- section -->
+                        <div class="clearfix m-b-20"></div>
+                    <p>感谢您的订购，我们会尽快处理您订购的商品并尽速安排出货。</p>
+                    <!-- /section -->
+<!-ok1->
+
+<!-err1-><div class="ordererr">{#ntc#}</div><!-err1->
+<!-end->
+</div>
+<!-end->

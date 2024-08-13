@@ -1,0 +1,18 @@
+<!-start->
+<link href="css/mail_login.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{#CP#}js/mail.js"></script>
+<div class="mail">
+<form id="globalsearchform" method="post" action="{#link#}" target="_blank">
+<input name="{#formdomain#}" type="hidden" value="{#domain#}" />
+	<div class="user"><input name="{#formname#}" type="text" id="user" value="" style="width:91px;" class="mailinput"></div>
+	<div class="pass"><input name="{#formpass#}" type="password" id="pass" value="" style="width:91px;" class="mailinput"></div>
+	
+	<div id="msg" class="msg"></div>
+	<div class="button">
+		<input name="submit" id="submit" type="image" src="images/submit.gif" />
+		<input name="cancel" id="cancel" type="image" src="images/cancel.gif" />
+	</div>
+</form>
+</div>
+
+<!-start->

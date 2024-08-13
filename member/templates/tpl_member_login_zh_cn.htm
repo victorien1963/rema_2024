@@ -1,0 +1,32 @@
+<script src="{#CP#}js/login.js"></script>
+				<form id="memberLogin" method="post" action="" >
+                    <div class="row two-col member">
+                        <div class="col-xs-6 right-line">
+                            <p class="title">我已经是REMA的会员</p>
+                            <ul class="info">
+                                <li class="m-b-5">请输入您的电子信箱地址和密码以登入网站。</li>
+                                <li class="m-b-5">电子信箱地址</li>
+                                <li class="m-b-15"><input id="muser" name="muser" type="text" class="form-control"></li>
+                                <li>密码</li>
+                                <li class="m-b-5"><input id="mpass" name="mpass" type="password" class="form-control"></li>
+                                <li class="m-b-30"><a href="{#CP#}lostpass.php" class="underline">忘记了密码？</a></li>
+                                <li><button type="submit" class="btn btn-black btn-lg" style="width:180px">登入</button></li>
+                            </ul>
+                            <input name="act" type="hidden" id="act" value="memberlogin" />
+							<div  id="notice" class="alert alert-danger noticediv" style="display:none;"></div>
+                        </div>
+                        <div class="col-xs-6">
+                            <p class="title">注册为REMA会员</p>
+                            <ul class="info">
+                                <li>立即注册为Rema会员，</li>
+                                <li class="m-b-30">享受更多会员专属购物资讯及折扣。</li>
+                                <li><a href="{#CP#}reg.php" class="btn btn-black btn-lg" style="width:180px">立即注册</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix m-b-20"></div>
+                        <div class="col-xs-12">
+                            <hr class="hr-10">
+                        </div>
+                    </div>
+                    <input type="hidden" name="from" value="{#REFERER#}">
+                   </form>

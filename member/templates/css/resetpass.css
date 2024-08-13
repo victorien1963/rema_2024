@@ -1,0 +1,7 @@
+
+/* ==提示样式== */
+
+.noticediv{display:none;border:1px #fc5959 solid;background:#f6e1b0 url(../images/chk_error.gif) 10px no-repeat;padding-left:33px;line-height:25px;margin:3px 0px}
+.okdiv{display:none;border:1px #fc5959 solid;background:#f6e1b0 url(../images/chk_right.gif) 10px no-repeat;padding-left:33px;line-height:25px;margin:3px 0px}
+.input{border:1px #bf8c4b solid;height:20px;line-height:20px;padding:0px 3px;color:#555;background:#f4d99c;}
+.submitreset{border:1px #bf8c4b solid;font: 12px Verdana, Arial, Helvetica, sans-serif;height:22px;line-height:20px;padding:0px 3px;background:#f4d99c;cursor:pointer;}

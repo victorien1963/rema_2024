@@ -1,0 +1,20 @@
+.shoptwoclass{
+padding:15px 0px 0px 0px;
+}
+
+.shoptwoclass_brand{
+text-align:center;
+padding:0px 0px 0px 17px;
+}
+
+.shoptwoclass_brand li{
+list-style-type: none;
+margin:0px 7px 0px 0px;
+text-align:center;
+float:left;
+}
+
+.shoptwoclass_brand li a{
+text-align:center;
+font:12px/25px Simsun;
+}

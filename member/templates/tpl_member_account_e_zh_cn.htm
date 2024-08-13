@@ -1,0 +1,37 @@
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+
+                    <h3 class="cart-title">订阅电子报</h3>
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <p>设定在电子邮件地址中接收我们最新商品资讯的电子报。</p>
+                    <hr>
+                    <!--END  section -->
+
+				<form id="memberModify"  method="post" action="" name="regform" >
+
+                        <!-- checkbox -->
+                     <div class="btn-group pull-left fix-padding5" data-toggle="buttons">
+                                    <label class="btn fix-padding" id="orderok">
+                                        <input type="radio" value="1" name="order_epaper" {#checkedok#}><i class="icon-square-o"></i><i class="icon-check-square-o"></i> <span class="small"> 订阅电子报</span>
+                                    </label>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="btn-group pull-left fix-padding5" data-toggle="buttons">
+                                    <label class="btn fix-padding" id="orderno">
+                                        <input type="radio" value="0" name="order_epaper" {#checkedno#}><i class="icon-square-o"></i><i class="icon-check-square-o"></i> <span class="small"> 取消订阅电子报</span>
+                                    </label>
+                                </div>
+                    <!-- END checkbox -->
+					
+                    <div class="clearfix m-b-30"></div>
+					<div  id="notice" class="alert alert-danger" style="display:none;"></div>
+   					<input type="hidden" name="act" value="memberaccounte" />
+   					<input type="hidden" name="order_paper" id="order_paper" value="{#order_paper#}" />
+                    <button type="submit" class="btn btn-black btn-lg pull-left">确定并储存</button>
+                    <div class="clearfix m-b-30"></div>
+                    <div class="clearfix m-b-30"></div>
+                    <div class="clearfix m-b-30"></div>
+                    <div class="clearfix m-b-30"></div>
+                    <div class="clearfix m-b-30"></div>
+
+				</form>

@@ -1,0 +1,64 @@
+/* ============¦Cªí============== */
+
+div.shoplist_diy3{
+	margin:10px 5px 10px 5px;
+	text-align:center;
+	border:1px #e5e5e5 solid;
+}
+
+div.shoplist_diy3 div.fang{
+	border:0px #e5e5e5 solid;
+	text-align:center;
+	padding:1px;
+	margin-bottom:10px;
+}
+
+div.shoplist_diy3 div.picFit{
+	overflow: hidden;
+}
+
+div.shoplist_diy3 div.picFit img{
+}
+
+div.shoplist_diy3 a.prodtitle:link,div.shoplist_diy3 a.prodtitle:visited,div.shoplist_diy3 a.prodtitle:active{
+	display:block;
+	color:#dd232e;
+	font:bold 12px/22px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	margin-bottom:5px;
+}
+
+div.shoplist_diy3 a.prodtitle:hover{
+	display:block;
+	color:#ff0000;
+	text-decoration: underline;
+	font:bold 12px/22px Verdana, Arial, Helvetica, sans-serif;
+	margin-bottom:5px;
+}
+
+div.shoplist_diy3 span.marketprice{
+	color:#888888;
+	font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration:line-through;
+}
+
+div.shoplist_diy3 span.price{
+	color:#666666;
+	font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.shoplist_diy3 font.mprice{
+	color:#dd242a;
+	font:bold 12px/22px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.shoplist_diy3 div.buttonzone{
+	margin:10px 0px 6px 0px;
+}
+
+
+img.addtocart{
+	cursor:pointer;
+}
+
+

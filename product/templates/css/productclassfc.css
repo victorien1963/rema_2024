@@ -1,0 +1,28 @@
+/* ============¤ÀÃþ¦Cªí============== */
+
+ul.productclassfc{
+margin:0px;
+padding:0px;
+}
+
+
+li.productclassfc{
+float:left;
+margin-right:20px;
+padding-left:16px;
+list-style-type: none;
+white-space: nowrap;
+background: transparent url(../images/78.gif) left no-repeat;
+}
+
+a.productclassfc:link,a.productclassfc:visited,a.productclassfc:active{
+color:#555;
+text-decoration: none;
+font: 12px/18px mingliu;
+}
+
+a.productclassfc:hover{
+color:#ff0000;
+text-decoration: underline;
+font: 12px/18px mingliu;
+}

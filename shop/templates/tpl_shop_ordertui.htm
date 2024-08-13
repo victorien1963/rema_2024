@@ -1,0 +1,59 @@
+<!-start->
+                    <div class="m-b-30"></div>
+                    <p>請選擇你想要退貨的訂單。如有任何問題，請與我們的客戶服務中心聯絡。</p>
+                    <!-- section -->
+                    <div class="row  fix-padding15 style-toggle">
+                        <div class="clearfix m-b-20"></div>
+                        <!-- ///////////////////////////////////////////////////////////// -->
+                        <!-- table -->
+                        <table class="table cart-list line-top">
+                            <thead>
+                                <tr>
+                                    <td>日期</td>
+                                    <td>訂單編號</td>
+                                    <td>狀態</td>
+                                    <td>金額</td>
+                                    <td class="t-gap"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+<!-start->  
+<!-list->
+                                <tr>
+                                    <td> {#dtime#} </td>
+                                    <td>{#OrderNo#}</td>
+                                    <td>{#status#}</td>
+                                    <td> {#pricesymbol#} {#paytotal#} </td>
+                                    <td><a href="ordertuidetail.php?orderid={#orderid#}" class="btn btn-default pull-right" {#showtui#}>申請退貨</a></td>
+                                </tr>
+<!-list->
+
+<!-m0->
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <p>我們會請快遞到府收取您的退貨。<br>
+                    ※請務必確認好以下須知後進行退貨</p>
+                    <hr>
+                    <!--END  section -->
+                      <div class="fix-padding15">
+                          <ul class="list-num">
+                        <li>吊牌與包裝盒必須完整、吊牌勿剪。</li>
+                        <li>產品沒有使用與洗滌過。</li>
+                        <li> 若收到貨品時有紙箱包裝，快遞取件時請將產品放入〝原紙箱包裝〞，請勿將單一產品交給快遞，會造成產品原包裝損壞。</li>
+                        <li>若收到貨品時為快遞袋包裝，取件時請將產品依原快遞袋包裝封口，若原快遞袋已破損，請向取件人員索取快遞包裝袋，請勿將單一產品交給快遞，會造成產品損壞。</li>
+                        <li>如未依照規定寄回造成產品損壞，將會依損壞程度請求賠償。</li>
+                    </ul>
+                      </div>
+                    <div class="clearfix m-b-20"></div>
+                    <a href="{#CP#}ordertui.php?act=list" class="btn btn-black btn-lg pull-left" style="width:150px">確定申請退貨</a>
+<!-m0->
+
+<!-end->
+                            </tbody>
+                        </table>
+                        <!-- END table -->
+                        <!-- //////////////////////////////////////////////////////////// -->
+                    </div>
+                    <!-- /section -->
+                    <div class="clearfix"></div>
+<!-end->

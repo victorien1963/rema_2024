@@ -1,0 +1,30 @@
+<!-start->
+	<script type=text/javascript src="{#CP#}js/order.js"></script>
+<!-start->  
+<!-list->
+                    	<div class="myact-sord-all">
+                        	<span>{#OrderNo#}</span>
+                            <p>
+                            	{#dtime#} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{#pricesymbol#} {#paytotal#}<br>
+                            	狀態 {#status#}
+                            </p>
+                            {#payagain#}
+                            {#showtui#}
+                        	<a href="orderdetail.php?orderid={#orderid#}" class="myact-sord-aa8">
+                            	檢視訂單詳情<br>
+                            	<i class="icon-arrow-right"></i>
+                            </a>
+                        </div>
+<!-list->
+
+<!-m0->
+	<p style="display:inline-block;width:105px;margin-top:10px;" class="pull-right"><a href="orderpay.php?orderid={#orderid#}" class="btn btn-default">重新刷卡</a></p>
+<!-m0->
+
+<!-m1->
+    <p style="display:inline-block;width:105px;margin-top:10px;" class="pull-right"><a href="javascript:;" id="delete_{#orderid#}" class="delchk btn btn-default">取消訂單</a></p>
+<!-m1->
+
+
+<!-end->
+<!-end->

@@ -1,0 +1,143 @@
+/* 
+*reset pagination
+*/
+
+.pagination{
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination__number{
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--paginationPageTextColor, inherit);
+}
+
+.pagination__number:hover{
+  text-decoration: none;
+}
+
+.pagination__number_active{
+  font-weight: var(--paginationPageFontWeight, 700);
+}
+
+.pagination__control_prev{
+  margin-left: var(--paginationArrowIndent, 4px);
+}
+
+.pagination__control_next{
+  margin-right: var(--paginationArrowIndent, 4px);
+}
+
+/*
+* types of pagination
+*/
+
+.pagination_type1 .pagination__number{
+  padding: 7px 10px;
+}
+
+.pagination_type1 .pagination__number_active{
+  background-color: var(--paginationPageActiveBgColor);
+  color: var(--paginationPageActiveTextColor);
+}
+
+/* type 2 */
+
+.pagination_type2 .pagination__number{
+  border: 2px solid transparent;
+  padding: 5px 8px;
+}
+
+.pagination_type2 .pagination__number_active{
+  border-color: var(--paginationPageActiveBgColor);
+  color: var(--paginationPageActiveTextColor);
+}
+
+/* type 3 */
+
+.pagination_type3 .pagination__number{
+  border-radius: 50%;
+}
+
+/* type 4 */
+
+.pagination_type4 .pagination__number{
+  border-radius: 2px;
+}
+
+/* type 5 */
+
+.pagination_type5{
+  --paginationArrowIndent: 10px;
+}
+
+.pagination_type5 .pagination__number{
+  padding: 10px 15px;
+}
+
+/*
+* demo styles for pagination
+*/
+
+.pagination_type1{
+  --paginationPageActiveBgColor: #000000;
+  --paginationPageTextColor: #000000;
+  --paginationPageActiveTextColor: #fff;
+}
+
+.pagination_type2{
+  --paginationPageTextColor: #000000;
+  --paginationPageActiveTextColor: #4557bb;
+  --paginationPageActiveBgColor: #000000;
+}
+
+.pagination_type5{
+  --paginationPageTextColor: #000000;
+  --paginationPageActiveBgColor: #000000;
+  background-color: #4557bb;  
+}
+
+@media screen and (max-width: 640px){
+
+  .pagination__item{
+    display: none;
+  }
+
+  .pagination__item:first-child, .pagination__item:nth-child(2),
+  .pagination__item:nth-child(3), .pagination__item:nth-child(4),
+  .pagination__item:nth-child(5), .pagination__item:last-child{
+    display: inline-block;
+  }
+
+  .pagination__control{
+    display: none;
+  }
+}
+
+
+.item-page{
+	clear:both;
+	padding-top: 2rem;
+  /*margin-top: 5rem;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

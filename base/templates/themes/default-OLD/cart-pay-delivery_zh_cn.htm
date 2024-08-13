@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <title>{#pagetitle#} {#sitename#}</title>
+    <meta name="description" content="{#metacon#}">
+    <meta name="Keywords" content="{#metakey#}">
+	{#metaimage#}
+	{#addmeta#}
+	{#addscript#}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{#TM#}img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="{#TM#}plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{#TM#}plugins/bootstrap-select/css/bootstrap-select.css">
+    <link rel="stylesheet" href="{#TM#}css/icomoon/style.css">
+    <link rel="stylesheet" href="{#TM#}css/style.css">
+    <link rel="stylesheet" href="{#TM#}css/header.css">
+    <link rel="stylesheet" href="{#TM#}css/index.css">
+    <link rel="stylesheet" href="{#TM#}css/responsive.css">
+    
+    <script type="text/javascript" src="{#TM#}js/jquery.min.js"></script>
+    <!-- wayhunt -->
+	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
+	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
+	<script>fbq('track', 'InitiateCheckout');</script>
+	<!-- Event snippet for 結帳 conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-872507826/G7TyCMWNlpMBELLThaAD',
+      'transaction_id': ''
+  });
+</script>
+</head>
+<body>
+    <!-- header -->
+    <div id="load-header">
+		<div class="top-info">
+		    <div class="container">
+			    <!-- SLIDER -->
+				<div id="top-info-slide" class=" carousel slide" data-ride="carousel">
+				    <div class="carousel-inner" role="listbox">
+				    	{#MARQUEE#}
+				    </div>
+				    <!-- arrow -->
+				    <a href="#top-info-slide" class="left carousel-control" data-slide="prev"><i class="icon-arrow-left2"></i></a>
+				    <a href="#top-info-slide" class="right carousel-control" data-slide="next"><i class="icon-arrow-right2"></i></a>
+				    <!-- E/arrow -->
+				</div>
+				<!-- SLIDER -->
+		    </div>
+		</div>
+		<div class="header">
+		    <!-- LOGO -->
+		    {#LOGO#}
+		    <!--a class="navbar-brand" href="index.htm" title="Home">
+		        <img src="{#TM#}img/index/REMA-logo.png" alt="">
+		    </a-->
+		    <!-- LOGO -->
+		    <!-- MENU -->
+		    <ul class="main-nav">
+		    	{#CHANNELMENU#}
+		    </ul>
+		    <!-- END MENU -->
+		    <!-- right-icon -->
+		    <ul class="right-icon">
+		    	{#TOPMENU#}
+		    </ul>
+		    <!-- END right-icon -->
+		</div>
+		<!-- header -->
+    </div>
+    <!-- END header -->
+    <div class="inpage cart-in">
+        <div class="row fix-padding15">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in">
+                <div class="container in">
+            		{#STARTORDER#}
+                </div>
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+		<div class="footer-hold">
+		<div class="pick-language collapse">
+		    <h3>选择地区及显示语言</h3>
+		    <div class="row hold">
+		    {#LANTYPE#}
+		    </div><!-- row -->
+		    <div class="clearfix m-b-40"></div>
+		</div>
+		    <div class="container-foot">
+		        <div class="row fix-padding10">
+		            <div class="col-xs-4 fix-padding5 info-1">
+		                <h4>联络我们</h4>
+		                {#聯絡我們#}
+		            </div>
+		            <div class="col-xs-4 fix-padding5 info-2">
+		            <div class="info-2-in">
+		                <h4>订购及售后服务</h4>
+		                <div class="row fix-padding10">
+		                	{#BTMENUTWO#}
+		                </div>
+		                <!-- row -->
+		                </div>
+		            </div>
+		            <div class="col-xs-2 fix-padding5 info-3">
+		            <div class="info-3-in">
+		                <h4>关注REMA</h4>
+		                <ul class="foot-memu">
+		                	{#VMENU#}
+		                </ul>
+		                </div>
+		            </div>
+		            <div class="col-xs-2 fix-padding5 info-4">
+		            <div class="info-4-in">
+		                <h4>选择地区</h4>
+		                <ul class="foot-memu">
+		                	
+		                    <li><a href=".pick-language" data-toggle="collapse" id="lantype">台湾 NT$</a></li>
+		                </ul>
+		            </div>
+		            </div>
+		        </div>
+		        <!-- row -->
+		    </div>
+		    <!-- container -->
+		</div>
+		<div class="copyright">
+		    {#BTINFO#}
+		</div>
+    </div>
+    <!--/  footer -->
+
+      <!-- modal -->
+    <div class="modal fade modal-style" id="CVC-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body style-toggle">
+                  <div class="row">
+                      <div class="col-xs-6">
+                      <p>Visa / MasterCard / JCB</p>
+                      <img src="{#TM#}img/inpage/CVC-1.jpg" class="img-responsive">
+                      </div>
+                      <div class="col-xs-6">
+                       <p>American Express</p>
+                      <img src="{#TM#}img/inpage/CVC-2.jpg" class="img-responsive">
+                      </div>
+                  </div><!-- row -->
+                  <div class="clearfix m-b-40"></div>
+                  <h3>什么是CVC验证码？</h3>
+                  <p>信用卡验证码 (CVC) 是一组三或四位数的信用卡安全码。由于这组代码并非以凸字方式印制在信用卡上，因此无法被拓印在收据上。这种机制可防止持卡人以外的人士滥用这组代码。 </p>
+
+ <p>． Visa、MasterCard卡和JCB卡的安全码是由三位数组成，位于卡片背面签名栏的右上角。<br>
+ ． 美国运通卡的安全码由四位数组成，印制在卡片正面的帐号上方。 </p>
+                </div>
+                <!-- modal-body -->
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script>-->
+    <!-- <script type="text/javascript" src="plugins/jqzoom-master/jquery-1.5.js"></script>-->
+    <script type="text/javascript" src="{#TM#}plugins/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{#TM#}plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <!-- <script type="text/javascript" src="js/load-page.js"></script>-->
+    <!-- owl-carousel -->
+    <script>
+    // very simple to use!
+    $(document).ready(function() {
+        $(".donate-invoice-btn").click(function() {
+            $("#two-invoice").collapse('hide');
+            $("#three-invoice").collapse('hide');
+        });
+        $(".two-invoice-btn").click(function() {
+            $("#donate-invoice").collapse('hide');
+            $("#three-invoice").collapse('hide');
+        });
+        $(".three-invoice-btn").click(function() {
+            $("#donate-invoice").collapse('hide');
+            $("#two-invoice").collapse('hide');
+        });
+    });
+    </script>
+    <!-- 选单专用-->
+	<script>
+		// $(".carousel").carousel();
+		$('.dropdown').hover(function() {
+		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
+		}, function() {
+		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
+		});
+	    $(".carousel").carousel({
+	        interval: 5000
+            // interval: false
+	    });
+	</script>
+    <!-- 选单专用 END-->
+	{#addbtscript#}
+</body>
+
+</html>

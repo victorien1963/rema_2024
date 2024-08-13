@@ -1,0 +1,156 @@
+/* ============圖片型詳情============== */
+
+div#piccontent{
+margin:0;
+background:#f7fbfe;
+border:1px #def solid;
+text-align:left;
+}
+
+div#piccontent .fcenter{
+text-align:center;
+}
+
+div#piccontent .introzone{
+margin:10px;
+border:1px #def solid;
+background:#f7fbfe;
+}
+
+
+div#piccontent .title{
+margin:10px 20px 0px 20px;
+text-align: left;
+font: 16px/1.5 Verdana, Arial, Helvetica, sans-serif ;
+font-weight:bold;
+line-height:50px;
+}
+
+div#piccontent .productzone{
+text-align: center;
+padding:15px;
+margin:10px;
+background:#fff;
+border:1px #def solid;
+}
+
+div#piccontent .productpic{
+cursor:pointer;
+}
+
+div#piccontent .productloading{
+margin:150px 0px;
+}
+
+div#memo{
+padding:0px;
+margin:5px 20px 20px 20px;
+text-align:left;
+font: 12px/1.5 Verdana, Arial, Helvetica, sans-serif ;
+}
+
+
+div#piccontent .bzone{
+clear:both;
+margin:20px 20px 30px 20px;
+text-align: left;
+}
+
+
+div#piccontent .tags{
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../images/tags.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+}
+
+div#piccontent .source{
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../images/source.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+}
+
+div#piccontent .addfav{
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../images/fav.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+cursor:pointer;
+}
+
+div#piccontent #zhichi{
+cursor:pointer;
+background:url(../images/zhichi.gif) right no-repeat;
+padding-right:12px;
+}
+
+div#piccontent #fandui{
+cursor:pointer;
+background:url(../images/fandui.gif) right no-repeat;
+padding-right:12px;
+}
+
+div#piccontent .banzhu{
+display:none;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../images/banzhu.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+}
+
+div#piccontent .banzhu span{
+cursor:pointer;
+}
+
+
+/* ============翻頁============== */
+
+div#contentpages {
+margin-top:15px;
+height:35px;
+}
+
+
+div#contentpages ul{
+margin:0;
+padding:0;
+}
+
+
+div#contentpages li{
+margin:3px;
+list-style-type: none;
+float:left;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+color:#505050;
+border:1px #cde6ff solid;
+background-color:#fff;
+white-space: nowrap;
+padding:2px 5px;
+cursor:pointer;
+}
+
+div#contentpages li.pagesnow{
+color:#505050;
+background-color:#e4f2ff;
+cursor:pointer;
+}
+
+div#contentpages li.pbutton{
+color:#505050;
+background-color:#e4f2ff;
+padding:2px 6px 2px 6px;
+cursor:pointer;
+}
+
+div#contentpages li.cbutton{
+color:#505050;
+background-color:#e4f2ff;
+padding:2px 6px 2px 6px;
+cursor:default;
+}

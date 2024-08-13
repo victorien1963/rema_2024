@@ -1,0 +1,45 @@
+/* ============Í¼Æ¬ÁÐ±í============== */
+ul.newspiclb_dolphin{
+margin:0;
+padding:0
+}
+
+ul.newspiclb_dolphin li{
+list-style-type: none;
+margin:0px 5px 5px 0px;
+text-align:center;
+float:left;
+}
+
+ul.newspiclb_dolphin div.fang{
+border:1px #ddd solid;
+background: #fff;
+padding:3px;
+text-align:center;
+}
+
+ul.newspiclb_dolphin div.picFit{
+overflow: hidden;
+}
+
+ul.newspiclb_dolphin div.picFit img{
+}
+
+
+ul.newspiclb_dolphin div.title{
+text-align:center;
+overflow: hidden;
+white-space:nowrap;
+}
+
+ul.newspiclb_dolphin a.title:link,ul.newspiclb_dolphin a.title:visited,ul.newspiclb_dolphin a.title:active{
+color:#555;
+font:12px/25px simsun;
+text-decoration: none;
+}
+
+ul.newspiclb_dolphin a.title:hover{
+color:#ff0000;
+text-decoration: underline;
+font:12px/25px simsun;
+}

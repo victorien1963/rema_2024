@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <title>{#pagetitle#} {#sitename#}</title>
+    <meta name="description" content="{#metacon#}">
+    <meta name="Keywords" content="{#metakey#}">
+	{#metaimage#}
+	{#addmeta#}
+	{#addscript#}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{#TM#}img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="{#TM#}plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{#TM#}css/icomoon/style.css">
+    <link rel="stylesheet" href="{#TM#}plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="{#TM#}plugins/mmenu/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="{#TM#}css/style_en.css">
+    <link rel="stylesheet" href="{#TM#}css/header.css">
+    <link rel="stylesheet" href="{#TM#}css/index.css">
+    <link rel="stylesheet" href="{#TM#}css/responsive.css">
+    
+    <script type="text/javascript" src="{#TM#}js/jquery.min.js"></script>
+    <style>
+    /*@media (min-width:768px) {
+        #myCarousel-1 .item {
+            height: 380px;
+        }
+    }
+    
+    @media (min-width:992px) {
+        #myCarousel-1 .item {
+            height: 450px;
+        }
+    }
+    
+    @media (min-width:1200px) {
+        #myCarousel-1 .item {
+            height: 750px;
+        }
+        #slide1,
+        #slide2,
+        #slide3,
+        #slide4,
+        #slide5,
+        #slide6 {
+            background-size: initial;
+        }
+    }*/
+    </style>
+<!-reload-!>
+</head>
+<body>
+    <!-- header -->
+    <div id="load-header">
+		<div class="top-info">
+		    <div class="container">
+			    <!-- SLIDER -->
+				<div id="top-info-slide" class=" carousel slide" data-ride="carousel">
+				    <div class="carousel-inner" role="listbox">
+				    	{#MARQUEE#}
+				    </div>
+				    <!-- arrow -->
+				    <a href="#top-info-slide" class="left carousel-control" data-slide="prev"><i class="icon-arrow-left2"></i></a>
+				    <a href="#top-info-slide" class="right carousel-control" data-slide="next"><i class="icon-arrow-right2"></i></a>
+				    <!-- E/arrow -->
+				</div>
+				<!-- SLIDER -->
+		    </div>
+		</div>
+		<div class="header">
+		    <!-- LOGO -->
+		    {#LOGO#}
+		    <!--a class="navbar-brand" href="index.htm" title="Home">
+		        <img src="{#TM#}img/index/REMA-logo.png" alt="">
+		    </a-->
+		    <!-- LOGO -->
+		    <!-- MENU -->
+		    <ul class="main-nav">
+		    	{#CHANNELMENU#}
+		    </ul>
+		    <!-- END MENU -->
+		    <!-- right-icon -->
+		    <ul class="right-icon">
+		    	{#TOPMENU#}
+		    </ul>
+		    <!-- END right-icon -->
+		</div>
+		<!-- header -->
+    </div>
+    <!-- MAIN SLIDER -->
+    <div class="clearfix"></div>
+    <div class="carousel slide index-main-slide carousel-fade" id="myCarousel-1">
+        <!-- Indicators -->
+        {#LB#}
+        <div class="carousel-arrow">
+            <a data-slide="prev" href="#myCarousel-1" class="left carousel-control"> <i class="icon-arrow-left2"></i> </a>
+            <a data-slide="next" href="#myCarousel-1" class="right carousel-control"> <i class="icon-arrow-right2"></i> </a>
+        </div>
+    </div>
+    <!-- MAIN SLIDER -->
+    <div class="clearfix"></div>
+    <div class="container">
+        <!-- 精選療程套餐 OWL CAROUSEL -->
+        <div class="index-main-title">
+            <h1><span>NEW PRODUCTS</span>
+    </h1>
+        </div>
+        <div id="owl-V1">
+            <div class="Navigation">
+                <a class="prev v1"><i class="icon-arrow-left"></i></a>
+                <a class="next v1"><i class="icon-arrow-right"></i></a>
+            </div>
+            <div class="owl-carousel owl-theme">
+            	{#SHOPLIST#}
+            </div>
+        </div>
+        <!-- owl-V1 -->
+        <!-- END 精選療程套餐 OWL CAROUSEL -->
+        <!-- Three AD -->
+        <div class="row fix-padding10 three-ad">
+        	{#SHOPCATS#}
+        </div>
+        <!-- END Three AD -->
+    </div>
+    <!-- container -->
+    <!-- footer -->
+    <div id="footer">
+		<div class="footer-hold">
+		<div class="pick-language collapse">
+		    <h3>Select Region & Language</h3>
+		    <div class="row hold">
+		    	{#LANTYPE#}
+		    </div><!-- row -->
+		    <div class="clearfix m-b-40"></div>
+		</div>
+		    <div class="container-foot">
+		        <div class="row fix-padding10">
+		            <div class="col-xs-4 fix-padding5 info-1">
+		                <h4>CONTACT US</h4>
+		                {#聯絡我們#}
+		            </div>
+		            <div class="col-xs-4 fix-padding5 info-2">
+		            <div class="info-2-in">
+		                <h4>CUSTOMER SERVICE</h4>
+		                <div class="row fix-padding10">
+		                	{#BTMENUTWO#}
+		                </div>
+		                <!-- row -->
+		                </div>
+		            </div>
+		            <div class="col-xs-2 fix-padding5 info-3">
+		            <div class="info-3-in">
+		                <h4>FOLLOW REMA</h4>
+		                <ul class="foot-memu">
+		                	{#VMENU#}
+		                </ul>
+		                </div>
+		            </div>
+		            <div class="col-xs-2 fix-padding5 info-4">
+		            <div class="info-4-in">
+		                <h4>SELECT REGION</h4>
+		                <ul class="foot-memu">
+		                    <li><a href=".pick-language" data-toggle="collapse" id="lantype">Taiwan NT$</a></li>
+		                </ul>
+		            </div>
+		            </div>
+		        </div>
+		        <!-- row -->
+		    </div>
+		    <!-- container -->
+		</div>
+		<div class="copyright">
+		    {#BTINFO#}
+		</div>
+    </div>
+    <!--/  footer -->
+    <script type="text/javascript" src="{#TM#}plugins/bootstrap/bootstrap.min.js"></script>
+    <!--script type="text/javascript" src="{#TM#}js/load-page.js"></script-->
+    <script type="text/javascript" src="{#TM#}plugins/bootstrap-carousel-swipe-master/carousel-swipe.js"></script>
+    <!-- owl-carousel -->
+    <script type="text/javascript" src="{#TM#}plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="{#TM#}plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- wayhunt -->
+	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
+	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
+	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
+	
+    <script>
+    // very simple to use!
+    $(document).ready(function() {
+        $(".woman-a").mouseover(function(){
+            $(this).parent().parent().parent().find(".woman-img").css("opacity","1");
+        });
+        $(".man-a").mouseover(function(){
+            $(this).parent().parent().parent().find(".woman-img").css("opacity","0");
+        });
+        $(".carousel").carousel({
+            // interval: 50
+            interval: false
+        });
+        var owl = $("#owl-V1 .owl-carousel");
+        owl.owlCarousel({
+            items: 5,
+            itemsDesktop: [1170, 4],
+            itemsDesktopSmall: [992, 3],
+            itemsTablet: [768, 3],
+            slideSpeed: 1000
+        });
+
+        // Custom Navigation Events
+        $(".next.v1").click(function() {
+            owl.trigger('owl.next');
+        })
+        $(".prev.v1").click(function() {
+            owl.trigger('owl.prev');
+        })
+
+    });
+    </script>
+    <!-- 選單專用-->
+    <script>
+    // $(".carousel").carousel();
+	    $('.dropdown').hover(function() {
+		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
+		}, function() {
+		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
+		});
+		$(".carousel").carousel({
+            interval: 6500
+            // interval: false
+        });
+    </script>
+    <!-- 選單專用 END-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $("#topcontrol").click(function() {
+	        $("html,body").animate({
+	            scrollTop: 0
+	        }, 500);
+	    });
+	    $("#topcontrol").hide();
+	    $(window).scroll(function() {
+	        console.log($(this).scrollTop());
+	        if ($(this).scrollTop() > 50) {
+	            $('#topcontrol').show();
+	            // $('float-bar').css('visibility','visible');
+	        } else {
+	            $('#topcontrol').hide();
+	            // $('#gotop').css('visibility','hidden');
+	        }
+	    });
+	});
+	$('.scroll-hold').slimScroll({
+	    height: '350px',
+	    alwaysVisible: false,
+	    color: '#fff0bb',
+	    size: '2px',
+	    allowPageScroll: false
+	});
+	$('[data-toggle="tooltip"]').tooltip({
+	    animated: 'fade',
+	    container: 'body'
+	});
+	</script>
+	{#addbtscript#}
+</body>
+
+</html>

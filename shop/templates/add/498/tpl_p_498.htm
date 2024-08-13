@@ -1,0 +1,72 @@
+<!-start->
+<link href="{#MYCSS#}shopcontent.css" rel="stylesheet" type="text/css" />
+<script type=text/javascript src="{#MYCSS#}shopcontent.js"></script>
+<script type=text/javascript src="{#MYCSS#}spec.js"></script>
+<link href="{#MYCSS#}spec.css" rel="stylesheet" type="text/css" />
+<script type='text/javascript' src='{#CP#}js/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='{#CP#}js/alertbox.js'></script>
+<link rel="stylesheet" type="text/css" href="{#CP#}js/alertstyle.css" />
+<div id="shopcontent">
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        	<tr>
+          		<td width="320" valign="top">
+		  <div class="piczone">
+				<table align="left" cellpadding="0" cellspacing="0">
+				<tr>
+				<td align="center">
+				<div id="shopview">
+					<img id='shoppic' class='shoppic' src='{#src#}' />
+				</div>
+				</td>
+				</tr>
+				</table>
+		   </div>
+		   <div id="contentpages"></div>
+		 </td>
+          	<td valign="top">
+		  <div id="prodtitle">{#title#}</div>
+			<div id="prop">
+				商品編號：{#bn#}<br />
+				
+				<div style="padding:0px;">
+				原價：<span class="marketprice">＄{#price0#}</span>&nbsp;元<br />
+				<div style="height:46px;line-height:46px;float:left;">加購價：<span id="price" class="price" style="height:46px;line-height:46px;">${#price#}</span>&nbsp;元</div>
+							<div class="buttonzone"> 
+			<img src="{#MYIMAGES#}shop.jpg" alt="訂購" width="174" height="38" border="0" class="addtocart"  id="addtocart" >
+			<!--<img src="images/addtofav.gif" alt="加入收藏" width="102" height="27" border="0" class="addtofav"  id="addtofav" >-->
+			</div>
+				</div>
+			</div>			
+			<div id="prop" style="margin-top:20px;">
+			訂購數量：
+              			<input name="buynums" type="text" class="input" id="buynums" style="height:18px" value="1" size="3" maxlength="6" /> 
+              			<input name="gid" type="hidden" id="gid" value="{#gid#}" />
+              			{#danwei#}
+			</div>
+			<input type="hidden" id="shopid" value="{#id#}"> 
+			<div style="clear:both;"></div>
+		  </td>
+	</tr>
+     	</table>
+
+	<br clear="all" />
+	<div id="bodyzone" class="bodyzone">{#body#}<div style="clear:boh;"></div></div>
+	<div id="canshuzone" class="canshuzone">{#canshu#}</div>
+	<input type="hidden" id="shopid" value="{#id#}"> 
+	<input type="hidden" id="buycolor" value="">
+	<input type="hidden" id="buysize" value="">
+	<input type="hidden" id="buyprice" value="">
+	<input type="hidden" id="buycolorname" value="">
+	<input type="hidden" id="buyspecid" value=""> 
+	<input type="hidden" id="isadd" value="{#isadd#}">
+</div>
+<!-start->
+<!-list->
+{#propname#}：{#prop#}<br>
+<!-list->
+
+<!-end->
+<!-end->
+<!-err1-><div class="notice">目前ID不存在或尚未發佈</div><!-err1->
+<!-err2-><div class="notice">對不起,本內容設置了閱讀權限,您無權瀏覽目前內容</div><!-err2->
+<!-err3-><div class="notice">很抱歉,您必須先購買主商品才能購買加購商品喔!</div><!-err3->

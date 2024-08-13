@@ -1,0 +1,156 @@
+<!-start->
+<script type=text/javascript src="{#CP#}js/cart.js"></script>
+<!-start->
+
+<!-m0->
+    <div class="top-status">
+        <a href="{#back#}"> {#cross#}</a>
+        <div class="top-status-title" style="display:{#showtitlea#}">购物袋 ( {#tnums#} )</div>
+        <div class="top-status-title" style="display:{#showtitleb#}">请选择付款方式</div>
+        <span onclick="{#modilink#}" class="top-status-a2">{#moditext#}</span>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in2">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in style-toggle mem-in-c">
+                	<div class="cart-main-out">
+<!-m0->
+<!-list->
+                        <div class="cart-main" style="display:{#showitem#}" id="del_{#gid#}{#fzspecid#}{#picgid#}">
+                        	<div class="cart-mitem-chose" data-toggle="buttons" style="display:{#showdel#};line-height: 90px;">
+                        		<label class="btn fix-padding">
+                                	<input type="checkbox" value="{#gid#}{#fzspecid#}{#picgid#}" name="cartdel[]"><i class="icon-square-o" style="margin: 35px 5px 0 0;"></i><i class="icon-check-square-o" style="margin: 35px 5px 0 0;"></i>
+                                </label>
+                            </div>
+                            <span class="cart-mitem-img">
+                                <img src="{#srcs#}" class="p-img" alt="">
+                            </span>
+                            <div class="cart-mitem-des2">
+                                <div class="cart-indes-title">{#bn#} {#goodsname#}</div>
+                                <div class="cart-indes-size">{#colorname#} / {#buysize#}</div>
+                                <div class="cart-indes-price">{#pricesymbol#} <span id="jine_{#gid#}{#fzspecid#}{#picgid#}">{#jine#}</span></div>
+                            </div>
+                            <div class="cart-mitem-addon" style="display:{#showchk#};">
+                                <input id="cartacc_{#gid#}{#fzspecid#}{#picgid#}" type="text" value="{#acc#}" name="cartacc" class="cartacc">
+                            </div>
+                            <input type="hidden" id="fz_{#gid#}{#fzspecid#}{#picgid#}" value="{#fz#}">
+                        </div>
+<!-list->
+<!-m1->
+                    	<div class="cpc-coupon" style="display:{#showcoupon#}">
+                            <form  class="form-inline" id="promoCode" method="post" action="cart.php?act=next">
+                                <span> 如使用电子折价券请输入编号</span>
+                                <input class="form-control form-control2" type="text" id="promocode1" name="promocode" value="{#promocode#}">
+                                <button type="submit" class="btn btn-black" style="width:80px;margin-top: 10px;">使用</button>
+                                <input type="hidden" name="promochk" value="1" />
+                            </form>
+                        </div>
+                    	<div class="cpc-counting" style="display:{#showcoupon#}">
+                        	<div class="cpc-countin">
+                            	<span class="cpc-coin-s1">购物篮商品金额小计</span>
+                            	<span class="cpc-coin-s2"><span>{#pricesymbol#}</span> <span id="chg_oritjine"> {#oritjine#}</span></span>
+                                <input type="hidden" name="oritjine" id="oritjine" value="{#oritjine#}" />
+                            </div>
+                        	<div class="cpc-countin">
+                            	<span class="cpc-coin-s1">物流费用(满{#pricesymbol#} {#setyunfei#}元享免运费)</span>
+                            	<span class="cpc-coin-s2"><span>{#pricesymbol#}</span> <span id="payyunfei"> {#yunfei#}</span></span>
+                                <input type="hidden" name="yunfei" id="yunfei" value="{#yunfei#}" />
+                            </div>
+                        	<div class="cpc-countin">
+                            	<span class="cpc-coin-s1">线上帐户余额{#pricesymbol#} {#account#}元，本次抵用</span>
+                            	<span class="cpc-coin-s2"><span>{#pricesymbol#}</span> <span id="chg_disaccount"> {#disaccount#}</span></span>
+                                <input type="hidden" name="disaccount" id="disaccount" value="{#disaccount#}" />
+                            </div>
+                        	<div class="cpc-countin">
+                            	<span class="cpc-coin-s1">电子折价券折扣金额</span>
+                            	<span class="cpc-coin-s2"><span>{#pricesymbol#}</span> <span id="groupon"> {#promoprice#}</span></span>
+                                <input type="hidden" name="promoprice" id="promoprice" value="{#promoprice#}" />
+                            </div>
+                        </div>
+<!-m1->
+<!-m2->
+                    	<div class="cpc-delivery" style="display:{#showcoupon#}">
+                            <li class="half v-top style-toggle cpc-dein1">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn active fix-padding payment2 {#checkyun#}">
+                                    	<input type="radio" id="payment2" name="payment" value="2" {#checkyun#}>
+                                    	<i class="icon-circle-o"></i>
+                                    	<i class="icon-dot-circle-o"></i>
+                                    	<span>宅配货到付款</span>
+                                    </label>
+                                </div>
+                                <p>每笔订单将酌收{#pricesymbol#} {#setyunprice2#}元物流费<br>若单笔购物满{#pricesymbol#} {#setyunfei#}元，即享有免运费优惠<br>(此服务仅限台湾本岛)</p>
+                            </li>
+                            <li class="half v-top style-toggle cpc-dein2">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn fix-padding payment1 {#checkcard#}">
+                                    	<input type="radio" id="payment1" name="payment" value="1" {#checkcard#}>
+                                        <i class="icon-circle-o"></i>
+                                        <i class="icon-dot-circle-o"></i>
+                                        <span>信用卡在线刷卡</span>
+                                    </label>
+                                </div>
+                                <p>每笔订单将酌收{#pricesymbol#} {#setyunprice#}元物流费<br>若单笔购物满{#pricesymbol#} {#setyunfei#}元，即享有免运费优惠<br>(可接受VISA, Master, JCB信用卡)</p>
+                            </li>
+                            
+                        </div>
+				<input type="hidden" id="promocode2" value="{#promocode2#}" />
+
+				<input type="hidden" id="setyunprice" value="{#setyunprice#}" />
+				<input type="hidden" id="setyunprice2" value="{#setyunprice2#}" />
+<!-m2->
+
+<!-m3->
+<p class="myact-headnote">购物车中没有商品</p>
+<hr>
+<!-m3->
+<!-end->
+<input type="hidden" id="promotype" value="{#promotype#}" />
+<input type="hidden" id="promotypecode" value="{#promotypecode#}" />
+                
+                    </div>
+            </div>
+            <!-- container in -->
+        </div>
+        <!--END  right-content -->
+    </div>
+    </div>
+    <a href="javascript:;" id="cartdelbtn" style="display:{#showdel#};">
+    <div class="cart-main-bottom2">
+    	删除商品
+    </div>
+    </a>
+    <div class="cart-main-bottom" style="display:{#showchk#};">
+    	<div class="cart-mab-in">
+        	<div class="cart-mab-num">
+            	<p>金额总计</p>
+                <span><span>{#pricesymbol#}</span> <span id="paytotal"> {#tjine#}</span></span>
+                <input type="hidden" name="tjine" id="tjine" value="{#nonfotmattjine#}" />
+            </div>
+        	<div class="cart-mab-btn"><a href="{#chkout#}" id="{#promocode#}" class="btn btn-black btn-lg {#gostart#}" style="width:130px;">{#chkstr#}</a></div>
+        </div>
+    </div>
+<!-end->
+<!-err1-><script>
+$(document).ready(function(){
+			alert('主商品已经清空，加购商品将一并清除！');
+			$.ajax({
+				type: "POST",
+				url:PDV_RP+"post.php",
+				data: "act=setcookie&cookietype=empty&cookiename=SHOPCART",
+				success: function(msg){
+					if(msg=="OK"){
+						window.location=PDV_RP+'shop/cart.php?isre=1';
+					}
+				}
+			});
+});
+</script><!-err1->
+
+

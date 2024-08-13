@@ -1,0 +1,20 @@
+<!-start->
+<script language="javascript" src="{#RP#}advs/js/advsflashlb.js"></script>
+<div id="flashcontent01">{#pics#}</div>
+<!-start->
+<!-end->
+<script type="text/javascript">
+			
+			var pics='{#pics#}';	
+			var links='{#links#}';
+			var sohuFlash2 = new sohuFlash("images/advsflashlb.swf","flashcontent01","{#picw#}","{#pich#}{","5","#ffffff");
+				sohuFlash2.addParam("quality", "high");
+				sohuFlash2.addParam("salign", "t");
+				sohuFlash2.addParam("wmode", "transparent");
+				sohuFlash2.addVariable("p",pics);	
+				sohuFlash2.addVariable("l",links);
+				sohuFlash2.write("flashcontent01");
+			
+</script>
+<!-end->
+

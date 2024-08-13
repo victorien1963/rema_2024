@@ -1,0 +1,25 @@
+/* ============分类列表============== */
+
+div.newsclass_menu_dd{
+margin:0px;
+padding:0px 21px 31px 7px;
+}
+
+
+a.newsclass_menu_dd:link,a.newsclass_menu_dd:visited,a.newsclass_menu_dd:active{
+display:block;
+text-decoration: none;
+font:12px/28px Verdana, Arial, Helvetica, sans-serif;
+height:28px;
+text-align:left;
+background:url(../images/dot2.gif) 16px 9px no-repeat;
+padding:2px 0px 0px 52px;
+margin:0px;
+color:#7aa424;
+}
+
+a.newsclass_menu_dd:hover{
+display:block;
+color: #72674c; 
+text-decoration: none;
+}

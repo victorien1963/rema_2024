@@ -1,0 +1,252 @@
+li{
+	list-style:none;
+}
+.icon_30x30{background-size:30px 30px !important;height:30px;width:30px;}
+.icon_64x64{background-size:64px 64px !important;height:64px;width:64px;}
+.icon_100x156{background-size:100px 156px !important;height:156px;width:100px;}
+.icon_100x100{background-size:100px 100px !important;height:100px;width:100px;}
+.inputS{cursor: pointer;text-decoration:underline;}
+.input_small{
+	position:absolute;
+	margin:-25px 0 0 120px;	
+}
+.input_show{
+	position:absolute;
+	margin:-70px 0 0 125px;	
+	margin:-70px 0 0 5px \9;	
+}
+.icon_48V{background:url(../../../../../page/templates/add/444/images/plug/48V.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/48V.png', sizingMethod='scale');
+background:url()\9;}
+.icon_ChinaP{background:url(../../../../../page/templates/add/444/images/plug/ChinaP.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/ChinaP.png', sizingMethod='scale');
+background:url()\9;}
+.icon_ChinaR{background:url(../../../../../page/templates/add/444/images/plug/ChinaR.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/ChinaR.png', sizingMethod='scale');
+background:url()\9;}
+.icon_IEC309-16{background:url(../../../../../page/templates/add/444/images/plug/IEC309-16.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/IEC309-16.png', sizingMethod='scale');
+background:url()\9;}
+.icon_IEC309-32{background:url(../../../../../page/templates/add/444/images/plug/IEC309-32.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/IEC309-32.png', sizingMethod='scale');
+background:url()\9;}
+.icon_IEC320_C13P{background:url(../../../../../page/templates/add/444/images/plug/IEC320_C13P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/IEC320_C13P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_IEC320_C13R{background:url(../../../../../page/templates/add/444/images/plug/IEC320_C13R.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/IEC320_C13R.png', sizingMethod='scale');
+background:url()\9;}
+.icon_IEC320_C20P{background:url(../../../../../page/templates/add/444/images/plug/IEC320_C20P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/IEC320_C20P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_IEC320_C20R{background:url(../../../../../page/templates/add/444/images/plug/IEC320_C20R.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/IEC320_C20R.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMA5-15P{background:url(../../../../../page/templates/add/444/images/plug/NEMA5-15P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMA5-15P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMA5-15R{background:url(../../../../../page/templates/add/444/images/plug/NEMA5-15R.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMA5-15R.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMA5-20P{background:url(../../../../../page/templates/add/444/images/plug/NEMA5-20P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMA5-20P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMA5-20R{background:url(../../../../../page/templates/add/444/images/plug/NEMA5-20R.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMA5-20R.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMA6-15P{background:url(../../../../../page/templates/add/444/images/plug/NEMA6-15P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMA6-15P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMA6-20P{background:url(../../../../../page/templates/add/444/images/plug/NEMA6-20P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMA6-20P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMAL5-15P{background:url(../../../../../page/templates/add/444/images/plug/NEMAL5-15P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMAL5-15P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMAL5-20P{background:url(../../../../../page/templates/add/444/images/plug/NEMAL5-20P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMAL5-20P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMAL5-30P{background:url(../../../../../page/templates/add/444/images/plug/NEMAL5-30P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMAL5-30P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMAL6-15P{background:url(../../../../../page/templates/add/444/images/plug/NEMAL6-15P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMAL6-15P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMAL6-20P{background:url(../../../../../page/templates/add/444/images/plug/NEMAL6-20P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMAL6-20P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_NEMAL6-30P{background:url(../../../../../page/templates/add/444/images/plug/NEMAL6-30P.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/NEMAL6-30P.png', sizingMethod='scale');
+background:url()\9;}
+.icon_UniversalR{background:url(../../../../../page/templates/add/444/images/plug/UniversalR.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/page/templates/add/444/images/plug/UniversalR.png', sizingMethod='scale');
+background:url()\9;}
+.accessory_thermometer{background:url(../images/thermometer.png) no-repeat;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/product/templates/add/481/images/images/thermometer.png', sizingMethod='scale');
+background:url()\9;}
+table.DeviceCompare{width:650px;margin:20px auto;border:0;border-collapse:collapse;font:12px Verdana, Arial, Helvetica, sans-serif;background-color: #ECEFF8;}
+table.DeviceCompare caption{font-size: 18pt;margin:20px 0;border:0;}
+table.DeviceCompare thead{display:table-row-group;background:#FFFFFF;width:650px;}
+table.DeviceCompare thead th{font-size: 8pt; padding:10px 0;}
+table.DeviceCompare tbody{width:650px;}
+table.DeviceCompare tr{border:0;text-align:center;font-size: 10pt;border-left:0;border-right:0;}
+table.DeviceCompare th.title1,table.DeviceCompare tr.title1{color:#FFFFFF;background-color:#0071BC;padding:5px 0;}
+table.DeviceCompare th.title1 td,table.DeviceCompare tr.title1 td{color:#FFFFFF;background-color:#0071BC;text-align:center;}
+table.DeviceCompare tr.title2{color:#FFFFFF;background-color:#0071BC;}
+table.DeviceCompare tr td.firsttd{width:220px;}
+table.DeviceCompare tr td.firsttd div{margin:0 auto;}
+table.DeviceCompare tr td div.astyle{text-indent:-9999px;cursor:pointer;}
+table.DeviceCompare tr td{padding:10px 0; text-align:center;}
+table.DeviceCompare tr.border td{border-bottom: 1px dotted #CCC;}
+table.DeviceCompare tr td.icontd{vertical-align:top;}
+table.DeviceCompare ul.text{width:350px;clear:both;}
+table.DeviceCompare ul.text li{width:350px; /*height:16px;*/float:left;margin:2px 0;text-align:left;font-size:10pt;}
+table.DeviceCompare ul.text li span.device_name{color:#999999;}
+table.DeviceCompare ul.icon{/*width:780px;*/clear:both;}
+table.DeviceCompare ul.icon li{cursor:pointer;width:36px; height:36px;text-indent:-9999px;float:left;margin:5px;}
+table.DeviceCompare a{text-decoration:none;}
+table.DeviceCompare ul li a{display:block;height:48px;width:48px;}
+table.DeviceCompare tr td.left, table.DeviceCompare tr th.left{text-align:left;padding-left:10px;}
+.plugtd{
+	text-align:left !important;
+}
+.display_none{display:none;}
+/*#accessorypic_sm8p{height:100px;}*/
+.devicepic_demo{
+	background:url(../images/download/demo.png) no-repeat;
+	background:url()\9;/*IE 6 7 8 hack*/
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/product/templates/add/481/images/download/demo.png', sizingMethod='scale')
+}
+.devicepic_data{
+	background:url(../images/download/data.png) no-repeat;
+	background:url()\9;/*IE 6 7 8 hack*/
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/product/templates/add/481/images/download/data.png', sizingMethod='scale')
+}
+.deviceSolution li{
+	float:left;
+	margin-right:20px;
+}
+.deviceSolution dl{
+	width:64px;
+}
+.deviceSolution dd{
+	text-align:center;
+	margin-left:0;
+}
+#datasheet dt, #datasheet dd{
+	width:90px;
+}
+#datasheet dt div{
+	margin:0 auto;
+}
+.demo_info dl{
+	width:80px;
+}
+.demo_info{
+	padding: 10px;
+	display: none;
+	width: 80px;
+	heigth: 30px;
+	position: absolute;
+	border: 1px solid #CCC;
+	margin-left: 20px;
+	margin-top: -10px;
+	background: #EEE;
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.demo_info dt{
+	width:35px;
+	float:left;
+	text-align:right;
+	clear:both;
+}
+.demo_info dd{
+	text-align:left;
+}
+.devicepic_490x209{background-size:490px 209px !important;height:209px;width:490px;}
+.device8h_data{
+	background:url(../images/connect/connect_8h.gif) no-repeat;
+	background:url()\9;/*IE 6 7 8 hack*/
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://webtest.bellwin.com.tw/product/templates/add/481/images/connect/connect_8h.gif', sizingMethod='scale')
+}
+.style3 {
+color: white;
+font-weight: bold;
+}
+.content1 tr td{
+	text-align:left !important;
+	padding-left:10px !important;
+}
+#download{
+	margin-top: -20px;
+}
+#download dt.first{
+	padding-bottom: 5px;
+}
+#download dt{
+	border-bottom: 1px solid #AAA;
+	padding: 20px 0 5px;
+}
+#download dt span{
+	font-size:1.5em;
+	font-weight: bold;
+}
+#download dd{
+	padding: 10px 0;
+}
+#download table.DeviceCompare{
+	margin:0 auto;
+}
+#download a:hover {
+	color: #09F;
+	text-decoration: underline;
+}
+.specification dt{
+}	
+.specification dd{
+	margin-left:10px;
+	padding-bottom:0;
+}
+.specification ul{
+	padding-top:0px;
+}
+.specification li{
+	clear:both;
+	list-style:none;
+	padding-bottom:7px;
+	display: block;
+} 
+.specification li div{
+	margin-top:-1px;
+}                                                                     
+.ui-icon{width:16px;height:16px;background-image:url(../images/ui-icons_217bc0_256x240.png);}
+.ui-icon-triangle-1-e{background-position:-32px -16px;}
+.ui-icon-bullet{background-position:-80px -144px;}
+.ui-icon-document{background-position:-32px -96px;}
+.ui-pdf{background-image:url(../images/icon-pdf.png);}
+.ui-iconstyle{
+	float:left;
+	margin:-1px 2px 0 5px;
+}
+.floatleft{
+	float:left;
+}
+.specification li div {
+	margin-top: -1px;
+}
+.hand{
+	cursor: pointer;
+}
+.magnifyarea,.zoomstatus,.zoomtracker,.cursorshade{
+	z-index:99;
+}
+.magnifyarea{
+	background: #FFF;
+}
+.downalign{
+	text-align:left !important;
+}
+.iconpic li{
+	list-style:none;
+}

@@ -1,0 +1,49 @@
+/* ============¦Cªí============== */
+
+div#shoplist_diy2{
+	width:100%;
+	border:1px #e5e5e5 solid;
+}
+
+div#shoplist_diy2 div.hr{
+	height:150px;
+	border-bottom:1px #cccccc dashed;
+	margin:0px 10px 10px 10px;
+}
+
+div.shoplist_diy2{
+	margin:0px 10px;
+	height:26px;
+}
+
+div.shoplist_diy2 div.prodtitle{
+	float:left;
+	width:335px;
+}
+
+div.shoplist_diy2 a.prodtitle:link,div.shoplist_diy2 a.prodtitle:visited,div.shoplist_diy2 a.prodtitle:active{
+	display:block;
+	color:#3d3d3d;
+	font:12px/26px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+div.shoplist_diy2 a.prodtitle:hover{
+	display:block;
+	color:#ff0000;
+	text-decoration: underline;
+	font:12px/26px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.shoplist_diy2 div.price{
+	float:left;
+	color:#3d3d3d;
+	font:12px/26px Verdana, Arial, Helvetica, sans-serif;
+	background:url(../images/face_01.gif) 0px 0px no-repeat;
+	padding-left:25px;
+}
+
+div.shoplist_diy2 font.mprice{
+	color:#c30027;
+	font:12px/26px Verdana, Arial, Helvetica, sans-serif;
+}

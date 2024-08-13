@@ -1,0 +1,47 @@
+<!-start->
+<link href="css/productcontent_1.css" rel="stylesheet" type="text/css" />
+<script type=text/javascript src="{#CP#}js/productcontent.js"></script>
+
+<div id="productcontent_1">
+	<div class="productpics">
+		<div class="piczone">
+			<table align="center" cellpadding="0" cellspacing="0">
+			<tr>
+			<td align="center">
+			<div id="productview">
+				<img src="images/loading.gif" border="0" id="productloading" class="productloading">
+			</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		<div id="contentpages"></div>
+	</div>
+
+	<div class="introzone">
+		<div id="prodtitle">產品名稱：{#title#}</div>
+		<div id="prop">{#propstr#}</div>
+		<div id="memo" class="memo" style="display:{#showmemo#}">{#memo#}</div>
+	</div>
+	
+	<div class="bodyzone">{#body#}</div>
+	
+	<div class="bzone">
+	<div class="source" >瀏覽 ({#cl#}) | <a href="{#commentutl#}">評論</a> ({#commentcount#}) | 評分({#centavg#}) | <span id="zhichi"  title="支持一票">支持(<span id="zhichinum">{#zhichi#}</span>) </span> | <span id="fandui" title="反對一票">反對(<span id="fanduinum">{#fandui#}</span>) </span> | 產品發佈：<a href="{#memberurl#}">{#author#}</a>  
+	  <input type="hidden" id="productid" value="{#id#}"> 
+	  </div>
+	<div id="addfav" class="addfav">將本產品加入收藏</div>
+	<div class="tags" style="display:{#showtag#}">標籤：{#tagstr#}</div>
+	<div id="banzhu" class="banzhu"></div>
+	</div>
+
+</div>
+<!-start->
+<!-list->
+{#propname#}：{#prop#}<br>
+<!-list->
+
+<!-end->
+<!-end->
+<!-err1-><div class="notice">目前ID不存在或尚未發佈</div><!-err1->
+<!-err2-><div class="notice">對不起,本內容設置了閱讀權限,您無權瀏覽目前內容</div><!-err2->

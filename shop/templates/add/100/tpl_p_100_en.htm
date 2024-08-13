@@ -1,0 +1,157 @@
+<!-start->
+    <form action="" method="post" id="tuisend">
+    <div class="top-status">
+        <a href="{#RP#}shop/ordertui.php?act=list">Cancel</a>
+        <div class="top-status-title">{#OrderNo#}</div>
+        <span onclick="javascript:$('#tuisend').submit();" class="top-status-a2">Confirm</span>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                	<div class="myact-formf">
+                    	<div class="myact-ffleft">{#dtime#}</div>
+                    </div>
+                	<div class="myact-formfs">
+                                <li>{#name#} </li>
+                                <li>{#s_addr_a#},{#s_addr_b#},{#postcode#}</li>
+                                <li>{#s_addr_c#}</li>
+                                <li>{#country#}</li>
+                                <li>Mobile number: {#s_mobi#}</li>
+                        <span>Total Amount<br>{#pricesymbol#} {#tjine#}</span>
+                    </div>
+                	<div class="myact-formf">
+                    	<div class="myact-ffleft">Please check to return</div>
+                    </div>
+                	<div class="style-toggle myact-formfbt">
+                    <input type="hidden" name="orderid" value="{#orderid#}" />
+                    <input type="hidden" name="act" value="sendtui" />
+                	
+<!-start->
+<!-list->
+                		<div class="myact-backall" >
+                            <div class="myact-ffleft">
+                            	<div class="myact-backcheck" data-toggle="buttons" style="{#dischk#}">
+                                	<label class="btn">
+                                        <input type="checkbox" name="tuilist[]" value="{#itemid#}">
+                                        <i class="icon-square-o"></i>
+                                        <i class="icon-check-square-o"></i>
+                                	</label>
+                                </div>
+                            	<div class="myact-backinfo">
+                                	{#bn#} {#goods#}<br>
+                                	{#colorname#} / {#size#}
+                                </div>
+                            </div>
+                            <div class="myact-ffright">{#pricesymbol#} {#jine#}</div>
+                    	</div>
+<!-list->
+<!-end->
+                    </div>
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+                    <!-- /section5201314 -->
+    <div class="clearfix"></div>
+    </form>
+<!-end->
+
+<!-err1->
+<link href="css/shoporderdetail.css" rel="stylesheet" type="text/css" />
+<div class="ordererr">{#ntc#}</div>
+<!-err1->
+
+
+<!-m0->
+<script language="javascript" src="{#CP#}js/ordertuidetail.js"></script>
+
+    <div class="top-status">
+        <a href="javascript:history.back();">Modify</a>
+        <div class="top-status-title">Application for return of goods {#OrderNo#}</div>
+        <span id="sendtui" class="top-status-a2">Confirm</span>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <p class="myact-headnote">您選擇的退貨商品如下。<br>請確認吊牌與包裝盒是否完整，將商品放入原紙箱或包裝袋內，快遞人員會在三個工作天內到您府上取件。</p>
+                	<div class="myact-formfbt">
+                    
+                            <input type="hidden" name="orderid" id="orderid" value="{#orderid#}" />
+                            <input type="hidden" name="tuilist" id="tuilist" value="{#tuilist#}" />
+
+<!-m0->
+
+<!-m1->
+                		<div class="myact-backall">
+                            <div class="myact-ffleft">
+                            	<div class="myact-backinfo">
+                                	{#bn#} {#goods#}<br>
+                                	{#colorname#} / {#size#}
+                                </div>
+                            </div>
+                    	</div>
+<!-m1->
+<!-m2->
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+<!-m2->
+
+<!-menu->
+    <div class="top-status">
+        <a href="{#RP#}member/index.php"><i class="icon-cross"></i></a>
+        <div class="top-status-title">Application for return of goods {#OrderNo#}</div>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <div class="col-xs-12 mem-in-e">
+                    	<p class="title">您的退貨申請已送出。</p>
+                    	<ul class="info">
+                            <li class="m-b-30">請確認吊牌與包裝盒是否完整，將商品放入原紙箱或包裝袋內，快遞人員會在三個工作天內到您府上取件。</li>
+                    	</ul>
+                    </div>
+                    <!--END  section -->
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+<!-menu->

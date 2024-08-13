@@ -1,0 +1,62 @@
+<!-start->
+
+<!--購物車的功能與現在官網一樣-->
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 35 35"
+  width="35"
+  height="35"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+>
+  <g transform="translate(-18 1)">
+    <path
+      d="M23.82 6.16H46.59V26.16A5 5 0 0141.59 31.16H28.82A5 5 0 0123.82 26.16V6.16Z"
+    />
+    <path d="M35.12 0.28a6 6 0 00-5.86 5.88H41A6 6 0 0035.12 0.28Z" />
+  </g>
+</svg>
+<p id="cartnum">{#tacc#}</p>
+<div class="dropdown small">
+  <div class="close-btn d-flex align-items-center justify-content-end">
+    <i class="bi bi-x-lg"></i>
+  </div>
+  <div class="small-list">
+    <div class="cart-con" id="cartlist">
+      {#itemlist#}
+    </div>
+    <!--購物車結算區域-->
+    <div class="cart-item title">
+      <div class="cart-word rema-col s8 title">
+        <div class="price font-s">總金額</div>
+        <div class="price font-l" id="cartprice">{#pricesymbol#} {#tjine#}</div>
+      </div>
+      <div class="bn-con bn-align-right">
+        <a class="shop-bn float-right" href="{#CP#}cart.php"> 查看購物車</a>
+      </div>
+    </div>
+    <!--END購物車結算區域-->
+  </div>
+</div>
+<!-start->
+
+<!-m0->
+<div class="cat-block">
+  <div class="cart-item">
+    <div class="cart-img rema-col s3">
+      <img class="cart-img" src="{#src#}" />
+    </div>
+    <div class="cart-word rema-col s8">
+      <div class="name">{#title#}</div>
+      <div class="size">({#colorname#} {#size#}) X {#acc#}</div>
+      <div class="price font-w-s">{#price#}</div>
+    </div>
+  </div>
+  <div class="cart-line"></div>
+</div>
+<!-m0->
+
+<!-end->
+<!-end->

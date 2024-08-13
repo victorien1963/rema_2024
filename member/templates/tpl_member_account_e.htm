@@ -1,0 +1,41 @@
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+			<div class="edm-con product-main-con  rema-col f20 s12">
+				<div class=" rema-col f20 s12 xs12 font-l font-w-l"> 
+					<div class="product-list-title list-title-first">訂閱電子報</div>
+					<div class="mobile-nav font-s font-w-m">
+						<div><a href="{#RP#}shop/order.php">訂單與退貨</a></div>
+						<div>|</div>
+						<div><a href="{#RP#}member/member_paylist.php">會員帳戶</a></div>
+						<div>|</div>
+						<div><a href="{#RP#}member/member_account.php?chk=e">電子報</a></div>
+						<div>|</div>
+						<div><a href="{#RP#}member/member_account.php?chk=c">載具歸戶</a></div>
+					</div>
+				</div>
+				<div class="edm-con rema-col">
+					<form id="memberModify"  method="post" action="" name="regform" >
+					<div class="edm-block">
+						<div class="sub-title">設定在電子郵件地址中接收我們最新商品資訊的電子報。</div>
+						<div class="mobile-dashline mobile-dashline-top">
+							<label class="radio-container">訂閱電子報
+							  <input type="radio" {#checkedok#} name="order_epaper" value="1">
+							  <span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="mobile-dashline">
+							<label class="radio-container">取消訂閱電子報
+							  <input type="radio" {#checkedno#} name="order_epaper" value="0">
+							  <span class="checkmark"></span>
+							</label>
+						</div> 
+						<div>
+							<div class="buy-bn-con">
+								<button class="shop-bn edm-bn">確定並儲存</button>
+							</div>
+						</div> 
+					</div>
+					<input type="hidden" name="act" value="memberaccounte" />
+   					<input type="hidden" name="order_paper" id="order_paper" value="{#order_paper#}" />
+					</form>
+				</div>
+			</div>

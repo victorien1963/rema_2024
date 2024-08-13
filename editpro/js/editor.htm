@@ -1,0 +1,188 @@
+<script type='text/javascript' src='../editor/kindeditor.js'></script>
+		<script>
+			var editor_id = 'txt_main';
+			KE.init({
+				id : editor_id,
+				width : '100%',
+				height : '450px',
+				wyswygMode : false,
+				afterCreate : function(id) {
+					KE.util.focus(id);
+				}
+			});
+		</script>
+		 <link rel="stylesheet" href="php.css" type="text/css" />
+		<script language="JavaScript" type="text/javascript">
+			//Gets the browser specific XmlHttpRequest Object
+			function getXmlHttpRequestObject() {
+				if (window.XMLHttpRequest) {
+					return new XMLHttpRequest(); //Not IE
+				} else if(window.ActiveXObject) {
+					return new ActiveXObject("Microsoft.XMLHTTP"); //IE
+				} else {
+					//Display your error message here. 
+					//and inform the user they might want to upgrade
+					//their browser.
+					alert("Your browser doesn't support the XmlHttpRequest object.  Better upgrade to Firefox.");
+				}
+			}			
+			//Get our browser specific XmlHttpRequest object.
+			var receiveReq = getXmlHttpRequestObject();		
+			//Initiate the asyncronous request.
+			var flag=false;
+			function ShowEditor() {
+				if(flag)
+					return;
+				//If our XmlHttpRequest object is not in the middle of a request, start the new asyncronous call.
+				if (receiveReq.readyState == 4 || receiveReq.readyState == 0) {
+					//Setup the connection as a GET call to SayHello.html.
+					//True explicity sets the request to asyncronous (default).
+					receiveReq.open("GET", 'ShowEditor.php?path={path}', true);
+					//Set the function that will be called when the XmlHttpRequest objects state changes.
+					receiveReq.onreadystatechange = handleShowEditor; 
+					//Make the actual request.
+					receiveReq.send(null);
+					flag=true;
+				}			
+			}
+			//Called every time our XmlHttpRequest objects state changes.
+			function handleShowEditor() {
+				//Check to see if the XmlHttpRequests state is finished.
+				if (receiveReq.readyState == 4) {
+					//Set the contents of our span element to the result of the asyncronous call.
+					document.getElementById('span_result').innerHTML = receiveReq.responseText;
+				}
+			}
+			</script>
+		
+			<script language="JavaScript" src="../../edit/cuteeditor_files/Scripts/IE_Loader/Loader.js"></script>
+			<script language="JavaScript" src="../../edit/cuteeditor_files/Scripts/Constant.js"></script>
+			<script language="JavaScript">var CE_Editor1_IDSettingClass_Strings=""; </script>
+
+<iframe name=inwin id=inwin src='' width=0px height=0px style="display:none"></iframe>
+
+<form action='do.php?action=savefile&path={path}' method=post name=editform target=inwin onsubmit="return editform_submit()">
+<span id="span_result"></span>
+<table border=0 cellspacing=0 cellpadding=0 width=100% style="layout:fixed;">
+ <tr>
+  <td width=100% colspan=9 height=23 background=images/titleback.gif>
+   <a href='javascript:window.close()'>關閉</a>
+   <a href='javascript:repon();'>字元替換</a>   
+   <font style='font-size:10pt;'>搜尋請按Ctrl+F</font> 
+   <a href='javascript:go_jump()' >預覽文件</a> 
+   <a href="javascript:runme();">本地預覽</a> 
+   <input type=checkbox onclick="breakline(this.checked);" name=autobreak>自動換行&nbsp; &nbsp; &nbsp;
+ Charset <select name='fdsafdsa' onchange="set_charset(this.value)"> 
+<option value='UTF-8' {selected_utf8}>UTF-8</option>
+<option value='GB2312' {selected_gb2312}>GB2312</option>
+
+</select>
+  </td>
+ </tr>	
+ <tr id='replacediv' style='display:none'><td>
+<!---字符串替換--->
+<div style='background-color:lightblue;padding:10px;' >
+ <textarea name="repLeft" id="repLeft" rows=3 cols=20></textarea>(與<textarea name="repRight" id="repRight" rows=3 cols=20></textarea>間的內容)替換為:<textarea name="repMid" id="repMid" rows=3 cols=20></textarea><br>
+(<input type="checkbox" name="isRemove" id="isRemove" value="y" checked>刪除定界符)<input type="button" name="Submit322" value="開始替換" onClick="str_replace();">&nbsp;<input type="button" name="Submit3222" value="撤銷替換" onClick="str_undo();"> <a href="javascript:repon()">關閉</a>
+</div>
+ </td>
+ </tr>
+ <tr>
+
+  <td>
+   <table width=100% border=0 cellspacing=0 cellpadding=0>
+    <tr>
+     <td>
+<script>
+if (debug) alert('loading content');
+</script>	
+      <textarea id='txt_ln' style='overflow:hidden;border:2px;border-right:0px;border-style:inset;padding-right:5px;text-align:right;scrolling:no;height:600px;font-family:verdana;font-size:12px;line-height:15px;background-color:#eeeeee;width:40px;padding:2px;' readonly>{lines}</textarea>
+     </td>
+     <td width=100%>
+      <textarea id='txt_main' name='txt_main' onkeydown='return editTab(event,this)'   onscroll="show_ln()" onkeyup='if($("loading").style.display == "none") document.editform.sub_bt.disabled = false; if (event.keyCode == 17) window.ctrlon=false;'   style='word-wrap:normal;word-break: break-all;padding:2px;height:600px;border:2px;border-style:inset;overflow:auto;scrolling:yes;border-left:0px;font-family:verdana;font-size:12px;line-height:15px;width:100%;'>{content}</textarea>
+     </td>
+    </tr>
+   </table>
+<script>
+if (debug) alert('content loaded');
+</script>
+
+<div>
+<b>保存為：</b>
+檔案名:<input type=text size=20 name=filename value='{filename}'>&nbsp;編碼:<select name='encodeto'>
+<option value='UTF-8' {selected_utf8} >UTF-8
+<option value='GB2312' {selected_gb2312} >GB2312
+</select>
+<input type=hidden name='encode' value='{encode}' />
+&nbsp;檔案大小:{size} &nbsp;
+<input type=checkbox onclick="save_if_close(this)" checked id='if_close' name='if_close' /><label for='if_close' >保存後關閉此窗口</label>&nbsp;<input type=submit name='sub_bt' value=保存 disabled onclick="if (this.disabled) {this.disabled=false;}" />  <input type=reset value=還原 >  		<input type="button" name="button" value="載入編輯器" onclick="javascript:ShowEditor();DelTxt();document.editform.sub_bt.disabled = false;" /><br>
+</div> 
+
+</form>
+<script>
+var timer;
+function save_suc(s)
+{
+	if (window.timer)
+	{
+		clearTimeout(timer);
+		window.timer = null;
+	}
+	$('loading').innerHTML = s;
+	if (document.editform.if_close.checked) alert(s);
+	setTimeout('$("loading").style.display = "none"',1000);
+	document.editform.sub_bt.value = '保存';
+	document.editform.sub_bt.disabled = true;
+	if (document.editform.if_close.checked) window.close();
+}
+function save_err(s)
+{
+	window.timer = null;
+	inwin.window.location = "about:blank";
+	$('loading').innerHTML = s;
+	alert(s);
+	setTimeout('$("loading").style.display = "none"',1000);
+	document.editform.sub_bt.value = '保存';
+	document.editform.sub_bt.disabled = false;
+}
+function go_jump()
+{
+	var path = "{path}";
+	var arr = path.split('/');
+	var dirname = "";
+	for(var i=0;i<arr.length-1;i++)
+	{
+		dirname += arr[i]+'/';
+	}
+	dirname+= document.editform.filename.value;
+	window.open("jump.php?url="+dirname);
+}
+function editform_submit()
+{
+	if (window.timer)
+	{
+		clearTimeout(timer);
+	}
+	$('loading').innerHTML = '保存中...';
+	$('loading').style.display = '';
+	document.editform.sub_bt.value = '保存中...';
+	document.editform.sub_bt.disabled = true;
+	document.editform.submit();
+	window.timer = setTimeout("save_err('連接超時!');",60*1000);
+	setTimeout("if (window.timer) {document.editform.sub_bt.disabled = false;document.editform.sub_bt.value='保存';}",5*1000);
+	return false;
+}
+if (debug) alert('check if close window after saving');
+if (document.cookie.toString().indexOf('if_close=true') != -1)
+{
+	$('if_close').checked = true;
+}
+else if (document.cookie.toString().indexOf('if_close=false') != -1)
+{
+	$('if_close').checked = false;
+}
+if (debug) alert('page loaded');
+</script>
+  </td>
+ </tr>
+</table>

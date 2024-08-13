@@ -1,0 +1,52 @@
+<!---右鍵菜單模塊--->
+<div id="mlay" style="position:absolute;display:none;cursor:default;font-family:細明體;font-size:9pt;" onClick="return false;"></div>
+
+<!---隱藏框架--->
+<iframe name='inwin' id='inwin' src='' width=0px height=0px border=0 style="display:none" visibility=hidden></iframe>
+<script>
+var allow_admin = "{admin}";
+</script>
+
+<div style="height:23px;padding:2px;margin:0px;background-image:url(images/titleback.gif);float:top;">
+<span class=toolbutton1><img src=images/up.gif /><a href='javascript:upindex();' title=返回上級目錄>返回上級目錄</a></span>
+<span class=toolbutton1 style="display:{newdir}"><img src=images/newfolder.gif /><a href='javascript:newfile(1);' title=新建目錄>新建目錄</a></span>
+<span class=toolbutton1 style="display:{zipppack}"><img src=images/icon_zip.gif /><a href='javascript:zippack();' title=將選中的文件及文件夾打包壓縮>添加到壓縮文件</a></span>
+<span class=toolbutton1 style="display:{select}"><a href='javascript:allcheck();' title=全部選中>全選</a>&nbsp;<a href='javascript:anticheck();' title=反向選擇>反選</a></span>
+<span class=toolbutton1 ><a href='javascript:reloaddata();' title=刷新當前目錄中的內容>刷新</a></span>
+<span class=toolbutton1 style="display:{property}"><img src=images/property.gif /><a href='javascript:property();' title=取得當前目錄的詳細信息>屬性</a></span>
+<span class=toolbutton1>
+ <input type=checkbox id='icon_mode' onclick='$("visit_mode").checked=this.checked;display()'>縮略圖
+ <input type=checkbox id='visit_mode' onclick='display()'>瀏覽
+</span>
+ <span style="display:{admin}"><a href='javascript:open_ctrl();'>控制面板</a></span>
+   <span class=toolbutton1 style="display:{search}"><img src='images/search.gif' /><a href='javascript:search()'>搜索</a></span>
+</div>
+<div style="padding:0px;margin:0px;float:top;"><div id='dirtable'>{wait}</div></div>
+<div id='bigtable' style='display:none;position:relative;width:auto;'>&nbsp;</div>
+<div style="height:23px;padding:2px;margin:0px;background-image:url(images/titleback.gif);float:top;">
+<span class=toolbutton1><img src='images/up.gif' /><a href='javascript:upindex();' title=返回上級目錄>返回上級目錄</a></span>
+<span class=toolbutton1 style="display:{newfile}"><img src=images/icon_txt.gif /><a href='javascript:newfile();' title=新建一個文本類型的文件>新建文件</a></span>
+<span class=toolbutton1 style="display:{upfile}"><img src=images/upfile.gif /><a href='javascript:fileup(0);' title='打開上傳文件模塊'>上傳文件</a></span>
+<span class=toolbutton1 style="display:{downfile}"><img src=images/downfile.gif /><a href='javascript:downfile();' title='下載選中的文件和文件夾如
+果是單個文件將下載其源文件
+如果是多個文件或文件夾則將他們打包下載'>下載文件</a></span>
+<span class=toolbutton1 style="display:{savefromurl}"><a href='javascript:fileup(1);' title='下載一個遠程文件到服務器'>遠程下載</a></span>
+<span class=toolbutton1 style="display:{move}"><img src=images/cut.gif /><a href='javascript:filecopy("cut");' title=剪切選中的文件或文件夾>剪切</a></span>
+<span class=toolbutton1 style="display:{copy}"><img src=images/copy.gif /><a href='javascript:filecopy("copy");'  title=複製選中的文件或文件夾>複製</a></span>
+<span class=toolbutton1 style="display:{paste}"><img src=images/paste.gif /><a href='javascript:filepaste();'  title=將剪貼板中的文件和文件夾粘貼到此目錄下>粘貼</a></span>
+<span class=toolbutton1 style="display:{delete}"><img src=images/delete.gif /><a href='javascript:filedel();' title=刪除選中的文件或文件夾>刪除</a></span>
+</div>
+<!---本地上傳模塊-->
+<div id='updiv0' style="display:none;font-family:細明體; background:lightblue;font-size:10pt;padding:10px;">
+ <form name='upform' ENCTYPE='multipart/form-data' action='up.php?action=upsave' method="post" target='inwin' onsubmit='waitme()'>
+ <div id='updivdata'><div id='upfileinput0'>本地文件:<INPUT name="myfile0" TYPE="File"  size="50"> <input type=button onclick="delupfile(0)" value=刪除></div>
+ </div> <br>
+ <input type=button value=增加 onclick="addupfile()">&nbsp;<input type="Submit" value="上傳">&nbsp;<input type="button" value="清空" onclick="updivdata.innerHTML='';">&nbsp;<input type=button value=關閉 onclick=" document.getElementById('updiv0').style.display='none';"><input type=hidden name=path id='upsavepath' value=''></form>
+</div>
+<!---遠程下載模塊--->
+<div id='updiv1' style="display:none;font-family:細明體; background:lightblue;font-size:10pt;padding:10px;">
+ <form name='upform2'>
+文件地址:<INPUT name="url" TYPE="text"  size="30">&nbsp;保存為[可不填]<input type=text name=filename size=10>
+ <input type=button value="下載" onclick="savefromurl()">&nbsp;<input type=button value=關閉 onclick=" document.getElementById('updiv1').style.display='none';"><input type=hidden name=path id='upsavefromurlpath' value=''></form>
+</div>
+<div style="padding:0px;margin:0px;float:top;"><div id='filetable'>{wait}</div></div>

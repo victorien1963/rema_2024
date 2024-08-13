@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <title>{#pagetitle#} {#sitename#}</title>
+    <meta name="description" content="{#metacon#}">
+    <meta name="Keywords" content="{#metakey#}">
+	{#metaimage#}
+	{#addmeta#}
+	{#addscript#}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{#TM#}img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="{#TM#}plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{#TM#}plugins/bootstrap-select/css/bootstrap-select.css">
+    <link rel="stylesheet" href="{#TM#}css/icomoon/style.css">
+    <link rel="stylesheet" href="{#TM#}css/style.css">
+    <link rel="stylesheet" href="{#TM#}css/header.css">
+    <link rel="stylesheet" href="{#TM#}css/index.css">
+    <link rel="stylesheet" href="{#TM#}css/responsive.css">
+    
+    <script type="text/javascript" src="{#TM#}js/jquery.min.js"></script>
+    <!-- wayhunt -->
+	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
+	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
+<!-reload-!>
+</head>
+<body>
+    <!-- header -->
+    <div id="load-header">
+		<div class="top-info">
+		    <div class="container">
+			    <!-- SLIDER -->
+				<div id="top-info-slide" class=" carousel slide" data-ride="carousel">
+				    <div class="carousel-inner" role="listbox">
+				    	{#MARQUEE#}
+				    </div>
+				    <!-- arrow -->
+				    <a href="#top-info-slide" class="left carousel-control" data-slide="prev"><i class="icon-arrow-left2"></i></a>
+				    <a href="#top-info-slide" class="right carousel-control" data-slide="next"><i class="icon-arrow-right2"></i></a>
+				    <!-- E/arrow -->
+				</div>
+				<!-- SLIDER -->
+		    </div>
+		</div>
+		<div class="header">
+		    <!-- LOGO -->
+		    {#LOGO#}
+		    <!--a class="navbar-brand" href="index.htm" title="Home">
+		        <img src="{#TM#}img/index/REMA-logo.png" alt="">
+		    </a-->
+		    <!-- LOGO -->
+		    <!-- MENU -->
+		    <ul class="main-nav">
+		    	{#CHANNELMENU#}
+		    </ul>
+		    <!-- END MENU -->
+		    <!-- right-icon -->
+		    <ul class="right-icon">
+		    	{#TOPMENU#}
+		    </ul>
+		    <!-- END right-icon -->
+		</div>
+		<!-- header -->
+    </div>
+    <!-- END header -->
+    <div class="inpage cart-in" style="padding:0;">
+        {#PAGECON#}
+    </div>
+    <!-- footer -->
+    <div id="footer">
+		<div class="footer-hold">
+		<div class="pick-language collapse">
+		    <h3>選擇地區及顯示語言</h3>
+		    <div class="row hold">
+		    {#LANTYPE#}
+		    </div><!-- row -->
+		    <div class="clearfix m-b-40"></div>
+		</div>
+		    <div class="container-foot">
+		        <div class="row fix-padding10">
+		            <div class="col-xs-4 fix-padding5 info-1">
+		                <h4>聯絡我們</h4>
+		                {#聯絡我們#}
+		            </div>
+		            <div class="col-xs-4 fix-padding5 info-2">
+		            <div class="info-2-in">
+		                <h4>訂購及售後服務</h4>
+		                <div class="row fix-padding10">
+		                	{#BTMENUTWO#}
+		                </div>
+		                <!-- row -->
+		                </div>
+		            </div>
+		            <div class="col-xs-2 fix-padding5 info-3">
+		            <div class="info-3-in">
+		                <h4>關注REMA</h4>
+		                <ul class="foot-memu">
+		                	{#VMENU#}
+		                </ul>
+		                </div>
+		            </div>
+		            <div class="col-xs-2 fix-padding5 info-4">
+		            <div class="info-4-in">
+		                <h4>選擇地區</h4>
+		                <ul class="foot-memu">
+		                	
+		                    <li><a href=".pick-language" data-toggle="collapse" id="lantype">台灣 NT$</a></li>
+		                </ul>
+		            </div>
+		            </div>
+		        </div>
+		        <!-- row -->
+		    </div>
+		    <!-- container -->
+		</div>
+		<div class="copyright">
+		    {#BTINFO#}
+		</div>
+    </div>
+    <!--/  footer -->
+    <!-- <script type="text/javascript" src="plugins/jqzoom-master/jquery-1.5.js"></script>-->
+    <script type="text/javascript" src="{#TM#}plugins/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{#TM#}plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <!--script type="text/javascript" src="js/load-page.js"></script-->
+    <!-- owl-carousel -->
+    <script>
+
+
+    $(document).ready(function() {
+        function close_all(){
+            $("#FAQ-1").collapse('hide');
+            $("#FAQ-2").collapse('hide');
+            $("#FAQ-3").collapse('hide');
+            $("#FAQ-4").collapse('hide');
+            $("#FAQ-5").collapse('hide');
+            $("#FAQ-6").collapse('hide');
+        }
+              $("ul.side-menu li a").click(function(){
+                    close_all();
+                    // var aa = $(this).attr("href");
+                })
+    });
+    </script>
+    <!-- 選單專用-->
+	<script>
+		// $(".carousel").carousel();
+		$('.dropdown').hover(function() {
+		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
+		}, function() {
+		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
+		});
+	    $(".carousel").carousel({
+	        interval: 5000
+            // interval: false
+	    });
+	</script>
+    <!-- 選單專用 END-->
+</body>
+</html>

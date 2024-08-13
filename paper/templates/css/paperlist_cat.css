@@ -1,0 +1,26 @@
+/* ============΄ՂP᭽============= */
+
+ul.paperlistcat{
+margin:0px;
+padding:0px;
+}
+
+li.paperlistcat {
+margin:0;
+list-style-type: none;
+font: 12px/22px mingliu;
+font-weight:100;
+color:#505050;
+}
+
+a.paperlistcat:link,a.paperlistcat:visited,a.paperlistcat:active{
+color:#505050;
+text-decoration: none;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+}
+
+a.paperlist1:hover{
+color:#ff6600;
+text-decoration: underline;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+}

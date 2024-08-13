@@ -1,0 +1,172 @@
+.productlistx a:link {
+	color: #432121;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.productlistx a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+.productlistx a:hover {
+	color: #666666;
+}
+
+.productlistx a:active {
+ 	color: #666666;
+	text-decoration: none;
+}
+
+.productlistx {
+	visibility:visible;
+	margin: 0 auto 0 auto;
+	padding: 0px;
+	position: relative;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	overflow: hidden;
+	width: 98%;
+
+}
+
+.rollproductlists {
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+	width:100%;
+}
+
+.blkproductlistx {
+	border:0px; 
+	margin:0 0px 0 50px;
+	padding:0px; 
+	overflow: hidden;
+	ZOOM: 1; 
+	width: 910px;
+	height:270px;s
+	
+}
+
+.blkproductlistx .LeftButton {	
+	float:left;
+	width:30px;
+	position: absolute;
+	height:250px;
+	left:0px;
+}
+
+.blkproductlistx .LeftButton1 {	
+	float:left;
+	background: url(../images/arrow.png) no-repeat 0px 0px;
+	width:30px;
+	cursor: pointer;
+	position: absolute;
+	height:48px;
+	top:80px;
+	left:0px;
+	border:0px solid #0066ff;
+}
+
+.blkproductlistx .RightButton {
+	float:right;
+	width:30px;
+	position: absolute;
+	height:250px;
+	right:0px;	
+}
+
+.blkproductlistx .RightButton1{
+	background: url(../images/arrow.png) no-repeat -30px 0px;
+	float:right;
+	width:30px;
+	cursor: pointer;
+	position: absolute;
+	height:48px;
+	top:80px;
+	right:0px;
+	border:0px solid #0066ff;
+}
+
+.blkproductlistx .Cont {
+	height:250px;
+	float:left;
+	padding:0;
+	margin:0px;
+	text-align:center;
+	overflow: hidden;
+}
+
+.blkproductlistx .box {
+	float:left;
+	margin: 0 16px 0 16px;
+	width: 140px;
+	height: 270px;
+	
+
+
+}
+.blkproductlistx .box img {
+	width: 137px;
+	height: 107px;
+	cursor: pointer;
+	overflow:hidden;
+	padding:2px;
+	border:1px solid #000;
+}
+.box .fang{
+	padding:0px;
+	margin:0px;
+	text-align:left;
+}
+
+.box .picFit{
+	overflow:hidden;
+}
+
+div.title{
+word-wrap:break-word;
+text-align:left;
+}
+
+div.prop{
+width:136px;
+height:50px;
+word-wrap:break-word;
+color:#000;
+text-align:left;
+}
+
+.protitle{
+text-align:center;
+overflow: hidden;
+white-space:nowrap;
+
+}
+
+div.box a.prodtitle:link,div.box a.prodtitle:visited,div.box a.prodtitle:active{
+color:#0066ff;
+font:12px/20px Arial,PMingLiU,SimSun,Arial,Sans-Serif;
+text-decoration: none;
+}
+
+div.box a.prodtitle:hover{
+color:#ff0000;
+text-decoration: none;
+font:12px/20px Arial,PMingLiU,SimSun,Arial,Sans-Serif;
+}
+
+.prodtitle{
+color:#0066ff;
+}
+
+div.box span.prop{
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+color:#393939;
+word-break:break-all;
+}
+
+div.box span.price{
+color:#ff8100;
+font:bold 12px/18px Verdana, Arial, Helvetica, sans-serif;
+}

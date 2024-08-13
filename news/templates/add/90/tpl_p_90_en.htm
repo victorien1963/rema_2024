@@ -1,0 +1,42 @@
+<!-start->
+                <div class="container inpage no-top-nav">
+                    <div class=" store-map">
+                            <p class="ptitle">Select the area you'd like to visit</p>
+                            <div class="text-center">
+                            <select class="selectpicker form-control center-block" data-width="200" onchange="window.location.href=this.options[selectedIndex].value">
+                                {#allcatalog#}
+                            </select>
+                            </div>
+                            <ul class="dealer-list">
+<!-start->
+
+<!-list->
+                           		 <!-- list -->
+                                <li>
+                                <a href="{#link#}" class="div-tb">
+                                    <div class="tr">
+                                        <div class="td">
+                                            <h3>{#title#}</h3>
+		                                    <p>{#prop2#}</p>
+		                                    <p>{#prop3#}</p>
+                                        </div>
+                                        <div class="td text-right three">
+                                           <p>Selling Series</p>
+		                                    <span class="tag cycling" {#show1#}>CYCLING</span>
+		                                    <span class="tag running" {#show2#}>RUNNING</span>
+		                                    <span class="tag compression" {#show3#}>COMPRESSION</span>
+                                        </div>
+                                        <div class="td vmid text-right">
+                                            <i class="icon-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                </li>
+                                <!-- / list -->
+<!-list->
+
+<!-end->
+                            </ul>
+                        </div>
+                    </div>
+<!-end->

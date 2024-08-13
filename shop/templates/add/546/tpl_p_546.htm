@@ -1,0 +1,239 @@
+<!-start->
+<link type="text/css" rel="stylesheet" href="{#RP#}base/files/Brusco/WebComponents/ShoppingCart.css"/>
+<script type=text/javascript src="{#CP#}js/orderpay.js"></script>
+
+<!-start->
+
+<!-m0->
+<div class="orderpay_cap">訂單付款 - 會員帳戶扣款</div>
+<div class="orderpay_txt">
+訂單號：{#OrderNo#}<br />
+訂單總金額：<span class="money">{#paytotal#}</span> 元<br />
+會員帳戶餘額：<span class="money">{#account#}</span> 元<br /><br />
+{#payntc#}
+<input name="orderid" type="hidden" id="orderid" value="{#orderid#}">
+
+</div>
+<!-m0->
+
+<!-m1->
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}member/index.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="orderpay.php?orderid={#orderid#}">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk3_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php">&nbsp;</a>
+</div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Title_ShoppingCardProduct_300dpi_111x15.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,完成訂購,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Description_300dpi_154x28.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_PaymentMethod_300dpi_174x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_OrderInfo_300dpi_182x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk4_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_Finish_Active_300dpi_176x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk5_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/Title_Finish_300dpi_67x16.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,完成訂購,"/>
+</div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/NT_56x32.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+<p>{#paytotal#}</p>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom_blk2_custom" class="b_literal" block_type="literal">
+<p>{#OrderNo#}</p>
+</div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php"><img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/OrderQuery_55x14.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php"><img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/OrderQuery_55x14.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+</div>
+</div>
+</div>
+<!-m1->
+
+<!-m2->
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}member/index.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="orderpay.php?orderid={#orderid#}">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk3_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php">&nbsp;</a>
+</div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Title_ShoppingCardProduct_300dpi_111x15.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,完成訂購,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Description_300dpi_154x28.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_PaymentMethod_300dpi_174x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_OrderInfo_300dpi_182x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk4_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_Finish_Active_300dpi_176x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk5_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/Title_Pay_300dpi_67x16.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,完成訂購,"/>
+</div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/NT_56x32.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+<p>{#showpaytotal#}</p>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom_blk2_custom2" class="b_literal" block_type="literal">
+<div style="float:left;width:1px;height:80px;border-left:1px #ccc solid;"></div>
+<div style="float:left;margin-top:-10px; margin-left:100px;">{#hiddenString#}</div>
+<!--<div style="float:left;margin-left:20px;">{#hiddenString_j#}</div>-->
+</div>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php"><img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/OrderQuery_55x14.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php"><img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/OrderQuery_55x14.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+</div>
+</div>
+</div>
+<!-m2->
+
+
+
+<!-ok1->
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}member/index.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="orderpay.php?orderid={#orderid#}">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk3_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php">&nbsp;</a>
+</div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Title_ShoppingCardProduct_300dpi_111x15.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,完成訂購,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Description_300dpi_154x28.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_PaymentMethod_300dpi_174x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_OrderInfo_300dpi_182x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk4_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_Finish_Active_300dpi_176x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk5_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/Title_Finish_300dpi_67x16.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,完成訂購,"/>
+</div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/NT_56x32.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+<p>{#showpaytotal#}</p>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom_blk2_custom" class="b_literal" block_type="literal">
+<p>{#OrderNo#}</p>
+</div>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php"><img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/OrderQuery_55x14.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php"><img src="{#RP#}base/files/Brusco/ShoppingCart/Finish/OrderQuery_55x14.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+</div>
+</div>
+</div>
+<!-ok1->
+
+<!-err1-><div class="ordererr">{#ntc#}</div><!-err1->
+<!-end->
+<!-- Facebook Conversion Code for web customer -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6015831387966', {'value':'0.00','currency':'TWD'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6015831387966&amp;cd[value]=0.00&amp;cd[currency]=TWD&amp;noscript=1" /></noscript>
+<!-end->
+<script>
+$(document).ready(function(){
+
+setTimeout(chk,500);
+				
+	function chk(){
+		var x = confirm("請點選確定，系統將為您導入至SSL安全認證信用卡交易頁面，\r\n或點取消回到購物車。");
+		if (x){
+			document.getElementById("ordersubmit").submit();
+		}else{
+			$.ajax({
+			type: "POST",
+			url: "post.php",
+			data: "act=delorder&orderid={#orderid#}",
+			success: function(msg){
+					if(msg=="OK"){
+						window.location='cart.php';
+					}else{
+						alert(msg);
+					}
+				}
+			});
+		}
+	}
+});
+</script>

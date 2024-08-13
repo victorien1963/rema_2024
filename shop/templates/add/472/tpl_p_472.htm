@@ -1,0 +1,60 @@
+<!-start->
+<link href="{#MYCSS#}shoplist_6.css" rel="stylesheet" type="text/css" />
+<script type=text/javascript src="{#CP#}js/cart.js"></script>
+<div class="catborders">{#catname#}</div>
+<div class="prodborder">
+<!-start->
+<!-list->
+<div class="shoplist_6">
+		<div class="fang" style="width:{#picw#}px;height:{#pich#}px">
+			<div class="picFit" style="width:{#picw#}px;height:{#pich#}px" id="bpic_{#gid#}">
+				<a href="{#link#}" target="{#target#}" ><img id="show_{#gid#}" src="{#srcs#}" rel="{#srcb#}" style="width:{#picw#}px;height:{#pich#}px" border="0" /></a>
+			</div>
+			<img src="{#srcb#}" style="width:0px;height:0px"/>
+		</div>
+		<div class="shoplist_left">
+			<a href="{#link#}" target="{#target#}" class="prodtitle" {#bold#} {#red#} >{#title#}</a>
+		
+			<span class="prop">
+			{#sizes#}<br style="clear:both;"/>
+			價格：<span class="price">{#price#}</span><br />
+		</div>
+		<div class="shoplist_right">{#saletagstr#}</div>
+		<div class="buttonzone" style="display:none;"><a href="{#link#}"><img src="images/b3.gif" alt="觀看商品介紹" border="0"></a> <img class="addtocart" src="images/b8.gif" alt="訂購" border="0" onClick="addtocart('{#gid#}','1','')"></div>
+		</span>
+		
+		
+</div>
+<!-list->
+<!-m1->
+{#propname#}：{#prop#}<br />
+<!-m1->
+
+<!-end->
+<script>
+$(function() {
+	$().picFit("{#fittype#}");
+});
+$(document).ready(function(){
+	$(".picFit").bind('mouseover', function() {
+		var getshowid = this.id.substr(5);
+		var orisrc = $("#show_"+getshowid).attr("src");
+		var chgsrc = $("#show_"+getshowid).attr("rel");
+		$("#show_"+getshowid).attr("src", chgsrc);
+		//$("#show_"+getshowid).fadeOut("fast", function(){ $("#show_"+getshowid).attr('src', chgsrc).fadeIn("fast");})
+		$("#show_"+getshowid).attr("rel", orisrc);
+	});
+	$(".picFit").bind('mouseout', function() {
+		var getshowid = this.id.substr(5);
+		var orisrc = $("#show_"+getshowid).attr("src");
+		var chgsrc = $("#show_"+getshowid).attr("rel");
+		$("#show_"+getshowid).attr("src", chgsrc);
+		//$("#show_"+getshowid).fadeOut("fast", function(){ $("#show_"+getshowid).attr('src', chgsrc).fadeIn("fast");})
+		$("#show_"+getshowid).attr("rel", orisrc);
+	});
+});
+</script>
+
+
+</div>
+<!-end->

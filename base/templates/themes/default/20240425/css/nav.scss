@@ -1,0 +1,18 @@
+@import "variable";
+@import "mixin";
+
+.breadcrumb {
+  background: none;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid $grey;
+  li {
+    &.active {
+      color: $block;
+      font-weight: 600;
+    }
+  }
+  .breadcrumb-item {
+    color: $grey;
+    cursor: pointer;
+  }
+}

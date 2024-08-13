@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+.top-space{
+	height: 30px;
+}
+.word-line{
+	border-top: 1px solid hsla(0,0%,60%,1.00);
+	border-bottom: 1px solid hsla(0,0%,60%,1.00);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.parg-title{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.parg{
+	padding-bottom: 30px;
+}
+.notice{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.strip{
+	display:flex;
+}
+.mobile-parg-icon{
+	display: none;
+}
+
+
+@media(max-width:1000px){
+	.mobile-con{
+		width: 90%;
+		margin: auto;
+	}
+	.mobile-hide{
+		display: none;
+	}
+	.mobile-parg-line{
+		border-bottom: 1px solid hsla(0,0%,60%,1.00);
+	}
+	.word-line {
+		margin-bottom: 0px;
+	}
+	.mobile-con .icon-plus:before {
+		font-size: 23px;
+	}
+	.mobile-con .icon-minus:before {
+		font-size: 23px;
+	}
+	.mobile-parg-icon{
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: relative;
+		padding-right: 10px;
+	}
+	.title-con {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

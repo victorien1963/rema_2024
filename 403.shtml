@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>403 Error...網站連線發生問題，可能是以下原因之一</title>
+<script>
+var local = "http://"+window.location.host+"/";
+document.writeln("<style type=\"text\/css\">");
+document.writeln("<!--");
+document.writeln("body {margin: 0;font-size: 15px;font-family: Arial, Helvetica, sans-serif;line-height: 15px;text-align: center;}");
+document.writeln("ol {padding-left: 100px;text-align: left;margin: 15px 0;}");
+document.writeln("li {line-height: 26px;}");
+document.writeln("a {color: #000cff;text-decoration: none;}");
+document.writeln("a:hover {color: #ff000c;text-decoration: underline;}");
+document.writeln("div{width: 800px;margin: 0 auto;}");
+document.writeln(".div_title{	width: 100%;background: #edeef0 url("+local+"base\/templates\/images\/404headbg.png) 0px 10px repeat-x;color:#fff;height:120px;padding-top:10px;margin:0 0 40px;}");
+document.writeln(".div_pic{width: 100%;background-image: url("+local+"base\/templates\/images\/bg.gif);background-repeat: repeat-x;}");
+document.writeln(".red {color: #ea5407;}");
+document.writeln(".blue{color: #0087be;}");
+document.writeln(".black{color: #000000;}");
+document.writeln("h1 {font-size: 30px;margin: 20px 0;}");
+document.writeln("h2 {font-size: 33px;margin: 25px  0;}");
+document.writeln("h4 {font-size: 19px;margin: 0;}");
+document.writeln("h3 {font-size: 16px;color: #006633;margin: 35px 0;}");
+document.writeln("h5 {font-size: 26px;margin:15px 0 ;}");
+document.writeln("h5 a{color: #fff;text-decoration: none;}");
+document.writeln("h5 a:hover{color: #fff;text-decoration: underline;}");
+document.writeln("-->");
+document.writeln("<\/style>");
+document.writeln("<\/head>");
+document.writeln("<body>");
+document.writeln("<div class=\"div_title\"><img src=\""+local+"base\/templates\/images\/404logo.png\" width=\"280\" height=\"120\" style=\"margin:0px auto\" \/><\/div>")
+</script>
+<div><h1 class="blue"><br /><br />網站連線發生問題，可能是以下原因之一<br /><br /></h1>
+<ol><li>
+  <h4>您使用非該網站設定的域名(網址)進入後台，系統判別為非法使用而停權。</h4></li>
+    <li>
+<h4>該網站系統租賃已經到期而停止服務，請進行<a href="http://www.wayhunt.com/page/html/extension.php" alt="威漢網站系統續約說明" target="blank">系統續約(說明)</a>。</h4></li>
+<li>
+  <h4>該網站系統尚未安裝啟用，請靜待系統人員為您安裝建置。</h4></li>
+</ol></div>
+<h3><br /><br /><br /><br />「若您為網站管理者使用上之任何疑問，請洽威漢網站系統<a href="http://www.wayhunt.com/service/" alt="威漢網站系統線上客服" target="blank">客服人員</a>」<br />
+<p><span class="black">威漢網站系統 - 網站建置、網頁設計服務</span>　<a href="http://www.wayhunt.com" class="red">http://www.wayhunt.com</a> </p>
+
+</h3>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+@charset "utf-8";
+/* CSS Document */
+@media only screen and (min-width: 200px) {
+	.measure-back{
+		margin: auto;
+		position: fixed;
+		top:0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.75);
+		display: none;
+		z-index: 20;
+	}
+	.measure{
+		position: relative;
+		top: 80px;
+		width: 90vmin;
+		margin: auto;
+		background-color:  #ffffff;
+		z-index: 30;
+		display: none;
+		box-sizing: content-box;
+		padding-top: 10px;
+	}
+	.esc{
+		cursor: pointer;
+		float:right;
+		width: 20px;
+		height: 20px;
+		background-image: url(if_cross_214654.png);
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		top:15px;
+		right: 15px;
+
+	}
+	.esc-nav{
+		width: 100%;
+		height: 20px;
+	}
+	.measure-item-pic-m{
+		margin: auto;
+		margin-top: 20px;
+		width: 40vmin;
+		height: 40vmin;
+		background-image: url(上衣-男-m.png);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.measure-item-pic{
+		display: none;
+	}
+	.measure-main{
+		display: none;
+	}
+	.measure-main-m{
+		
+	}
+	.measure-con-m{
+		margin: auto;
+		width: 70vmin;
+	}
+	.option-form{
+		width: 45vmin;
+		height: 30px;
+		margin-top: 10px;
+	}
+	.option-bar{
+		width: 45vmin;
+		margin: auto;
+	}
+	.measure-word1{
+		margin-top: 30px;
+		margin-bottom: 15px;
+		font-size: 16px;
+	}
+	.measure-word2{
+		margin-top: 20px;
+		margin-bottom: 5px;
+		font-size: 16px;
+		display: inline-block;
+		width: 23vmin;
+	}
+	.measure-word3{
+		display: inline-block;
+	}
+	.measure-button-con{
+		width: 70vmin;
+		height: 65px;
+		margin: auto;
+		margin-top: 40px;
+	}
+	.measure-button{
+		width: 70vmin;
+		height: 38px;
+		padding: 9px;
+		font-size: 16px;
+		text-align: center;
+		background-color: #151515;
+		color: #FFFFFF ;
+		cursor: pointer;
+	}
+	.measure-fin{
+		display: none;
+	}
+	.loding-con{
+		height: 350px;
+		width: 300px;
+		margin: auto;
+		display: none;
+		padding-top: 150px;
+	}
+	.loding-gif{
+		height: 100px;
+		width: 100px;
+		margin: auto;
+		background-image: url(Rolling-1.5s-200px.gif);
+		background-size: cover;
+		background-position: center;
+	}
+	.loding-word{
+		margin-top: 15px;
+		text-align: center;
+	}
+	.con-m{
+		display: flex;
+	}
+	
+}
+
+
+@media only screen and (min-width: 1300px) {
+
+	.measure{
+		position: relative;
+		top:150px;
+		width: 800px;
+		background-color:  #ffffff;
+		z-index: 30;
+		display: none;
+		margin: auto;
+		padding-top: 0px;
+	}
+	.esc{
+		margin-top: 15px;
+		margin-right: 15px;
+		cursor: pointer;
+		float:right;
+		width: 20px;
+		height: 20px;
+		background-image: url(if_cross_214654.png);
+		background-size: cover;
+		background-position: center;
+
+	}
+	.slider-1 {
+		-webkit-appearance: none;
+		width: 100%;
+		height: 10px;
+		background: #d3d3d3;
+		outline: none;
+		opacity: 0.7;
+		-webkit-transition: 1.0s;
+		transition: opacity 1.0s;
+	}
+
+	.slider-1:hover {
+		opacity: 1;
+	}
+
+	.slider-1::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 10px;
+		height: 10px;
+		background: #222222;
+		cursor: pointer;
+	}
+
+	.slider-1::-moz-range-thumb {
+		width: 10px;
+		height: 10px;
+		background: #222222;
+		cursor: pointer;
+	}
+	.measure-main-m{
+		display: none;
+	}
+
+	.measure-main{
+		display: block;
+		display: flex;
+	}
+
+
+	.measure-item-pic{
+		margin: 20px;
+		margin-right: 0px;
+		width: 300px;
+		height: 450px;
+		background-image: url(上衣-男.png);
+		background-size: contain;
+		background-position: center;
+		display: block;
+	}
+	.measure-con{
+		width: 400px;
+		margin-left: 30px;
+	}
+
+
+	.measure-word1{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		font-size: 22px;
+	}
+	.measure-word2{
+		margin-top: 40px;
+		margin-bottom: 15px;
+		font-size: 18px;
+		display: block;
+	}
+	.measure-word3{
+		display:block;
+
+	}
+
+	.slider-bar{
+		margin-top: 15px;
+	}
+	.measure-sub{
+		display: flex;
+	}
+
+	.measure-chest-pic{
+		margin: 10px;
+		width: 250px;
+		height: 250px;
+		background-image: url(胸圍test.png);
+		background-size: cover;
+	}
+	.measure-button-con{
+		width:400px;
+		height: 50px;
+		margin: auto;
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	.measure-button{
+		width: 150px;
+		height: 38px;
+		padding: 9px;
+		font-size: 16px;
+		text-align: center;
+		background-color: #151515;
+		color: #FFFFFF ;
+		float:right;
+		cursor: pointer;
+	}
+	.wieght-con{
+		margin-top: 15px;
+	}
+
+
+
+}
+
+
+
+	.measure-fin-word{
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 80%;
+		margin: auto;
+	}
+	.measure-fin-word-title-m{
+		font-size: 16px;
+		line-height: 32px;	
+	}
+	.measure-fin-word-size{
+		font-size: 24px;
+		margin-top: 0px;
+		margin-bottom: 30px;
+	}
+	.measure-again{
+		font-size: 16px;
+		background-color: #151515;
+		color: #FFFFFF ;
+		cursor: pointer;
+		width: 150px;
+		margin: auto;
+		padding: 9px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+	.measure-fin-pic{
+		background-image: url();
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin: auto;
+	}
+	.measure-fin-pic-2{
+		background-image: url();
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin: auto;
+	}
+	.measure-again:hover{
+		color: #01c3ff;
+	}
+	@media only screen and (min-width: 200px) {
+		.measure-fin-con-one{
+			width: 75%;
+			margin: auto;
+		}
+		.measure-fin-con{
+			width: 100%;
+			margin: auto;
+			display:flex;
+			justify-content: center;
+		}
+		.measure-space-m{
+			height: 20px;
+		}
+		.measure-space-m1{
+			height: 10px;
+		}
+		.measure-fin-pic{
+			width: 90%;
+			height: 45vmin;
+			margin-top: 0px;
+			margin-bottom: 10px;
+			display: block;
+		}
+		.measure-fin-pic-2{
+			width: 90%;
+			height: 40vmin;
+			margin-top: 0px;
+			margin-bottom: 10px;
+			display: block;
+		}
+		.measure-fin-con-two{
+			width: 42%;
+		}
+		.measure-fin-word-title-two{
+			padding-left: 50px;
+			margin-bottom: 20px;
+			padding-top: 40px;
+			font-size: 18px;
+			
+		}
+		.two-line{
+			height: 1px;
+			width: 80px;
+			margin-left: 20px;
+			margin-bottom: 15px;
+			background-color: #414141;
+		}
+		.measure-m-two-result-con{
+			display: flex;
+		}
+		.measure-fin-word-size2{
+			font-size: 26px;
+			margin-top: 5px;
+			margin-bottom: 25px;
+		}
+		.measure-m-one-result-con{
+			display: flex;
+		}
+		.two-line1{
+			height: 222px;
+			width: 1px;
+			background-color: #414141;
+			margin-top: 0px;
+		}
+		.measure-fin-word-size1{
+			font-size: 30px;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+	}

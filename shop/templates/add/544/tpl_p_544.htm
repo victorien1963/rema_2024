@@ -1,0 +1,196 @@
+<!-start->
+<link type="text/css" rel="stylesheet" href="{#RP#}base/files/Brusco/WebComponents/ShoppingCart.css"/>
+<link type="text/css" rel="stylesheet" href="{#RP#}base/files/Brusco/WebComponents/ShoppingCartList.css"/>
+<script type="text/javascript" src="{#RP#}base/files/Brusco/WebComponents/FancyBox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="{#RP#}base/files/Brusco/WebComponents/FancyBox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="{#RP#}base/files/Brusco/WebComponents/FancyBox/jquery.fancybox-1.3.4.css" media="screen"/>
+
+<script type=text/javascript src="{#CP#}js/cart.js?520520"></script>
+
+<!-start->
+
+<!-m0->
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}member/index.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/cart.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk3_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php">&nbsp;</a>
+</div>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Title_ShoppingCardProduct_300dpi_111x15.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom" class="b_bg" block_type="bg">
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Description_300dpi_154x28.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_PaymentMethod_Active_300dpi_174x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_OrderInfo_300dpi_182x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk4_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_Finish_300dpi_176x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk5_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Title_ProductsList_300dpi_100x16.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom" class="b_literal" block_type="literal">
+<!-m0->
+<!-list->
+<div id="ItemArea">
+   <div id="ItemImg"><img src="{#src#}"/></div>
+   <div id="ItemDescription"><h1>{#bn#}</h1><h4>{#goodsname#}</h4><img src="{#RP#}base/files/Brusco/ShoppingCart/Button_Cancel_300dpi_102x32.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單," id="cartdel_{#gid#}{#fzspecid#}" class="cartdel" style="cursor:pointer;" /></div>
+   <div id="ItemTableTitle"></div>
+   <div id="ItemTable"><h5>{#buysize#}</h5>
+      <div id="ItemColor"><img src="{#iconsrc#}"/></div>
+      <p><select class="cartacc" id="cartacc_{#gid#}{#fzspecid#}">{#accselect#}</select></p>
+      <div id="ItemPrice"><h3>{#price#}</h3></div>
+      <div id="ItemRemark"><p></p></div>
+      <div id="Subtotal"><p id="jine_{#gid#}{#fzspecid#}">{#jine#}</p></div>
+   </div>
+   <input type="hidden" id="fz_{#gid#}{#fzspecid#}" value="{#fz#}">
+</div>
+<!-list->
+<!-m1->
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom" class="b_bg" block_type="bg">
+<form id="promoCode" method="post" action="cart.php" >
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<input type="checkbox" name="promochk" value="1" style="width:20px; height:20px; color:#cccccc;" {#promochk#} />
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<input type="text" id="promocode1" name="promocode" value="{#promocode#}" style="width:158px; height:18px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;float:left;"/>
+<input type="image" class="img" src="{#RP#}base/files/Brusco/ShoppingCart/Button_Confirm_300dpi_53x26.png" style="cursor:pointer;border:0;" />
+</div>
+</form>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk2_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk2_custom_blk1_custom" class="b_literal" block_type="literal">
+<p>購物車商品金額小計</p>
+<p>物流費用(滿NT$1500元,享免運費)</p>
+<p>線上帳戶餘額NT$ {#account#}元,本次抵用</p>
+<p>電子折價卷折扣金額</p>
+<p>合購商品折扣金額</p>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk2_custom_blk2_custom" class="b_literal" block_type="literal">
+<p id="chg_oritjine">{#oritjine#}</p>
+<input type="hidden" name="oritjine" id="oritjine" value="{#oritjine#}" />
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk2_custom_blk3_custom" class="b_literal" block_type="literal">
+<p id="payyunfei">{#yunfei#}</p>
+<input type="hidden" name="yunfei" id="yunfei" value="{#yunfei#}" />
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk2_custom_blk4_custom" class="b_literal" block_type="literal">
+<p id="chg_disaccount">{#disaccount#}</p>
+<input type="hidden" name="disaccount" id="disaccount" value="{#disaccount#}" />
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk2_custom_blk5_custom" class="b_literal" block_type="literal">
+<p id="groupon">{#promoprice#}</p>
+<input type="hidden" name="promoprice" id="promoprice" value="{#promoprice#}" />
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk2_custom_blk6_custom" class="b_literal" block_type="literal">
+<p id="grouponadd">{#promoaddprice#}</p>
+<input type="hidden" name="promoaddprice" id="promoaddprice" value="{#promoaddprice#}" />
+</div>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk3_custom" class="b_literal" block_type="literal">
+<p>應付金額總計</p>
+<img src="{#RP#}base/files/Brusco/WebComponents/Products/NT_300dpi_33x19.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+<h2 id="paytotal">{#tjine#}</h2>
+<input type="hidden" name="tjine" id="tjine" value="{#nonfotmattjine#}" />
+</div>
+</div>
+<!-m1->
+<!-m2->
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk1_custom" class="b_literal" block_type="literal">
+<input type="radio" id="payment2" name="payment" value="2" {#checkyun#} />
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk2_custom" class="b_literal" block_type="literal">
+<input type="radio" id="payment1" name="payment" value="1" {#checkcard#} />
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk3_custom" class="b_literal" block_type="literal">
+<a href="{#return#}"><img src="{#RP#}base/files/Brusco/ShoppingCart/Button_ContinueShopping_300dpi_162x32.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk4_custom" class="b_literal" block_type="literal">
+<a href="javascript:;" class="gostart" id="{#promocode#}"><img src="{#RP#}base/files/Brusco/ShoppingCart/Button_Next_300dpi_128x32.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+</div>
+</div>
+<input type="hidden" id="promocode2" value="{#promocode2#}" />
+<!-m2->
+
+<!-m3->
+<div id="ItemArea">
+<div style="width:170px;margin:30px 0px 0px 60px;float:left">
+<img src="{#MYIMAGES#}emptycart_170x30.png" />
+</div>
+<div style="width:162px;margin:30px 0px 0px 60px;float:left;display:none;">
+<a href="{#return#}"><img src="{#RP#}base/files/Brusco/ShoppingCart/Button_ContinueShopping_300dpi_162x32.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+</div>
+
+
+
+</div>
+</div>
+<div style="width:162px;margin:20px auto;padding-top:20px;display:none;">
+<a href="{#return#}"><img src="{#RP#}base/files/Brusco/ShoppingCart/Button_ContinueShopping_300dpi_162x32.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/></a>
+</div>
+<!-m3->
+<!-end->
+</div>
+<input type="hidden" id="promotype" value="{#promotype#}" />
+<input type="hidden" id="promotypecode" value="{#promotypecode#}" />
+
+<a id="autostart2" class="fancybox" style="display:none;width:780px;height:586px;" href="#Attention2"></a>
+<div id="Attention2" class="Attention" style="width:780px;height:586px;background:url('{#probg2#}') no-repeat;">
+<a href="javascript:;" id="gopromo2" class="delchk" style="display:block;width:135px;height:52px;position:absolute;top:427px;left:350px;"></a>
+</div>
+
+<a id="autostart3" class="fancybox" style="display:none;width:780px;height:586px;" href="#Attention3"></a>
+<div id="Attention3" class="Attention" style="width:780px;height:586px;background:url('{#probg3#}') no-repeat;">
+<a href="javascript:;" id="gopromo3" class="delchk" style="display:block;width:135px;height:52px;position:absolute;top:427px;left:350px;"></a>
+</div>
+
+<a id="autostart1" class="fancybox" style="display:none;width:780px;height:586px;" href="#Attention1"></a>
+<div id="Attention1" class="Attention" style="width:780px;height:586px;background:url('{#probg1#}') no-repeat;">
+<a href="javascript:;" id="gopromo1" class="delchk" style="display:block;width:135px;height:52px;position:absolute;top:427px;left:350px;"></a>
+	<div id="SelectStyle" style="width:93px;height:28px;position:absolute;top:191px;left:347px;z-index:1000;">
+		<div id="sizeselects">
+  			<select name="promosize" id="promosize">
+    			<option value="0" selected="selected">請選擇</option>
+    			{#promoproduct#}
+  			</select>
+		</div>
+	</div>
+</div>
+<script>
+window.onload = function(e) {
+	bodyclick = document.getElementsByTagName('body').item(0);
+	rSelects();
+	bodyclick.onclick = function(){
+		for (i=0;i<selects.length;i++){	
+			document.getElementById('select_info_' + selects[i].name).className = 'tag_select';
+			document.getElementById('options_' + selects[i].name).style.display = 'none';
+		}
+	}
+}
+</script>
+<!-end->
+
+<!-err1->
+<!-err1->

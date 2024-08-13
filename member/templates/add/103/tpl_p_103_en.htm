@@ -1,0 +1,740 @@
+<!-start->
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+    <div class="top-status">
+        <a href="{#CP#}index.php"><i class="icon-arrow-left"></i></a>
+        <div class="top-status-title">Contact Lists</div>
+    </div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <p class="myact-headnote">You may register several frequently used addresses for the convenience of automatic fill in when ordering products every time.</p>
+                    <hr>
+                    <div class="row  fix-padding15 style-toggle">
+                        <!-- ///////////////////////////////////////////////////////////// -->
+                        <div class="myact-cts-title">Default Address</div>
+                        <div class="myact-cts-all">
+                        	<p>
+                            	{#name#}<br>
+                                {#addr_a#},{#addr_b#},{#postcode#}<br>
+                                {#addr_c#}<br>
+                                {#country#}<br>
+                                Mobile number: {#mov#}
+                            </p>
+                            <a class="atcs-edit1" href="member_contact.php?act=modi&memberid={#memberid#}">Modify</a>
+                        </div>
+                        <div class="myact-cts-title">Other Contacts</div>
+<!-start->
+
+<!-list->
+                        <div class="myact-cts-all" id="ad_{#id#}">
+                        	<p>
+                            	{#name#}<br>
+                                {#addr_a#},{#addr_b#},{#postcode#}<br>
+                                {#addr_c#}<br>
+                                {#country#}<br>
+                                Mobile number: {#mov#}
+                            </p>
+                            <a class="atcs-edit" href="member_contact.php?act=modiaddr&aid={#id#}">Modify</a>
+                            <a class="atcs-cut deltaddr" href="javascript:;" id="delt_{#id#}">Delete</a>
+                       	</div>
+<!-list->
+
+<!-end->
+                        <a href="member_contact.php?act=add" class="btn btn-black btn-lg-mact">
+                            <div class="myact-cts-plusout">
+                                <div class="myact-cts-plus1">Add new address</div>
+                                <div class="myact-cts-plus">+</div>
+                            </div>
+                        </a>
+                        <!-- END table -->
+                        <!-- //////////////////////////////////////////////////////////// -->
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+<!-end->
+
+<!-m0->
+<script language="javascript" src="{#CP#}js/zone_en.js"></script>
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+	<form id="memberModify"  method="post" action="" name="regform" >
+    <div class="top-status">
+        <a href="javascript:history.back();"> Cancel</a>
+        <div class="top-status-title">Default Address</div>
+        <span onclick="javascript:$('#memberModify').submit();" class="top-status-a2">Save</span>
+    </div>
+    <div  id="notice" class="alert alert-danger" style="display:none;"></div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+<div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <div class="row two-col member">
+                        <div class="col-xs-12 myact-in">
+                           <!--p class="myact-headnote">※ Please note, if you need to apply for company invoice, please register to become a member under the name of the ”company”; if you have registered using ”individual” name, you will be unable to apply for company invoice.</p-->
+                            <!-- section -->
+                            <div class="row menber-register-hold fix-padding15 style-toggle" id="reg">
+                               
+                                <div class="clearfix m-b-46"></div>
+                                <!-- ///////////////////////////////////////////////////////////// -->
+                                <div class="btn-group btn-group2" data-toggle="buttons">
+                                    <label class="btn active fix-padding" id="membertypeid1" style="margin-right: 20px;">
+                                        <input type="radio" name='membertypeid' {#memberchk1#} value="1"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  Individual</span>
+                                    </label>
+                                    <!--label class="btn active fix-padding" id="membertypeid2">
+                                        <input type="radio" name='membertypeid' {#memberchk2#} value="2"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  Company</span>
+                                    </label-->
+                                </div>
+                                <span class="pull-right cpc-addr-noe1">* Must fill in</span>
+                                <span id="zonelist">{#ZoneList#}</span>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
+                                        <div class="clearfix m-b-30"></div>
+                                        <div class="row22">
+                                        	<!-- list -->
+                                            <div class="col-xs-5 forc mem-in-fom1">Unified Taxation Code*</div>
+                                            <div class="col-xs-7 forc mem-in-fom2">
+                                                <input type="text" name="passcode" id="passcode" value="{#passcode#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15 forc"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 forc mem-in-fom1">Business Name*</div>
+                                            <div class="col-xs-7 forc mem-in-fom2">
+                                                <input type="text" name="company" id="company" value="{#company#}" class="form-control forc">
+                                            </div>
+                                            <div class="clearfix m-b-15 forc"></div>
+                                            <!-- / list -->
+                                        	 <!-- list -->
+                                            <div class="col-xs-5 forp mem-in-fom1">Gender*</div>
+                                            <div class="col-xs-7 forp mem-in-fom2">
+                                                 <select name="sex" id="sex" class="selectpicker form-control">
+                                                            <option value="1" {#CHKman#}>Male</option>
+                                                            <option value="2" {#CHKwoman#}>Female</option>
+                                                        </select>
+                                            </div>
+                                            <div class="clearfix m-b-15 forp"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 forp mem-in-fom1">Name*</div>
+                                            <div class="col-xs-7 forp mem-in-fom2">
+                                                <input type="text" name="name" id="name" value="{#name#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15 forp"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1 forp">Birthday*</div>
+                                            <div class="col-xs-7 mem-in-fom2 forp">
+                                                <div class="row fix-padding10">
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select class="selectpicker form-control" name="yy" id="Year_ID">
+                                                        	<option value="0">Year</option>
+                                                            {#BirthYear#}
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select class="selectpicker form-control" name="mm" id="Month_ID">
+                                                        	<option value="0">Month</option>
+                                                            {#BirthMonth#}
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select class="selectpicker form-control" name="dd" id="Day_ID">
+                                                        	<option value="0">Day</option>
+                                                            {#BirthDay#}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix m-b-15 forp"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Country*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <select name="country" class="form-control" id="selcountry">
+                                                	{#selcountry#}
+                                                </select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">City*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <select class="form-control" id="Province" onKeyUp='if(window.event.keyCode==13) document.regform.zoneid.focus();'  onChange="provinceSelChange(regform.zoneid,regform.Province.value,'{#zoneid#}',regform.postcode,regform.addr,regform.Province)" name="Province">
+	 	 											<script language=javascript>document.write(pList.getOptionString('{#Province#}'));</script>
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Town*</div>
+                                            <div id="zonediv" class="col-xs-7 mem-in-fom2">
+                                                <select onKeyUp='if(window.event.keyCode==13) document.regform.regCardNum.focus();' id="zoneid" name="zoneid"  class="form-control" onChange="postSelChange(regform.Province.value,regform.zoneid.value,regform.postcode,regform.addr,regform.Province)">
+													<script language=javascript>
+														document.write(pList.getOptionAreasString(regform.Province.value,regform.zoneid,'{#zoneid#}',1));
+													</script>
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Address*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="addr" id="addr" value="{#addr#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Postal Code</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="postcode" id="postcode" value="{#postcode#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Telephone No. (Mobile No.)</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="tel" name="mov" id="mov" value="{#mov#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Telephone No. (Other)</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="tel" name="tel" id="tel" value="{#tel#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                        </div>
+                                        <!-- row -->
+                                        <div class="clearfix m-b-15"></div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- tab-content -->
+                                <p class="myact-notebot">※ Please enter at least one telephone number to receive the notifications for order status, and please confirm whether the number is correct or not.</p>
+                                <div class="clearfix m-b-30"></div>
+                                <!-- //////////////////////////////////////////////////////////// -->
+                            </div>
+                            <!-- /section -->
+                               <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+    <input type="hidden" name="act" value="memberdetail" />
+</form>
+<!-m0->
+
+<!-m1->
+<script language="javascript" src="{#CP#}js/zone_en.js"></script>
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+	<form id="memberModify"  method="post" action="" name="regform" >
+    <div class="top-status">
+        <a href="javascript:history.back();"> Cancel</a>
+        <div class="top-status-title">Other Contacts</div>
+        <span onclick="javascript:$('#memberModify').submit();" class="top-status-a2">Save</span>
+    </div>
+    <div  id="notice" class="alert alert-danger" style="display:none;"></div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+<div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <div class="row two-col member">
+                        <div class="col-xs-12 myact-in">
+                           <!--p class="myact-headnote">請注意，如需申請公司發票請以「公司」名義註冊會員，如果您是以「個人」 名義註冊，您將無法申請公司發票。</p-->
+                            <!-- section -->
+                            <div class="row menber-register-hold fix-padding15 style-toggle" id="reg">
+                               
+                                <div class="clearfix m-b-46"></div>
+                                <!-- ///////////////////////////////////////////////////////////// -->
+                                <!--div class="btn-group btn-group2" data-toggle="buttons">
+                                    <label class="btn active fix-padding" id="membertypeid1" style="margin-right: 20px;">
+                                        <input type="radio" name='membertypeid' {#memberchk1#} value="1"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  個人</span>
+                                    </label>
+                                    <label class="btn active fix-padding" id="membertypeid2">
+                                        <input type="radio" name='membertypeid' {#memberchk2#} value="2"><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  公司</span>
+                                    </label>
+                                </div>
+                                <span class="pull-right cpc-addr-noe1">* 必填欄位</span-->
+                                <span id="zonelist">{#ZoneList#}</span>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
+                                        <div class="clearfix m-b-30"></div>
+                                        <div class="row22">
+                                        	<!-- list -->
+                                            <!--div class="col-xs-5 forc mem-in-fom1">統一編號*</div>
+                                            <div class="col-xs-7 forc mem-in-fom2">
+                                                <input type="text" name="spasscode" id="spasscode" value="{#passcode#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15 forc"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <!--div class="col-xs-5 forc mem-in-fom1">公司名稱*</div>
+                                            <div class="col-xs-7 forc mem-in-fom2">
+                                                <input type="text" name="scompany" id="scompany" value="{#company#}" class="form-control forc">
+                                            </div>
+                                            <div class="clearfix m-b-15 forc"></div-->
+                                            <!-- / list -->
+                                        	 <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Gender*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                 <select name="ssex" id="ssex" class="selectpicker form-control">
+                                                            <option value="1" {#CHKman#}>Male</option>
+                                                            <option value="2" {#CHKwoman#}>Female</option>
+                                                        </select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Name*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="sname" id="sname" value="{#name#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <!--div class="col-xs-5 mem-in-fom1 forp">生日*</div>
+                                            <div class="col-xs-7 mem-in-fom2 forp">
+                                                <div class="row fix-padding10">
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select class="selectpicker form-control" name="yy" id="Year_ID">
+                                                        	<option value="0">年</option>
+                                                            {#BirthYear#}
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select class="selectpicker form-control" name="mm" id="Month_ID">
+                                                        	<option value="0">月</option>
+                                                            {#BirthMonth#}
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-4 fix-padding5">
+                                                        <select class="selectpicker form-control" name="dd" id="Day_ID">
+                                                        	<option value="0">日</option>
+                                                            {#BirthDay#}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix m-b-15 forp"></div-->
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Country*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <select name="scountry" class="form-control" id="selcountry2">
+                                                	{#selcountry#}
+                                                </select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">City*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <select class="form-control" id="sProvince" onKeyUp='if(window.event.keyCode==13) document.regform.szoneid.focus();'  onChange="provinceSelChange(regform.szoneid,regform.sProvince.value,'{#zoneid#}',regform.spostcode,regform.saddr,regform.sProvince)" name="sProvince">
+	 	 											<script language=javascript>document.write(pList.getOptionString('{#Province#}'));</script>
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Town*</div>
+                                            <div id="zonediv" class="col-xs-7 mem-in-fom2">
+                                                <select onKeyUp='if(window.event.keyCode==13) document.regform.regCardNum.focus();' name="szoneid" id="szoneid" class="form-control" onChange="postSelChange(regform.sProvince.value,regform.szoneid.value,regform.spostcode,regform.saddr,regform.sProvince)">
+													<script language=javascript>
+														document.write(pList.getOptionAreasString(regform.sProvince.value,regform.szoneid,'{#zoneid#}',1));
+													</script>
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Address*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="saddr" id="saddr" value="{#addr#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Postal Code</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="spostcode" id="spostcode" value="{#postcode#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Telephone No. (Mobile No.)</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="tel" name="smov" id="smov" value="{#mov#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Telephone No. (Other)</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="tel" name="stel" id="stel" value="{#tel#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                        </div>
+                                        <!-- row -->
+                                        <div class="clearfix m-b-15"></div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- tab-content -->
+                                <p class="myact-notebot">※ Please enter at least one telephone number to receive the notifications for order status, and please confirm whether the number is correct or not.</p>
+                                <div class="clearfix m-b-30"></div>
+                                <!-- //////////////////////////////////////////////////////////// -->
+                            </div>
+                            <!-- /section -->
+                               <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+    <input type="hidden" name="act" value="memberaddrmodi" />
+	<input type="hidden" name="aid" id="aid" value="{#aid#}" />
+</form>
+<!-m1->
+
+<!-m2->
+<script language="javascript" src="{#CP#}js/zone_en.js"></script>
+<script language="javascript" src="{#CP#}js/memberset.js?520"></script>
+	<form id="memberModifymobi"  method="post" action="" name="regform" >
+    <div class="top-status">
+        <a href="javascript:history.back();"> Cancel</a>
+        <div class="top-status-title">Add New Address</div>
+        <span onclick="javascript:$('#memberModifymobi').submit();" class="top-status-a2">Save</span>
+    </div>
+    <div  id="notice" class="alert alert-danger" style="display:none;"></div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+<div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <div class="row two-col member">
+                        <div class="col-xs-12 myact-in">
+                            <!-- section -->
+                            <div class="row menber-register-hold fix-padding15 style-toggle" id="reg">
+                               
+                                <div class="clearfix m-b-46"></div>
+                                <!-- ///////////////////////////////////////////////////////////// -->
+                                <span id="zonelist">{#ZoneList#}</span>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
+                                        <div class="clearfix m-b-30"></div>
+                                        <div class="row22">
+                                        	 <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Gender*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                 <select name="ssex" id="sex" class="selectpicker form-control">
+                                                            <option value="1" {#CHKman#}>Male</option>
+                                                            <option value="2" {#CHKwoman#}>Female</option>
+                                                        </select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Name*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="name" id="name" value="" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->                                           
+                                            <div class="col-xs-5 mem-in-fom1">Country*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <select name="country" class="form-control" id="selcountry">
+                                                	{#selcountry#}
+                                                </select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">City*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <select class="form-control" id="Province" onKeyUp='if(window.event.keyCode==13) document.regform.zoneid.focus();'  onChange="provinceSelChange(regform.zoneid,regform.Province.value,'{#zoneid#}',regform.postcode,regform.addr,regform.Province)" name="Province">
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Town*</div>
+                                            <div id="zonediv" class="col-xs-7 mem-in-fom2">
+                                                <select onKeyUp='if(window.event.keyCode==13) document.regform.regCardNum.focus();' name="zoneid" id="zoneid" class="form-control" onChange="postSelChange(regform.Province.value,regform.zoneid.value,regform.postcode,regform.addr,regform.Province)">
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Address*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="addr" id="addr" value="" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Postal Code</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="postcode" id="postcode" value="" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Telephone No. (Mobile No.)</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="tel" name="mov" id="mov" value="" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Telephone No. (Other)</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="tel" name="tel" id="tel" value="" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                        </div>
+                                        <!-- row -->
+                                        <div class="clearfix m-b-15"></div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- tab-content -->
+                                <p class="myact-notebot">※ Please enter at least one telephone number to receive the notifications for order status, and please confirm whether the number is correct or not.</p>
+                                <div class="clearfix m-b-30"></div>
+                                <!-- //////////////////////////////////////////////////////////// -->
+                            </div>
+                            <!-- /section -->
+                               <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+    <input type="hidden" name="act" value="memberaddr" />
+</form>
+<!-m2->
+
+<!-m3->
+<script language="javascript" src="{#CP#}js/zone_en.js"></script>
+<script language="javascript" src="{#CP#}js/memberset.js?5201314"></script>
+	<form id="memberModifymobi"  method="post" action="" name="regform" >
+    <div class="top-status">
+        <a href="{#REFERER#}" id="REF"><i class="icon-cross"></i></a>
+        <div class="top-status-title">Delivery Address</div>
+    </div>
+    <div  id="notice" class="alert alert-danger" style="display:none;"></div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+<div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in mem-in-c">
+                    <div class="row two-col member">
+                        <div class="col-xs-12 myact-in">
+                            <div class="row menber-register-hold fix-padding15 style-toggle" id="reg">
+                               
+                                <div class="clearfix m-b-46"></div>
+                                <!-- ///////////////////////////////////////////////////////////// -->
+                                <span id="zonelist">{#ZoneList#}</span>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
+                                        <div class="clearfix m-b-30"></div>
+                                        <div class="row22">
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Name*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="sname" id="sname" value="{#name#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Country*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <select name="scountry" class="form-control" id="selcountry2">
+                                                	{#selcountry#}
+                                                </select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">City*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <select class="form-control" id="sProvince" onKeyUp='if(window.event.keyCode==13) document.regform.szoneid.focus();'  onChange="provinceSelChange(regform.szoneid,regform.sProvince.value,'{#zoneid#}',regform.spostcode,regform.saddr,regform.sProvince)" name="sProvince">
+	 	 											<script language=javascript>document.write(pList.getOptionString('{#Province#}'));</script>
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Town*</div>
+                                            <div id="zonediv" class="col-xs-7 mem-in-fom2">
+                                                <select onKeyUp='if(window.event.keyCode==13) document.regform.regCardNum.focus();' name="szoneid" id="szoneid" class="form-control" onChange="postSelChange(regform.sProvince.value,regform.szoneid.value,regform.spostcode,regform.saddr,regform.sProvince)">
+													<script language=javascript>
+														document.write(pList.getOptionAreasString(regform.sProvince.value,regform.szoneid,'{#zoneid#}',1));
+													</script>
+												</select>
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Address*</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="saddr" id="saddr" value="{#addr#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Postal Code</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="text" name="spostcode" id="spostcode" value="{#postcode#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Telephone No. (Mobile No.)</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="tel" name="smov" id="smov" value="{#mov#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                            <!-- list -->
+                                            <div class="col-xs-5 mem-in-fom1">Telephone No. (Other)</div>
+                                            <div class="col-xs-7 mem-in-fom2">
+                                                <input type="tel" name="stel" id="stel" value="{#tel#}" class="form-control">
+                                            </div>
+                                            <div class="clearfix m-b-15"></div>
+                                            <!-- / list -->
+                                        </div>
+                                        <!-- row -->
+                                        <div class="clearfix m-b-15"></div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- tab-content -->
+                                <p class="myact-notebot">※ Please enter at least one telephone number to receive the notifications for order status, and please confirm whether the number is correct or not.</p>
+                                <div class="clearfix m-b-30"></div>
+                                <!-- //////////////////////////////////////////////////////////// -->
+                            </div>
+                            <!-- /section -->
+                               <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix m-b-30"></div>
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+    <input type="hidden" name="act" value="{#mobiact#}" />
+	<input type="hidden" name="aid" id="aid" value="{#aid#}" />
+	<input type="hidden" name="company" value="{#company#}" />
+	<input type="hidden" name="sex" value="{#sex#}" />
+	<input type="hidden" name="yy" value="{#yy#}" />
+	<input type="hidden" name="mm" value="{#mm#}" />
+	<input type="hidden" name="dd" value="{#dd#}" />
+    <div class="cart-main-bottom">
+    	<div class="cart-mab-in">
+        	<div class="cart-mab-btn">
+                <a href="javascript:;" class="btn btn-black btn-lg" style="width:130px;" onclick="javascript:$('#memberModifymobi').submit();">Update</a>
+            </div>
+        </div>
+    </div>
+</form>
+<!-m3->

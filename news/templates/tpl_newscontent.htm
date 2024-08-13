@@ -1,0 +1,28 @@
+<!-start->
+<script type=text/javascript src="{#CP#}js/newscontent.js"></script>
+
+                    <h3 class="cart-title m-b-20">{#catname#}</h3>
+                    <div class="blog-in">
+                        <img src="{#src#}" class="img-responsive" alt="">
+                    <div class="content">
+                        <h1>
+                        {#title#}
+                        <span class="date">{#dtime#} {#author#}</span>
+                        </h1>
+                    	
+                    	{#body#}
+                    </div>
+                    </div><!-- content -->
+                    </div>
+                    <input type="hidden" id="newsid" value="{#id#}">
+                    <div id="banzhu" class="banzhu"></div>
+
+<script>
+$(function(){
+$().contentPages('{#id#}');
+});
+
+</script>
+<!-start->
+<!-err1-><div class="securenotice">目前ID不存在或尚未發佈</div><!-err1->
+<!-err2-><div class="securenotice">對不起，本內容設置了閱讀權限,您無權瀏覽目前內容</div><!-err2->

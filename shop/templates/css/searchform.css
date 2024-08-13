@@ -1,0 +1,23 @@
+/* ============·j¯Áªí³æ============== */
+div.shopsearchform{
+	height:31px;
+} 
+
+div.shopsearchform div.searchform{
+	float:left;
+	padding:0px 3px 0px 0px;
+	height:31px;
+	line-height:31px;
+	color:#ffffff;
+}
+
+div.shopsearchform div.searchform .input{
+	border:0px #a30c0f solid;
+	width:221px;
+	height:31px;
+	padding:10px 5px 0px 5px;
+	background:#ffffff;
+	color:#505050;
+	font:14px Arial, Helvetica, sans-serif;
+	background:url(../images/input_bg.gif) no-repeat;
+}

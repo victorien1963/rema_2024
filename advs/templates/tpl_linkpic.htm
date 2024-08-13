@@ -1,0 +1,50 @@
+<!-start->
+			<div class="window-con invoice-block">
+				<div class="window-block">
+					<div class="close-window ">
+						<div class="icon icon-close close-window-icon"></div>
+					</div>
+					<div>
+						<div class="font-l font-w-l select-country-title">選擇地區及顯示語言</div>
+						<div class="area-con">
+<!-start->
+
+
+
+<!-list->
+							<div class="country-con">
+								<div class="contry-img">
+									<img src="{#src#}">
+								</div>
+								<div class="lang-sect">
+									<div class="area-name flex-line">
+										<div class="country">{#name#}</div>
+										<div class="country-money">{#subname#}</div>
+									</div>
+									<div class="lang-sect-con flex-line">
+										<div class="font-s "><a href="{#lanlink#}" class="select-item">{#linkstr#}</a></div>
+										<div class="font-s " style="display:{#showsublan#};"><a href="{#sublanlink#}" class="select-item">{#sublinkstr#}</a></div>
+									</div>
+								</div>
+							</div>
+<!-list->
+
+<!-menu->
+<!-menu->
+
+<!-end->
+						</div>
+					</div>
+				</div>
+			</div>
+<script>
+	$(document).ready(function() {
+	    $("#lantypeflag").attr("src","{#src#}");
+	    $("#lantypestr").text("{#lantype#}");
+		$("#getsymbol").text("{#getsymbol#}");
+		$("#showtitle").text("{#showtitle#}");
+
+	});
+</script>
+
+<!-end->

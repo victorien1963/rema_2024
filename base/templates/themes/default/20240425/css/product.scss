@@ -1,0 +1,54 @@
+@import "variable";
+@import "mixin";
+
+body {
+  font-family: "SF Pro Text", "Noto Sans TC", "PingFangTC-Regular",
+    "PingFangSC-Regular", "Microsoft YaHei", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.container-fluid {
+  
+  a {
+    text-decoration: none !important;
+    color: $block;
+  }
+  
+  .product-list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 -15px;
+    font-size: 14px;
+    @include rwd($mobile) {
+      margin: 0 -7.5px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .product-card {
+      cursor: pointer;
+      padding: 0 15px;
+      margin-bottom: 30px;
+      @include rwd($mobile) {
+        padding: 0 7.5px;
+      }
+    }
+    .product-code {
+      @include rwd($mobile) {
+        display: block;
+      }
+    }
+    .product-img {
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #f1f1f1;
+      margin-bottom: 20px;
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 125%;
+      }
+    }
+  }
+}

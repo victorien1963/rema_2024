@@ -1,0 +1,79 @@
+<!-start->
+<link type="text/css" rel="stylesheet" href="{#RP#}base/files/Brusco/WebComponents/Members.css"/>
+<link type="text/css" rel="stylesheet" href="{#RP#}base/files/Brusco/WebComponents/Member_OrderList.css"/>
+<script type="text/javascript" src="{#RP#}base/files/Brusco/WebComponents/FancyBox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="{#RP#}base/files/Brusco/WebComponents/FancyBox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="{#RP#}base/files/Brusco/WebComponents/FancyBox/jquery.fancybox-1.3.4.css" media="screen"/>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery(".fancybox").fancybox({
+		padding : 0,
+		openEffect : 'none',
+		closeEffect : 'none',
+		helpers : { overlay : { css : { 'background' : 'rgba(250, 250, 250, 0.7)' }}}
+	});
+});
+</script>
+<script type=text/javascript src="{#CP#}js/order.js"></script>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}member/index.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/cart.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk3_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php">&nbsp;</a>
+</div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk2_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk2_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/Members/Order/OrderTracking_300dpi_63x15.png" Alt="Brusco,銳鎷,Order Tracking,訂單查詢,"/>
+</div>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/Members/Order/90Days_Description_340x13.png" Alt="Brusco,銳鎷,Order Tracking,訂單查詢,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom" class="b_html" block_type="html">
+<table style="border-color: #b3b3b3; border-width: 1px; width: 692px;" border="0" rules="all" align="center">
+<tbody>
+<tr style="background-color: #cccccc;" align="center" valign="middle">
+<td style="width: 113px;"><img src="{#RP#}base/files/Brusco/Members/Order/TableTitle_OrderDay_57x14.png" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></td>
+<td style="width: 125px;"><img src="{#RP#}base/files/Brusco/Members/Order/TableTitle_OrderNumber_59x14.png" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></td>
+<td style="width: 132px;"><img src="{#RP#}base/files/Brusco/Members/Order/TableTitle_OrderPayment_59x14.png" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></td>
+<td style="width: 125px;"><img src="{#RP#}base/files/Brusco/Members/Order/TableTitle_OrderProcess_59x14.png" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></td>
+<td style="width: 101px;"><img src="{#RP#}base/files/Brusco/Members/Order/TableTitle_OrderCencel_59x14.png" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></td>
+<td><img src="{#RP#}base/files/Brusco/Members/Order/TableTitle_OrderAmount_58x14.png" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></td>
+</tr>
+<!-start->  
+<!-list->
+<tr align="center" valign="middle">
+<td>{#dtime#}</td>
+<td><a href="orderdetail.php?orderid={#orderid#}">{#OrderNo#}</a></td>
+<td><img src="{#paypic#}" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></td>
+<td><img src="{#statupic#}" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></td>
+<td><a class="fancybox" href="#Attention_{#orderid#}" {#showtui#}><img src="{#RP#}base/files/Brusco/Members/Order/TableOrderCancel_58x14.png" alt="Brusco,銳鎷,Order Tracking,訂單查詢," /></a></td>
+<td>{#paytotal#}</td>
+</tr>
+<div id="Attention_{#orderid#}" class="Attention" style="width:578px;height:313px;background:url('{#RP#}base/files/Brusco/Members/Order/Attention_578x313.png') no-repeat;">
+<a href="javascript:;" id="delcancel" onclick="$.fancybox.close();" style="display:block;width:140px;height:32px;position:absolute;top:201px;left:146px;"></a>
+<a href="javascript:;" id="delchk_{#orderid#}" class="delchk" style="display:block;width:140px;height:32px;position:absolute;top:201px;left:294px;"></a>
+</div>
+<!-list->
+<!-end-> 
+</tbody>
+</table>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom_blk1_custom" class="b_literal" block_type="literal">
+<p>{#totalnums#}</p>
+</div>
+</div>
+</div>
+</div>
+<!-end->
+

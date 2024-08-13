@@ -1,0 +1,58 @@
+.papertwoclass{
+width: 100%; 
+}
+
+.papertwoclass .papertwoclass_top{ 
+height:23px;
+color: #999999;
+font:12px/23px 'Microsoft YaHei','mingliu',Arial,Sans-Serif;
+cursor: pointer;
+}
+
+.papertwoclass .papertwoclass_top a{
+color: #505050;
+font:14px/23px 'Microsoft YaHei','mingliu',Arial,Sans-Serif;
+background:url(../images/li.gif) 5px no-repeat;  
+padding-left:18px;
+text-decoration: none;
+}
+
+.papertwoclass .papertwoclass_top a:visited{
+color: #505050;
+}
+
+.papertwoclass .papertwoclass_top a:hover{ 
+color: #ff6600;
+}
+
+
+.papertwoclass ul{ 
+padding:2px 0px 5px 0px;
+margin:0px;
+}
+
+.papertwoclass ul li{
+list-style-type: none;
+height:18px;
+font:12px/18px 'Microsoft YaHei','mingliu',Arial,Sans-Serif;
+padding:0px; 
+margin:0px;
+color: #999999;
+}
+
+.papertwoclass ul li a{
+color: #505050;
+font:14px/18px 'Microsoft YaHei','mingliu',Arial,Sans-Serif;
+padding-left:30px;
+background:url(../images/li.gif) 18px no-repeat;  
+text-decoration: none;
+}
+
+.papertwoclass ul li a:visited{
+color: #505050;
+}
+
+.papertwoclass ul li a:hover{ 
+color: #ff6600;
+}
+

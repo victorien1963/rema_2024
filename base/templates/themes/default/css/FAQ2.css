@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+.little-title{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.little-title-sup{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ditail-word{
+    padding-bottom: 30px;
+}
+@media(max-width:1000px){
+	.mobile-con{
+		width: 90%;
+		margin: auto;
+	}
+	.mobile-hide{
+		display: none;
+	}
+	.mobile-parg-line{
+		border-bottom: 1px solid hsla(0,0%,60%,1.00);
+	}
+	.word-line {
+		margin-bottom: 0px;
+	}
+	.mobile-con .icon-plus:before {
+		font-size: 23px;
+	}
+	.mobile-con .icon-minus:before {
+		font-size: 23px;
+	}
+	.mobile-parg-icon{
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: relative;
+		padding-right: 10px;
+	}
+	.title-con {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

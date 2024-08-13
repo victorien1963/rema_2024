@@ -1,0 +1,53 @@
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+<form id="memberModify"  method="post" action="" name="regform" >
+    <div class="top-status">
+        <a href="{#CP#}index.php"> <i class="icon-arrow-left"></i></a>
+        <div class="top-status-title">Subscribe E-Newsletter</div>
+        <span class="top-status-a2" onclick="javascript:$('#memberModify').submit();">Save</span>
+    </div>
+    <div  id="notice" class="alert alert-danger" style="display:none;"></div>
+    <!-- header -->
+    <div id="load-header"></div>
+    <!-- END header -->
+    <div class="inpage cart-in mem-in3">
+        <div class="row fix-padding15 mem-in-a">
+            <!-- left-menu -->
+            <div class="col-xs-3 left-menu">
+                <div id="side-menu-account"></div>
+            </div>
+            <!-- END left-menu -->
+            <!-- right-content -->
+            <div class="col-xs-9 right-content in cart-in mem-in-b">
+                <div class="container in style-toggle mem-in-c">
+                    <!-- section -->
+                    <p class="myact-headnote">Set your e-mail to receive the latest product information.</p>
+                    <hr>
+                    <!--END  section -->
+                    <!-- checkbox -->
+                     <div class="btn-group pull-left fix-padding5 myact-epaper1" data-toggle="buttons">
+                     	<label class="btn fix-padding">
+                     		<input type="radio" value="1" name="order_epaper" {#checkedok#}>
+                     		<i class="icon-square-o"></i>
+                     		<i class="icon-check-square-o"></i>
+                     		<span class="small">Subscribe E-Newsletter</span>
+                     	</label>
+                     </div>
+                     <div class="btn-group pull-left fix-padding5 myact-epaper2" data-toggle="buttons">
+                     	<label class="btn fix-padding">
+                     		<input type="radio" value="0" name="order_epaper" {#checkedno#}>
+                     		<i class="icon-square-o"></i>
+                     		<i class="icon-check-square-o"></i>
+                     		<span class="small">Cancel subscribing E-Newsletter</span>
+                     	</label>
+                     </div>
+                     
+                     <input type="hidden" name="act" value="memberaccounte" />
+   					 <input type="hidden" name="order_paper" id="order_paper" value="{#order_paper#}" />
+                    <!-- END checkbox -->
+                </div>
+                <!-- container in -->
+            </div>
+            <!--END  right-content -->
+        </div>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+/* ============΄ՂP᭽============= */
+
+ul.paperlist{
+margin:0px;
+padding:0px;
+}
+
+li.paperlist {
+margin:0;
+padding-left:16px;
+list-style-type: none;
+font-weight:100;
+color:#505050;
+background: transparent url(../images/li.gif) left no-repeat;
+}
+
+a.paperlist:link,a.paperlist:visited,a.paperlist:active{
+color:#505050;
+text-decoration: none;
+font:12px/22px mingliu;
+}
+
+a.paperlist:hover{
+color:#ff0000;
+text-decoration: underline;
+font:12px/22px mingliu;
+}

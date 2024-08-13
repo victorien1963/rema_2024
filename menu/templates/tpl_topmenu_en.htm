@@ -1,0 +1,49 @@
+<!-start->
+	<script src="{#TM#}js/jquery.color.js"></script>
+	<script src="{#TM#}js/search.js"></script>
+		    <li><form id="searchForm" method="get" action="{#RP#}shop/class/index.php">
+                <fieldset>
+                    <div class="input">
+                        <input type="text" name="key" id="s" value="Enter your search" />
+                    	<input type="submit" id="searchSubmit" value="" />
+                    </div>
+                </fieldset>
+            </form></li>
+<!-start->
+
+<!-menu->
+<li><a href="{#menuurl#}" target="{#target#}" title="{#menu#}">{#menu#}</a></li>
+<!-menu->
+
+<!-m0->
+<li><a href="{#menuurl#}" class="user" target="{#target#}" title="{#menu#}"><div class="login"><!-- 登入 --></div></a></li>
+<!-m0->
+
+<!-m1->
+<li class="dropdown">
+	<a href="{#RP#}shop/cart.php" id="scart"  title="{#menu#}" class="cart -toggle" data-toggle="dropdown"><span id="cartnum">{#cartnum#}</span></a>
+	<!-- dropdown-memu -->
+	<div class="dropdown-menu cart-dropdown">
+		<ul>
+			<div class="cart-scroll" id="cartlist">
+				{#items#}
+			</div>
+		<li class="list">
+			<a href="javascript:;">
+				<p>Total Amount</p>
+				<p>{#pricesymbol#} <span id="cartprice">{#cartprice#}</span></p>
+			</a>
+		</li>
+		</ul>
+		<a href="{#RP#}shop/cart.php"  title="{#menu#}" class="btn btn-block btn-black">VIEW SHOPPING BAG</a>
+	</div>
+	<!-- END dropdown-memu -->
+</li>
+<!-m1->
+
+<!-m2->
+<li><a href="{#menuurl#}" target="{#target#}" class="fb" title="{#menu#}"></a></li>
+<!-m2->
+
+<!-end->
+<!-end->

@@ -1,0 +1,43 @@
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+
+                    <h3 class="cart-title">Change Password</h3>
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <p>Change your currently saved password.</p>
+                    <hr>
+                    <!--END  section -->
+
+				<form id="memberModify"  method="post" action="" name="regform" >
+
+                        <table  class="table-st2">
+                        <tr>
+                                <td colspan="2" >
+                                <span class="pull-right">* Must fill in</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 150px">Original password*</td>
+                                <td style="width: 300px">
+                                    <input type="password" name="password" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Enter new password*</td>
+                                <td>
+                                    <input type="password" name="newpassword" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Check new password*</td>
+                                <td>
+                                    <input type="password" name="renewpass" class="form-control">
+                                </td>
+                            </tr>
+                        </table>
+					
+                    
+					<div  id="notice" class="alert alert-danger" style="display:none;"></div>
+   					<input type="hidden" name="act" value="memberaccount" />
+                    <button type="submit" class="btn-black mt-3">Confirm and Save</button>
+
+				</form>

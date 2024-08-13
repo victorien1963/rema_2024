@@ -1,0 +1,152 @@
+<section id="SignUp">
+	<span id="zonelist">{#ZoneList#}</span>
+    <div class="background-black" style="display: none;"></div>
+        <div class="window-con">
+            <div class="window-block">
+                <div class="close-window ">
+                    <div class="icon icon-close close-window-icon"></div>
+                </div>
+                <div class="logo header-icon icon-con">
+                    <a href="{#RP#}"><span class="icon icon-logo"></span></a>
+                </div>
+                <div class="window-center-word window-word-break font-l font-w-l">登入註冊</div>
+                <div class="window-center-word font-xs">請填寫下列表格註冊為 Rema 會員</div>
+                <div class="window-center-word font-xs">我們將儲存您提供的訊息以方便日後的購物。</div>
+                <div style="width:100%;height:10px;"></div>
+                <!--
+                 <div class="popupu-bn-con  poputwindow-bn">
+                        <button class="login-bn new-connection-bn">用facebook註冊</button>
+                    </div>
+                    <div class="separation-line-con">
+                        <div class="separation-line"></div>
+                        <div class="font-xs">或</div>
+                        <div class="separation-line"></div>
+                    </div>
+                <div>
+                -->
+                     <form id="memberReg" method="post" action="" name="regform" >
+                        <input class="inputsy" type="email" name="email" id="email" placeholder="電子信箱">
+                        <input class="inputsy" type="password" name="password" id="password" placeholder="密碼">
+                        <input class="inputsy" type="password" name="repass" id="repass" placeholder="密碼確認">
+                        <input class="inputsy" type="text" name="name" id="name" placeholder="姓名">
+                        <input class="inputsy" type="text" name="mov" id="mov" placeholder="電話">
+                        <div class="con-3">
+                            <div class=" inputsy width-4 width-4-margin">
+                                <select name="Year_ID" id="Year_ID">
+                                <option value="0">生日</option>
+                                {#showyear#}
+                                </select>
+                            </div>
+                                <div class="inputsy width-4 width-4-margin">
+                                <select name="Month_ID" id="Month_ID">
+                                <option value="0">月</option>
+                                <option value="01">01月</option>
+							    <option value="02">02月</option>
+							    <option value="03">03月</option>
+							    <option value="04">04月</option>
+							    <option value="05">05月</option>
+							    <option value="06">06月</option>
+							    <option value="07">07月</option>
+							    <option value="08">08月</option>
+							    <option value="09">09月</option>
+							    <option value="10">10月</option>
+							    <option value="11">11月</option>
+							    <option value="12">12月</option>
+
+                                </select>
+                            </div>
+                            <div class=" inputsy width-4">
+                                <select name="Day_ID" id="Day_ID">
+                                <option value="0">日</option>
+                                <option value="01">01日</option>
+							    <option value="02">02日</option>
+							    <option value="03">03日</option>
+							    <option value="04">04日</option>
+							    <option value="05">05日</option>
+							    <option value="06">06日</option>
+							    <option value="07">07日</option>
+							    <option value="08">08日</option>
+							    <option value="09">09日</option>
+							    <option value="10">10日</option>
+							    <option value="11">11日</option>
+							    <option value="12">12日</option>
+							    <option value="13">13日</option>
+							    <option value="14">14日</option>
+							    <option value="15">15日</option>
+							    <option value="16">16日</option>
+							    <option value="17">17日</option>
+							    <option value="18">18日</option>
+							    <option value="19">19日</option>
+							    <option value="20">20日</option>
+							    <option value="21">21日</option>
+							    <option value="22">22日</option>
+							    <option value="23">23日</option>
+							    <option value="24">24日</option>
+							    <option value="25">25日</option>
+							    <option value="26">26日</option>
+							    <option value="27">27日</option>
+							    <option value="28">28日</option>
+							    <option value="29">29日</option>
+							    <option value="30">30日</option>
+							    <option value="31">31日</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class=" inputsy width-12">
+                            <select name="sex" id="sex">
+                                <option value="0">性別</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </div>
+                        
+                        <div class="con-3">
+                            <div class=" inputsy width-4 width-4-margin">
+                                <select name="country" class="form-control" id="selcountry">
+                                	{#selcountry#}
+                                </select>
+                            </div>
+                                <div class=" inputsy width-4 width-4-margin">
+                                <select class="form-control" id="Province" onKeyUp='if(window.event.keyCode==13) document.regform.zoneid.focus();'  onChange="provinceSelChange(regform.zoneid,regform.Province.value,'{#zoneid#}',regform.postcode,regform.addr,regform.Province)" name="Province">
+	 	 										
+												</select>
+                            </div>
+                            <div id="zonediv" class=" inputsy width-4">
+                                <select onKeyUp='if(window.event.keyCode==13) document.regform.regCardNum.focus();' id="zoneid" name="zoneid"  class="form-control" onChange="postSelChange(regform.Province.value,regform.zoneid.value,regform.postcode,regform.addr,regform.Province)">
+													
+												</select>
+                            </div>
+                        </div>
+                        <input class="inputsy" type="text" name="addr" id="addr" placeholder="國家縣市地區" readonly style="width:37%;">
+                        <input class="inputsy" type="text" name="addr2" id="addr2" placeholder="地址" style="width:61%;margin-left:2px;">
+                        <div class="Edm-book padding-top">
+                            <label class="checkbox-container">
+                              <input type="checkbox" name="orderpaper" value="1" checked="checked">
+                              <span class="checkmark  checkbox-checkmark"></span>
+                            </label>
+                            <div class="checkbox-item font-xs">訂閱REMA電子報，以獲得最新商品資訊</div>
+                        </div>
+                        <div class="Edm-book">
+                            <label class="checkbox-container">
+                              <input type="checkbox" id="tongyi" value="1" checked="checked">
+                              <span class="checkmark  checkbox-checkmark"></span>
+                            </label>
+                            <div class="checkbox-item font-xs">我接受  <a href="{#RP#}page/html/" target="_blank">隱私權聲明</a></div>
+                        </div>
+                        <div class="popupu-bn-con poputwindow-bn">
+                            <button type="submit" class="login-bn new-connection-bn">註冊完成</button>
+                        </div>
+                        <input name="act" type="hidden" id="act" value="memberreg" />
+	   					<input name="nextstep" type="hidden" id="nextstep" value="enter" />
+                    </form>
+                </div>
+                <div class="padding-top window-center-word font-xs">
+                    <div class="little-bn memberbn">
+                        <div>已經是會員了嗎?</div>
+                        <div class="icon-next-con">
+                            <div class="icon icon-next icon-size"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>

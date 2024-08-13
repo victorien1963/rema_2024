@@ -1,0 +1,45 @@
+div#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom_title {
+  padding-bottom: 10px; width: 628px; min-width: 628px; max-width: 628px; clear: both; padding-top: 10px; height: auto; overflow: hidden; border-right-width: 1px; border-left-color: #b3b3b3; border-bottom-width: 0px; border-left-width: 1px; border-bottom-style: solid; border-right-style: solid; border-right-color: #b3b3b3; border-left-style: solid; border-bottom-color: #b3b3b3; padding-right: 64px; background-repeat: no-repeat; background-position: 631px center; color: #999999; line-height: 1; font-size: 15px;
+}
+div#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom_title img{
+  display:block; width:83px; height:15px; margin-left:304px;
+}
+
+div#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom_title {
+  border-bottom-width: 1px; border-bottom-style: solid; border-left-width: 1px; border-right-color: #b3b3b3; border-right-style: solid; border-left-style: solid; border-bottom-color: #b3b3b3; border-top-width: 1px; width: 692px; float: left; min-width: 692px; max-width: 692px; clear: both; overflow: hidden; min-height: 30px; text-align: center; color: #b3b3b3; line-height: 1; font-size: 0px; border-top-color: #b3b3b3; border-right-width: 1px; border-top-style: solid; border-left-color: #b3b3b3;
+}
+
+div#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom_title a {
+text-transform: uppercase;
+color: #8cc63f;
+line-height: 1;
+font-size: 15px;
+}
+div#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom_title img {
+float: none;
+display: inline;
+}
+div#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom_title p {
+line-height: 1;
+font-size: 15px;
+}
+div#rot #rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom_title td {
+color: #999999;
+font-size: 15px;
+padding-bottom: 8px;
+padding-top: 10px;
+}
+
+div#rot #yunprice {
+float:right;
+background:url(../images/orderdetail_r5_c9.png) no-repeat;
+padding-left:84px;
+width:50px;
+}
+
+div#rot #paytotal {
+float:right;
+background:url(../images/orderdetail_total.png) no-repeat;
+padding-left:127px;
+width:50px;
+}

@@ -1,0 +1,273 @@
+@import url(function.less);
+.index-main-title{
+        margin: 60px 0 20px 0;
+        position: relative;
+        text-align: center;
+        h1{
+                text-align: center;
+                position: relative;
+                font-size: 30px;
+                line-height: 25px;
+                font-weight: normal;
+                color:#888;
+                background: transparent;
+                display: inline-block;
+                z-index: 9;
+                span{
+                     display: inline-block;
+                     position: relative;
+                     padding: 0 15px;
+                     height: 28px;
+                     // border-right: 1px solid #aaa;
+                     &:before{
+                          display:inline-block;
+                          content: "";
+                          width: 1px;
+                          height: 28px;
+                          background: #aaa;
+                          position: absolute;
+                          right: 0;
+                          top: -2px;
+                     }
+                     &:last-child{
+                      &:before{
+                        display: none;
+                      }
+                     // border-right: 0px solid #aaa;
+
+                     }
+                }
+        }
+}
+
+/*///////////////*/
+/*bootstrap Carousel v1*/
+.index-main-slide{
+            overflow: hidden;
+            .carousel-inner{
+                    margin: 0;
+                    background: @dark;
+                    .item{
+                          
+                    }
+              }
+                    .carousel-arrow{
+                                a.carousel-control {
+                                       opacity: .8;
+                                       font-size: 15px;
+                                       height:inherit;
+                                       width: inherit;
+                                       text-align: left;
+                                       text-shadow: none;
+                                       position: absolute;
+                                       // border-radius: 50%;
+                                       // height: 45px;
+                                       // width: 45px;
+                                       background: rgba(0,0,0,0);
+                                       top: 50%;
+                                       text-align: center;
+                                       line-height: 52px;
+                                       margin-top: -40px;
+                                       .transition;
+                                       i{
+                                          color:@gray;
+                                            font-size: 30px;
+                                       }
+                            }
+                            a.left {
+                                       left: 50px;
+                                      i{
+                                            margin-left: -3px;
+                                      }
+                            }
+                            a.right {
+                                       right: 50px;
+                                    i{
+                                            margin-right: -3px;
+                                      }
+                            }
+                    }
+                    &:hover{
+                          .carousel-arrow a.carousel-control{
+                                opacity: 1;
+                                .transition;
+                          }
+                    }
+}
+.carousel-indicators{
+  bottom: 0;
+  li{
+        background:url(../img/index/dot.png) top center;
+        width: 13px;
+        height: 13px;
+        border: 0px;
+        margin:0 3px;
+  }
+      .active{
+        margin:0 3px;
+            width: 13px;
+            height: 13px;
+            background:url(../img/index/dot.png) bottom center;
+      }
+}
+/*END bootstrap Carousel v1*/
+/*///////////////////////*/
+
+#owl-V1{
+      position: relative;
+      width: 100%;
+     padding: 0 95px;
+     margin-bottom: 60px;
+     XD{}
+      .Navigation{
+            width: 100%;
+            top:50%;
+            z-index: 999;
+            .transition;
+            a{
+                  position: absolute;
+                  top:155px;
+                  margin-top: -45px;
+                  width: 45px;
+                  height: 45px;
+                  cursor: pointer;
+                  text-align: center;
+                  .transition;
+                  i{
+                        color: @gray;
+                        font-size: 30px;
+                  }
+                  &:hover{
+                       i{
+                          color:@blue;
+                        }
+                  }
+            }
+            .prev{
+                  left: 25px;
+            }
+            .next{
+                  right: 25px;
+            }
+      }
+      .owl-carousel .item{
+            padding: 10px 5px;
+            display: block;
+            margin: 0px;
+            color: @dark;
+            min-height: 100px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            text-align: center;
+            z-index: 1;
+            overflow: hidden;
+            position: relative;
+            .transition;
+            .rim{
+                  /*border: 1px solid @gray-light;*/
+                  overflow: hidden;
+                  position: relative;
+                  img{
+                          .transition;
+                          z-index: -1;
+                          width: 100%;
+                          height: auto;
+                  }
+            }
+            h4{
+                      font-size: 16px;
+                      text-align: center;
+                      color: #888;
+                      margin: 30px 0 5px 0;
+            }
+            &:hover{
+                  .rim{
+                        /*border: 1px solid @pink;*/
+                        .transition;
+                        img{
+                              opacity: .8;
+                              .transition;
+                        }
+                        p{
+                              opacity:1;
+                              .transition;
+                              top: 0;
+                        }
+                        &:before{
+                              opacity:1;
+                              .transition;
+                              top:0;
+                        }
+                  }
+            }
+      }
+      .owl-item{
+            z-index: 1;
+            &:hover{
+              z-index: 5;
+            }
+      }
+}
+
+
+.three-ad{
+  margin-bottom: 110px;
+  .img-gap{margin:0 5px;position: relative;}
+  .toggle-img{
+      position: relative;
+      text-align: center;
+      h3.i-title{
+            font-size: 20px;
+            font-weight: bolder;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            z-index: 20;
+            color:@white;
+      }
+     .woman-img{
+          position: absolute;
+          z-index: 2;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          .transition;
+     }
+     // .woman-a{
+     //    &:hover{
+     //      .woman-img{opacity: 1}
+     //     }
+     // }
+  }
+  // toggle-img
+    ul.link{
+      display: inline-block;
+      margin-top: 20px;
+      li{
+          display: inline-block;
+          a{
+                display: block;
+                padding: 0 20px;
+                color:#888;
+                &:hover{
+                    color:@blue;
+                }
+          }
+          &:before{
+            display:inline-block;
+            border-right: 1px solid #b3b3b3;
+            content: "";
+            width: 1px;
+            height: 18px;
+            float: right;
+            position: relative;
+            margin-top: 4px;
+            margin-right: -2px;
+        }
+        &:last-child:before{
+            display: none;
+        }
+      }
+    }
+}

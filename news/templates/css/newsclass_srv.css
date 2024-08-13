@@ -1,0 +1,32 @@
+/* ============分类列表============== */
+
+div.newsclass_srv{
+margin:0px;
+padding:0px;
+width:100%;
+}
+
+
+a.newsclass_srv:link,a.newsclass_srv:visited,a.newsclass_srv:active{
+display:block;
+text-decoration: none;
+font:12px/35px Verdana, Arial, Helvetica, sans-serif;
+height:35px;
+text-align:left;
+background:url(../images/arrow.gif) 7px 12px no-repeat;
+padding-left:34px;
+border-bottom:1px #d4d4d4 solid;
+margin:0px 22px 0px 22px;
+color:#606060;
+}
+
+a.newsclass_srv:hover{
+display:block;
+color: #ff0000; 
+text-decoration: none;
+height:35px;
+font:12px/35px Verdana, Arial, Helvetica, sans-serif;
+text-align:left;
+padding-left:34px;
+border-bottom:1px #d4d4d4 solid;
+}

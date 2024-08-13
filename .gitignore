@@ -1,0 +1,8 @@
+pics
+*.png
+*.gif
+*.jpg
+*.jpeg
+images
+error_log
+*.log

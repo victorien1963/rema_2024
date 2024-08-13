@@ -1,0 +1,50 @@
+<!-start->
+<link href="css/feedbackform.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{#CP#}js/feedback.js"></script>
+<h1 style="float:left;">{#groupname#}</h1>
+<ul class="accura-social-icons accura-stacked accura-jump accura-full-height accura-bordered accura-small accura-colored-bg clearFix"  style="float:right;list-style-type:none;">
+<li><a href="http://www.facebook.com/butchardvillas?fref=ts" target="_blank" class="accura-social-icon-facebook circle" style="color:#fff;width:40px;height:40px;"><i class="fa fa-facebook"  style="color:#fff;width:40px;height:40px;line-height:40px;"></i><i class="fa fa-facebook"  style="color:#fff;width:40px;height:40px;line-height:40px;"></i></a></li></ul>
+
+<p style="clear:both;">{#intro#}</p>
+<div  id="notice" class="noticediv alert alert-warning" style="display:none;clear:both;"></div>
+<form id="contact_form" method="post" action="" name="myform" class="cont_form pad_top13" style="clear:both;">
+<div class="clearfix cont_form pad_top20"> 
+<!-start->
+
+<!-input->
+<input type="text" name="{#fieldname#}" class="validate['required'] textbox1" placeholder="{#mustfill#}{#title#} : " value="{#fieldvalue#}"
+                    onfocus="this.placeholder = ''" onBlur="this.placeholder = '{#mustfill#}{#title#} :'" />
+<div style="padding-top:3px;color:#666">{#intro#}</div>
+<!-input->
+
+<!-textarea->
+<textarea name="{#fieldname#}" class="validate['required'] messagebox1" value="{#fieldvalue#}"
+                    placeholder="{#mustfill#}{#title#} : " onFocus="this.placeholder = ''" onBlur="this.placeholder = '{#mustfill#}{#title#} :'"></textarea>
+<div style="padding-top:3px;color:#666">{#intro#}</div>
+<!-textarea->
+
+<!-list->
+<select name="{#fieldname#}" class="textbox1"  />
+	{#list#}
+</select>
+<div style="padding-top:3px;color:#666">{#intro#}</div>
+<!-list->
+
+<!-end->
+<div style="white-space:nowrap;float:left;margin-right:1px">
+<input type="text" name="ImgCode" class="validate['required'] textbox1" placeholder="* 驗證碼 : "
+                    onfocus="this.placeholder = ''" onBlur="this.placeholder = '* 驗證碼 :'" />
+</div>
+<div style="white-space:nowrap;float:left">
+<img id="codeimg" src="{#RP#}codeimg.php" width="60" height="20" style="border:1px #dddddd solid">
+<span id="getImgCode" style="cursor:pointer;margin-left:10px;line-height:20px">看不清？更換一張</span>
+</div>
+
+        <input type="submit" name="Submit" value="送出" class="submitBtn" style="display:block;clear:both;">
+        <input type='hidden' name='act' value='formsend'>
+        <input name='groupid' type='hidden' id="groupid" value='{#groupid#}'>
+
+   </div>
+</form>
+
+<!-end->

@@ -1,0 +1,107 @@
+<!-start->
+<script language="javascript" src="{#CP#}js/orderdetail.js"></script>
+
+
+                    <h3 class="cart-title">查詢訂單</h3>
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <p class="pull-left" style="margin-right:30px">日期 {#dtime#}</p>
+                            <p class="pull-left">訂單編號 {#OrderNo#}</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="btn-group pull-right">
+                                <a href="{#preid#}" class="btn btn-default" style="margin-right:10px;padding: 5px 15px 4px 13px"><i class="icon-arrow-left"></i> 上一張</a>
+                                <a href="{#nextid#}" class="btn btn-default" style="padding: 5px 13px 4px 15px">下一張 <i class="icon-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <!--END  section -->
+                    <hr class="hr-15">
+                    <!-- section -->
+                    <div class="row two-col">
+                        <div class="col-xs-6">
+                            <p class="title">收據地址</p>
+                            <ul class="info">
+                                <li>{#name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#postcode#}</li>
+                                <li>{#country#}</li>
+                                <li>行動電話：{#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 card-info">
+                        <div class="right-sum" style="margin-top: 0">
+                                <table>
+                                    <tbody><tr>
+                                        <td>物流費用(滿{#getsymbol#} {#setyunfei#}元享免運費)</td>
+                                        <td class="fix-padding15">{#pricesymbol#} {#multiyunfei#}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>線上帳戶餘額{#getsymbol#} {#account#}元，本次抵用</td>
+                                        <td class="fix-padding15">{#pricesymbol#} {#disaccount#} </td>
+                                    </tr>
+                                     <tr>
+                                        <td>電子折價券折扣金額</td>
+                                        <td class="fix-padding15">{#pricesymbol#} {#promoprice#} </td>
+                                    </tr>
+                                     <tr>
+                                        <td colspan="2">
+                                        <hr class="hr-10">
+                                           <span class="title">金額總計</span> 
+                                            <p class="money">{#pricesymbol#} {#tjine#}</p>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END section -->
+                    <!-- section -->
+                    <div class="row  fix-padding15">
+                        <!-- ///////////////////////////////////////////////////////////// -->
+                        <!-- table -->
+                        <table class="table cart-list line-top a1">
+                            <thead>
+                                <tr>
+                                    <td class="t-gap">品名</td>
+                                    <td>顏色</td>
+                                    <td>尺寸</td>
+                                    <td>數量</td>
+                                    <td>金額</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+  <!-start->
+  <!-list->
+                                <tr>
+                                    <td>
+                                        <p>{#bn#}</p>
+                                        <p>{#goods#}</p>
+                                    </td>
+                                    <td>{#colorname#}</td>
+                                    <td>{#size#}</td>
+                                    <td>{#nums#}</td>
+                                    <td>{#pricesymbol#} {#jine#}</td>
+                                </tr>
+  <!-list->
+<!-end->
+                            </tbody>
+                        </table>
+                        <!-- END table -->
+                        <!-- //////////////////////////////////////////////////////////// -->
+                    </div>
+                    <!-- /section -->
+                    <div class="clearfix"></div>
+                    <div class="clearfix m-b-30"></div>
+<!-end->
+
+<!-err1->
+<link href="css/shoporderdetail.css" rel="stylesheet" type="text/css" />
+<div class="ordererr">{#ntc#}</div>
+<!-err1->
+

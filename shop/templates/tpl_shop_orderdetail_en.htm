@@ -1,0 +1,107 @@
+<!-start->
+<script language="javascript" src="{#CP#}js/orderdetail.js"></script>
+
+
+                    <h3 class="cart-title">Order Inquiry</h3>
+                    <!-- section -->
+                    <div class="m-b-20"></div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <p class="pull-left" style="margin-right:30px">Date {#dtime#}</p>
+                            <p class="pull-left">Order No. {#OrderNo#}</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="btn-group pull-right">
+                                <a href="{#preid#}" class="btn btn-default" style="margin-right:10px;padding: 5px 15px 4px 13px"><i class="icon-arrow-left"></i> Prev</a>
+                                <a href="{#nextid#}" class="btn btn-default" style="padding: 5px 13px 4px 15px">Next <i class="icon-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <!--END  section -->
+                    <hr class="hr-15">
+                    <!-- section -->
+                    <div class="row two-col">
+                        <div class="col-xs-6">
+                            <p class="title">Delivery Asddress</p>
+                            <ul class="info">
+                                <li>{#name#} </li>
+                                <li>{#s_addr_a#}</li>
+                                <li>{#s_addr_b#}</li>
+                                <li>{#s_addr_c#} {#postcode#}</li>
+                                <li>{#country#}</li>
+                                <li>Mobile number: {#s_mobi#}</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 card-info">
+                        <div class="right-sum" style="margin-top: 0">
+                                <table>
+                                    <tbody><tr>
+                                        <td>Logistics charge (free transportation for reaching {#getsymbol#} {#setyunfei#})</td>
+                                        <td class="fix-padding15">{#getsymbol#} {#yunfei#}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Online account balance {#getsymbol#} {#account#}, use this time</td>
+                                        <td class="fix-padding15">{#pricesymbol#} {#disaccount#} </td>
+                                    </tr>
+                                     <tr>
+                                        <td>E-coupon deduction amount</td>
+                                        <td class="fix-padding15">{#pricesymbol#} {#promoprice#} </td>
+                                    </tr>
+                                     <tr>
+                                        <td colspan="2">
+                                        <hr class="hr-10">
+                                           <span class="title">Total Amount</span> 
+                                            <p class="money">{#pricesymbol#} {#tjine#}</p>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END section -->
+                    <!-- section -->
+                    <div class="row  fix-padding15">
+                        <!-- ///////////////////////////////////////////////////////////// -->
+                        <!-- table -->
+                        <table class="table cart-list line-top a1">
+                            <thead>
+                                <tr>
+                                    <td class="t-gap">Product Name</td>
+                                    <td>Color</td>
+                                    <td>Size</td>
+                                    <td>Quantity</td>
+                                    <td>Amount</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+  <!-start->
+  <!-list->
+                                <tr>
+                                    <td>
+                                        <p>{#bn#}</p>
+                                        <p>{#goods#}</p>
+                                    </td>
+                                    <td>{#colorname#}</td>
+                                    <td>{#size#}</td>
+                                    <td>{#nums#}</td>
+                                    <td>{#pricesymbol#} {#jine#}</td>
+                                </tr>
+  <!-list->
+<!-end->
+                            </tbody>
+                        </table>
+                        <!-- END table -->
+                        <!-- //////////////////////////////////////////////////////////// -->
+                    </div>
+                    <!-- /section -->
+                    <div class="clearfix"></div>
+                    <div class="clearfix m-b-30"></div>
+<!-end->
+
+<!-err1->
+<link href="css/shoporderdetail.css" rel="stylesheet" type="text/css" />
+<div class="ordererr">{#ntc#}</div>
+<!-err1->
+

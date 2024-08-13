@@ -1,0 +1,65 @@
+<!-start->
+<!-start->
+<!-list->
+        	<!-- LIST -->
+            <li class="col-sm-4 col-xs-6 {#showli#}" {#clear#}>
+	            <a href="{#link#}" target="{#target#}">
+	                <img src="{#colorpics#}" class="img-responsive">
+	                <h3 {#bold#} {#red#} >{#bn#} {#title#}</h3>
+	                <p style="display:block;text-align:center;">
+	                {#pricesymbol#} {#price#} <del style="display:{#showprice0#};font-size: 0.8em;">{#pricesymbol#} {#price0#}</del><br>
+	                {#colors#}
+	                </p>
+	            </a>
+            </li>
+            <!-- END LIST -->
+<!-list->
+
+<!-m0->
+<!-m0->
+<!-m2->
+<!-m2->
+<!-m3->
+<!-m3->
+
+<!-menu->
+<!-menu->
+
+<!-con->
+<li>{#strNoresult#}</li>
+<!-con->
+
+<!-m1->
+{#propname#}：{#prop#}<br />
+<!-m1->
+
+<!-end->
+    <script>
+		setTimeout(function() { $(".bottom-nav li").eq({#n#}).addClass("active");}, 300 );
+		$(document).ready(function(){
+				var getW = $('body').width();
+				if(getW >= 640){
+					$(".li-3").css("clear","none");
+					$(".li-4").css("clear","both");
+				}else{
+					$(".li-3").css("clear","both");
+					$(".li-4").css("clear","none");
+				}
+		});
+		
+			$(window).on('resize',function(){
+				var getW = $('body').width();
+				if(getW >= 640){
+						$(".li-3").css("clear","none");
+						$(".li-4").css("clear","both");
+				}else{
+					$(".li-3").css("clear","both");
+					$(".li-4").css("clear","none");
+				}
+			});
+    </script>
+<!-end->
+
+<!-text->
+	<em class="colorround" style="width:8px;height:8px;border-radius:4px;color:#fff;line-height:8px;text-align:center;text-decoration:none;background:{#colorcode#};"></em>
+<!-text->

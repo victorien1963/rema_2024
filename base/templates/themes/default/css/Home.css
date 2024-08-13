@@ -1,0 +1,655 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.cycling {
+	background-image: url(../img/28156918_223296568235877_2360346595171500032_n.jpg);
+}
+
+.training {
+	background-image: url(../img/35166361_239188723339706_1641327352803753984_n.jpg);
+}
+
+.running {
+	background-image: url(../img/36085348_329861470884321_6660383567488483328_n.jpg);
+}
+
+.swimming {
+	background-image: url(../img/swimming-NEW-E.jpg);
+}
+
+#hero-banner {
+	width: 100%;
+}
+
+#hero-carousel {
+	clear: both;
+	max-width: 1600px;
+	margin: 10px auto 20px auto;
+	box-sizing: border-box;
+}
+
+#hero-carousel .owl-carousel .owl-nav {
+	font-size: 30px;
+
+	top: 58%;
+}
+
+#hero-carousel .owl-theme .owl-dots {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#sports-category {
+	position: relative;
+
+	float: left;
+
+	width: 100%;
+}
+
+#introduce {
+	position: relative;
+
+	/* float: left; */
+
+	width: 100%;
+}
+.introduce-pic {
+	padding-top: 100%;
+}
+.introduce-word .title {
+	font-size: 20px;
+	margin: 20px 0px 5px 0px;
+}
+.introduce-word .link a {
+	font-size: 16px;
+	color: #000;
+}
+.introduce-word .link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1;
+}
+.introduce-word .divider-v {
+	border-color: inherit;
+}
+
+.hero-banner {
+	position: relative;
+
+	height: 52.08vw;
+
+	max-height: 1500px;
+	min-height: 320px;
+}
+
+.hero-banner .mx-width {
+	height: 100%;
+	position: relative;
+}
+
+.hero-img {
+	height: 100%;
+
+	background-color: hsla(0, 0%, 0%, 1);
+}
+
+.hero-img video {
+	position: relative;
+
+	height: 100%;
+
+	transform: translate(-50%, -50%);
+
+	top: 50%;
+
+	left: 50%;
+}
+
+.hero-word {
+	position: absolute;
+
+	transform: translate(-50%, -50%);
+}
+
+.hero-word-center {
+	left: 50%;
+
+	top: 50%;
+}
+
+.hero-word-left {
+	left: 18%;
+
+	transform: translate(0%, -50%);
+
+	top: 48%;
+}
+
+.hero-word-con-aling-center {
+	text-align: center;
+}
+
+.hero-word-con-align-left {
+	text-align: left;
+}
+
+.hero-carousel-img {
+	height: 40vw;
+
+	background-image: url(../img/跑13.jpg);
+}
+
+.hero-carousel-img1 {
+	height: 40vw;
+
+	background-image: url(../img/swimming-NEW-B.jpg);
+}
+
+.hero-carousel-img2 {
+	height: 40vw;
+
+	background-image: url(../img/swimming-NEW-C.jpg);
+}
+
+.hero-carousel-img3 {
+	height: 40vw;
+
+	background-image: url(../img/跑11.jpg);
+}
+.ratios-img {
+	width: 100%;
+	position: relative;
+}
+.ratios-img img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	object-fit: cover;
+}
+.hero-carousel-pic {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 52.11%;
+}
+
+.hero-carousel-word-con {
+	text-align: center;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+
+.sports-category-select {
+	float: none;
+
+	margin: auto;
+}
+
+.category-img {
+	height: 20vw;
+}
+
+.word-con {
+	transform: translate(-50%, -50%);
+
+	position: relative;
+
+	bottom: -50%;
+
+	left: 50%;
+
+	padding-bottom: none;
+}
+
+.word-left {
+	padding-left: 2vw;
+
+	text-align: left;
+}
+
+.word-right {
+	padding-right: 2vw;
+
+	text-align: right;
+}
+
+.shortline {
+	width: 42px;
+
+	height: 8px;
+
+	background-color: hsla(0, 0%, 4%, 1);
+
+	margin-top: 3vw;
+
+	margin-bottom: 0.5vw;
+}
+
+.long-line {
+	width: 82.5vw;
+
+	height: 1px;
+
+	background-color: hsla(0, 0%, 60%, 1);
+
+	float: left;
+
+	margin-top: 62px;
+
+	margin-bottom: 62px;
+
+	margin-left: 8.75vw;
+
+	margin-right: 8.75vw;
+}
+
+.float-right {
+	float: right;
+
+	margin-left: calc(10.375vw - 42px);
+}
+
+.caregory-word-con {
+	position: relative;
+
+	height: 20vw;
+}
+
+.introduce-carousel {
+	float: none;
+
+	margin: auto;
+}
+
+.sports-category-con {
+	float: left;
+}
+
+.introduce-carousel-con {
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40	px;
+	padding: 0 4%;
+	box-sizing: border-box;
+}
+
+.introduce .owl-nav button.owl-prev:after {
+	font-size: 36px;
+}
+
+.introduce .owl-nav button.owl-next:after {
+	font-size: 36px;
+}
+.introduce.owl-theme .owl-nav .disabled {
+	opacity: 0.2;
+}
+.introduce-title {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 0.5px solid #000;
+}
+
+.introduce.owl-carousel .owl-nav {
+	width: 106%;
+
+	top: 35%;
+}
+
+.gander-word-con {
+	display: flex;
+
+	justify-content: center;
+}
+/* topic--------------------- */
+#topic {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1920px;
+	margin: auto;
+}
+.card {
+	width: 50%;
+	margin-bottom: 10px;
+}
+.card-img {
+	padding-top: 52.08%;
+}
+.card-word {
+	text-align: center;
+	padding: 0 19%;
+}
+.card-word .title {
+	text-align: center;
+	margin: 30px 0 15px;
+}
+
+@media (max-width: 1300px) {
+	.word-right {
+		padding-right: 1.5vw;
+
+		text-align: right;
+	}
+
+	.word-left {
+		padding-left: 1.5vw;
+
+		text-align: left;
+	}
+
+	.font-xxxl {
+		font-size: 24px;
+	}
+
+	.sports-category .rema-col.f7 {
+		width: 28vw;
+	}
+	.introduce-word .title {
+		font-size: 18px;
+	}
+	.introduce-word .link a {
+		font-size: 15px;
+	}
+	.introduce-word .link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1;
+	}
+}
+
+@media (max-width: 1000px) {
+	#hero-carousel {
+		margin-bottom: 30px;
+	}
+
+	#hero-carousel .owl-carousel .owl-nav {
+		font-size: 20px;
+		top: 90%;
+	}
+
+	/* .hero-word-center {
+		position: relative;
+
+		transform: none;
+
+		left: inherit;
+
+		top: inherit;
+
+		text-align: center;
+
+		float: left;
+
+		width: 100%;
+
+		padding-top: 20px;
+
+		padding-bottom: 20px;
+	} */
+
+	/* .hero-word-left {
+		position: relative;
+
+		transform: none;
+
+		left: inherit;
+
+		top: inherit;
+
+		text-align: center;
+
+		float: left;
+
+		width: 100%;
+
+		padding-top: 20px;
+
+		padding-bottom: 20px;
+	} */
+
+	/* .hero-word .white-word {
+		color: hsla(0, 0%, 4%, 1);
+	}
+
+	.hero-word .white-word .bn {
+		border-color: hsla(0, 0%, 4%, 1);
+	} */
+
+	.hero-carousel-img {
+		height: 58vw;
+	}
+
+	.hero-carousel-img2 {
+		height: 58vw;
+	}
+
+	.hero-carousel-img1 {
+		height: 58vw;
+	}
+
+	.hero-carousel-img3 {
+		height: 58vw;
+	}
+
+	.hero-carousel-word-con {
+		padding: 0 5vw;
+		max-width: 520px;
+		margin-bottom: 30px;
+	}
+	.hero-carousel-word-con .title {
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+
+	.sports-category {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+	.gander-category {
+		padding: 1vw;
+
+		padding-top: 25px;
+	}
+
+	.long-line {
+		display: none;
+	}
+
+	.bicycyle-mobile-img {
+		height: 45vw;
+
+		background-image: url(../img/bicyc-m.jpg);
+	}
+
+	.train-mobile-img {
+		height: 45vw;
+
+		background-image: url(../img/train-m.jpg);
+	}
+
+	.run-mobile-img {
+		height: 45vw;
+
+		background-image: url(../img/run-m.jpg);
+	}
+
+	.swim-mobile-img {
+		height: 45vw;
+
+		background-image: url(../img/swim-m.jpg);
+	}
+
+	.gander-word {
+		padding-top: 10px;
+
+		text-align: center;
+	}
+
+	.sports-category-con {
+		padding-bottom: 52px;
+	}
+
+	.introduce.owl-carousel .owl-nav {
+		width: 100%;
+	}
+	.introduce.owl-carousel .owl-nav button.owl-prev,
+	.introduce.owl-carousel .owl-nav button.owl-next {
+		color: rgba(255, 255, 255, 0.7);
+	}
+	.introduce-carousel-con {
+		padding: 0;
+	}
+	.introduce-title {
+		margin-left: 9%;
+		margin-right: 9%;
+	}
+	.introduce-word .title {
+		margin: 15px 0;
+	}
+
+	.gander-word-bn {
+		padding-top: 5px;
+
+		padding-bottom: 5px;
+
+		text-align: center;
+	}
+
+	.gander-word-bn-line {
+		border-right: 1px solid black;
+	}
+
+	.mobile-category-title {
+		color: white;
+
+		padding-left: 10px;
+
+		padding-top: 5px;
+	}
+
+	.card-word {
+		padding: 0 10%;
+	}
+	.card-word .title {
+		text-align: center;
+		margin: 20px 0 5px;
+	}
+}
+
+@media (max-width: 700px) {
+	.hero-banner {
+		height: 70vw;
+	}
+	#hero-carousel {
+		/* margin-bottom: 60px; */
+	}
+	#hero-carousel .owl-theme .owl-dots {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	#hero-carousel .owl-theme .owl-dots .owl-dot span{
+		width: 8px;
+		height: 8px;
+	}
+
+	.gander-word {
+		padding-top: 5px;
+
+		text-align: center;
+	}
+
+	.gander-category {
+		padding: 1vw;
+
+		padding-top: 10px;
+	}
+
+	.introduce-word .title {
+		font-size: 16px;
+		margin: 15px 0 5px 0;
+	}
+	.introduce-word .link a {
+		font-size: 13px;
+	}
+	.introduce-word .link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1;
+	}
+
+	.card {
+		margin-bottom: 30px;
+	}
+	.card-word {
+		padding: 0 5%;
+	}
+}
+
+@media (max-width: 600px) {
+	/* .hero-word .bn-con.bn-align-left {
+		justify-content: center;
+	}
+
+	.hero-word-con-align-left {
+		text-align: center;
+	} */
+
+	#topic {
+		display: block;
+	}
+	.card {
+		width: 100%;
+	}
+}
+/* 桌機版 */
+@media (min-width: 1001px) {
+	.hero-carousel-con .item {
+		padding: 0 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		padding: 0 60px;
+	}
+	/* .hero-carousel-word-con {
+		order: 1;
+		margin-bottom: 40px;
+	} */
+	.hero-carousel-pic {
+		max-width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 52.11%;
+	}
+	.hero-carousel-word-con .title {
+		margin-bottom: 20px;
+	}
+	/* 全系列商品 */
+	.introduce-title {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+
+	.card {
+		margin-bottom: 55px;
+	}
+
+	#hero-carousel {
+		margin: 40px auto 40px auto;
+	}
+}

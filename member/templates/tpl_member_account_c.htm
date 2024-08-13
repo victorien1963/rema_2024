@@ -1,0 +1,45 @@
+			
+<script language="javascript" src="{#CP#}js/memberset.js"></script>
+			<div class="edm-con product-main-con  rema-col f20 s12">
+				<div class=" rema-col f20 s12 xs12 font-l font-w-l"> 
+					<div class="product-list-title list-title-first">會員載具歸戶</div>
+					<div class="mobile-nav font-s font-w-m">
+						<div><a href="{#RP#}member/index.php">個人資料</a></div>
+						<div>|</div>
+						<div><a href="{#RP#}shop/order.php">訂單與退貨</a></div>
+						<div>|</div>
+						<div><a href="{#RP#}member/member_paylist.php">會員帳戶</a></div>
+						<div>|</div>
+						<div><a href="{#RP#}member/member_account.php?chk=e">電子報</a></div>
+					</div>
+				</div>
+				<div class="edm-con rema-col">
+					<form id="memberModify123"  method="post" action="{#toURL#}" name="regform" >
+					<div class="edm-block">
+						<div class="sub-title">完成電子發票載具歸戶設定後，即可將本站消費發票記錄在您的載具中</div>
+						
+						<div class="mobile-dashline mobile-dashline-top" style="display:{#showok#};">
+							<label class="radio-container">您已經完成本站電子發票載具歸戶！
+							  <input type="radio" checked value="" readonly>
+							  <span class="checkmark"></span>
+							</label>
+						</div>
+						
+						<div  style="display:{#showbt#};">
+							<div class="buy-bn-con">
+								<button class="shop-bn">進行載具歸戶</button>
+							</div>
+						</div> 
+					</div>
+						<input type="hidden" name="act" value="membercard" />
+	   					<input type="hidden" name="memberid" id="member_id" value="{#memberid#}" />
+	   					<input type="hidden" name="act" value="membercard" />
+	   					<input type="hidden" name="card_ban" value="{#card_ban#}" />
+	   					<input type="hidden" name="card_no1" value="{#card_no1#}" />
+	   					<input type="hidden" name="card_no2" value="{#card_no2#}" />
+	   					<input type="hidden" name="card_type" value="{#card_type#}" />
+	   					<input type="hidden" name="back_url" value="{#back_url#}" />
+	   					<input type="hidden" name="token" value="{#token#}" />
+					</form>
+				</div>
+			</div>

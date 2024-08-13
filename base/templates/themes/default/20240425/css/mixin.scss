@@ -1,0 +1,12 @@
+@mixin rwd($device) {
+    @media only screen and (max-width:#{$device}) {
+        @content;
+    }
+}
+  
+// @media only screen and (max-width: 768px)
+@mixin rwd-m($device) {
+    @media only screen and (min-width:#{$device}) {
+        @content;
+    }
+}

@@ -1,0 +1,60 @@
+.shoptwoclass_expand{
+padding:0px 26px;
+}
+
+.shoptwoclass_expand .shoptwoclass_expand_top{ 
+height:31px;
+color: #f9d111;
+font:14px/16px 'SimSun',Arial,Sans-Serif;
+cursor: pointer;
+display:block;
+padding-left:34px;
+background:url(../images/twoclass.gif) 0px 2px no-repeat;
+}
+
+.shoptwoclass_expand .shoptwoclass_expand_top a{
+color: #efefef;
+font:14px/20px Verdana, Arial, Helvetica, sans-serif;
+padding-left:38px;
+text-decoration: none;
+}
+
+.shoptwoclass_expand .shoptwoclass_expand_top a:visited{
+color: #efefef;
+}
+
+.shoptwoclass_expand .shoptwoclass_expand_top a:hover{ 
+color: #ff6600;
+}
+
+
+.shoptwoclass_expand ul{ 
+padding:2px 0px 5px 0px;
+margin:0px;
+}
+
+.shoptwoclass_expand ul li{
+list-style-type: none;
+height:25px;
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+padding:0px; 
+margin:0px;
+color: #fff;
+}
+
+.shoptwoclass_expand ul li a{
+color: #fff;
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+padding-left:53px;
+background:url(../images/twoclassarr.gif) 36px 1px no-repeat;  
+text-decoration: none;
+}
+
+.shoptwoclass_expand ul li a:visited{
+color: #fff;
+}
+
+.shoptwoclass_expand ul li a:hover{ 
+color: #ff6600;
+}
+

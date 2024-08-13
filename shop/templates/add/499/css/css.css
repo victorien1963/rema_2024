@@ -1,0 +1,17 @@
+.slide-pic { padding:30px 0px 10px 0px; HEIGHT: auto}
+.slide-pic A#prev {DISPLAY: block; BACKGROUND: url(../images/slide.png) no-repeat; MARGIN: 0px; OVERFLOW: hidden; WIDTH: 93px; TEXT-INDENT: -9999em; HEIGHT: 14px; outline: none}
+.slide-pic A#next {DISPLAY: block; BACKGROUND: url(../images/slide.png) no-repeat; MARGIN: 0px; OVERFLOW: hidden; WIDTH: 93px; TEXT-INDENT: -9999em; HEIGHT: 14px; outline: none}
+.slide-pic A#prev {BACKGROUND-POSITION: center 0px}
+.slide-pic A#next {BACKGROUND-POSITION: center -20px}
+.slide-pic A#prev:hover {BACKGROUND-POSITION: center -40px}
+.slide-pic A#next:hover {BACKGROUND-POSITION: center -60px}
+.slide-pic A.gray#prev {BACKGROUND-POSITION: center -80px}
+.slide-pic A.gray#next {BACKGROUND-POSITION: center -100px}
+.slide-pic .pic-container {MARGIN: 5px 0px; OVERFLOW: hidden; WIDTH: 93px; HEIGHT: 237px}
+.slide-pic UL {WIDTH: 93px; margin:28px 0px 0px 0px;}
+.slide-pic UL LI {PADDING-RIGHT: 0px; PADDING-LEFT: 8px; PADDING-BOTTOM: 5px; CURSOR: pointer; PADDING-TOP: 5px; MARGIN-TOP:-28px;}
+.slide-pic UL LI P {BORDER-RIGHT: #fff 5px solid; BORDER-TOP: #fff 5px solid; OVERFLOW: hidden; BORDER-LEFT: #fff 5px solid; WIDTH: 66px; BORDER-BOTTOM: #fff 5px solid; HEIGHT: 66px;}
+.slide-pic UL LI.hover P {BORDER-LEFT-COLOR: #bbbbbb; BORDER-BOTTOM-COLOR: #bbbbbb; BORDER-TOP-COLOR: #bbbbbb; BORDER-RIGHT-COLOR: #bbbbbb}
+.slide-pic UL LI P IMG {WIDTH: 64px; HEIGHT: 64px; border:1px #333 solid;}
+.slide-pic UL LI.cur P {BORDER-LEFT-COLOR: #2c2c2c! important; BORDER-BOTTOM-COLOR: #2c2c2c! important; BORDER-TOP-COLOR: #2c2c2c! important; BORDER-RIGHT-COLOR: #2c2c2c! important}
+.slide-pic UL LI .date {MARGIN: -20px auto 0px auto; DISPLAY: block; Z-INDEX: 1; BACKGROUND: #fff; WIDTH: 64px; COLOR: #000; LINE-HEIGHT: 20px; POSITION: static; HEIGHT: 19px; TEXT-ALIGN: center;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8; opacity: 0.8;font-size:10px;}

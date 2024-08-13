@@ -1,0 +1,105 @@
+<!--<link href="css/reg.css" rel="stylesheet" type="text/css" />-->
+<link href="css/reg001.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{#CP#}js/zone.js"></script>
+<script language="javascript" src="{#CP#}js/reg.js"></script>
+
+<div id="reg" >
+<div  id="notice" class="noticediv"></div>
+<form id="RegStep"  method="post" action="" name="regform" >
+<div id="stepname" class="stepname"></div>
+<div class="zone">
+
+
+<div class="row">
+	<div class="left">會員姓名：</div> <div class="mustfill">*</div>
+	<div class="con">
+	<input type="text" id="name"  name="name"  class="input"  value="{#name#}" size="20" />
+	
+	</div>
+</div>
+
+<div class="row">
+	<div class="left">性別稱謂：</div> <div class="mustfill"></div>
+	<div class="con">
+	<input type="radio" name="sex" value="1" checked /> 男
+    <input type="radio" name="sex" value="2" /> 女	
+	</div>
+</div>
+
+<div class="row" style="display:none;">
+	<div class="left">證件類型：</div> <div class="mustfill"></div>
+	<div class="con">
+	<select name="passtype" style="color:#666666;font-size:12px">{#PassList#}</select>
+	</div>
+</div>
+
+<div class="row" style="display:none;">
+	<div class="left">證件號碼：</div> <div class="mustfill"></div>
+	<div class="con">
+	<input type="text" name="passcode"  class="input"  value="{#passcode#}" size="30" />
+	</div>
+</div>
+
+<div class="row">
+	<div class="left">出生年月：</div> <div class="mustfill"></div>
+	<div class="con">
+	<select name="yy" style="color:#666666;font-size:12px">{#BirthYear#}</select>年
+	<select name="mm" style="color:#666666;font-size:12px">{#BirthMonth#}</select>月
+    <select name="dd" style="color:#666666;font-size:12px">{#BirthDay#}</select>日
+	</div>
+</div>
+
+<div class="row">
+	<div class="left">所在地區：</div> <div class="mustfill"></div>
+	<div class="con">{#ZoneList#}
+                        <select onKeyUp='if(window.event.keyCode==13) document.regform.zoneid.focus();'  onChange=provinceSelChange(regform.zoneid,regform.Province.value,'{#zoneid#}') name="Province"  style="color:#666666;font-size:12px" >
+                         	 <script language=javascript>document.write(pList.getOptionString('{#Province#}'));
+								</script>
+                        </select>
+                        <div id='zonediv' style='position:absolute; width:150px; height:26px; z-index:1'>
+                          <select onKeyUp='if(window.event.keyCode==13) document.regform.regCardNum.focus();'  name="zoneid"  style="color:#666666;font-size:12px">
+                            <script language=javascript>
+							document.write(pList.getOptionAreasString(regform.Province.value,regform.zoneid,'{#zoneid#}',1));
+    						</script>
+                          </select>
+                        </div>
+	</div>
+</div>
+
+
+
+
+
+<div class="row" style="display:none;">
+	<div class="left" style="display:none;">首頁/部落格：</div> <div class="mustfill"></div>
+	<div class="con">
+	<input type="text" name="url"  class="input"  value="{#url#}" size="50" />
+	</div>
+</div>
+
+
+<div class="row" style="display:none;">
+	<div class="left" tyle="display:none;">個人簡介：</div> <div class="mustfill"></div>
+	<div class="con">
+	<textarea name="bz" class="textarea" cols="60" rows="8">{#bz#}</textarea>
+	</div>
+</div>
+
+
+
+<div class="row" style="margin:10px 0px">
+	<div class="left"></div> <div class="mustfill"></div>
+	<div class="con">
+	<input type="submit" name="Submit" value="下一步" class="submit" />
+	 <input name="nowstep" type="hidden" id="nowstep" value="detail" />
+	  <input name="nextstep" type="hidden" id="nextstep" value="enter" />
+	 <input name="membertypeid" type="hidden" id="membertypeid" value="{#membertypeid#}" />
+    <input type="hidden" name="act" value="memberdetail" />
+	<p></p><p></p>
+	</div>
+</div>
+</div>
+</form>
+</div>
+
+

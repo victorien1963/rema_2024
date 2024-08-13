@@ -1,0 +1,121 @@
+div#rot #receiptinfo {
+  padding-bottom: 0px; width: 698px; min-width: 698px; max-width: 698px; clear: both; padding-top: 33px; height: auto; float: left; margin-left: 126px; margin-top: 20px; margin-bottom: 20px; overflow: hidden; min-height: 0px; background-repeat: no-repeat; background-position: center top; background-image: url('../images/Title_Receipt_698x33.png');
+color:#000; line-height:2;
+}
+
+div#rot #receiptinfo .relist{
+width: 618px; min-width: 618px; max-width: 618px; clear: both; background-color: #f2f2f2; padding:30px 40px; margin:0 0 6px 0;
+}
+
+div#rot #receiptinfo #re01{
+background-image: url('../images/re01.png'); background-repeat: no-repeat; clear: both; background-position: 70px 38px; background-position: 70px 32px\0; 
+}
+
+div#rot #receiptinfo #re02{
+background-image: url('../images/re02.png'); background-repeat: no-repeat; clear: both; background-position: 70px 38px; background-position: 70px 32px\0; 
+}
+
+div#rot #receiptinfo #re03{
+background-image: url('../images/re03.png'); background-repeat: no-repeat; clear: both; background-position: 70px 38px; background-position: 70px 32px\0; 
+}
+
+div#rot #receiptinfo .relist span{
+display:block; height:20px; float:left; padding:0; margin:0;
+}
+
+div#rot #receiptinfo .relist .reradio{
+width: 18px; height:18px;
+}
+
+div#rot #receiptinfo .renote{
+width: 565px; height: 16px; margin:0 auto; background-image: url('../images/renote_565x16.png'); background-repeat: no-repeat; clear: both;
+}
+
+/*通用*/
+.resel{
+	height:20px; float:left;
+}
+.reinfonote{
+	height:20px; float:left; margin-left:15px; padding-top:10px;
+}
+div#rot .renotedd{
+background-image: url('../images/renote_565x16.png'); background-repeat: no-repeat; width:565px; height:16px; margin:20px auto 0 auto; 
+}
+
+/*捐贈*/
+div#rot #receiptinfo .receipt_info{
+display:none; height:auto; border-top:1px dashed #999; margin-top:20px; margin-bottom:-20px; padding:20px 0 20px 0;
+}
+div#rot #receiptinfo .receipt_info_a{
+background-image: url('../images/re04.png'); background-repeat: no-repeat; background-position: 30px 9px; background-position: 30px 3px\0; float:left; width:180px; height:auto;
+}
+div#rot #receiptinfo .receipt_info_b{
+background-image: url('../images/re05.png'); background-repeat: no-repeat; background-position: 30px 9px; background-position: 30px 3px\0;float:left; width:180px; height:auto;
+}
+
+/*二聯 receipt_info_b*/
+div#rot #receiptinfo #receipt_info_b_a{
+background-image: url('../images/re_brusco.png'); background-repeat: no-repeat; background-position: 30px 9px; background-position: 30px 3px\0; width:180px; height:auto;
+}
+div#rot #receiptinfo #receipt_info_b_b{
+background-image: url('../images/re_mobi.png'); background-repeat: no-repeat; background-position: 30px 9px; background-position: 30px 3px\0; width:180px; height:auto;
+}
+div#rot #receiptinfo #receipt_info_b_c{
+background-image: url('../images/re_cd.png'); background-repeat: no-repeat; background-position: 30px 9px; background-position: 30px 3px\0; width:180px; height:auto;
+}
+
+/*三聯 receipt_info_c*/
+div#rot #receiptinfo .receipt_info_c_a{
+background-image: url('../images/re_num.png'); background-repeat: no-repeat; background-position: 0px 6px;
+padding-left:100px;
+}
+
+div#rot #receiptinfo .receipt_info_c_b{
+background-image: url('../images/re_title.png'); background-repeat: no-repeat; background-position: 0px 6px;
+padding-left:100px;
+margin-top:20px;
+}
+
+/*下拉*/
+#SelectStyleRe .select_box
+   { width: 243px; height: 30px; }
+   
+
+#SelectStyleRe div.tag_select
+   { display: block; color: #999999; width: 220px; height: 24px; padding: 3px 20px 0px 8px; line-height:24px;
+     background:transparent url("SelectButtonRe.png") no-repeat -260px -46px;
+     /*hack*/
+     /*IE*/
+     height: 28px\9;line-height:28px\9;
+     font-size:12px;
+     }
+#SelectStyleRe div.tag_select_hover
+   { display: block; color: #999999; width: 215px; height: 27px; padding: 3px 20px 0px 8px; line-height: 24px;
+     background:transparent url("SelectButtonRe.png") no-repeat right top;
+     /*hack*/
+     /*IE*/
+     height: 28px\9;line-height:28px\9;
+     font-size:12px;
+     }
+#SelectStyleRe div.tag_select_open
+   { display: block; color: #999999; width: 215px; height: 27px; padding: 3px 20px 0px 8px; line-height: 24px;
+     background:transparent url("SelectButtonRe.png") no-repeat right -95px;
+     /*hack*/
+     /*IE*/
+     height: 28px\9;line-height:28px\9;
+     font-size:12px;
+     }
+#SelectStyleRe ul.tag_options
+   { position: absolute; max-height: 144px; margin: -3px 0px 0px 2px; padding: 0px 0px 5px 0px; Overflow: auto; list-style: none;
+     background:transparent url("SelectButtonRe.png") no-repeat 0px bottom;
+     font-size:12px; }
+#SelectStyleRe ul.tag_options li
+   { display: block; color: #4e4e4e; width: 221px; height: 24px; padding: 0 0 0 6px; line-height: 24px; text-decoration: none;
+     background:transparent url("SelectButtonRe.png") repeat-y 0px -90px;
+     font-size:12px; }
+#SelectStyleRe ul.tag_options li.open_hover
+   { color: #ff0000; background: transparent url("SelectButtonRe.png") no-repeat 0px -33px;
+     font-size:12px; }
+#SelectStyleRe ul.tag_options li.open_selected
+   { color: #ffffff; background: transparent url("SelectButtonRe.png") no-repeat 0px -63px;
+     font-size:12px; }

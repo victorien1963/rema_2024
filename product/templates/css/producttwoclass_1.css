@@ -1,0 +1,60 @@
+.producttwoclass{
+width: 100%; 
+}
+
+.producttwoclass .producttwoclass_top{ 
+clear:both;
+height:30px;
+color: #999999;
+font:12px/30px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+cursor: pointer;
+}
+
+.producttwoclass .producttwoclass_top a{
+color: #505050;
+font:14px/23px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+background:url(../images/li.gif) left no-repeat;  
+padding-left:15px;
+text-decoration: none;
+}
+
+.producttwoclass .producttwoclass_top a:visited{
+color: #505050;
+}
+
+.producttwoclass .producttwoclass_top a:hover{ 
+color: #ff6600;
+}
+
+
+.producttwoclass ul{ 
+margin:0px 0px 5px 8px;
+padding:0px;
+}
+
+.producttwoclass ul li{
+list-style-type: none;
+float:left;
+height:18px;
+font:11px/18px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+margin:0px; 
+padding:0px;
+color: #999999;
+white-space:nowrap;
+}
+
+.producttwoclass ul li a{
+color: #505050;
+font:12px/18px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+text-decoration: none;
+margin:0px 6px 0px 6px
+}
+
+.producttwoclass ul li a:visited{
+color: #505050;
+}
+
+.producttwoclass ul li a:hover{ 
+color: #ff6600;
+}
+

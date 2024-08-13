@@ -1,0 +1,183 @@
+<script language="javascript" src="{#CP#}js/reg.js"></script>
+<form id="memberReg" method="post" action="" name="regform" >
+                        <p class="mem-in-note">
+                        	请确认您输入的个人资料、地址是否正确<br>如果您要更改资料内容，请按“返回修改”。
+                        </p>
+                        <hr>
+					<div class="row menber-register-hold fix-padding15 style-toggle mem-in-fbi">
+                        <!-- list -->
+                        <div class="clearfix m-b-30"></div>
+                        <div class="col-xs-5 fix-padding mem-in-fom1">电子信箱地址</div>
+                        <div class="col-xs-7 fix-padding mem-in-fom2">{#email#}</div>
+                        <div class="clearfix m-b-15"></div>
+                        <!-- / list -->
+                          <!-- ///////////////////////////////////////////////////////////// -->
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn active fix-padding" data-toggle="tab" data-target="#tab-1" style="margin-right: 20px;">
+                            <input type="radio" name='choice' {#memberchk1#}><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  个人</span>
+                        </label>
+                        <!--label class="btn active fix-padding" data-toggle="tab" data-target="#tab-2">
+                            <input type="radio" name='choice' {#memberchk2#}><i class="icon-circle-o"></i><i class="icon-dot-circle-o"></i> <span class="small">  公司</span>
+                        </label-->
+                    </div>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade {#in1#}" id="tab-1">
+                            <div class="clearfix m-b-30"></div>
+                            <div class="row22">
+                              <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">性别</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#gen#}</div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">姓名</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#name#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">生日</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#Year_ID#} / {#Month_ID#} / {#Day_ID#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">国家*</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#country#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">城市</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#Province#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">乡镇区</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#zoneid#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">地址</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#addr#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">邮递区号</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#postcode#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">行动电话</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#mov#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">其他电话</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#tel#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                            </div>
+                            <!-- row -->
+                            <div class="clearfix m-b-15"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade {#in2#}" id="tab-2">
+                            <div class="clearfix m-b-30"></div>
+                            <div class="row22">
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">统一编号</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#passcode#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">公司名称</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#company#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                 <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">姓名</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#name#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">国家*</div>
+                                <div class="col-xs-7 mem-in-fom2"> 台湾 </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">城市</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#Province#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">乡镇区</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#zoneid#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">地址</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#addr#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">邮递区号</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#postcode#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">行动电话</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#mov#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                                <!-- list -->
+                                <div class="col-xs-5 mem-in-fom1">其他电话</div>
+                                <div class="col-xs-7 mem-in-fom2"> {#tel#} </div>
+                                <div class="clearfix m-b-15"></div>
+                                <!-- / list -->
+                            </div>
+                            <!-- row -->
+                            <div class="clearfix m-b-15"></div>
+                        </div>
+                    </div>
+                    <!-- tab-content -->
+                    <div class="clearfix m-b-30"></div>
+                      <!-- checkbox -->
+                             <div class="btn-group pull-left fix-padding5" data-toggle="buttons">
+                                    <label class="btn active fix-padding">
+                                        <input type="checkbox" name="orderpaper" value="1" {#orderchk#}><i class="icon-square-o"></i><i class="icon-check-square-o"></i> <span class="small"> 我同意订阅 Rema 电子报以获得最新商品资讯</span>
+                                    </label>
+                                </div>
+                                    <div class="clearfix"></div>
+                                
+                            <div class="clearfix m-b-15"></div>
+                            <!-- checkbox -->
+                    <!-- //////////////////////////////////////////////////////////// -->
+                    </div>
+					<div  id="notice" class="noticediv"></div>
+					<input name="act" type="hidden" id="act" value="memberreg" />
+					<input name="nowstep" type="hidden" id="nowstep" value="account" />
+					<input name="nextstep" type="hidden" id="nextstep" value="enter" />
+					<input name="step" type="hidden" id="step" value="fins" />
+					<input name="orderpaper" type="hidden" id="orderpaper" value="{#orderpaper#}" />
+					<input name="membertypeid" type="hidden" id="membertypeid" value="{#membertypeid#}" />
+					<input name="email" type="hidden" id="email" value="{#email#}" />
+					<input name="name" type="hidden" id="name" value="{#name#}" />
+					<input name="sex" type="hidden" id="sex" value="{#sex#}" />
+					<input name="birthday" type="hidden" id="birthday" value="{#birthday#}" />
+					<input name="password" type="hidden" id="password" value="{#password#}" />
+					<input name="repass" type="hidden" id="repass" value="{#repass#}" />
+					<input name="postcode" type="hidden" id="postcode" value="{#postcode#}" />
+					<input name="addr" type="hidden" id="addr" value="{#addr#}" />
+					<input name="mov" type="hidden" id="mov" value="{#mov#}" />
+					<input name="tel" type="hidden" id="tel" value="{#tel#}" />
+					<input name="company" type="hidden" id="company" value="{#company#}" />
+					<input name="passcode" type="hidden" id="passcode" value="{#passcode#}" />
+					<input name="country" type="hidden" id="country" value="{#country#}" />
+					<input name="zoneid" type="hidden" id="zoneid" value="{#zoneid#}" />
+					<input name="countryid" type="hidden" id="countryid" value="{#countryid#}" />
+                    
+                    <!-- /section -->
+                   <hr>
+                   <!-- section -->
+                	<div class="clearfix m-b-30"></div>
+                    <div class="blk-btn">
+                        <button type="submit" class="btn btn-black btn-lg" style="width:150px">确定</button>
+                    </div>
+			</form>

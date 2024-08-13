@@ -1,0 +1,57 @@
+<!-start->
+
+    <div class="top-status">
+        <a href="javascript:history.back();"> <i class="icon-arrow-left"></i></a>
+        {#title#}
+    </div>
+    <div class="container inpage">
+    <div class="store-map m-b-20">
+    <ul class="dealer-list">
+                            <!-- list -->
+                                <li>
+                                <div  class="div-tb">
+                                    <div class="tr">
+                                        <div class="td">
+                                            <h3>{#title#}</h3>
+		                                    <p>{#prop2#}</p>
+		                                    <p>{#prop3#}</p>
+                                        </div>
+                                    </div>
+                                    <div class="tr">
+                                         <div class="td">
+                                            <p>Selling Series</p>
+		                                    <span class="tag cycling" {#show1#}>CYCLING</span>
+		                                    <span class="tag running" {#show2#}>RUNNING</span>
+		                                    <span class="tag compression" {#show3#}>COMPRESSION</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <!-- / list -->
+                            </ul>
+                            </div>
+        <div class="map" id="map-marker" style="min-height: 420px;">
+            
+        </div>
+    </div>
+
+                    <script>
+                    
+	                    $.fn.tinyMapConfigure({	
+						    'key': 'AIzaSyDWM2r4jkaPsvq_KV1X9-aXFUrb9EuG7O0'
+						});
+						var map = $('#map-marker');
+					    map.tinyMap({
+						    'center': [{#firaddr#}],
+						    'zoom': 17,
+						    'markerCluster': true,
+						    //'markerFitBounds': true,
+						    'marker': [
+						    	{#addrlist#}
+						    ]
+						});
+
+                    </script>
+<!-start->
+<!-err1-><div class="securenotice">目前ID不存在或尚未發佈</div><!-err1->
+<!-err2-><div class="securenotice">對不起，本內容設置了閱讀權限,您無權瀏覽目前內容</div><!-err2->

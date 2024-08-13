@@ -1,0 +1,25 @@
+<link href="css/paper_search_dolphin.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{#CP#}js/searchform.js"></script>
+<SCRIPT language="javascript" src="{#CP#}js/selectBox.js"></SCRIPT>
+<div class="papersearchformzone">
+<form id="papersearchform" method="get" action="{#RP#}paper/index.php">
+  <div class="papersearchform">
+    <select name="catid" id="catid" class="box" style="display:none; background:#ffffff; width:140px; height:19px;">
+      <option value="0" >請選擇分類</option>
+      
+	  {#catlist#}
+    
+    </select> 
+	<script>
+	makeSelectBox('catid','{#RP#}');
+	</script>
+  </div>
+
+    <div class="papersearchform">
+    <input name="key" type="text" id="papersearchform_key" value="{#key#}" style="width:138px;" class="inputtext">
+  </div>
+  <div class="papersearchform2">
+  <input name="imageField" id="button" type="image" src="images/search5.gif" >
+  </div>
+</form>
+</div>

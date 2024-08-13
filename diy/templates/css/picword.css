@@ -1,0 +1,25 @@
+div.pic{
+margin:0px;
+padding:0px;
+}
+
+div.word{
+text-align:left;
+margin:4px 12px 0px 12px;
+}
+
+div.word a.recommtitle:link,div.word a.recommtitle:visited,div.word a.recommtitle:active{
+display:block;
+color:#fff;
+font:12px/20px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+text-align:center;
+padding:0px 10px 0px 0px;
+}
+
+div.word a.recommtitle:hover{
+display:block;
+color:#ff0000;
+font:12px/20px Verdana, Arial, Helvetica, sans-serif;
+text-align:center;
+}

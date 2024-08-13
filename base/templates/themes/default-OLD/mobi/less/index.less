@@ -1,0 +1,246 @@
+@import url(function.less);
+.index-main-title{
+        margin: 15px 0 0px 0;
+        position: relative;
+        text-align: center;
+        h1{
+                text-align: center;
+                position: relative;
+                font-size: 18px;
+                line-height: 15px;
+                font-weight: normal;
+                color:#888;
+                background: transparent;
+                display: inline-block;
+                z-index: 9;
+                span{
+                     display: inline-block;
+                     position: relative;
+                     padding: 0 10px;
+                     height: 15px;
+                     // border-right: 1px solid #aaa;
+                     &:before{
+                          display:inline-block;
+                          content: "";
+                          width: 1px;
+                          height: 19px;
+                          background: #aaa;
+                          position: absolute;
+                          right: 0;
+                          top: -2px;
+                     }
+                     &:last-child{
+                      &:before{
+                        display: none;
+                      }
+                     // border-right: 0px solid #aaa;
+
+                     }
+                }
+        }
+}
+
+/*///////////////*/
+/*bootstrap Carousel v1*/
+.index-main-slide{
+            overflow: hidden;
+            .carousel-inner{
+                    margin: 0;
+                    background: @dark;
+                    .item{
+                          img{
+                            width: 100%;
+                            height: auto;
+                            max-height: 480px;
+                            background-repeat: no-repeat;
+                            background-position: center top;
+                            background-size: auto 100%;
+                          }
+                    }
+              }
+                    .carousel-arrow{
+                                a.carousel-control {
+                                       opacity: .8;
+                                       font-size: 15px;
+                                       height:inherit;
+                                       width: inherit;
+                                       text-align: left;
+                                       text-shadow: none;
+                                       position: absolute;
+                                       // border-radius: 50%;
+                                       // height: 45px;
+                                       // width: 45px;
+                                       background: rgba(0,0,0,0);
+                                       top: 50%;
+                                       text-align: center;
+                                       line-height: 52px;
+                                       margin-top: -40px;
+                                       .transition;
+                                       i{
+                                          color:@gray;
+                                            font-size: 30px;
+                                       }
+                            }
+                            a.left {
+                                       left: 50px;
+                                      i{
+                                            margin-left: -3px;
+                                      }
+                            }
+                            a.right {
+                                       right: 50px;
+                                    i{
+                                            margin-right: -3px;
+                                      }
+                            }
+                    }
+                    &:hover{
+                          .carousel-arrow a.carousel-control{
+                                opacity: 1;
+                                .transition;
+                          }
+                    }
+                    &.product-in{
+                        margin:0px;
+                        .carousel-inner{
+                                .item{
+                                      img{
+                                        width: 100%;
+                                        height: auto;
+                                        max-height: 100%;
+                                      }
+                                }
+                          }
+                        .carousel-arrow{
+                          a.carousel-control i{
+                                color: #fff;
+                                font-size: 23px;
+                          }
+                            .left{
+                              left: 10px;
+                            }
+                             .right{
+                              right: 10px;
+                            }
+                        }
+                    }
+}
+.carousel-indicators{
+  bottom: 0;
+  li{
+        /*background:url(../img/index/dot.png) top center;*/
+        width: 10px;
+        height: 10px;
+        border: 0px;
+        margin:0 2px;
+        border: 1px solid #fff;
+        background: #fff;
+  }
+      .active{
+        margin:0 3px;
+            width: 10px;
+            height: 10px;
+            /*background:url(../img/index/dot.png) bottom center;*/
+            background: #4d4d4d;
+      }
+}
+/*END bootstrap Carousel v1*/
+/*///////////////////////*/
+
+#owl-V1{
+      position: relative;
+      width: 100%;
+     padding: 0 15px;
+     margin-bottom: 20px;
+     XD{}
+      .Navigation{
+            width: 100%;
+            top:50%;
+            z-index: 999;
+            .transition;
+            a{
+                  position: absolute;
+                  top:120px;
+                  margin-top: -45px;
+                  width: 45px;
+                  height: 45px;
+                  cursor: pointer;
+                  text-align: center;
+                  .transition;
+                  i{
+                        color: @gray;
+                        font-size: 18px;
+                  }
+                  &:hover{
+                       i{
+                          color:@blue;
+                        }
+                  }
+            }
+            .prev{
+                  left: -20px;
+            }
+            .next{
+                  right: -20px;
+            }
+      }
+      .owl-carousel .item{
+            padding: 10px 5px;
+            display: block;
+            margin: 0px;
+            color: @gray-dark;
+            min-height: 100px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            text-align: center;
+            z-index: 1;
+            overflow: hidden;
+            position: relative;
+            .transition;
+            .rim{
+                  /*border: 1px solid @gray-light;*/
+                  overflow: hidden;
+                  position: relative;
+                  img{
+                          .transition;
+                          z-index: -1;
+                          width: 100%;
+                          height: auto;
+                  }
+            }
+            h4{
+                      font-size: 12px;
+                      text-align: center;
+                      color: #888;
+                      margin: 10px 0 3px 0;
+            }
+            &:hover{
+                  .rim{
+                        /*border: 1px solid @pink;*/
+                        .transition;
+                        img{
+                              opacity: .8;
+                              .transition;
+                        }
+                        p{
+                              opacity:1;
+                              .transition;
+                              top: 0;
+                        }
+                        &:before{
+                              opacity:1;
+                              .transition;
+                              top:0;
+                        }
+                  }
+            }
+      }
+      .owl-item{
+            z-index: 1;
+            &:hover{
+              z-index: 5;
+            }
+      }
+}
+

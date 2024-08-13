@@ -1,0 +1,53 @@
+<!-start->
+<script language="javascript" src="{#CP#}js/feedback.js"></script>
+				<div class="window-center-word window-word-break font-w-l">申請退款</div>
+                    <div>
+                         <form id="feedbacksmallform" method="post" action="" name="gform">
+<!-start->
+
+<!-input->
+							<input class="inputsy" type="text" id="{#fieldname#}" name="{#fieldname#}" value="{#fieldvalue#}" placeholder="{#title#}{#mustfill#}">
+<!-input->
+
+<!-textarea->
+							<textarea class="inputsy" type="text" id="{#fieldname#}" name="{#fieldname#}" placeholder="{#title#}{#mustfill#}">{#fieldvalue#}</textarea>
+<!-textarea->
+
+<!-list->
+
+        <select class="inputsy" id="{#fieldname#}" name="{#fieldname#}">
+			{#list#}
+        </select>
+
+<!-list->
+
+<!-end->
+
+                                  <div class="popupu-bn-con poputwindow-bn">
+                                <button class="login-bn refund-completed-bn">確認申請</button>
+                            </div>
+        <input type='hidden' name='act' value='formsend'>
+        <input name='groupid' type='hidden' id="groupid" value='{#groupid#}'>
+
+                        </form>
+                    </div>
+<!-end->
+
+
+                    <div class="window-center-word window-word-break font-w-l">申請退款</div>
+                    <div>
+                         <form  Method="POST" Action="mailto:sean@rema-sports.com" >
+                            <input class="inputsy" type="text" id="name" name="receive" placeholder="姓名123123">
+                            <input class="inputsy" type="text" id="bank-aconut" name="location" placeholder="請輸入帳戶號碼123123">
+                            <input class="inputsy" type="text" id="bank-name" name="receive" placeholder="銀行名稱12312">
+                            <input class="inputsy" type="text" id="bank-name" name="refund" placeholder="退款金額12321">
+                            <div class="popupu-bn-con poputwindow-bn">
+                                <a class="login-bn refund-completed-bn">確認申請</a>
+                            </div>
+                            <!--
+                            <div class="popupu-bn-con  poputwindow-bn">
+                                <button class="login-bn new-connection-bn">用facebook登入</button>
+                            </div>
+                            -->
+                        </form>
+                    </div>

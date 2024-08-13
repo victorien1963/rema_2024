@@ -1,0 +1,28 @@
+/* ============分类列表============== */
+
+div.newsclass_menu{
+margin:0px;
+padding:0px;
+width:100%;
+}
+
+
+a.newsclass_menu:link,a.newsclass_menu:visited,a.newsclass_menu:active{
+display:block;
+color: #303030; 
+text-decoration: none;
+font:14px/38px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+height:40px;
+background:url(../images/classmenu2.gif) 0px 0px no-repeat;
+padding-left:55px;
+}
+
+a.newsclass_menu:hover{
+display:block;
+color: #ff6600; 
+text-decoration: none;
+height:40px;
+font:bold 16px/38px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+background:url(../images/classmenu2.gif) 0px -40px no-repeat;
+padding-left:55px;
+}

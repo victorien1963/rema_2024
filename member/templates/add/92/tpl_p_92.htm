@@ -1,0 +1,32 @@
+					<script src="{#CP#}js/login.js"></script>
+
+                    <h3 class="cart-title">登入 / 註冊會員</h3>
+                    <!-- section -->
+                    <form id="memberLogin" method="post" action="" >
+                    <div class="row two-col member">
+                        <div class="col-xs-6 right-line mem-in-d">
+                            <p class="title">我已經是REMA的會員</p>
+                            <ul class="info">
+                                <li class="m-b-5">請輸入您的電子信箱地址和密碼以登入網站。</li>
+                                <li class="m-b-5">電子信箱地址</li>
+                                <li class="m-b-15"><input id="muser" name="muser" type="text" class="form-control"></li>
+                                <li class="m-b-5">密碼</li>
+                                <li class="m-b-5"><input id="mpass" name="mpass" type="password" class="form-control"></li>
+                                <li class="m-b-30"><a href="{#CP#}lostpass.php" class="underline">忘記了密碼？</a></li>
+                                <li><button type="submit" class="btn btn-black btn-lg2" style="width:180px">登入帳戶</button></li>
+                            </ul>
+                            <input name="act" type="hidden" id="act" value="memberlogin" />
+							<div  id="notice" class="alert alert-danger noticediv" style="display:none;"></div>
+                        </div>
+                        <div class="col-xs-6 mem-in-d">
+                            <p class="title">註冊為REMA會員</p>
+                            <ul class="info">
+                                <li class="m-b-30">立即註冊為Rema會員，享受更多會員專屬購物資訊及折扣。</li>
+                                <li><a href="{#CP#}reg.php" class="btn btn-black btn-lg2" style="width:180px">立即註冊</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix m-b-20"></div>
+                    </div>
+                    <input type="hidden" name="from" value="{#REFERER#}">
+                    </form>
+                    <!-- /section -->

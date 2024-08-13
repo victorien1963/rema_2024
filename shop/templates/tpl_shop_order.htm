@@ -1,0 +1,515 @@
+<!-start->
+<script type=text/javascript src="{#CP#}js/order.js?5"></script>
+<script language="javascript" src="{#CP#}js/ordertuidetail.js?5"></script>
+				<div class="order-con rema-col f20 s12">
+<!-start->  
+<!-list->
+					<div class="order-block rema-col">
+						<div class="order-item">
+							<div class="base-order-list-con">
+								<div class="base-order-list rema-col">
+									<div class="rema-col l2">訂單編號</div>
+									<div class="rema-col l2">日期</div>
+									<div class="rema-col l2">金額</div>
+									<div class="rema-col l2">付款方式</div>
+									<div class="rema-col l2">訂單狀態</div>
+									<div class="rema-col l2">{#delorder#}</div>
+								</div>
+								<div class="base-order-item rema-col">
+									<div class="mobile-base-order-item">
+										<div class="rema-col l2 xs12 mobile-flex-num">{#OrderNo#}</div>
+										<div class="rema-col l2 xs12 mobile-flex-num">{#dtime#}</div>
+										<div class="rema-col l2 xs12 mobile-price">{#pricesymbol#} {#paytotal#}</div>
+										<div class="rema-col l2 xs12 mobile-flex-num">{#paytype#}</div>
+										<div class="rema-col l2 xs12 mobile-flex-num">{#status#}</div>
+										<div class="rema-col l2 xs1  mobile-close">
+											{#showtui#}
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="order-state"  style="display:{#showprocess#};">
+								<div class="state-base rema-col">
+									<div class="rema-col order-item-icon">
+										<div class="icon-block">
+											<!--div class="icon icon-minus"></div-->
+											<div class="icon icon-plus"></div>
+										</div>
+									</div>
+									<div class="rema-col order-item-title font-w-l">訂單狀態</div>
+								</div>
+								<div class="state-detail" style="display: none">
+									<div class="state-detail-img">
+										<div class="dotandline act order-state-num-1">
+											<div class="state-dot">
+												<div class="state-word-con">
+													<div class="font-s">收到訂單</div>
+													<div class="font-s">{#odtime#}</div>
+												</div>
+											</div>
+										</div>
+										<div class="dotandline {#act1#} order-state-num-2">
+											<div class="state-line dotandline-order-1"></div>
+											<div class="state-dot dotandline-order-2">
+												<div class="state-word-con">
+													<div class="font-s">訂單處理中</div>
+													<div class="font-s">{#odlook#}</div>
+												</div>
+											</div>
+										</div>
+										<div class="dotandline {#act2#} order-state-num-3">
+											<div class="state-line dotandline-order-1"></div>
+											<div class="state-dot dotandline-order-2">
+												<div class="state-word-con">
+													<div class="font-s">出貨中</div>
+													<div class="font-s">{#odyun#}</div>
+												</div>
+											</div>
+										</div>
+										<div class="dotandline {#act3#} order-state-num-4">
+											<div class="state-line dotandline-order-1"></div>
+											<div class="state-dot dotandline-order-2">
+												<div class="state-word-con">
+													<a href="{#searchod#}" target="{#otarget#}" class="hyperlink font-s">配送進度查詢</a>
+													<div class="font-s">貨號 {#odyunno#}</div>
+												</div>
+											</div>
+										</div>
+										<div class="dotandline {#act4#} order-state-num-5">
+											<div class="state-line dotandline-order-1"></div>
+											<div class="state-dot dotandline-order-2">
+												<div class="state-word-con">
+													<div class="font-s">已送達</div>
+													<div class="font-s">&nbsp;</div>
+													<!-- <div class="font-s">{#s_addr_a#}</div> -->
+													<!-- <div class="font-s">{#s_addr_b#}</div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="order-state return-state" style="display:{#showtuiprocess#};">
+								<div class="state-base rema-col">
+									<div class="rema-col order-item-icon">
+										<div class="icon-block">
+											<div class="icon icon-plus"></div>
+										</div>
+									</div>
+									<div class="rema-col order-item-title font-w-l">退貨狀態</div>
+								</div>
+								<div class="state-detail"  style="display: none">
+									<div class="state-detail-img">
+										<div class="dotandline act order-state-num-1">
+											<div class="state-dot">
+												<div class="state-word-con">
+													<div class="font-s">收到通知</div>
+													<div class="font-s">{#tuitime#}</div>
+												</div>
+											</div>
+										</div>
+										<div class="dotandline {#tact2#} order-state-num-3">
+											<div class="return-state-line dotandline-order-1"></div>
+											<div class="state-dot dotandline-order-2">
+												<div class="state-word-con">
+													<div class="font-s">派遣快遞</div>
+													<div class="font-s">{#tuiyuntime#}</div>
+												</div>
+											</div>
+										</div>
+										<div class="dotandline {#tact3#} order-state-num-4">
+											<div class="return-state-line dotandline-order-1"></div>
+											<div class="state-dot dotandline-order-2">
+												<div class="state-word-con">
+													<div class="font-s">收到退貨</div>
+													<div class="font-s">{#gettuitime#}</div>
+												</div>
+											</div>
+										</div>
+										<div class="dotandline {#tact4#} order-state-num-5">
+											<div class="return-state-line dotandline-order-1"></div>
+											<div class="state-dot dotandline-order-2">
+												<div class="state-word-con">
+													<div class="font-s">完成退款</div>
+													<div class="font-s">{#tuidtime#}</div>
+													<!--div class="font-s">{#s_addr_a#}</div>
+													<div class="font-s">{#s_addr_b#}</div-->
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<div class="order-state state-con product-deteail-con" id="show_{#orderid#}">
+								<div class="state-base rema-col">
+									<div class="rema-col order-item-icon">
+										<div class="icon-block">
+											<div class="icon icon-plus"></div>
+										</div>
+									</div>
+									<div class="rema-col order-item-title  font-w-l">商品明細</div>
+								</div>
+								<div class="state-detail "  style="display: none">
+									<div class="order-detail-con">
+										<div class="product-detail rema-col l8 m12">
+											<div class="order-detail-block">
+												<div class="rema-col  product-item-list">
+													<div class="rema-col l2 font-s">商品</div>
+													<div class="rema-col l3 font-s">名稱</div>
+													<div class="rema-col l7 text-align-center">
+														<div class="rema-col l3 font-s">顏色</div>
+														<div class="rema-col l3 font-s">尺寸</div>
+														<div class="rema-col l3 font-s">件數</div>
+														<div class="rema-col l3 font-s">金額</div>
+													</div>
+												</div>
+												{#itemlist#}
+											</div>
+										</div>
+										<div id="itemlist_{#orderid#}" style="display:none;">
+											{#itemlist2#}
+										</div>
+										<div class="price-count rema-col l4 m12">
+											<div class="price-count-con">
+												<div class="underlin-dash">
+													<div class="price-row">
+														<div class="rema-col l8">
+															<div class="font-s font-m-xs">商品金額總計</div>
+														</div>
+														<div class="rema-col l4">
+															<div class="font-s font-m-xs number">{#pricesymbol#} {#totaljine#}</div>
+														</div>
+													</div>
+													
+													<div class="price-row">
+														<div class="rema-col l8">
+															<div class="font-s font-m-xs">物流費用(滿{#getsymbol#} {#setyunfei#}元享免運費)</div>
+														</div>
+														<div class="rema-col l4">
+															<div class="font-s font-m-xs number">{#pricesymbol#} {#multiyunfei#}</div>
+														</div>
+													</div>
+													
+													<div class="price-row">
+														<div class="rema-col l8">
+															<div class="font-s font-m-xs">線上帳戶餘額{#getsymbol#} {#account#}元，本次抵用</div>
+														</div>
+														<div class="rema-col l4">
+															<div class="font-s font-m-xs number">{#pricesymbol#} {#disaccount#}</div>
+														</div>
+													</div>
+													
+													<div class="price-row">
+														<div class="rema-col l8">
+															<div class="font-s font-m-xs">電子折價券折扣金額</div>
+														</div>
+														<div class="rema-col l4">
+															<div class="font-s font-m-xs number">{#pricesymbol#} {#promoprice#}</div>
+														</div>
+													</div>
+													
+												</div>
+												<div class="price-totle-con">
+													<div class="rema-col l8">
+														<div class="font-m font-w-l">金額總計</div>
+													</div>
+													<div class="rema-col l4">
+														<div class="font-m font-w-l number">{#pricesymbol#} {#tjine#}</div>
+													</div>
+													<div class="rema-col invioce-bn-con" id="indate_{#orderid#}" style="display:{#showinno#}">
+														<div class="">檢視發票</div>
+													</div>
+													<input type="hidden" id="Rdate_{#orderid#}" value="{#InDate#}">
+													<input type="hidden" id="Rtime_{#orderid#}" value="{#InTime#}">
+													<input type="hidden" id="Cdate_{#orderid#}" value="{#CDate#}">
+													<input type="hidden" id="Rinno_{#orderid#}" value="{#CreateInvoice#}">
+													<input type="hidden" id="Jine_{#orderid#}" value="{#totaljine#}">
+													<input type="hidden" id="Tjine_{#orderid#}" value="{#tjine#}">
+													<input type="hidden" id="Items_{#orderid#}" value="{#kk#}">
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<section id="return">
+								<div class="return-con" style="display:none">
+									<div class="return-notice">
+										<div class="state-base rema-col">
+											<div class="rema-col order-item-icon">
+												<div class="icon-block">
+													<div class=" "></div>
+												</div>
+											</div>
+											<div class="rema-col order-item-title  font-w-l">退貨須知</div>
+										</div>
+										<div class="return-notice-block rema-col">
+											<div class="font-s">我們會請快遞到府收取您的退貨。</div>
+											<div class="font-s m-b-20">※請務必確認好以下須知後進行退貨</div>
+											<div class="font-s">吊牌與包裝盒必須完整、吊牌勿剪。</div>
+											<div class="font-s">產品沒有使用與洗滌過。</div>
+											<div class="font-s">若收到貨品時有紙箱包裝，快遞取件時請將產品放入〝原紙箱包裝〞，請勿將單一產品交給快遞，會造成產品原包裝損壞。</div>
+											<div class="font-s">若收到貨品時為快遞袋包裝，取件時請將產品依原快遞袋包裝封口，若原快遞袋已破損，請向取件人員索取快遞包裝袋，請勿將單一產品交給快遞，會造成產品損壞。</div>
+											<div class="font-s m-b-20">如未依照規定寄回造成產品損壞，將會依損壞程度請求賠償。</div>
+											<div class="font-s">退還的款項將會匯入您的線上帳戶中，您可以在會員帳戶點選〝申請退款〞將款項退至您的銀行帳戶。</div>
+											<div class="buy-bn-con">
+												<button class="shop-bn return-apply-bn">確定申請退貨</button>
+											</div>
+											<div class="m-b-40"></div>
+										</div>
+									</div>
+									<div class="return"   style="display:none">
+									<form action="" method="post" id="sendtuiform_{#orderid#}">
+		                                <input type="hidden" name="orderid" value="{#orderid#}" />
+		                                <input type="hidden" name="act" value="itemtui" />
+										<div class="state-base rema-col">
+											<div class="rema-col order-item-icon">
+												<div class="icon-block">
+													<div class=" "></div>
+												</div>
+											</div>
+											<div class="rema-col order-item-title   font-w-l">申請退貨</div>
+											<!--<div class="rema-col font-s order-item-sup-title">請選擇欲退貨之商品</div>-->
+										</div>
+										<div class="return-product-con" >
+											<div class="product-detail rema-col l8 m12">
+												<div class="order-detail-block">
+													<div class="rema-col  product-item-list">
+														<div class="rema-col l1 font-s height"></div>
+														<div class="rema-col l2 font-s">商品</div>
+														<div class="rema-col l3 font-s">名稱</div>
+														<div class="rema-col l6 text-align-center">
+															<div class="rema-col l3 font-s">顏色</div>
+															<div class="rema-col l3 font-s">尺寸</div>
+															<div class="rema-col l3 font-s">件數</div>
+															<div class="rema-col l3 font-s">金額</div>
+														</div>
+													</div>
+													{#itemtuilist#}
+													
+												</div>
+											</div>
+											<div class="price-count rema-col l4 m12">
+												<div class="price-count-con">
+													<div class="return-reashon-title">要退還本商品的原因是什麼？</div>
+													<div class="rema-col reason-box">
+														<div class="rema-col l6 m12 mobile-reason-con">
+															<div class="return-reashon-title mobile-reason-item">
+																<label class="checkbox-container">
+																  <input type="checkbox" name="tuinote[]" value="與照片不符">
+																  <span class="checkmark  checkbox-checkmark"></span>
+																</label>
+																<div class="checkbox-item">與照片不符</div>
+															</div>
+															<div class="return-reashon-title mobile-reason-item">
+																<label class="checkbox-container">
+																  <input type="checkbox" name="tuinote[]" value="商品寄錯">
+																  <span class="checkmark  checkbox-checkmark"></span>
+																</label>
+																<div class="checkbox-item">商品寄錯</div>
+															</div>
+															<div class="return-reashon-title mobile-reason-item">
+																<label class="checkbox-container">
+																  <input type="checkbox" name="tuinote[]" value="瑕疵">
+																  <span class="checkmark  checkbox-checkmark"></span>
+																</label>
+																<div class="checkbox-item">瑕疵</div>
+															</div>
+														</div>
+														<div class="rema-col l6 m12 mobile-reason-con">
+															<div class="return-reashon-title mobile-reason-item">
+																<label class="checkbox-container">
+																  <input type="checkbox" name="tuinote[]" value="不如預期">
+																  <span class="checkmark  checkbox-checkmark"></span>
+																</label>
+																<div class="checkbox-item">不如預期</div>
+															</div>
+															<div class="return-reashon-title mobile-reason-item">
+																<label class="checkbox-container">
+																  <input type="checkbox" name="tuinote[]" value="太大">
+																  <span class="checkmark  checkbox-checkmark"></span>
+																</label>
+																<div class="checkbox-item">太大</div>
+															</div>
+															<div class="return-reashon-title mobile-reason-item">
+																<label class="checkbox-container">
+																  <input type="checkbox" name="tuinote[]" value="太小">
+																  <span class="checkmark  checkbox-checkmark"></span>
+																</label>
+																<div class="checkbox-item">太小</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="return-address">
+												<div class="rema-col">
+													<div class="return-address-con rema-col">
+														<div class="rema-col l6">取件地址</div>
+														<div class="mobile-none">
+															<div class="rema-col l6 return-item-list">
+																<div class="rema-col l3 align-center">聯絡人</div>
+																<div class="rema-col l3 align-center">聯絡號碼</div>
+																<div class="rema-col l3 align-center">修改</div>
+															</div>
+														</div>
+														<div class="rema-col return-address-item-con">
+															<div class="rema-col l6 xs12 return-address-item return-address-order-1">
+																<div class="font-s">{#s_addr_a#}</div>
+																<div class="font-s"></div>
+																<div class="font-s">{#s_addr_b#}</div>
+															</div>
+															<div class="rema-col l6 xs12 return-address-order-2">
+																<div class="rema-col l3 xs3 align-center mobile-align">{#s_name#}</div>
+																<div class="rema-col l3 xs7 align-center mobile-align">{#s_mobi#}</div>
+																<div class="rema-col l3 xs2">
+																	<div class="icon-block">
+																		<a class="icon icon-edit return-address-bn" target="_blank" href="mailto:service@rema-sports.com?subject=我的訂單[{#OrderNo#}]想要申請退貨"></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="buy-bn-con rema-col">
+															<button type="button" id="for_{#orderid#}" class="shop-bn return-submit sendtui">申請完成</button>
+														</div>
+													</div>
+													<div class="m-b-40 rema-col"></div>
+												</div>
+												<div>
+												</div>
+											</div>
+										</div>
+                    					</form>
+									</div>
+								</div>
+								<div class="order-state state-con product-deteail-con" style="display:none" id="hide_{#orderid#}"> 
+									<div class="state-base rema-col">
+										<div class="rema-col order-item-icon">
+											<div class="icon-block">
+												<div class="icon icon-plus"></div>
+											</div>
+										</div>
+										<div class="rema-col order-item-title  font-w-l">商品明細</div>
+									</div>
+									
+								</div>
+							</section>
+						</div>
+					</div>
+					<script>
+						$("#hide_{#orderid#}").html( $("#show_{#orderid#}").html() );
+					</script>
+<!-list->
+
+<!-m0->
+	<a href="orderpay.php?orderid={#orderid#}" class="shop-bn">重新線上刷卡</a>
+<!-m0->
+
+<!-m1->
+											<div class="icon-block" style="cursor: pointer;">
+												<div id="delete_{#orderid#}" class="delchk icon icon-close order-close"></div>
+											</div>
+<!-m1->
+
+<!-m2->
+												<div class="product-item">
+													<div class="product-item-con">
+														<div class="rema-col l2 xs5 ">
+															<img class="detail-product-img" src="{#srcs#}">
+														</div>
+														<div class="name-con rema-col l3 xs7">
+															<div class="product-detail-word">
+																<div class="font-s">{#goods#}</div>
+																<div class="font-s font-m-xs">{#bn#}</div>
+															</div>
+														</div>
+														<div class="rema-col l7 xs7  product-tetail-block">
+															<div class="rema-col l3 font-s">
+																<div class="product-detail-word detail-align-center">
+																	<div class="font-s font-m-xs">{#colorname#}</div>
+																</div>
+															</div>
+															<div class="rema-col l3 font-s font-m-xs">
+																<div class="product-detail-word detail-align-center">
+																	<div class="font-s font-m-xs">{#size#}</div>
+																</div>
+															</div>
+															<div class="rema-col l3 font-s font-m-xs">
+																<div class="product-detail-word detail-align-center">
+																	<div class="font-s font-m-xs">{#nums#}</div>
+																</div>
+															</div>
+															<div class="rema-col l3 xs12 font-s font-m-xs">
+																<div class="product-detail-word detail-align-center mobile-detail-price">
+																	<div class="font-s">{#pricesymbol#} {#jine#}</div>
+																	<div class="font-s" style="color: red; display:{#showtuistr#};">退貨中</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+<!-m2->
+
+
+
+<!-m3->
+
+													<div class="product-item">
+														<div class="product-item-con">
+															<div class="rema-col l1 xs1 font-s  return-tetail-con">
+																<div class="product-detail-word  detail-align-center">
+																	<label class="checkbox-container">
+																	  <input type="checkbox" name="tuilist[]" value="{#itemid#}">
+																	  <span class="checkmark checkbox-checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="rema-col l2 xs3 return-tetail-con-height">
+																<img class="detail-product-img" src="{#srcs#}">
+															</div>
+															<div class="name-con rema-col l3 xs8 return-tetail-con">
+																<div class="product-detail-word">
+																	<div class="font-s">{#goods#}</div>
+																	<div class="font-s font-m-xs">{#bn#}</div>
+																</div>
+															</div>
+															<div class="rema-col l6 xs8 return-tetail-block">
+																<div class="rema-col l3 xs3 font-s return-tetail-con">
+																	<div class="product-detail-word detail-align-center">
+																		<div class="font-s font-m-xs">{#colorname#}</div>
+																	</div>
+																</div>
+																<div class="rema-col l3 xs2 font-s return-tetail-con">
+																	<div class="product-detail-word detail-align-center">
+																		<div class="font-s font-m-xs">{#size#}</div>
+																	</div>
+																</div>
+																<div class="rema-col l3 xs3 font-s return-tetail-con">
+																	<div class="product-detail-word detail-align-center">
+																		<div class="font-s font-m-xs">{#nums#}</div>
+																	</div>
+																</div>
+																<div class="rema-col l3 xs4 font-s return-tetail-con">
+																	<div class="product-detail-word detail-align-center">
+																		<div class="font-s">{#pricesymbol#} {#jine#}</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+<!-m3->
+
+<!-menu->
+									<div class="invoice-word-con invoice-detail">
+										<div>{#goods#}</div>
+										<div>*{#nums#} |</div>
+										<div>{#jine#}</div>
+									</div>
+<!-menu->
+
+<!-end->
+				</div>
+<!-end->

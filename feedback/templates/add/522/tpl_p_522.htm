@@ -1,0 +1,47 @@
+<!-start->
+<script language="javascript" src="{#CP#}js/feedback.js"></script>
+
+<!--h3>{#groupname#}</h3>
+<h4>{#intro#}</h4-->
+               <!--hr class="vertical-space1"-->
+               <div class="contact-form">
+                  <form id="feedbacksmallform" method="post" action="" name="myform" >
+<!-start->
+
+<!-input->
+<input name="{#fieldname#}" type="text" class="name"  onClick="this.select()" value="{#fieldvalue#}" placeholder="{#title#}{#mustfill#} : " onfocus="this.placeholder = ''" onBlur="this.placeholder = '{#mustfill#}{#title#} :'">
+<!-input->
+
+<!-textarea->
+<textarea name="{#fieldname#}"  class="comments" onClick="this.select()" value="{#fieldvalue#}"
+                    placeholder="{#title#}{#mustfill#} : " onFocus="this.placeholder = ''" onBlur="this.placeholder = '{#mustfill#}{#title#} :'"></textarea>
+<!-textarea->
+
+<!-list->
+<select name="{#fieldname#}" class="textbox1"  />
+	{#list#}
+</select>
+<!-list->
+
+<!-end->
+        <input type='hidden' name='act' value='formsend'>
+        <input name='groupid' type='hidden' id="groupid" value='{#groupid#}'>
+
+        	<div class="alert alert-warning" id="message2" style="display:none;"></div>
+
+<div class="col2-left">	      
+									<div class="form-tip sp-top20">
+										<i class="fa fa-info-circle"></i> 標註星號 *為必填項目
+									</div>
+								</div>
+        <button type="submit"  class="btn-border-black btn-size-2" style="float:right;">送出留言</button>          										           											
+                     
+                  </form>
+               </div>
+<!-end->
+
+
+                     <input type="text" placeholder="Name" name="txtName" id="txtName">
+                     <input type="email" placeholder="Email" name="txtEmail" id="txtEmail">
+                     <input type="text" placeholder="Subject" name="txtSubject" id="txtSubject">
+                     <textarea placeholder="Message" cols="40" rows="10" name="txtText" id="txtText"></textarea>

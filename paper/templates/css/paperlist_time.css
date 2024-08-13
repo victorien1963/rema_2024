@@ -1,0 +1,31 @@
+/* ============΄ՂP᭽============= */
+
+ul.paperlist_time{
+margin:0px;
+padding:0px;
+}
+
+li.paperlist_time {
+margin:0;
+padding-left:16px;
+list-style-type: none;
+background: transparent url(../images/li.gif) left no-repeat;
+}
+
+li.paperlist_time .time{
+float:right;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+color:#999;
+}
+
+a.paperlist_time:link,a.paperlist_time:visited,a.paperlist_time:active{
+color:#505050;
+text-decoration: none;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+}
+
+a.paperlist_time:hover{
+color:#ff0000;
+text-decoration: underline;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+}

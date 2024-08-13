@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{#pagetitle#} {#sitename#}</title>
+    <meta name="description" content="{#metacon#}">
+    <meta name="Keywords" content="{#metakey#}">
+	{#metaimage#}
+	{#addmeta#}
+	{#addscript#}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{#TM#}css/owl.carousel.css">
+    <link rel="stylesheet" href="{#TM#}css/owl.theme.default.css">
+	<link rel="stylesheet" href="{#TM#}css/HeaderAndFoot.css">
+	<link rel="stylesheet" href="{#TM#}css/InputStyle.css">
+	<link rel="stylesheet" href="{#TM#}css/PopupWindow.css?3">
+	<link rel="stylesheet" href="{#TM#}css/Checkout.css?2">
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	<script src="{#TM#}js/jquery.min.js"></script>
+    <script src="{#TM#}js/owl.carousel.js"></script>
+	<script src="{#TM#}js/HeaderAndFoot.js"></script>
+	<script src="{#TM#}js/MemberFilter.js"></script>
+	<script src="{#TM#}js/InputStyle.js"></script>
+	<script src="{#TM#}js/popupwindow.js?5"></script>
+	<script src="{#TM#}js/Checkout.js"></script>
+    <!-- wayhunt -->
+	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
+	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
+	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
+<!-reload-!>
+</head>
+
+<body>
+	<section id="header" class="rema-col l12">
+		<!--跑馬燈部分-->
+		<div class="marquee">
+			<div class="mx-width">
+				<!-- 跑馬燈 -->
+				<div class="owl-carousel owl-theme marquee-con mx-width">
+					{#MARQUEE#}
+				</div>
+				<!-- END跑馬燈 -->
+			</div>
+		</div>
+		<!-- END跑馬燈部分-->
+		<!--頁首選單-->
+		<div class="head">
+			<div class="mx-width">
+				<!--回首頁按鈕-->
+				<div class="logo header-icon rema-col l2 s4 icon-con">
+					{#LOGO#}
+				</div>
+				<!--END回首頁按鈕-->
+				<!--主選單按鈕-->
+				<div class="nav rema-col l7 s12">
+					<div class="nav-con">
+						<!--手機板選單title-->
+						<div class="mobile-nav-title mobile-line">
+							<div class="mobile-top-title">
+								<div class="category-name"></div>
+
+							</div>
+							<div class="mobile-top"><a><span class="icon icon-close close-nav"></span></a></div>
+						</div>
+						<!--END手機板選單title-->
+
+						{#CHANNELMENU#}
+						
+					</div>
+				</div>
+				<div class="member-bar rema-col l2 s7">
+
+					<div class="member">
+						<div class=" header-icon member-ico rema-col l3 s3 icon-con nav-con-bn">
+							<a class="memberbn"><span class="icon icon-user"></span></a>
+							<a class="menubn"><span class="icon icon-menu"></span></a>
+						</div>
+					</div>
+					
+					<div class="cart">
+
+						<div class="header-icon dropdown-nav rema-col l3 s3 icon-con nav-con-bn">
+	
+							{#SMALLCART#}
+	
+						</div>
+	
+					</div>
+
+					<div class="search">
+						<div class=" header-icon rema-col l3 s3 icon-con  nav-con-bn">
+							<a><span class="icon icon-search-light"></span></a>
+						</div>
+						<div class=" header-icon rema-col l3 s3 icon-con  nav-con-bn">
+							<a id="username"></a>
+						</div>
+						<div class="dropdown">
+							<div class="dropdown-con">
+								<div class="search-form">
+									{#SHOPSEARCH#}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="rema-col l1 " style="height: 1px;"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section  id="content">
+		<div class="top-space rema-col"></div>
+		{#STARTORDER#}
+
+		
+		
+
+		
+		
+		
+		
+	</section>
+	<section id="popupwindow-in">		
+	</section>
+	<!--頁尾-->
+	<section id="footer">
+		<div class="foot-con">
+			<div class="email rema-col l12">
+				<div class="email-con rema-col s12">
+					<div class="rema-col l2 s5 email-word">
+						<select name="order" id="paperorder">
+							<option value="1">Subscribe</option>
+							<option value="0">Unsubscribe</option>
+						</select>
+					</div>
+
+					{#ORDERPAPER#}
+
+
+				</div>
+			</div>
+			<div class="bottom-info rema-col l12">
+				<div class="footer-info">
+					<div class="contact footer-box">
+						<div class="footer-title">Contact Us</div>
+						<div class="footer-con">
+							{#聯絡我們#}
+						</div>
+					</div>
+					<div class="location footer-box">
+						<div class="footer-title">Change Country</div>
+						<div class="location-con footer-con">
+							<div class="country-select-bn">
+
+								<div  class="location-item" id="lantype">台灣 NT$</div>
+
+								<div id="SelectCountry" style="display:none;">
+
+									{#LANTYPE#}
+
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="service footer-box">
+						<div class="footer-title">Customer Care</div>
+						<div class="service-con footer-con">
+
+							{#BTMENUTWO#}
+
+						</div>
+					</div>
+					<div class="service footer-box mobile-hidden">
+						<div class="footer-title">Follow REMA</div>
+						<div class="service-con footer-con">
+
+							{#VMENU#}
+
+						</div>
+					</div>
+					<div class="follow footer-box pc-disable">
+						<div class="footer-title pc-disable">Follow REMA</div>
+						<div class="follow-con footer-con">
+
+							{#VMENU#}
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="copyright">
+			{#BTINFO#}
+		</div>
+	</section>
+	{#addbtscript#}
+</body>
+</html>

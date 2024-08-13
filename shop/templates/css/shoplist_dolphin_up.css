@@ -1,0 +1,52 @@
+/* ============产品图片列表============== */
+div.shoplist_dolphin_up{
+border:0px #ebebeb solid;
+padding:0px 2px 0px 0px;
+margin:0px;
+overflow: hidden; 
+width:506px;
+height:194px;
+position:relative;
+}
+
+div.shoplist_dolphin_up div.shopborder{
+list-style-type: none;
+float:left;
+margin:0px 5px 0px 0px;
+}
+
+div.shoplist_dolphin_up div.fang{
+background:url(../images/pbg.jpg) 0 0 no-repeat;
+padding:22px 12px 23px 8px;
+margin:0px 0px 6px 0px;
+text-align:left;
+}
+
+div.shoplist_dolphin_up div.picFit{
+overflow: hidden;
+}
+
+div.shoplist_dolphin_up a.prodtitle:link,div.shoplist_dolphin_up a.prodtitle:visited,div.shoplist_dolphin_up a.prodtitle:active{
+display:block;
+color:#000;
+font:12px/25px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+text-align:left;
+padding-left:5px;
+}
+
+div.shoplist_dolphin_up a.prodtitle:hover{
+display:block;
+color:#ff0000;
+text-decoration: underline;
+font:12px/25px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.shoplist_dolphin_up span.price{
+display:block;
+text-align:left;
+color:#c30027;
+font:bold 12px/16px Verdana, Arial, Helvetica, sans-serif;
+margin-bottom:10px;
+padding-left:5px;
+}

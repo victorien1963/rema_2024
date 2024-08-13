@@ -1,0 +1,1421 @@
+<!-start->
+<!--545-->
+ <link type="text/css" rel="stylesheet" href="{#RP#}base/files/Brusco/WebComponents/ShoppingCart.css"/>
+<link type="text/css" rel="stylesheet" href="{#RP#}base/files/Brusco/WebComponents/ShoppingInfo.css"/>
+<link type="text/css" rel="stylesheet" href="{#RP#}base/files/Brusco/WebComponents/SelectButton_78x24/SelectButton.css"/>
+<link type="text/css" rel="stylesheet" href="{#MYCSS#}info.css"/>
+<script type="text/javascript" src="{#MYCSS#}info.js"></script>
+<script type="text/javascript" src="{#RP#}base/files/Brusco/WebComponents/BG_FullScr_Brusco_InnerPage950px_SelectButton.js"></script>
+<script src="{#RP#}base/files/Brusco/WebComponents/SelectButton_78x24/SelectButton.js"></script>
+<script type=text/javascript src="{#CP#}js/startorder.js?555187"></script>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom" class="b_bg" block_type="bg">
+<form id="OrderForm" method="post" action="">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk1_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}member/index.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/cart.php">&nbsp;</a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk1_custom_blk3_custom" class="b_literal" block_type="literal">
+<a href="{#RP#}shop/order.php">&nbsp;</a>
+</div>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Title_ShoppingCardProduct_300dpi_111x15.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk1_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Description_300dpi_154x28.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_PaymentMethod_300dpi_174x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk3_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_OrderInfo_Active_300dpi_182x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk4_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Symbol_Finish_300dpi_176x48.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk3_custom_blk5_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Title_ShoppingProducts_300dpi_66x16.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+</div>
+</div>
+<!-start->
+<!-m0->
+<!-m0->
+<!-list->
+<!-list->
+<!-m1->
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk4_custom" class="b_literal" block_type="literal">
+<p>購物車商品總金額</p>
+<img src="{#RP#}base/files/Brusco/WebComponents/Products/NT_300dpi_33x19.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,"/>
+<h2>{#showtjine#}</h2>
+</div>
+<!-m1->
+<!-m2->
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_s" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk1_custom" class="b_literal" block_type="literal">
+<input type="text" name="name" id="name" style="width:158px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk2_custom" class="b_literal" block_type="literal">
+<input type="radio" name="Gender" id="gender_a" value="1" class="Gender" />
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk3_custom" class="b_literal" block_type="literal">
+<input type="radio" name="Gender" id="gender_b" value="2" class="Gender" />
+</div>
+<input type="hidden" id="gender" value=""/>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk4_custom" class="b_literal" block_type="literal">
+<input type="text" name="mobi" id="mobi" style="width:158px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk5_custom" class="b_literal" block_type="literal">
+<div id="SelectStyle" style="display:none;">
+  <select name="postcode" id="postcode">
+    <option value="0" selected="selected">郵遞區號</option>
+    <option value="100">100</option>
+    <option value="103">103</option>
+    <option value="104">104</option>
+    <option value="105">105</option>
+    <option value="106">106</option>
+    <option value="108">108</option>
+    <option value="110">110</option>
+    <option value="111">111</option>
+    <option value="112">112</option>
+    <option value="114">114</option>
+    <option value="115">115</option>
+    <option value="116">116</option>
+    <option value="200">200</option>
+    <option value="201">201</option>
+    <option value="202">202</option>
+    <option value="203">203</option>
+    <option value="204">204</option>
+    <option value="205">205</option>
+    <option value="206">206</option>
+    <option value="207">207</option>
+    <option value="208">208</option>
+    <option value="209">209</option>
+    <option value="210">210</option>
+    <option value="211">211</option>
+    <option value="212">212</option>
+    <option value="220">220</option>
+    <option value="221">221</option>
+    <option value="222">222</option>
+    <option value="223">223</option>
+    <option value="224">224</option>
+    <option value="225">225</option>
+    <option value="226">226</option>
+    <option value="227">227</option>
+    <option value="228">228</option>
+    <option value="231">231</option>
+    <option value="232">232</option>
+    <option value="233">233</option>
+    <option value="234">234</option>
+    <option value="235">235</option>
+    <option value="236">236</option>
+    <option value="237">237</option>
+    <option value="238">238</option>
+    <option value="239">239</option>
+    <option value="241">241</option>
+    <option value="242">242</option>
+    <option value="243">243</option>
+    <option value="244">244</option>
+    <option value="247">247</option>
+    <option value="248">248</option>
+    <option value="249">249</option>
+    <option value="251">251</option>
+    <option value="252">252</option>
+    <option value="253">253</option>
+    <option value="260">260</option>
+    <option value="261">261</option>
+    <option value="262">262</option>
+    <option value="263">263</option>
+    <option value="264">264</option>
+    <option value="265">265</option>
+    <option value="266">266</option>
+    <option value="267">267</option>
+    <option value="268">268</option>
+    <option value="269">269</option>
+    <option value="270">270</option>
+    <option value="272">272</option>
+    <option value="290">290</option>
+    <option value="300">300</option>
+    <option value="302">302</option>
+    <option value="303">303</option>
+    <option value="304">304</option>
+    <option value="305">305</option>
+    <option value="306">306</option>
+    <option value="307">307</option>
+    <option value="308">308</option>
+    <option value="310">310</option>
+    <option value="311">311</option>
+    <option value="312">312</option>
+    <option value="313">313</option>
+    <option value="314">314</option>
+    <option value="315">315</option>
+    <option value="320">320</option>
+    <option value="324">324</option>
+    <option value="325">325</option>
+    <option value="326">326</option>
+    <option value="327">327</option>
+    <option value="328">328</option>
+    <option value="330">330</option>
+    <option value="333">333</option>
+    <option value="334">334</option>
+    <option value="335">335</option>
+    <option value="336">336</option>
+    <option value="337">337</option>
+    <option value="338">338</option>
+    <option value="350">350</option>
+    <option value="351">351</option>
+    <option value="352">352</option>
+    <option value="353">353</option>
+    <option value="354">354</option>
+    <option value="355">355</option>
+    <option value="356">356</option>
+    <option value="357">357</option>
+    <option value="358">358</option>
+    <option value="360">360</option>
+    <option value="361">361</option>
+    <option value="362">362</option>
+    <option value="363">363</option>
+    <option value="364">364</option>
+    <option value="365">365</option>
+    <option value="366">366</option>
+    <option value="367">367</option>
+    <option value="368">368</option>
+    <option value="369">369</option>
+    <option value="400">400</option>
+    <option value="401">401</option>
+    <option value="402">402</option>
+    <option value="403">403</option>
+    <option value="404">404</option>
+    <option value="406">406</option>
+    <option value="407">407</option>
+    <option value="408">408</option>
+    <option value="411">411</option>
+    <option value="412">412</option>
+    <option value="413">413</option>
+    <option value="414">414</option>
+    <option value="420">420</option>
+    <option value="421">421</option>
+    <option value="422">422</option>
+    <option value="423">423</option>
+    <option value="424">424</option>
+    <option value="426">426</option>
+    <option value="427">427</option>
+    <option value="428">428</option>
+    <option value="429">429</option>
+    <option value="432">432</option>
+    <option value="433">433</option>
+    <option value="434">434</option>
+    <option value="435">435</option>
+    <option value="436">436</option>
+    <option value="437">437</option>
+    <option value="438">438</option>
+    <option value="439">439</option>
+    <option value="500">500</option>
+    <option value="502">502</option>
+    <option value="503">503</option>
+    <option value="504">504</option>
+    <option value="505">505</option>
+    <option value="506">506</option>
+    <option value="507">507</option>
+    <option value="508">508</option>
+    <option value="509">509</option>
+    <option value="510">510</option>
+    <option value="511">511</option>
+    <option value="512">512</option>
+    <option value="513">513</option>
+    <option value="514">514</option>
+    <option value="515">515</option>
+    <option value="516">516</option>
+    <option value="520">520</option>
+    <option value="521">521</option>
+    <option value="522">522</option>
+    <option value="523">523</option>
+    <option value="524">524</option>
+    <option value="525">525</option>
+    <option value="526">526</option>
+    <option value="527">527</option>
+    <option value="528">528</option>
+    <option value="530">530</option>
+    <option value="540">540</option>
+    <option value="541">541</option>
+    <option value="542">542</option>
+    <option value="544">544</option>
+    <option value="545">545</option>
+    <option value="546">546</option>
+    <option value="551">551</option>
+    <option value="552">552</option>
+    <option value="553">553</option>
+    <option value="555">555</option>
+    <option value="556">556</option>
+    <option value="557">557</option>
+    <option value="558">558</option>
+    <option value="600">600</option>
+    <option value="602">602</option>
+    <option value="603">603</option>
+    <option value="604">604</option>
+    <option value="605">605</option>
+    <option value="606">606</option>
+    <option value="607">607</option>
+    <option value="608">608</option>
+    <option value="611">611</option>
+    <option value="612">612</option>
+    <option value="613">613</option>
+    <option value="614">614</option>
+    <option value="615">615</option>
+    <option value="616">616</option>
+    <option value="621">621</option>
+    <option value="622">622</option>
+    <option value="623">623</option>
+    <option value="624">624</option>
+    <option value="625">625</option>
+    <option value="630">630</option>
+    <option value="631">631</option>
+    <option value="632">632</option>
+    <option value="633">633</option>
+    <option value="634">634</option>
+    <option value="635">635</option>
+    <option value="636">636</option>
+    <option value="637">637</option>
+    <option value="638">638</option>
+    <option value="640">640</option>
+    <option value="643">643</option>
+    <option value="646">646</option>
+    <option value="647">647</option>
+    <option value="648">648</option>
+    <option value="649">649</option>
+    <option value="651">651</option>
+    <option value="652">652</option>
+    <option value="653">653</option>
+    <option value="654">654</option>
+    <option value="655">655</option>
+    <option value="700">700</option>
+    <option value="701">701</option>
+    <option value="702">702</option>
+    <option value="704">704</option>
+    <option value="708">708</option>
+    <option value="709">709</option>
+    <option value="710">710</option>
+    <option value="711">711</option>
+    <option value="712">712</option>
+    <option value="713">713</option>
+    <option value="714">714</option>
+    <option value="715">715</option>
+    <option value="716">716</option>
+    <option value="717">717</option>
+    <option value="718">718</option>
+    <option value="719">719</option>
+    <option value="720">720</option>
+    <option value="721">721</option>
+    <option value="722">722</option>
+    <option value="723">723</option>
+    <option value="724">724</option>
+    <option value="725">725</option>
+    <option value="726">726</option>
+    <option value="727">727</option>
+    <option value="730">730</option>
+    <option value="731">731</option>
+    <option value="732">732</option>
+    <option value="733">733</option>
+    <option value="734">734</option>
+    <option value="735">735</option>
+    <option value="736">736</option>
+    <option value="737">737</option>
+    <option value="741">741</option>
+    <option value="742">742</option>
+    <option value="743">743</option>
+    <option value="744">744</option>
+    <option value="745">745</option>
+    <option value="800">800</option>
+    <option value="801">801</option>
+    <option value="802">802</option>
+    <option value="803">803</option>
+    <option value="804">804</option>
+    <option value="805">805</option>
+    <option value="806">806</option>
+    <option value="807">807</option>
+    <option value="811">811</option>
+    <option value="812">812</option>
+    <option value="813">813</option>
+    <option value="814">814</option>
+    <option value="815">815</option>
+    <option value="817">817</option>
+    <option value="819">819</option>
+    <option value="820">820</option>
+    <option value="821">821</option>
+    <option value="822">822</option>
+    <option value="823">823</option>
+    <option value="824">824</option>
+    <option value="825">825</option>
+    <option value="826">826</option>
+    <option value="827">827</option>
+    <option value="828">828</option>
+    <option value="829">829</option>
+    <option value="830">830</option>
+    <option value="831">831</option>
+    <option value="832">832</option>
+    <option value="833">833</option>
+    <option value="840">840</option>
+    <option value="842">842</option>
+    <option value="843">843</option>
+    <option value="844">844</option>
+    <option value="845">845</option>
+    <option value="846">846</option>
+    <option value="847">847</option>
+    <option value="848">848</option>
+    <option value="849">849</option>
+    <option value="851">851</option>
+    <option value="852">852</option>
+    <option value="880">880</option>
+    <option value="881">881</option>
+    <option value="882">882</option>
+    <option value="883">883</option>
+    <option value="884">884</option>
+    <option value="885">885</option>
+    <option value="890">890</option>
+    <option value="891">891</option>
+    <option value="892">892</option>
+    <option value="893">893</option>
+    <option value="894">894</option>
+    <option value="896">896</option>
+    <option value="900">900</option>
+    <option value="901">901</option>
+    <option value="902">902</option>
+    <option value="903">903</option>
+    <option value="904">904</option>
+    <option value="905">905</option>
+    <option value="906">906</option>
+    <option value="907">907</option>
+    <option value="908">908</option>
+    <option value="909">909</option>
+    <option value="911">911</option>
+    <option value="912">912</option>
+    <option value="913">913</option>
+    <option value="920">920</option>
+    <option value="921">921</option>
+    <option value="922">922</option>
+    <option value="923">923</option>
+    <option value="924">924</option>
+    <option value="925">925</option>
+    <option value="926">926</option>
+    <option value="927">927</option>
+    <option value="928">928</option>
+    <option value="929">929</option>
+    <option value="931">931</option>
+    <option value="932">932</option>
+    <option value="940">940</option>
+    <option value="941">941</option>
+    <option value="942">942</option>
+    <option value="943">943</option>
+    <option value="944">944</option>
+    <option value="945">945</option>
+    <option value="946">946</option>
+    <option value="947">947</option>
+    <option value="950">950</option>
+    <option value="951">951</option>
+    <option value="952">952</option>
+    <option value="953">953</option>
+    <option value="954">954</option>
+    <option value="955">955</option>
+    <option value="956">956</option>
+    <option value="957">957</option>
+    <option value="958">958</option>
+    <option value="959">959</option>
+    <option value="961">961</option>
+    <option value="962">962</option>
+    <option value="963">963</option>
+    <option value="964">964</option>
+    <option value="965">965</option>
+    <option value="966">966</option>
+    <option value="970">970</option>
+    <option value="971">971</option>
+    <option value="972">972</option>
+    <option value="973">973</option>
+    <option value="974">974</option>
+    <option value="975">975</option>
+    <option value="976">976</option>
+    <option value="977">977</option>
+    <option value="978">978</option>
+    <option value="979">979</option>
+    <option value="981">981</option>
+    <option value="982">982</option>
+    <option value="983">983</option>
+  </select>
+</div></div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk5_custom_blk6_custom" class="b_literal" block_type="literal">
+<input type="text" name="addr" id="addr" style="width:229px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+</div>
+</div>
+<!--收貨人-->
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk1_custom" class="b_literal" block_type="literal">
+<input type="checkbox" id="loadorder" style="width:20px; height:20px; color:#cccccc;"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk2_custom" class="b_literal" block_type="literal">
+<input type="text" name="s_name" id="s_name" style="width:158px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk3_custom" class="b_literal" block_type="literal">
+<input type="radio" name="s_Gender" id="s_gender_a" value="1"/></div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk4_custom" class="b_literal" block_type="literal">
+<input type="radio" name="s_Gender" id="s_gender_b" value="2"/></div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk5_custom" class="b_literal" block_type="literal">
+<input type="text" name="s_mobi" id="s_mobi" style="width:158px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/></div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk6_custom" class="b_literal" block_type="literal">
+<div id="SelectStyle" style="display:none;">
+  <select name="s_postcode" id="s_postcode">
+    <option value="0" selected="selected">郵遞區號</option>
+    <option value="100">100</option>
+    <option value="103">103</option>
+    <option value="104">104</option>
+    <option value="105">105</option>
+    <option value="106">106</option>
+    <option value="108">108</option>
+    <option value="110">110</option>
+    <option value="111">111</option>
+    <option value="112">112</option>
+    <option value="114">114</option>
+    <option value="115">115</option>
+    <option value="116">116</option>
+    <option value="200">200</option>
+    <option value="201">201</option>
+    <option value="202">202</option>
+    <option value="203">203</option>
+    <option value="204">204</option>
+    <option value="205">205</option>
+    <option value="206">206</option>
+    <option value="207">207</option>
+    <option value="208">208</option>
+    <option value="209">209</option>
+    <option value="210">210</option>
+    <option value="211">211</option>
+    <option value="212">212</option>
+    <option value="220">220</option>
+    <option value="221">221</option>
+    <option value="222">222</option>
+    <option value="223">223</option>
+    <option value="224">224</option>
+    <option value="225">225</option>
+    <option value="226">226</option>
+    <option value="227">227</option>
+    <option value="228">228</option>
+    <option value="231">231</option>
+    <option value="232">232</option>
+    <option value="233">233</option>
+    <option value="234">234</option>
+    <option value="235">235</option>
+    <option value="236">236</option>
+    <option value="237">237</option>
+    <option value="238">238</option>
+    <option value="239">239</option>
+    <option value="241">241</option>
+    <option value="242">242</option>
+    <option value="243">243</option>
+    <option value="244">244</option>
+    <option value="247">247</option>
+    <option value="248">248</option>
+    <option value="249">249</option>
+    <option value="251">251</option>
+    <option value="252">252</option>
+    <option value="253">253</option>
+    <option value="260">260</option>
+    <option value="261">261</option>
+    <option value="262">262</option>
+    <option value="263">263</option>
+    <option value="264">264</option>
+    <option value="265">265</option>
+    <option value="266">266</option>
+    <option value="267">267</option>
+    <option value="268">268</option>
+    <option value="269">269</option>
+    <option value="270">270</option>
+    <option value="272">272</option>
+    <option value="290">290</option>
+    <option value="300">300</option>
+    <option value="302">302</option>
+    <option value="303">303</option>
+    <option value="304">304</option>
+    <option value="305">305</option>
+    <option value="306">306</option>
+    <option value="307">307</option>
+    <option value="308">308</option>
+    <option value="310">310</option>
+    <option value="311">311</option>
+    <option value="312">312</option>
+    <option value="313">313</option>
+    <option value="314">314</option>
+    <option value="315">315</option>
+    <option value="320">320</option>
+    <option value="324">324</option>
+    <option value="325">325</option>
+    <option value="326">326</option>
+    <option value="327">327</option>
+    <option value="328">328</option>
+    <option value="330">330</option>
+    <option value="333">333</option>
+    <option value="334">334</option>
+    <option value="335">335</option>
+    <option value="336">336</option>
+    <option value="337">337</option>
+    <option value="338">338</option>
+    <option value="350">350</option>
+    <option value="351">351</option>
+    <option value="352">352</option>
+    <option value="353">353</option>
+    <option value="354">354</option>
+    <option value="355">355</option>
+    <option value="356">356</option>
+    <option value="357">357</option>
+    <option value="358">358</option>
+    <option value="360">360</option>
+    <option value="361">361</option>
+    <option value="362">362</option>
+    <option value="363">363</option>
+    <option value="364">364</option>
+    <option value="365">365</option>
+    <option value="366">366</option>
+    <option value="367">367</option>
+    <option value="368">368</option>
+    <option value="369">369</option>
+    <option value="400">400</option>
+    <option value="401">401</option>
+    <option value="402">402</option>
+    <option value="403">403</option>
+    <option value="404">404</option>
+    <option value="406">406</option>
+    <option value="407">407</option>
+    <option value="408">408</option>
+    <option value="411">411</option>
+    <option value="412">412</option>
+    <option value="413">413</option>
+    <option value="414">414</option>
+    <option value="420">420</option>
+    <option value="421">421</option>
+    <option value="422">422</option>
+    <option value="423">423</option>
+    <option value="424">424</option>
+    <option value="426">426</option>
+    <option value="427">427</option>
+    <option value="428">428</option>
+    <option value="429">429</option>
+    <option value="432">432</option>
+    <option value="433">433</option>
+    <option value="434">434</option>
+    <option value="435">435</option>
+    <option value="436">436</option>
+    <option value="437">437</option>
+    <option value="438">438</option>
+    <option value="439">439</option>
+    <option value="500">500</option>
+    <option value="502">502</option>
+    <option value="503">503</option>
+    <option value="504">504</option>
+    <option value="505">505</option>
+    <option value="506">506</option>
+    <option value="507">507</option>
+    <option value="508">508</option>
+    <option value="509">509</option>
+    <option value="510">510</option>
+    <option value="511">511</option>
+    <option value="512">512</option>
+    <option value="513">513</option>
+    <option value="514">514</option>
+    <option value="515">515</option>
+    <option value="516">516</option>
+    <option value="520">520</option>
+    <option value="521">521</option>
+    <option value="522">522</option>
+    <option value="523">523</option>
+    <option value="524">524</option>
+    <option value="525">525</option>
+    <option value="526">526</option>
+    <option value="527">527</option>
+    <option value="528">528</option>
+    <option value="530">530</option>
+    <option value="540">540</option>
+    <option value="541">541</option>
+    <option value="542">542</option>
+    <option value="544">544</option>
+    <option value="545">545</option>
+    <option value="546">546</option>
+    <option value="551">551</option>
+    <option value="552">552</option>
+    <option value="553">553</option>
+    <option value="555">555</option>
+    <option value="556">556</option>
+    <option value="557">557</option>
+    <option value="558">558</option>
+    <option value="600">600</option>
+    <option value="602">602</option>
+    <option value="603">603</option>
+    <option value="604">604</option>
+    <option value="605">605</option>
+    <option value="606">606</option>
+    <option value="607">607</option>
+    <option value="608">608</option>
+    <option value="611">611</option>
+    <option value="612">612</option>
+    <option value="613">613</option>
+    <option value="614">614</option>
+    <option value="615">615</option>
+    <option value="616">616</option>
+    <option value="621">621</option>
+    <option value="622">622</option>
+    <option value="623">623</option>
+    <option value="624">624</option>
+    <option value="625">625</option>
+    <option value="630">630</option>
+    <option value="631">631</option>
+    <option value="632">632</option>
+    <option value="633">633</option>
+    <option value="634">634</option>
+    <option value="635">635</option>
+    <option value="636">636</option>
+    <option value="637">637</option>
+    <option value="638">638</option>
+    <option value="640">640</option>
+    <option value="643">643</option>
+    <option value="646">646</option>
+    <option value="647">647</option>
+    <option value="648">648</option>
+    <option value="649">649</option>
+    <option value="651">651</option>
+    <option value="652">652</option>
+    <option value="653">653</option>
+    <option value="654">654</option>
+    <option value="655">655</option>
+    <option value="700">700</option>
+    <option value="701">701</option>
+    <option value="702">702</option>
+    <option value="704">704</option>
+    <option value="708">708</option>
+    <option value="709">709</option>
+    <option value="710">710</option>
+    <option value="711">711</option>
+    <option value="712">712</option>
+    <option value="713">713</option>
+    <option value="714">714</option>
+    <option value="715">715</option>
+    <option value="716">716</option>
+    <option value="717">717</option>
+    <option value="718">718</option>
+    <option value="719">719</option>
+    <option value="720">720</option>
+    <option value="721">721</option>
+    <option value="722">722</option>
+    <option value="723">723</option>
+    <option value="724">724</option>
+    <option value="725">725</option>
+    <option value="726">726</option>
+    <option value="727">727</option>
+    <option value="730">730</option>
+    <option value="731">731</option>
+    <option value="732">732</option>
+    <option value="733">733</option>
+    <option value="734">734</option>
+    <option value="735">735</option>
+    <option value="736">736</option>
+    <option value="737">737</option>
+    <option value="741">741</option>
+    <option value="742">742</option>
+    <option value="743">743</option>
+    <option value="744">744</option>
+    <option value="745">745</option>
+    <option value="800">800</option>
+    <option value="801">801</option>
+    <option value="802">802</option>
+    <option value="803">803</option>
+    <option value="804">804</option>
+    <option value="805">805</option>
+    <option value="806">806</option>
+    <option value="807">807</option>
+    <option value="811">811</option>
+    <option value="812">812</option>
+    <option value="813">813</option>
+    <option value="814">814</option>
+    <option value="815">815</option>
+    <option value="817">817</option>
+    <option value="819">819</option>
+    <option value="820">820</option>
+    <option value="821">821</option>
+    <option value="822">822</option>
+    <option value="823">823</option>
+    <option value="824">824</option>
+    <option value="825">825</option>
+    <option value="826">826</option>
+    <option value="827">827</option>
+    <option value="828">828</option>
+    <option value="829">829</option>
+    <option value="830">830</option>
+    <option value="831">831</option>
+    <option value="832">832</option>
+    <option value="833">833</option>
+    <option value="840">840</option>
+    <option value="842">842</option>
+    <option value="843">843</option>
+    <option value="844">844</option>
+    <option value="845">845</option>
+    <option value="846">846</option>
+    <option value="847">847</option>
+    <option value="848">848</option>
+    <option value="849">849</option>
+    <option value="851">851</option>
+    <option value="852">852</option>
+    <option value="880">880</option>
+    <option value="881">881</option>
+    <option value="882">882</option>
+    <option value="883">883</option>
+    <option value="884">884</option>
+    <option value="885">885</option>
+    <option value="890">890</option>
+    <option value="891">891</option>
+    <option value="892">892</option>
+    <option value="893">893</option>
+    <option value="894">894</option>
+    <option value="896">896</option>
+    <option value="900">900</option>
+    <option value="901">901</option>
+    <option value="902">902</option>
+    <option value="903">903</option>
+    <option value="904">904</option>
+    <option value="905">905</option>
+    <option value="906">906</option>
+    <option value="907">907</option>
+    <option value="908">908</option>
+    <option value="909">909</option>
+    <option value="911">911</option>
+    <option value="912">912</option>
+    <option value="913">913</option>
+    <option value="920">920</option>
+    <option value="921">921</option>
+    <option value="922">922</option>
+    <option value="923">923</option>
+    <option value="924">924</option>
+    <option value="925">925</option>
+    <option value="926">926</option>
+    <option value="927">927</option>
+    <option value="928">928</option>
+    <option value="929">929</option>
+    <option value="931">931</option>
+    <option value="932">932</option>
+    <option value="940">940</option>
+    <option value="941">941</option>
+    <option value="942">942</option>
+    <option value="943">943</option>
+    <option value="944">944</option>
+    <option value="945">945</option>
+    <option value="946">946</option>
+    <option value="947">947</option>
+    <option value="950">950</option>
+    <option value="951">951</option>
+    <option value="952">952</option>
+    <option value="953">953</option>
+    <option value="954">954</option>
+    <option value="955">955</option>
+    <option value="956">956</option>
+    <option value="957">957</option>
+    <option value="958">958</option>
+    <option value="959">959</option>
+    <option value="961">961</option>
+    <option value="962">962</option>
+    <option value="963">963</option>
+    <option value="964">964</option>
+    <option value="965">965</option>
+    <option value="966">966</option>
+    <option value="970">970</option>
+    <option value="971">971</option>
+    <option value="972">972</option>
+    <option value="973">973</option>
+    <option value="974">974</option>
+    <option value="975">975</option>
+    <option value="976">976</option>
+    <option value="977">977</option>
+    <option value="978">978</option>
+    <option value="979">979</option>
+    <option value="981">981</option>
+    <option value="982">982</option>
+    <option value="983">983</option>
+  </select>
+</div></div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk6_custom_blk7_custom" class="b_literal" block_type="literal">
+<input type="text" name="s_addr" id="s_addr" style="width:229px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+</div>
+</div>
+<!--發票資訊-->
+<div id="receiptinfo">
+<!--捐贈發票-->
+<div class="relist" id="re01">
+    <input type="radio" name="receiptinfo" id="receipt_a" class="reradio" value="1" />
+    <div class="receipt_info" id="receipt_info_a">
+    	<div>
+				<div class="receipt_info_a">
+    			<input type="radio" name="receipt_info_first" id="receipt_a_a" class="reradio" value="1" checked />
+    			</div>
+				<div id="SelectStyleRe" class="resel">
+  					<select name="postpay" id="postpay">
+    				<option value="0">請選擇</option>
+                                                                    <option value="299299">世界聯合保護動物協會</option>
+                                                                        <option value="085">中華傳愛社區服務協會</option>
+                                                                        <option value="1314520">中華數位人文關懷協會</option>
+                                                                        <option value="795">中華日月門黃帝內經學會</option>
+                                                                        <option value="861108">中華民國康復之友聯盟</option>
+                                                                        <option value="9473">中華民國救世慈善協會</option>
+                                                                        <option value="9958">中華民國溪水旁關懷單親家庭協會</option>
+                                                                        <option value="888">中華民國無障礙科技發展協會</option>
+                                                                        <option value="8566550">中華民國發展遲緩兒童早期療育協會</option>
+                                                                        <option value="1207">中華民國紅十字會台灣省嘉義縣支會</option>
+                                                                        <option value="7777777">中華民國紅心字會</option>
+                                                                        <option value="999">中華民國老人福利推動聯盟</option>
+                                                                        <option value="330">中華民國聲暉聯合會</option>
+                                                                        <option value="885885">中華民國腦性麻痺協會</option>
+                                                                        <option value="621">中華民國運動神經元疾病病友協會</option>
+                                                                        <option value="875">中華民國關懷心臟病童協會</option>
+                                                                        <option value="1012833">中華民國關懷腦瘤兒童協會</option>
+                                                                        <option value="7505">中華社會福利聯合勸募協會</option>
+                                                                        <option value="1717">中華育幼機構兒童關懷協會</option>
+                                                                        <option value="6647">中華靈寶派道士會</option>
+                                                                        <option value="51688">佛教觀音線協會</option>
+                                                                        <option value="860713">保護動物協會</option>
+                                                                        <option value="5979066">內政部委託財團法人台灣省天主教會新竹教區辦理台灣省寧園安養院</option>
+                                                                        <option value="1234">公益慈善會</option>
+                                                                        <option value="777777">博愛菁莪愛心會</option>
+                                                                        <option value="1979322">台北市心生活協會</option>
+                                                                        <option value="168168">台灣兒童伊比力斯協會</option>
+                                                                        <option value="17885">台灣公益服務協會</option>
+                                                                        <option value="599">台灣動物不再流浪協會</option>
+                                                                        <option value="99365">台灣向日葵全人關懷協會</option>
+                                                                        <option value="288">台灣寶希望樹兒童協會</option>
+                                                                        <option value="329580">台灣少年權益與福利促進聯盟</option>
+                                                                        <option value="5218">台灣展翅協會</option>
+                                                                        <option value="54321">台灣排球運動協會</option>
+                                                                        <option value="456789">台灣環境保護聯盟</option>
+                                                                        <option value="230">台灣蠻野心足生態協會</option>
+                                                                        <option value="007">台灣障礙者就業服務協會</option>
+                                                                        <option value="1011">台灣青少年性別文教會</option>
+                                                                        <option value="195310">國立臺灣海洋大學</option>
+                                                                        <option value="700">城市之光關懷協會</option>
+                                                                        <option value="539">埔基醫療財團法人</option>
+                                                                        <option value="3369">基督教旌旗協會</option>
+                                                                        <option value="789">基督教都市標竿協會</option>
+                                                                        <option value="6256">山海屯脊髓損傷協會</option>
+                                                                        <option value="859480">希望社會服務協會</option>
+                                                                        <option value="7017885">康復之友協會</option>
+                                                                        <option value="1841">彩色頁女性願景協會</option>
+                                                                        <option value="520168">心智障礙關顧協會</option>
+                                                                        <option value="8880064">恆基醫療財團法人恆春基督教醫院</option>
+                                                                        <option value="6601">戴德森醫療財團法人嘉義基督教醫院</option>
+                                                                        <option value="95940">春陽協會</option>
+                                                                        <option value="1685">智障者家長協會</option>
+                                                                        <option value="1818">有限責任屏東縣幸福原住民照顧服務勞動合作社</option>
+                                                                        <option value="0829">柳春春劇社劇團</option>
+                                                                        <option value="5788">樂扶庇護工場</option>
+                                                                        <option value="3450">沐風關懷協會</option>
+                                                                        <option value="172">流浪貓保護協會</option>
+                                                                        <option value="2558">盲人福利協進會</option>
+                                                                        <option value="000">社團法人世界和平會</option>
+                                                                        <option value="620">社團法人中華人權協會</option>
+                                                                        <option value="818">社團法人中華光鹽愛盲協會</option>
+                                                                        <option value="708585">社團法人中華勵本志身心障礙者技藝創業協會</option>
+                                                                        <option value="725">社團法人中華基督奇蹟全人關懷協會</option>
+                                                                        <option value="51919">社團法人中華基督教救助協會</option>
+                                                                        <option value="51990">社團法人中華基督教福音協進會</option>
+                                                                        <option value="1360">社團法人中華基督教讚美宣教協會</option>
+                                                                        <option value="377168">社團法人中華好家庭關懷協會</option>
+                                                                        <option value="786">社團法人中華安得烈慈善協會</option>
+                                                                        <option value="9972">社團法人中華小腦萎縮症病友協會</option>
+                                                                        <option value="9195">社團法人中華樂扶社會服務協會</option>
+                                                                        <option value="7299">社團法人中華民國保護動物協會</option>
+                                                                        <option value="529529">社團法人中華民國動物福利環保協進會</option>
+                                                                        <option value="9888">社團法人中華民國台北效力志工團</option>
+                                                                        <option value="777">社團法人中華民國向陽關懷協會</option>
+                                                                        <option value="2656">社團法人中華民國喜願協會</option>
+                                                                        <option value="2080">社團法人中華民國多加幸福婚姻促進協會</option>
+                                                                        <option value="235757">社團法人中華民國婦幼關懷成長協會</option>
+                                                                        <option value="580097">社團法人中華民國家庭照顧者關懷總會</option>
+                                                                        <option value="428">社團法人中華民國工作傷害受害人協會</option>
+                                                                        <option value="520080">社團法人中華民國得勝者教育協會</option>
+                                                                        <option value="911">社團法人中華民國恩友愛心協會</option>
+                                                                        <option value="99999">社團法人中華民國愛滋感染者權益促進會</option>
+                                                                        <option value="899">社團法人中華民國星橋愛心服務協會</option>
+                                                                        <option value="5252">社團法人中華民國殘障聯盟</option>
+                                                                        <option value="980322">社團法人中華民國無犯罪促進會</option>
+                                                                        <option value="0520">社團法人中華民國白化症者關懷協會</option>
+                                                                        <option value="4518">社團法人中華民國紅十字會台灣省台中市支會</option>
+                                                                        <option value="5275">社團法人中華民國肌萎縮症病友協會</option>
+                                                                        <option value="6666">社團法人中華民國肯愛社會服務協會</option>
+                                                                        <option value="1577">社團法人中華民國自閉症總會</option>
+                                                                        <option value="8999">社團法人中華民國荒野保護協會</option>
+                                                                        <option value="5680">社團法人中華萱民會</option>
+                                                                        <option value="3399">社團法人中華青少年純潔運動協會</option>
+                                                                        <option value="2358482">社團法人南投縣麻煩小天使協會</option>
+                                                                        <option value="450">社團法人台中市啟智協進會</option>
+                                                                        <option value="520580">社團法人台中市盲人福利協進會</option>
+                                                                        <option value="885770">社團法人台中市聲暉協進會</option>
+                                                                        <option value="566">社團法人台中市脊髓損傷者協會</option>
+                                                                        <option value="1127">社團法人台中市自閉症教育協進會</option>
+                                                                        <option value="5990">社團法人台中市開懷協會</option>
+                                                                        <option value="2718">社團法人台北市喜願協會</option>
+                                                                        <option value="0915915">社團法人台北市基督教萬芳浸信會</option>
+                                                                        <option value="0096">社團法人台北市晚晴婦女協會</option>
+                                                                        <option value="95958">社團法人台北市生命線協會</option>
+                                                                        <option value="772">社團法人台北市自閉症家長協會</option>
+                                                                        <option value="456">社團法人台北市行無礙資源推廣協會</option>
+                                                                        <option value="0422">社團法人台北市雙胞胎協會</option>
+                                                                        <option value="8599">社團法人台南市女性權益促進會</option>
+                                                                        <option value="3037980">社團法人台南市新世代社會福利關懷協會</option>
+                                                                        <option value="830">社團法人台南市聲暉協進會</option>
+                                                                        <option value="815">社團法人台南市腦性麻痺之友協會</option>
+                                                                        <option value="94168">社團法人台灣優活山林協會</option>
+                                                                        <option value="1111">社團法人台灣公益團體自律聯盟</option>
+                                                                        <option value="1001">社團法人台灣動物人文社</option>
+                                                                        <option value="916">社團法人台灣動物輔助活動及治療協會</option>
+                                                                        <option value="6878">社團法人台灣同志家庭權益促進會</option>
+                                                                        <option value="0609">社團法人台灣同志諮詢熱線協會</option>
+                                                                        <option value="9009">社團法人台灣善行天下發展協會</option>
+                                                                        <option value="333">社團法人台灣婦女團體全國聯合會</option>
+                                                                        <option value="70345">社團法人台灣弱勢希望協進會</option>
+                                                                        <option value="199907">社團法人台灣彩虹愛家生命教育協會</option>
+                                                                        <option value="518066">社團法人台灣數位有聲書推展學會</option>
+                                                                        <option value="3838">社團法人台灣濟公盲人愛心會</option>
+                                                                        <option value="17930">社團法人台灣環境資訊協會</option>
+                                                                        <option value="3886">社團法人台灣省大專青年服務協會</option>
+                                                                        <option value="5845">社團法人台灣社會福利總盟</option>
+                                                                        <option value="52020">社團法人台灣福氣社區關懷協會</option>
+                                                                        <option value="0285">社團法人台灣結節硬化症協會</option>
+                                                                        <option value="25985">社團法人台灣關愛之家協會</option>
+                                                                        <option value="7799">社團法人台灣關懷人權與健康協會</option>
+                                                                        <option value="5217">社團法人台灣阿甘精神發展協會</option>
+                                                                        <option value="85885">社團法人台灣陽光婦女協會</option>
+                                                                        <option value="852">社團法人台灣露德協會</option>
+                                                                        <option value="0220">社團法人台灣非營利事業經營管理協會</option>
+                                                                        <option value="16940">社團法人台灣黃絲帶愛網關懷協會</option>
+                                                                        <option value="703">社團法人嘉義市正德護生慈善會</option>
+                                                                        <option value="1995">社團法人國際生命線台灣總會</option>
+                                                                        <option value="8858">社團法人基隆市脊髓損傷者協會</option>
+                                                                        <option value="588">社團法人基隆市自閉症家長協會</option>
+                                                                        <option value="135">社團法人宜蘭縣培德關懷協進會</option>
+                                                                        <option value="94180">社團法人宜蘭縣得安家庭關懷協會</option>
+                                                                        <option value="1011212">社團法人宜蘭縣渡安居女性關懷協會</option>
+                                                                        <option value="1313677">社團法人宜蘭縣自閉症者福利協進會</option>
+                                                                        <option value="1616888">社團法人宜蘭縣非營利組織聯盟</option>
+                                                                        <option value="94352">社團法人屏東縣原住民社會公益服務協會</option>
+                                                                        <option value="9898">社團法人屏東縣慈善團體聯合協會</option>
+                                                                        <option value="7364783">社團法人屏東縣社會工作者協會</option>
+                                                                        <option value="7351024">社團法人屏東縣自閉症協進會</option>
+                                                                        <option value="5168">社團法人屏東縣躍愛全人關懷協會</option>
+                                                                        <option value="006">社團法人彰化縣啟智協進會</option>
+                                                                        <option value="820">社團法人彰化縣喜樂小兒麻痺關懷協會</option>
+                                                                        <option value="500">社團法人彰化縣愛鄰社會福利協會</option>
+                                                                        <option value="8888">社團法人彰化縣脊髓損傷重建協會</option>
+                                                                        <option value="17655">社團法人恩物社會服務推廣協會</option>
+                                                                        <option value="021995">社團法人新北市國際生命線協會</option>
+                                                                        <option value="7879">社團法人新北市脊髓損傷者協會</option>
+                                                                        <option value="6684">社團法人新竹市智障福利協進會</option>
+                                                                        <option value="9595">社團法人新竹市生命線協會</option>
+                                                                        <option value="97324">社團法人新竹市聲暉協會</option>
+                                                                        <option value="8185">社團法人桃園縣失智症關懷協會</option>
+                                                                        <option value="204">社團法人桃園縣愛鄰舍協會</option>
+                                                                        <option value="2615372">社團法人桃園縣拾穗關懷服務協會</option>
+                                                                        <option value="3699135">社團法人桃園縣智障者家長協會</option>
+                                                                        <option value="0885">社團法人桃園縣社區精神復健協會</option>
+                                                                        <option value="922">社團法人看守台灣協會</option>
+                                                                        <option value="626626">社團法人臺中市山海屯啟智協會</option>
+                                                                        <option value="52668">社團法人臺北市支持流浪貓絕育計畫協會</option>
+                                                                        <option value="88749">社團法人臺北縣康復之友協會</option>
+                                                                        <option value="377">社團法人臺北縣彌賽亞全人關懷協會</option>
+                                                                        <option value="1205">社團法人臺北縣志願服務協會</option>
+                                                                        <option value="1010">社團法人臺南市以琳之家關懷協會</option>
+                                                                        <option value="4141">社團法人臺東縣南迴健康促進關懷服務協會</option>
+                                                                        <option value="668">社團法人臺東縣向日葵關懷協會</option>
+                                                                        <option value="513663">社團法人臺東縣教育發展協會</option>
+                                                                        <option value="95999">社團法人臺灣點一盞燈社會關懷協會</option>
+                                                                        <option value="4997276">社團法人花蓮縣大比大家庭關懷協會</option>
+                                                                        <option value="7756">社團法人花蓮縣智障福利協進會</option>
+                                                                        <option value="5577">社團法人花蓮縣老人暨家庭關懷協會</option>
+                                                                        <option value="1520">社團法人花蓮縣脊髓損傷福利協進會</option>
+                                                                        <option value="334792">社團法人苗栗縣肢體傷殘自強協會</option>
+                                                                        <option value="181622">社團法人親慈慈善會</option>
+                                                                        <option value="5223040">社團法人雲林縣兒童福利發展協會</option>
+                                                                        <option value="1311">社團法人雲林縣啟智協會</option>
+                                                                        <option value="1313">社團法人雲林縣老人福利保護協會</option>
+                                                                        <option value="0531026">社團法人雲林縣老人長期照護協會</option>
+                                                                        <option value="630123">社團法人雲林縣聲暉協進會</option>
+                                                                        <option value="6332675">社團法人雲林縣虎尾殘障福利協會</option>
+                                                                        <option value="6565520">社團法人雲林縣身心照護協會</option>
+                                                                        <option value="954846">社團法人高雄市向陽自立生活協會</option>
+                                                                        <option value="58938">社團法人高雄市大崗山康復之友協會</option>
+                                                                        <option value="3226666">社團法人高雄市慈善團體聯合總會</option>
+                                                                        <option value="88002">社團法人高雄市注意力缺陷過動症協會</option>
+                                                                        <option value="7995">社團法人高雄市生命線協會</option>
+                                                                        <option value="7881155">社團法人高雄市社福慈善團體聯合會</option>
+                                                                        <option value="6565">社團法人高雄市超越巔峰關懷協會</option>
+                                                                        <option value="529">社團法人高雄市關懷流浪動物協會</option>
+                                                                        <option value="9016888">社團法人高雄市青少年關懷協會</option>
+                                                                        <option value="7893">社團法人高雄縣心理復健家屬關懷協會</option>
+                                                                        <option value="17843">社團法人高雄縣憨兒就業輔導協會</option>
+                                                                        <option value="3560463">私立希恩之家</option>
+                                                                        <option value="137">私立康寧醫護暨管理專科學校</option>
+                                                                        <option value="5281">私立臺北醫學大學</option>
+                                                                        <option value="17924">綠黨</option>
+                                                                        <option value="775885">聲暉協會</option>
+                                                                        <option value="33000">聲暉協進會</option>
+                                                                        <option value="2013">肢體傷殘協進會</option>
+                                                                        <option value="8585885">自閉症協進會</option>
+                                                                        <option value="7688">自閉症服務協進會</option>
+                                                                        <option value="5201314">自閉症肯納家長協會</option>
+                                                                        <option value="555">臺灣基督教門諾會醫療財團法人門諾醫院</option>
+                                                                        <option value="0219">藝術創作者職業工會</option>
+                                                                        <option value="209">財團法人一粒麥子社會福利慈善事業基金會</option>
+                                                                        <option value="8828">財團法人中華基督教伯特利會總會</option>
+                                                                        <option value="25163">財團法人中華民國(台灣)安寧照顧基金會</option>
+                                                                        <option value="779">財團法人中華民國佛教慈濟慈善事業基金會</option>
+                                                                        <option value="88888">財團法人中華民國兒童癌症基金會</option>
+                                                                        <option value="885521">財團法人中華民國兒童福利聯盟文教基金會</option>
+                                                                        <option value="321">財團法人中華民國唐氏症基金會</option>
+                                                                        <option value="7001234">財團法人中華民國消費者文教基金會</option>
+                                                                        <option value="402">財團法人中華民國自閉症基金會</option>
+                                                                        <option value="201314">財團法人主婦聯盟環境保護基金會</option>
+                                                                        <option value="7777">財團法人乳癌防治基金會</option>
+                                                                        <option value="918">財團法人人安社會福利慈善事業基金會</option>
+                                                                        <option value="05178">財團法人介惠社會福利慈善基金會</option>
+                                                                        <option value="25885">財團法人伊甸社會福利基金會</option>
+                                                                        <option value="3131">財團法人佛教僧伽醫護基金會</option>
+                                                                        <option value="876945">財團法人信望愛臍帶血基金會</option>
+                                                                        <option value="120">財團法人全民健康基金會</option>
+                                                                        <option value="9866">財團法人切膚之愛社會福利慈善事業基金會</option>
+                                                                        <option value="2995">財團法人利河伯社會福利基金會</option>
+                                                                        <option value="919">財團法人創世社會福利基金會</option>
+                                                                        <option value="9118595">財團法人勵馨社會福利事業基金會</option>
+                                                                        <option value="1010225">財團法人十方啟智文教基金會</option>
+                                                                        <option value="885">財團法人千佛山慈善基金會</option>
+                                                                        <option value="85717">財團法人南投縣私立德安啟智教養院</option>
+                                                                        <option value="545">財團法人南投縣私立炫寬愛心教養家園</option>
+                                                                        <option value="131">財團法人博幼社會福利基金會</option>
+                                                                        <option value="1589">財團法人台中市私立宏恩社會福利慈善基金會</option>
+                                                                        <option value="3335">財團法人台中市私立康善社會福利慈善事業基金會</option>
+                                                                        <option value="0303">財團法人台中市私立張秀菊社會福利慈善事業基金會</option>
+                                                                        <option value="1385">財團法人台中市私立甘霖社會福利慈善事業基金會</option>
+                                                                        <option value="2020">財團法人台中市私立真愛社會福利慈善事業基金會</option>
+                                                                        <option value="5678">財團法人台中市私立群園社會福利基金會</option>
+                                                                        <option value="33001">財團法人台中市私立聲暉綜合知能發展中心</option>
+                                                                        <option value="185">財團法人台中市私立龍眼林社會福利慈善事業基金會</option>
+                                                                        <option value="0770223">財團法人台北市基督徒救世會社會褔利事業基金會</option>
+                                                                        <option value="101">財團法人台北市基督教勵友中心</option>
+                                                                        <option value="88472">財團法人台北市失親兒福利基金會</option>
+                                                                        <option value="81852">財團法人台北市愛慈社會福利基金會</option>
+                                                                        <option value="785785">財團法人台北市私立同舟發展中心</option>
+                                                                        <option value="3060493">財團法人台北市私立愛愛院</option>
+                                                                        <option value="520">財團法人台北市私立雙連視障關懷基金會</option>
+                                                                        <option value="52772">財團法人台北市自閉兒社會福利基金會</option>
+                                                                        <option value="399">財團法人台北市賽珍珠基金會</option>
+                                                                        <option value="1013">財團法人台北縣私立樂山療養院</option>
+                                                                        <option value="520999">財團法人台南市私立吾愛吾家老人養護中心</option>
+                                                                        <option value="52088">財團法人台南市私立天主教瑞復益智中心</option>
+                                                                        <option value="52099">財團法人台南市私立天主教瑞復社會福利基金會</option>
+                                                                        <option value="0202">財團法人台南市私立康寧教養院</option>
+                                                                        <option value="788">財團法人台南市私立朝興社會福利慈善事業基金會</option>
+                                                                        <option value="666">財團法人台南市私立朝興社會福利慈善事業基金會</option>
+                                                                        <option value="971103">財團法人台南市私立荷園社會福利慈善事業基金會</option>
+                                                                        <option value="8080">財團法人台東基督教醫院</option>
+                                                                        <option value="299">財團法人台東基督教醫院</option>
+                                                                        <option value="5257999">財團法人台東縣私立牧心智能發展中心</option>
+                                                                        <option value="7000">財團法人台灣世界展望會</option>
+                                                                        <option value="68660">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="5900">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="5678585">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="463558">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="8455">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="818585">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="461234">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="8585">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="7885">財團法人台灣兒童暨家庭扶助基金會</option>
+                                                                        <option value="70885">財團法人台灣兒童暨家庭扶助基金會南投分事務所</option>
+                                                                        <option value="024">財團法人台灣兒童暨家庭扶助基金會台中市北區分事務所</option>
+                                                                        <option value="5584">財團法人台灣兒童暨家庭扶助基金會台中市南區分事務所</option>
+                                                                        <option value="176176">財團法人台灣兒童暨家庭扶助基金會台北市北區分事務所</option>
+                                                                        <option value="5520">財團法人台灣兒童暨家庭扶助基金會台北市南區分事務所</option>
+                                                                        <option value="2085">財團法人台灣兒童暨家庭扶助基金會台南市北區分事務所</option>
+                                                                        <option value="6782">財團法人台灣兒童暨家庭扶助基金會台南市南區分事務所</option>
+                                                                        <option value="323804">財團法人台灣兒童暨家庭扶助基金會台東分事務所</option>
+                                                                        <option value="2812085">財團法人台灣兒童暨家庭扶助基金會嘉義分事務所</option>
+                                                                        <option value="33085">財團法人台灣兒童暨家庭扶助基金會基隆分事務所</option>
+                                                                        <option value="078585">財團法人台灣兒童暨家庭扶助基金會宜蘭分事務所</option>
+                                                                        <option value="7123">財團法人台灣兒童暨家庭扶助基金會屏東分事務所</option>
+                                                                        <option value="2100">財團法人台灣兒童暨家庭扶助基金會彰化分事務所</option>
+                                                                        <option value="378585">財團法人台灣兒童暨家庭扶助基金會新北市分事務所</option>
+                                                                        <option value="5875">財團法人台灣兒童暨家庭扶助基金會澎湖分事務所</option>
+                                                                        <option value="1785">財團法人台灣兒童暨家庭扶助基金會花蓮分事務所</option>
+                                                                        <option value="326139">財團法人台灣兒童暨家庭扶助基金會金門分事務所</option>
+                                                                        <option value="8700">財團法人台灣兒童暨家庭扶助基金會附設南投縣私立家扶希望學園</option>
+                                                                        <option value="8300">財團法人台灣兒童暨家庭扶助基金會附設彰化縣私立家扶發展學園</option>
+                                                                        <option value="6361712">財團法人台灣兒童暨家庭扶助基金會附設雲林縣私立家扶希望學園</option>
+                                                                        <option value="6361716">財團法人台灣兒童暨家庭扶助基金會附設雲林縣私立家扶發展學園</option>
+                                                                        <option value="6323200">財團法人台灣兒童暨家庭扶助基金會雲林分事務所</option>
+                                                                        <option value="3100">財團法人台灣兒童暨家庭扶助基金會高雄市北區分事務所</option>
+                                                                        <option value="7261651">財團法人台灣兒童暨家庭扶助基金會高雄市南區分事務所</option>
+                                                                        <option value="2000">財團法人台灣國際奧比斯防盲救盲基金會</option>
+                                                                        <option value="580">財團法人台灣基督教主愛之家輔導中心</option>
+                                                                        <option value="1799">財團法人台灣癌症基金會</option>
+                                                                        <option value="195185">財團法人台灣省私立台灣盲人重建院</option>
+                                                                        <option value="002">財團法人台灣省私立向上社會福利基金會</option>
+                                                                        <option value="175758">財團法人台灣省私立心德慈化教養院</option>
+                                                                        <option value="17934">財團法人台灣省私立景仁殘障教養院</option>
+                                                                        <option value="3344">財團法人台灣省私立香園紀念教養院</option>
+                                                                        <option value="252999">財團法人台灣省私立鴻佳啟能庇護中心</option>
+                                                                        <option value="8612423">財團法人台灣省花蓮縣中華基督長老會山宣總會附設花蓮縣私立原住</option>
+                                                                        <option value="121">財團法人台灣紅絲帶基金會</option>
+                                                                        <option value="1018">財團法人台灣肯納自閉症基金會</option>
+                                                                        <option value="2597885">財團法人台灣關愛基金會</option>
+                                                                        <option value="525">財團法人周大觀文教基金會</option>
+                                                                        <option value="88432">財團法人喜憨兒社會福利基金會</option>
+                                                                        <option value="220225">財團法人嘉義市私立修緣育幼院</option>
+                                                                        <option value="5656">財團法人嘉義市私立嘉愛啟智發展中心</option>
+                                                                        <option value="2390069">財團法人嘉義縣私立嘉惠教養院</option>
+                                                                        <option value="5968">財團法人嘉義縣私立天主教敏道社會福利慈善事業基金會</option>
+                                                                        <option value="0123">財團法人圓覺宗智敏慧華金剛上師教育基金會</option>
+                                                                        <option value="8524">財團法人地球公民基金會</option>
+                                                                        <option value="276">財團法人基督教宇宙光全人關懷機構</option>
+                                                                        <option value="1720">財團法人基督教愛網全人關懷社會福利慈善事業基金會</option>
+                                                                        <option value="52947">財團法人基督教救世軍</option>
+                                                                        <option value="7699">財團法人基督教瑪喜樂社會福利基金會</option>
+                                                                        <option value="5200">財團法人基督教臺北市私立伯大尼兒少家園</option>
+                                                                        <option value="001">財團法人基督教芥菜種會</option>
+                                                                        <option value="2259">財團法人基督教都市人工作群社會福利事業基金會</option>
+                                                                        <option value="699">財團法人基隆市私立博愛仁愛之家</option>
+                                                                        <option value="20999">財團法人大甲媽社會福利基金會附設臺中縣私立鎮瀾兒童家園</option>
+                                                                        <option value="017885">財團法人大眾教育基金會</option>
+                                                                        <option value="988">財團法人天主教光仁社會福利基金會</option>
+                                                                        <option value="2020520">財團法人天主教台南縣私立蘆葦啟智中心</option>
+                                                                        <option value="8835">財團法人天主教善牧社會福利基金會</option>
+                                                                        <option value="858">財團法人天主教失智老人社會福利基金會</option>
+                                                                        <option value="1773">財團法人天主教曉明社會福利基金會</option>
+                                                                        <option value="213">財團法人天主教會台中教區</option>
+                                                                        <option value="7885580">財團法人天主教會台中教區</option>
+                                                                        <option value="01985">財團法人天主教會台中教區</option>
+                                                                        <option value="2885">財團法人天主教會台中教區</option>
+                                                                        <option value="025520">財團法人天主教會嘉義教區</option>
+                                                                        <option value="225">財團法人天主教會嘉義教區</option>
+                                                                        <option value="520770">財團法人天主教會嘉義教區</option>
+                                                                        <option value="88742">財團法人天主教會嘉義教區</option>
+                                                                        <option value="855">財團法人天主教會花蓮教區附設花蓮縣私立聲遠老人養護之家</option>
+                                                                        <option value="1111111">財團法人天主教白永恩神父社會福利基金會</option>
+                                                                        <option value="885288">財團法人天主教福利會</option>
+                                                                        <option value="386">財團法人天主教聖保祿修女會醫院</option>
+                                                                        <option value="2025">財團法人天主教臺南市私立德蘭啟智中心</option>
+                                                                        <option value="8861210">財團法人天主教花蓮教區附設私立安德啟智中心</option>
+                                                                        <option value="1251">財團法人天主教華光社會福利基金會</option>
+                                                                        <option value="011668">財團法人天主教靈醫會</option>
+                                                                        <option value="336">財團法人天使心家族社會福利基金會</option>
+                                                                        <option value="580580">財團法人天恆文教基金會</option>
+                                                                        <option value="3899">財團法人婦女新知基金會</option>
+                                                                        <option value="9283880">財團法人宜蘭縣私立蘭陽仁愛之家</option>
+                                                                        <option value="235">財團法人宜蘭縣私立蘭馨婦幼中心</option>
+                                                                        <option value="7366294">財團法人屏東基督教勝利之家</option>
+                                                                        <option value="90061">財團法人屏東縣私立基督教伯大尼之家</option>
+                                                                        <option value="080">財團法人屏東縣私立屏東啟智教養院</option>
+                                                                        <option value="111222">財團法人屏東縣私立福慧社會福利慈善事業基金會</option>
+                                                                        <option value="7707097">財團法人屏東縣私立迦南身心障礙養護院</option>
+                                                                        <option value="2581">財團法人廣青文教基金會</option>
+                                                                        <option value="590">財團法人弘道老人福利基金會</option>
+                                                                        <option value="1980198">財團法人張老師基金會</option>
+                                                                        <option value="5276">財團法人彰化縣私立基督教喜樂保育院</option>
+                                                                        <option value="72995">財團法人彰化縣私立秀和慈善事業基金會</option>
+                                                                        <option value="8713399">財團法人彰化縣私立青山社會福利慈善事業基金會</option>
+                                                                        <option value="876">財團法人心路社會福利基金會</option>
+                                                                        <option value="25999">財團法人忠義社會福利事業基金會</option>
+                                                                        <option value="199185">財團法人惠光導盲犬教育基金會</option>
+                                                                        <option value="921">財團法人愚人之友社會福利慈善事業基金會</option>
+                                                                        <option value="5880">財團法人愛盲基金會</option>
+                                                                        <option value="9331001">財團法人慈懷社會福利基金會</option>
+                                                                        <option value="107765">財團法人新北市私立台灣天主教安老院</option>
+                                                                        <option value="4567988">財團法人新北市私立榮光育幼院</option>
+                                                                        <option value="228">財團法人新竹市天主教仁愛社會福利基金會</option>
+                                                                        <option value="521">財團法人新竹市私立愛恆啟能中心</option>
+                                                                        <option value="9955116">財團法人新竹縣天主教世光教養院</option>
+                                                                        <option value="0280928">財團法人新竹縣天主教世光教養院</option>
+                                                                        <option value="1314">財團法人晨光社會福利基金會附設金門縣私立晨光教養家園</option>
+                                                                        <option value="17270">財團法人普仁青年關懷基金會</option>
+                                                                        <option value="1314885">財團法人李勝賢文教基金會</option>
+                                                                        <option value="268">財團法人桃園縣真善美社會福利基金會</option>
+                                                                        <option value="295">財團法人桃園縣私立仁友愛心家園</option>
+                                                                        <option value="520530">財團法人桃園縣私立安康啟智教養院</option>
+                                                                        <option value="329">財團法人桃園縣私立寶貝潛能發展中心</option>
+                                                                        <option value="4205558">財團法人桃園縣私立心燈啟智教養院</option>
+                                                                        <option value="4870110">財團法人桃園縣私立方舟啟智教養院</option>
+                                                                        <option value="518007">財團法人桃園縣私立脊髓損傷潛能發展中心</option>
+                                                                        <option value="995">財團法人桃園縣私立觀音愛心家園</option>
+                                                                        <option value="1000">財團法人桃園縣私立路得啟智學園</option>
+                                                                        <option value="0916">財團法人桃園縣私立龍潭啟智教養院</option>
+                                                                        <option value="1961537">財團法人桃園縣美好社會福利基金會</option>
+                                                                        <option value="923">財團法人正德社會福利慈善基金會</option>
+                                                                        <option value="8957282">財團法人流浪動物之家基金會</option>
+                                                                        <option value="86129">財團法人濟興長青基金會</option>
+                                                                        <option value="5850">財團法人犯罪被害人保護協會</option>
+                                                                        <option value="5238">財團法人現代婦女教育基金會</option>
+                                                                        <option value="880">財團法人瑪利亞社會福利基金會</option>
+                                                                        <option value="2321">財團法人環境品質文教基金會</option>
+                                                                        <option value="711">財團法人環宇國際文化基金會</option>
+                                                                        <option value="16888">財團法人癌症希望基金會</option>
+                                                                        <option value="365">財團法人私立天主教中華聖母社會福利慈善事業基金會</option>
+                                                                        <option value="0818">財團法人私立天主教華光智能發展中心</option>
+                                                                        <option value="51811">財團法人第一社會福利基金會</option>
+                                                                        <option value="161">財團法人粘得紀念教育基金會</option>
+                                                                        <option value="9527">財團法人罕見疾病基金會</option>
+                                                                        <option value="012378">財團法人羅慧夫顱顏基金會</option>
+                                                                        <option value="050">財團法人老五老基金會</option>
+                                                                        <option value="9946959">財團法人耕心蓮苑教育基金會</option>
+                                                                        <option value="123999">財團法人聖島社會福利慈善基金會</option>
+                                                                        <option value="583">財團法人肝病防治學術基金會</option>
+                                                                        <option value="7085">財團法人育成社會福利基金會</option>
+                                                                        <option value="4399">財團法人至善社會福利基金會</option>
+                                                                        <option value="12345">財團法人臺中市私立信望愛智能發展中心</option>
+                                                                        <option value="2320">財團法人臺中市私立衡山社會福利基金會</option>
+                                                                        <option value="5291">財團法人臺北市喜樂家族社會福利基金會</option>
+                                                                        <option value="8595">財團法人臺北市婦女救援社會福利事業基金會</option>
+                                                                        <option value="52168">財團法人臺南市私立豐德教養院</option>
+                                                                        <option value="6688">財團法人臺灣基督教門諾會</option>
+                                                                        <option value="35760">財團法人臺灣基督教門諾會</option>
+                                                                        <option value="788595">財團法人臺灣更生保護會</option>
+                                                                        <option value="528">財團法人臺灣省天主教會新竹教區</option>
+                                                                        <option value="5566">財團法人臺灣省天主教會新竹教區</option>
+                                                                        <option value="3675235">財團法人臺灣省天主教會新竹教區</option>
+                                                                        <option value="1795">財團法人臺灣省天主教會新竹教區</option>
+                                                                        <option value="66666">財團法人臺灣省私立光明仁愛之家</option>
+                                                                        <option value="1212">財團法人臺灣省花蓮縣基督教宣教士差會附屬花蓮畢士大教養院</option>
+                                                                        <option value="2911811">財團法人良顯堂社會福利基金會</option>
+                                                                        <option value="212">財團法人花蓮縣私立博愛居安廬老人安養中心</option>
+                                                                        <option value="527">財團法人花蓮縣私立慈惠愛心基金會</option>
+                                                                        <option value="823">財團法人花蓮縣私立美崙啟能發展中心</option>
+                                                                        <option value="2595">財團法人苗栗縣私立幼安教養院</option>
+                                                                        <option value="520520">財團法人苗栗縣私立華嚴啟能中心</option>
+                                                                        <option value="064063">財團法人若竹兒教育基金會</option>
+                                                                        <option value="111">財團法人華山社會福利慈善事業基金會</option>
+                                                                        <option value="785">財團法人蒲公英希望基金會</option>
+                                                                        <option value="96588">財團法人蘭智社會福利基金會</option>
+                                                                        <option value="5260">財團法人門諾社會福利慈善事業基金會</option>
+                                                                        <option value="16885">財團法人阿寶教育基金會</option>
+                                                                        <option value="13579">財團法人陽光社會福利基金會</option>
+                                                                        <option value="889881">財團法人雅文兒童聽語文教基金會</option>
+                                                                        <option value="2003098">財團法人雙福社會福利慈善事業基金會</option>
+                                                                        <option value="2002515">財團法人雙福社會福利慈善事業基金會</option>
+                                                                        <option value="515">財團法人靖娟兒童安全文教基金會</option>
+                                                                        <option value="7177">財團法人高雄市小港浸信會</option>
+                                                                        <option value="5586331">財團法人高雄市私立博正兒童發展中心</option>
+                                                                        <option value="6891054">財團法人高雄市私立基督教山地育幼院</option>
+                                                                        <option value="8888888">財團法人高雄市私立慈暉關懷學園</option>
+                                                                        <option value="88772">財團法人高雄市私立星星兒社會福利基金會</option>
+                                                                        <option value="86888">財團法人麥當勞叔叔之家兒童慈善基金會</option>
+                                                                        <option value="59427">財團法人黑潮海洋文教基金會</option>
+                                                                        <option value="0998428">身心障礙服務推展協會</option>
+                                                                        <option value="088999">身心障礙福利促進會</option>
+                                                                        <option value="200938">身心障礙者體育會</option>
+                                                                        <option value="179">醫療財團法人正德癌症醫療基金會</option>
+    				</select>
+    			</div>
+    			<div class="reinfonote">
+    				<a href="#" style="display:none;"><img src="{#MYIMAGES#}re04_1.png" /></a>
+    			</div>
+		</div>
+		<div style="clear:both;padding-top:20px;">
+			<div class="receipt_info_b">
+			<input type="radio" name="receipt_info_first" id="receipt_a_b" class="reradio" value="2" />
+			</div>
+				<div class="resel">
+  					<input type="text" name="postnum" id="postnum" style="width:230px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+    			</div>
+    			<div class="reinfonote">
+    				<a href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/XcaOrgPreserveCodeQuery/XcaOrgPreserveCodeQuery" target="_blank"><img src="{#MYIMAGES#}re05_1.png" /></a>
+    			</div>
+		</div>
+		<div style="clear:both"></div>
+    </div>
+</div>
+<!--二聯發票-->
+<div class="relist" id="re02">
+    <input type="radio" name="receiptinfo" id="receipt_b" class="reradio" value="2" />
+    <div class="receipt_info" id="receipt_info_b">
+    	<div>
+			<div id="receipt_info_b_a">
+            	<input type="radio" name="receipt_info_second" id="receipt_b_a" class="reradio" value="1" />
+			</div>
+			<div style="margin-top:10px;">
+				<img src="{#MYIMAGES#}re_brusco_note.png" />
+			</div>
+		</div>
+		<div style="margin-top:20px;">
+			<div id="receipt_info_b_b">
+            	<input type="radio" name="receipt_info_second" id="receipt_b_b" class="reradio" value="2" checked />
+			</div>
+			<div style="margin-top:10px;" >
+				<div style="background-image: url('{#MYIMAGES#}re_mobicode.png'); background-repeat: no-repeat; background-position: 0px 6px;padding-left:175px;">
+					<input type="text" name="mobicode" id="mobicode" style="width:230px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+				</div>
+				<div style="margin-top:10px;background-image: url('{#MYIMAGES#}re_remobicode.png'); background-repeat: no-repeat; background-position: 0px 6px;padding-left:175px;">
+					<input type="text" name="remobicode" id="remobicode" style="width:230px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+				</div>
+			</div>
+		</div>
+		<div style="margin-top:20px;">
+			<div id="receipt_info_b_c">
+            	<input type="radio" name="receipt_info_second" id="receipt_b_c" class="reradio" value="3" />
+			</div>
+			<div style="margin-top:10px;" >
+				<div style="background-image: url('{#MYIMAGES#}re_cdcode.png'); background-repeat: no-repeat; background-position: 0px 6px;padding-left:175px;">
+					<input type="text" name="cdcode" id="cdcode" style="width:230px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+				</div>
+				<div style="margin-top:10px;background-image: url('{#MYIMAGES#}re_recdcode.png'); background-repeat: no-repeat; background-position: 0px 6px;padding-left:175px;">
+					<input type="text" name="recdcode" id="recdcode" style="width:230px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;"/>
+				</div>
+			</div>
+		</div>
+		<div style="width:472px;margin:30px auto 0 auto;"><a href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/GeneralCarrier/generalCarrier" target="_blank"><img src="{#MYIMAGES#}re_second_note.png" /></a></div>
+    </div>
+    
+    <div style="clear:both;"></div>
+</div>
+<!--三聯發票-->
+<div class="relist" id="re03">
+    <input type="radio" name="receiptinfo" id="receipt_c" class="reradio" value="3" />
+    <div class="receipt_info" id="receipt_info_c">
+		<div class="receipt_info_c_a">
+			<input type="text" name="invoicenumber" id="invoicenumber" style="width:230px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;" />
+		</div>
+		<div class="receipt_info_c_b">
+			<input type="text" name="invoicename" id="invoicename" style="width:230px; height:22px; color:#999999; Padding:2px 5px;; font-size:12px; font-family: arial; letter-spacing:0.5px;" />
+			<img src="{#MYIMAGES#}re_titlenote.png" style="display:block; float:right;margin:6px 160px 0 0;" />
+		</div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+
+<div class="renotedd"></div>
+</div>
+
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk7_custom" class="b_bg" block_type="bg">
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk7_custom_blk1_custom" class="b_literal" block_type="literal">
+<input type="checkbox" id="isok" value="1" style="width:20px; height:20px; color:#cccccc;"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk7_custom_blk2_custom" class="b_literal" block_type="literal">
+<img src="{#RP#}base/files/Brusco/ShoppingCart/Information/ShoppingDescription_415x31.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,訂購資訊,"/>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk7_custom_blk3_custom" class="b_literal" block_type="literal">
+<a href="cart.php"><img src="{#RP#}base/files/Brusco/ShoppingCart/Information/Button_Return_153x30.png" Alt="Brusco,銳鎷,Shopping Cart,購物車,購物清單,訂購資訊,"/></a>
+</div>
+<div id="rot_ctr1_bod_ctr3_bod_wrp1_blk1_blk1_custom_blk3_custom_blk1_custom_blk7_custom_blk4_custom" class="b_literal" block_type="literal">
+<input name="imageField" type="image" src="{#RP#}base/files/Brusco/ShoppingCart/Information/Button_Next_130x32.png" border="0" style="border:0px;">
+</div>
+</div>
+<input name="act" type="hidden" id="act" value="orderformsubmit">
+<input type="hidden" id="tjine" value="{#tjine#}">
+<input type="hidden" name="payid" id="payid" value="{#payid#}">
+<input type="hidden" name="urlstr" id="urlstr" value="{#urlstr#}">
+<input type="hidden" name="postpayname" id="postpayname" value="">
+<input type="hidden" name="addrtnote" id="addrnote" value="">
+
+<div  id="notice" class="noticediv"></div>
+</form>
+</div>
+<!-m2->
+<!-end->
+<!-end->

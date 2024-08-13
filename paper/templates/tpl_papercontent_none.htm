@@ -1,0 +1,28 @@
+<!-start->
+<link href="css/papercontent.css" rel="stylesheet" type="text/css" />
+<script type=text/javascript src="{#CP#}js/papercontent.js"></script>
+<div id="papercontent">
+	<div class="papertitle">{#title#}</div>
+
+	<div class="info">作者：{#author#} &nbsp;&nbsp; 發佈於：{#dtime#} &nbsp;&nbsp; 文字：【<a  href="javascript:fontZoom(16)">大</a>】【<a  href="javascript:fontZoom(14)">中</a>】【<a   href="javascript:fontZoom(12)">小</a>】</div>
+	<div id="memo" class="memo" style="display:{#showmemo#}"><span style="color:#ff6600">摘要：</span>{#memo#}</div>
+	<div id="con" class="con">{#body#}</div>
+	<div id="contentpages">
+	</div>
+	<div class="bzone">
+	<div class="down" style="display:{#showdown#}">附件下載：<span id="downlink">{#fname#}</span> (已下載{#downcount#}次) <span id="downcentnotice"></span><input type="hidden" id="downcent" value="{#downcentstr#}"></div>
+	  <input type="hidden" id="paperid" value="{#id#}"> 
+	  </div>
+	<div class="tags" style="display:{#showtag#}">標籤：{#tagstr#}</div>
+	<div id="banzhu" class="banzhu"></div>
+	</div>
+</div>
+<script>
+$(function(){
+$().contentPages('{#id#}');
+});
+
+</script>
+<!-start->
+<!-err1-><div class="securenotice">目前的ID不存在或尚未發佈</div><!-err1->
+<!-err2-><div class="securenotice">對不起，本內容設置了閱讀權限,您無權瀏覽目前的內容</div><!-err2->

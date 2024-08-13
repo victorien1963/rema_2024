@@ -1,0 +1,5 @@
+[MerchantID]-[006243118409001]^[purchAmt]-[70000]^[merID]-[24311840]^[TerminalID]-[90010001]^[xid]-[]^[rescode]-[10]^[lidm]-[821110031825112]
+[MerchantID]-[006243118409001]^[purchAmt]-[70000]^[merID]-[24311840]^[TerminalID]-[90010001]^[xid]-[]^[rescode]-[10]^[lidm]-[821110031825112]
+[MerchantID]-[006243118409001]^[purchAmt]-[70000]^[merID]-[24311840]^[TerminalID]-[90010001]^[xid]-[]^[rescode]-[10]^[lidm]-[821110031825112]
+[xid]-[]^[lidm]-[111073130105]^[TerminalID]-[90010001]^[merID]-[24311840]^[MerchantID]-[006243118409001]^[purchAmt]-[1065]^[rescode]-[10]
+[xid]-[]^[lidm]-[771111100331044]^[TerminalID]-[90010001]^[merID]-[24311840]^[MerchantID]-[006243118409001]^[purchAmt]-[0]^[rescode]-[10]

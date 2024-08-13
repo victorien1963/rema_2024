@@ -1,0 +1,35 @@
+.color-pic-cont{
+    padding-top: 15px;
+    width: calc(100% - 28px);
+    padding-left: 14px;
+    padding-right: 14px;
+    position: relative;
+}
+.color-pic-block{
+    overflow: hidden;
+}
+.color-pic{
+    display: inline-block;
+    padding: 3px;
+}
+
+.color-pic-nav{
+    position: absolute;
+    display: flex;
+    width: calc(100% - 3px);
+    justify-content: space-between;
+    transform: translate(-12px,-50%);
+    top: calc(50% - 6px);
+    height: 0;
+}
+.color-pic-nav .color-prev{
+    cursor: pointer;
+}
+.color-pic-nav .color-next{
+    cursor: pointer;
+}
+.color-pic-width{
+    position: relative;
+    padding-left: 3px;
+    display: flex;
+}

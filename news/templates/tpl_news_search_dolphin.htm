@@ -1,0 +1,24 @@
+<link href="css/news_search_dolphin.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{#CP#}js/selectbox.js"></script>
+<div class="newssearchformzone">
+<form id="newssearchform" method="get" action="{#CP#}class/index.php">
+  <div class="newssearchform">
+    <select name="catid" id="catid" class="box" style="display:none; background:#ffffff; width:138px; height:19px;">
+      <option value="0" >请选择分类</option>
+      
+	  {#catlist#}
+    
+    </select> 
+	<script>
+	makeSelectBox('catid','{#RP#}');
+	</script>
+  </div>
+
+    <div class="newssearchform">
+    <input name="key" type="text" id="newssearchform_key" value="{#key#}" style="width:136px;" class="inputtext">
+  </div>
+  <div class="newssearchform2">
+  <input name="imageField" id="button" type="image" src="images/search5.gif" >
+  </div>
+</form>
+</div>

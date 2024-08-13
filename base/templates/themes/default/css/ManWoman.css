@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cycling-img{
+	background-image: url(../img/28156918_223296568235877_2360346595171500032_n.jpg);
+}
+.training-img{
+	background-image: url( ../img/35166361_239188723339706_1641327352803753984_n.jpg);
+}
+.running-img{
+	background-image: url(../img/36085348_329861470884321_6660383567488483328_n.jpg);
+}
+.swimming-img{
+	background-image: url(../img/swimming-NEW-E.jpg);
+}
+.top-mid-con{
+	padding-bottom: 60px;
+}
+.side-part{
+	padding-bottom: 60px;
+}
+.sports-category{
+	padding-bottom: 60px;
+}
+.side-part-word-con .bn-con{
+	justify-content: flex-start;
+}
+.top-img{
+	background-image: url(../img/跑3.jpg);
+	height: 70vh;
+}
+.top-word-con {
+    width: 35%;
+    float: left;
+    padding-left: 30px;
+    margin-left: 15%;
+    margin-top: 3vw;
+    border-left: 2px solid hsla(0,0%,4%,1.00);
+}
+
+.side-part-con .left{
+	float: left;
+}
+.side-part-con .right{
+	float: right;
+}
+.side-part-img{
+	height: 37vw;
+}
+.side-img1{
+	background-image: url(../img/RUM-d.jpg);
+}
+.side-img2{
+	background-image: url(../img/跑2.jpg);
+}
+.side-part-word{
+	height: 37vw;
+}
+.side-part-word-con {
+    position: absolute;
+    bottom: 0px;
+    padding: 3vw;
+    padding-left: 4vw;
+}
+
+
+
+.sports-category-img{
+	height: 16.66vw;
+	filter: brightness(80%);
+}
+.sports-category-con{
+}
+.sports-category-word{
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.float-box{
+	margin: auto;
+}
+.category-part{
+	padding: 1vw;
+}
+@media(max-width:1000px){
+	.top-word-con{
+		width: 90%;
+		float: none;
+		padding-left: 0;
+		text-align: center;
+		margin: auto;
+		margin-top: 3vw;
+		border-left: none;
+	}
+	.top-img {
+		height: 60vh;
+	}
+	.side-part-img{
+		height: 50vh;
+		margin: auto;
+	}
+	.side-part-img.left{
+		float: none;
+	}
+	.side-part-img.right{
+		float: none;
+	}
+	.side-part-word{
+		height: auto;
+	}
+	.side-part-word-con {
+		position: relative;
+		bottom: 0px;
+		padding: 3vw;
+		padding-left: 4vw;
+	}
+	.side-part-word .bn-con {
+		padding-top: 25px;
+	}
+	.sports-category-img{
+		height: 45.83333vw;
+	}
+	
+
+}
+
+
+
+
+

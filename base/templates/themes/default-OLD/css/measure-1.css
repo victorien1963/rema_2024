@@ -1,0 +1,454 @@
+@charset "utf-8";
+/* CSS Document */
+label{
+    font-weight:400;
+}
+
+.bar{
+	position: relative;
+}
+.input-num{
+	border: none;
+	padding: 0px;
+	margin-bottom: 3px;
+	box-shadow: none;
+	outline:none;
+	width: 40px;
+	text-align: center;
+}
+.input-underline{
+	width: 30px;
+	height: 1px;
+	background-color: #d3d3d3;
+	position: absolute;
+	left: 35px;
+	top: 17px;
+}
+.input-underline-c1{
+	width: 30px;
+	height: 1px;
+	background-color: #d3d3d3;
+	position: absolute;
+	left: 54px;
+	top: 17px;
+}
+.input-underline-c2{
+	width: 30px;
+	height: 1px;
+	background-color: #d3d3d3;
+	position: absolute;
+	left: 130px;
+	top: 18px;
+}
+.input-underline-w1{
+	width: 30px;
+	height: 1px;
+	background-color: #d3d3d3;
+	position: absolute;
+	left: 58px;
+	top: 17px;
+}
+.input-underline-w2{
+	width: 30px;
+	height: 1px;
+	background-color: #d3d3d3;
+	position: absolute;
+	left: 134px;
+	top: 17px;
+}
+.input-underline-h1{
+	width: 30px;
+	height: 1px;
+	background-color: #d3d3d3;
+	position: absolute;
+	left: 56px;
+	top: 17px;
+}
+.input-underline-h2{
+	width: 30px;
+	height: 1px;
+	background-color: #d3d3d3;
+	position: absolute;
+	left: 132px;
+	top: 17px;
+}
+.meas-con{
+	margin-top: 50px;
+}
+.uni{
+	display: flex;
+}
+.uni-p{
+	margin-bottom: 3px;
+}
+.notice{
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+	.measure-back{
+		margin: auto;
+		position: fixed;
+		top:0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.75);
+		display: none;
+		z-index: 20;
+	}
+	.measure{
+		position: relative;
+		top: 150px;
+		width: 90vmin;
+		margin: auto;
+		background-color:  #ffffff;
+		z-index: 30;
+		display: none;
+		box-sizing: content-box;
+		
+	}
+
+	.esc{
+		cursor: pointer;
+		background-image: url(if_cross_214654.png);
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		right:15px;
+		top:15px;
+	}
+	.esc-nav{
+	}
+
+	.measure-word1{
+		margin-top: 30px;
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
+
+
+
+	.measure-fin{
+		display: none;
+	}
+	.loding-con{
+		height: 350px;
+		width: 300px;
+		margin: auto;
+		display: none;
+		padding-top: 100px;
+	}
+	.loding-gif{
+		height: 100px;
+		width: 100px;
+		margin: auto;
+		background-image: url(Rolling-1.5s-200px.gif);
+		background-size: cover;
+		background-position: center;
+	}
+	.loding-word{
+		margin-top: 15px;
+		text-align: center;
+	}
+	.measure{
+		position: relative;
+		top:150px;
+		width: 800px;
+		background-color:  #ffffff;
+		z-index: 30;
+		display: none;
+		margin: auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+
+
+	.slider-1 {
+		-webkit-appearance: none;
+		width: 100%;
+		height: 10px;
+		background: #d3d3d3;
+		outline: none;
+		opacity: 0.7;
+		-webkit-transition: 1.0s;
+		transition: opacity 1.0s;
+	}
+
+	.slider-1:hover {
+		opacity: 1;
+	}
+
+	.slider-1::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 10px;
+		height: 10px;
+		background: #222222;
+		cursor: pointer;
+	}
+
+	.slider-1::-moz-range-thumb {
+		width: 10px;
+		height: 10px;
+		background: #222222;
+		cursor: pointer;
+	}
+	.measure-main{
+		display: block;
+		display: flex;
+	}
+	.measure-item-pic{
+		margin: 20px;
+		margin-bottom: 40px;
+		margin-right: 0px;
+		margin-left: 50px;
+		width: 250px;
+		height: 350px;
+		background-image: url(上衣-男.png);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		display: block;
+	}
+	.measure-con{
+		width: 400px;
+		margin-left: 30px;
+	}
+	.measure-word1{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		font-size: 22px;
+	}
+	.measure-word2 p{
+		font-size: 13px;
+		margin-top: 10px;
+	}
+	.measure-word3{
+		margin-top: 2px;
+		font-size: 12px;
+		margin-left: 10px;
+	}
+
+	.slider-bar{
+		margin-top: 15px;
+	}
+	.measure-sub{
+		display: flex;
+	}
+
+	.measure-chest-pic{
+		margin: 10px;
+		width: 250px;
+		height: 250px;
+		background-image: url(胸圍test.png);
+		background-size: cover;
+	}
+	.measure-button-con{
+		width:400px;
+		height: 50px;
+		margin: auto;
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	.measure-button{
+		width: 150px;
+		height: 38px;
+		padding: 9px;
+		font-size: 16px;
+		text-align: center;
+		background-color: #D4D4D4;
+		color: #FFFFFF ;
+		float:right;	
+		font-weight: bold;
+	}
+	 .measure-button:hover {
+		color: #FFFFFF;
+	}
+	.act{
+		background-color: #151515;
+		cursor: pointer;
+	}
+	.act:hover{
+		color:#01c3ff;
+	}
+	.wieght-con{
+		margin-top: 15px;
+	}
+	.unselectable {
+	   -moz-user-select: -moz-none;
+	   -khtml-user-select: none;
+	   -webkit-user-select: none;
+
+	   /*
+		 Introduced in IE 10.
+		 See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+	   */
+	   -ms-user-select: none;
+	   user-select: none;
+	}
+
+
+
+
+
+
+
+
+
+	.measure-fin-word{
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 80%;
+		margin: auto;
+	}
+	.measure-fin-word-title{
+		font-size: 18px;
+		line-height: 26px;
+		display: none;
+	}
+	.measure-fin-word-title-m{
+		font-size: 18px;
+		line-height: 32px;	
+	}
+	.measure-fin-word-size{
+		font-size: 36px;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		font-weight: 600;
+	}
+	.measure-again{
+		font-size: 16px;
+		background-color: #151515;
+		color: #FFFFFF ;
+		cursor: pointer;
+		width: 150px;
+		margin: auto;
+		padding: 9px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+	.measure-fin-pic{
+		background-image: url(IMG/短袖-緊身-女.png);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin: auto;
+	}
+	.measure-fin-pic-2{
+		background-image: url(IMG/短袖-寬鬆-女.png);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin: auto;
+	}
+	.measure-again:hover{
+		color: #01c3ff;
+	}
+
+
+
+
+
+		.measure-fin-con{
+			width: 85%;
+			margin: auto;
+			display:flex;
+			justify-content: center;
+		}
+		.measure-fin-con-two{
+			width: 49.999%;
+		}
+		.measure-fin-con-two .measure-fin-pic{
+		    height:250px;
+			margin-top: 60px;
+		}
+		.measure-fin-con-one{
+			width: 60%;
+			margin: auto;
+			display:flex;
+		}
+		.measure-space{
+			width: 50px;
+			height: 45px;
+		}
+
+		.measure-fin-word{
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 80%;
+			margin: auto;
+			padding-bottom:1px;
+		}
+		.measure-fin-word1{
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 200px;
+			margin: auto;
+			padding-bottom:1px;
+		}
+		.measure-fin-word2{
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 200px;
+			margin: auto;
+			padding-bottom:1px;
+		}
+
+		.measure-fin-pic{
+			width: 250px;
+			height: 300px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			display: block;
+		}
+		
+
+		
+		.measure-fin-word-title-m{
+			display: none;
+		}
+		.measure-fin-word-title{
+			display: block;
+		}
+		.measure-fin-word-title-two{
+			padding-left: 120px;
+			margin-bottom: 30px;
+			font-size: 22px;
+			padding-top: 40px;
+		}
+				
+		
+		.two-rest{
+			display: flex;
+			justify-content: space-around;
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+		.two-line{
+			height: 90px;
+			width: 1px;
+			background-color: #414141;
+		}
+		.two-line1{
+			height: 370px;
+			width: 1px;
+
+			background-color: #414141;
+			margin-top: 60px;
+		}
+
+
+
+
+

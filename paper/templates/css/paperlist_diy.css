@@ -1,0 +1,48 @@
+/* ============ндубап╠М============== */
+
+ul.paperlist_diy{
+	margin:0px;
+	padding:0px;
+}
+
+li.paperlist_diy {
+	margin:0;
+	padding-left:16px;
+	list-style-type: none;
+	font-weight:100;
+	color:#505050;
+	background: transparent url(../images/paper_li01.gif) left no-repeat;
+}
+
+li.paperlist_diy2 {
+	margin:0;
+	padding-left:16px;
+	list-style-type: none;
+	font-weight:100;
+	color:#505050;
+	background: transparent url(../images/paper_li02.gif) left no-repeat;
+}
+
+a.paperlist_diy:link,a.paperlist_diy:visited,a.paperlist_diy:active{
+	color:#505050;
+	text-decoration: none;
+	font:12px/22px simsun;
+}
+
+a.paperlist_diy:hover{
+	color:#ff0000;
+	text-decoration: underline;
+	font:12px/22px simsun;
+}
+
+a.paperlist_diy2:link,a.paperlist_diy2:visited,a.paperlist_diy2:active{
+	color:#505050;
+	text-decoration: none;
+	font:12px/22px simsun;
+}
+
+a.paperlist_diy2:hover{
+	color:#ff0000;
+	text-decoration: underline;
+	font:12px/22px simsun;
+}

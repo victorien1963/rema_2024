@@ -1,0 +1,56 @@
+/* ============¦Cªí============== */
+
+div.shoplist_diy4{
+	margin:0px 8px 5px 8px;
+	text-align:left;
+}
+
+
+div.shoplist_diy4 div.fang{
+	float:left;
+	border:0px #e5e5e5 solid;
+	text-align:center;
+	padding:1px;
+	margin-bottom:10px;
+}
+
+div.shoplist_diy4 div.picFit{
+	overflow: hidden;
+}
+
+div.shoplist_diy4 div.picFit img{
+}
+
+div.shoplist_diy4 div.prodright{
+	float:right;
+	padding:15px 10px 0px 20px;
+}
+
+
+div.shoplist_diy4 a.prodtitle:link,div.shoplist_diy4 a.prodtitle:visited,div.shoplist_diy4 a.prodtitle:active{
+	display:block;
+	color:#a8004b;
+	font:bold 12px/16px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+
+div.shoplist_diy4 a.prodtitle:hover{
+	display:block;
+	color:#ff0000;
+	text-decoration: underline;
+	font:bold 12px/16px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.shoplist_diy4 div.memo{
+	color:#434343;
+	font:12px/16px Verdana, Arial, Helvetica, sans-serif;
+	margin-top:15px;
+	width:250px;
+}
+
+div.shoplist_diy4 div.buttonzone{
+	margin:10px 0px 0px 0px;
+	float:right;
+	padding-right:10px;
+}
+
