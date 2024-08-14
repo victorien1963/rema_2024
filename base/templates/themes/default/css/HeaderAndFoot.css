@@ -807,7 +807,7 @@ form.rema-input-type1 label {
 }
 .member-bar {
 	float: right;
-	margin-right: 10px;
+	margin-right: -20px;
 }
 .item-con {
 	display: flex;

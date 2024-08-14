@@ -151,16 +151,16 @@ img {
 }
 .arrow_l {
   position: absolute;
-  left: 50px;
-  top: 50%;
+  left: 65px;
+  top: 55%;
   margin-top: -15px;
   cursor: pointer;
   z-index: 1;
 }
 .arrow_r {
   position: absolute;
-  right: 67px;
-  top: 50%;
+  right: 65px;
+  top: 55%;
   margin-top: -15px;
   cursor: pointer;
   z-index: 2;
