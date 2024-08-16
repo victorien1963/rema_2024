@@ -151,16 +151,16 @@ img {
 }
 .arrow_l {
   position: absolute;
-  left: 65px;
-  top: 55%;
+  left: 90px;
+  top: 53%;
   margin-top: -15px;
   cursor: pointer;
   z-index: 1;
 }
 .arrow_r {
   position: absolute;
-  right: 65px;
-  top: 55%;
+  right: 90px;
+  top: 53%;
   margin-top: -15px;
   cursor: pointer;
   z-index: 2;
@@ -228,7 +228,7 @@ img {
 }
 .index_series {
   position: absolute;
-  bottom: 100px;
+  bottom: 125px;
   right: 7.5%;
   color: #fff;
   font-size: 1rem;
