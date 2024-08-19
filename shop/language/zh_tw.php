@@ -41,7 +41,7 @@ $strSendAPI[2]="http://query2.e-can.com.tw/多筆查件_oo4o.asp?txtMainID_1=";
 $strSendAPI[3]="http://postserv.post.gov.tw/webpost/CSController?cmd=POS4001_2&_SYS_ID=D&_MENU_ID=189&_ACTIVE_ID=190&MAILNO1=";
 /*新竹貨運*/
 //$strSendAPI[4]="http://cagweb01.hct.com.tw/pls/cagweb/C_POKAM031_NEW_S?pSearchFlg=2&pKey=";
-$strSendAPI[4]="https://htm.sf-express.com/tw/tc/dynamic_function/waybill?no=";
+$strSendAPI[4]="https://htm.sf-express.com/tw/tc/dynamic_function/waybill/?no=";
 /*嘉里大榮貨運*/
 $strSendAPI[5]="http://www.tjoin.com/search/stocksearch.asp?no=";
 /*順豐速運"*/
