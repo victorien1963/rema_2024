@@ -89,6 +89,14 @@
 	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
 	
 	<script type=text/javascript src="{#TM#}20240425/js/header.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+        var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        if (isSafari) {
+            document.body.classList.add('safari');
+        }
+      });
+	</script>
 	
 <!-reload-!>
 
@@ -188,6 +196,163 @@
 	.close-btn i {
 		color: #000!important;
 	}
+
+
+/* ipad */
+	@media screen and (min-width: 431px) and (max-width: 1668px){
+	.swiper {
+		height: auto;
+	}
+
+	.text-box label {
+		font-size: 80px;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	.text-box {
+		padding-top: 95px;
+	}
+
+	.index_series {
+		bottom: 60px;
+	}
+
+	.swiper-wrapper {
+		height: 73vw;
+	}
+
+	.member-bar {
+		float: right;
+		margin-right: 5px;
+		margin-top: -15px;
+	}
+
+	header .nav-box img {
+		width: 310px;
+	}
+
+	#index {
+		height: auto;
+	}
+
+	.arrow_l > img, .arrow_r > img {
+		width: 19px;
+	}
+
+	.arrow_l, .arrow_r {
+		top: 53.5%;
+	}
+
+	.text-box.position-1 {
+		padding: 0 40px;
+	}
+
+	header .nav-box li {
+		font-size: 21px;
+	}
+
+	header .pc-menu .type-list {
+		justify-content: center;
+		margin: 0 -201px;
+	}
+
+	header .pc-menu .type-list .title > a {
+    font-size: 20px;
+	}
+
+	header .pc-menu .type-list li a {
+    font-size: 16px;
+	}
+
+	header .pc-menu .input-group {
+    max-width: 400px;
+		padding: 10px 20px;
+	}
+
+	.input-group > .form-control {
+		padding: 7px 10px;
+		font-size: 16px;
+	}
+
+	header .pc-menu .box {
+		overflow-x: hidden;
+		padding: 70px 50px 80px 50px;
+	}
+
+	header .pc-menu .type-list .type-item {
+		padding: 30px 10px;
+	}
+}
+
+/* iphone */
+@media only screen and (max-width: 430px) {
+	.swiper {
+		height: auto;
+	}
+	
+	#index {
+		height: auto;
+	}
+
+	header .nav-box img {
+		width: 300px;
+	}
+
+	.swiper-wrapper {
+		height: 165vw;
+	}
+
+	.member-bar {
+    margin-right: -12px;
+    margin-top: -11px;
+	}
+
+	header .nav-box .nav-items-box {
+      padding-right: 0px;
+    }
+
+	.text-box label {
+		font-size: 57px;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	.text-box {
+		padding-top: 70px;
+	}
+
+	.text-box p {
+    font-size: 21px;
+	}
+
+	header .nav-box ul {
+		padding-right: 10px;
+		line-height: 2;
+	}
+
+	#search-produce > input {
+		padding: 10px 10px;
+		margin-bottom: 175px;
+		font-size: 16px;
+	}
+
+	.text-box.position-1 {
+        bottom: 60px;
+    }
+
+	.index_series { 
+		bottom: 20px;
+	}
+
+	.service {
+		padding: 64px 0;
+	}
+
+}
+
+
+
 
 	@media only screen and (max-width: 1440px) {
       .text-box.position-1 {

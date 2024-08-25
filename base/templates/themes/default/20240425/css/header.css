@@ -186,10 +186,7 @@ header .nav-box .nav-items-box {
     padding-right: 50px;
   }
 }
-header .nav-box img {
-  width: 340px;
-  margin-right: 45px;
-}
+
 @media only screen and (max-width: 576px) {
   header .nav-box img {
     width: 220px;
@@ -538,3 +535,26 @@ header .mobile-menu .mobile-menu-category .mobile-menu-category-box {
 header .mobile-menu .mobile-menu-category .mobile-menu-category-box.active {
   display: block;
 }/*# sourceMappingURL=header.css.map */
+
+
+
+/* adjust */
+header .nav-box img {
+  width: 340px;
+  margin-right: 45px;
+}
+
+@media only screen and (max-width: 1200px) {
+  header .nav-box img {
+    width: 250px;
+    margin-right: 45px;
+  }
+}
+
+
+@media only screen and (min-width: 431px) {
+    body.safari header .nav-box img {
+      width: 250px;
+      margin-right: 45px;
+  }
+}
