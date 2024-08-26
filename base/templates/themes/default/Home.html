@@ -54,450 +54,456 @@
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/apple-fonts.css" />
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/product.css" />
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/nav.css" />
-
-	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/homeNew.css" />
+		<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/homeNew.css" />
   	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/responsive.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<!--[if lt IE 9]>
-
-	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-
-	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-
-	<![endif]-->
-	<script src="{#TM#}js/jquery.min.js"></script>
-	
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		<script src="{#TM#}js/jquery.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-	
-
-    <script src="{#TM#}js/owl.carousel.js"></script>
-
-	<script src="{#TM#}js/HeaderAndFoot.js"></script>
-
-	<script src="{#TM#}js/Home.js?1"></script>
-
-	<script src="{#TM#}js/popupwindow.js?11"></script>
-
+		<script src="{#TM#}js/owl.carousel.js"></script>
+		<script src="{#TM#}js/HeaderAndFoot.js"></script>
+		<script src="{#TM#}js/Home.js?1"></script>
+		<script src="{#TM#}js/popupwindow.js?11"></script>
     <!-- wayhunt -->
-
-	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
-
-	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
-
-	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
-	
-	<script type=text/javascript src="{#TM#}20240425/js/header.js"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-        var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        if (isSafari) {
-            document.body.classList.add('safari');
-        }
-      });
-	</script>
-	
-<!-reload-!>
-
-</head>
-
-<style>
-	html,
-	body {
-	  position: relative;
-	  height: fit-content;
-	}
-  
-	body {
-	  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-	  font-size: 14px;
-	  color: #000;
-	  margin: 0;
-	  padding: 0;
-	}
-  
-	.swiper {
-	  width: 100%;
-	  height: 100%;
-	  position: absolute;
-	  top: 0;
-	  z-index: 0;
-	}
-  
-	.swiper-slide {
-	  font-size: 18px;
-	  background: url("./images/REMA_KV_B_231207.jpg");
-	  background-position: center;
-	  background-size: cover;
-	  background-repeat: no-repeat;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	}
-  
-	.swiper-slide img {
-	  display: block;
-	  width: 100%;
-	  height: 100%;
-	  object-fit: cover;
-	}
-	.m_memu_wp {
-	  z-index: 1;
-	}
-	.text-box {
-		padding-top: 110px;
-		color: #fff;
-		font-family: "SF Pro Text", "Noto Sans TC", "蘋方體", "雅黑體";
-		text-align: center;
+		<script type=text/javascript src="{#RP#}base/js/form.js"></script>
+		<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
+		<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
+		<script type=text/javascript src="{#TM#}20240425/js/header.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+					var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+					if (isSafari) {
+							document.body.classList.add('safari');
+					}
+				});
+		</script>
+		<!-reload-!>
+	</head>
+	<style>
+		html,
+		body {
+			position: relative;
+			height: fit-content;
+		}
 		
-	}
-	.text-box label {
-		font-size: 64px;
-	}
-	.text-box p {
-		font-size: 28px;
-	}
-	.text-box.position-1 {
-		position: absolute;
-		width: 100%;
-		bottom: 100px;
-		text-align: left;
-		padding: 0 25px;
+		body {
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
 		
-	}
-	header .member-bar svg,
-	header .member-bar i,
-	header .member-bar #cartnum {
-		transition: color 0.8s ease-in-out;
-		color: #fff;
-	}
-	header .nav-items-box {
-		transition: filter 0.8s ease-in-out;
-		filter: brightness(0) invert(1);
-	}
-	header.active .nav-items-box {
-		filter: brightness(1) invert(0);
-	}
-	header.active .member-bar svg,
-	header.active .member-bar i,
-	header.active .member-bar #cartnum {
-		color: #000;
-	}
-	header.black-color .member-bar svg,
-	header.black-color .member-bar i,
-	header.black-color .member-bar p,
-	header.active .member-bar #cartnum {
-		color: #000!important;
-	}
-	header.black-color .nav-items-box {
-		filter: brightness(1) invert(0)!important;
-	}
-	.close-btn i {
-		color: #000!important;
-	}
-
-
-/* ipad */
-	@media screen and (min-width: 431px) and (max-width: 1668px){
-	.swiper {
-		height: auto;
-	}
-
-	.text-box label {
-		font-size: 80px;
-		font-weight: 500;
-		line-height: 1.2;
-	}
-
-	.text-box {
-		padding-top: 95px;
-	}
-
-	.index_series {
-		bottom: 60px;
-	}
-
-	.swiper-wrapper {
-		height: 73vw;
-	}
-
-	.member-bar {
-		float: right;
-		margin-right: 5px;
-		margin-top: -15px;
-	}
-
-	header .nav-box img {
-		width: 310px;
-	}
-
-	#index {
-		height: auto;
-	}
-
-	.arrow_l > img, .arrow_r > img {
-		width: 19px;
-	}
-
-	.arrow_l, .arrow_r {
-		top: 53.5%;
-	}
-
-	.text-box.position-1 {
-		padding: 0 40px;
-	}
-
-	header .nav-box li {
-		font-size: 21px;
-	}
-
-	header .pc-menu .type-list {
-		justify-content: center;
-		margin: 0 -201px;
-	}
-
-	header .pc-menu .type-list .title > a {
-    font-size: 20px;
-	}
-
-	header .pc-menu .type-list li a {
-    font-size: 16px;
-	}
-
-	header .pc-menu .input-group {
-    max-width: 400px;
-		padding: 10px 20px;
-	}
-
-	.input-group > .form-control {
-		padding: 7px 10px;
-		font-size: 16px;
-	}
-
-	header .pc-menu .box {
-		overflow-x: hidden;
-		padding: 70px 50px 80px 50px;
-	}
-
-	header .pc-menu .type-list .type-item {
-		padding: 30px 10px;
-	}
-}
-
-/* iphone */
-@media only screen and (max-width: 430px) {
-	.swiper {
-		height: auto;
-	}
-	
-	#index {
-		height: auto;
-	}
-
-	header .nav-box img {
-		width: 300px;
-	}
-
-	.swiper-wrapper {
-		height: 165vw;
-	}
-
-	.member-bar {
-    margin-right: -12px;
-    margin-top: -11px;
-	}
-
-	header .nav-box .nav-items-box {
-      padding-right: 0px;
-    }
-
-	.text-box label {
-		font-size: 57px;
-		font-weight: 500;
-		line-height: 1.2;
-	}
-
-	.text-box {
-		padding-top: 70px;
-	}
-
-	.text-box p {
-    font-size: 21px;
-	}
-
-	header .nav-box ul {
-		padding-right: 10px;
-		line-height: 2;
-	}
-
-	#search-produce > input {
-		padding: 10px 10px;
-		margin-bottom: 175px;
-		font-size: 16px;
-	}
-
-	.text-box.position-1 {
-        bottom: 60px;
-    }
-
-	.index_series { 
-		bottom: 20px;
-	}
-
-	.service {
-		padding: 64px 0;
-	}
-
-}
-
-
-
-
-	@media only screen and (max-width: 1440px) {
-      .text-box.position-1 {
+		.swiper {
 			width: 100%;
-			bottom: 50px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 0;
 		}
-  }
-	@media only screen and (max-width: 1100px) {
+		
+		.swiper-slide {
+			font-size: 18px;
+			background: url("./images/REMA_KV_B_231207.jpg");
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.m_memu_wp {
+			z-index: 1;
+		}
+		.text-box {
+			padding-top: 110px;
+			color: #fff;
+			font-family: "SF Pro Text", "Noto Sans TC", "蘋方體", "雅黑體";
+			text-align: center;
+			
+		}
+		.text-box label {
+			font-size: 64px;
+		}
+		.text-box p {
+			font-size: 28px;
+		}
 		.text-box.position-1 {
-			bottom: 30px;
+			position: absolute;
+			width: 100%;
+			bottom: 100px;
+			text-align: left;
+			padding: 0 25px;
+			
+		}
+		header .member-bar svg,
+		header .member-bar i,
+		header .member-bar #cartnum {
+			transition: color 0.8s ease-in-out;
+			color: #fff;
+		}
+		header .nav-items-box {
+			transition: filter 0.8s ease-in-out;
+			filter: brightness(0) invert(1);
+		}
+		header.active .nav-items-box {
+			filter: brightness(1) invert(0);
+		}
+		header.active .member-bar svg,
+		header.active .member-bar i,
+		header.active .member-bar #cartnum {
+			color: #000;
+		}
+		header.black-color .member-bar svg,
+		header.black-color .member-bar i,
+		header.black-color .member-bar p,
+		header.active .member-bar #cartnum {
+			color: #000!important;
+		}
+		header.black-color .nav-items-box {
+			filter: brightness(1) invert(0)!important;
+		}
+		.close-btn i {
+			color: #000!important;
+		}
+
+		.swiper-wrapper {
+			height: 100%;
+			width: 100vw;
+		}
+
+		.swiper {
+			height: 54.1vw;
+		}
+
+		.wrap {
+			padding: 41vw 0 5vw 0;
+		}
+
+		footer {
+			padding-top: 5vw;
+		}
+
+
+	/* ipad */
+		@media screen and (min-width: 431px) and (max-width: 1668px){
+		.swiper {
+			height: auto;
+		}
+
+		.text-box label {
+			font-size: 80px;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		.text-box {
+			padding-top: 95px;
+		}
+
+		.index_series {
+			bottom: 60px;
+		}
+
+		.swiper-wrapper {
+			height: 67vw;
+		}
+
+		.member-bar {
+			float: right;
+			margin-right: 5px;
+			margin-top: -15px;
+		}
+
+		header .nav-box img {
+			width: 310px;
+		}
+
+		#index {
+			height: auto;
+		}
+
+		.wrap {
+			padding: 19rem 0 100px 0;
+		}
+
+		.arrow_l > img, .arrow_r > img {
+			width: 19px;
+		}
+
+		.arrow_l, .arrow_r {
+			top: 53.5%;
+		}
+
+		.text-box.position-1 {
+			padding: 0 40px;
+		}
+
+		header .nav-box li {
+			font-size: 21px;
+		}
+
+		header .pc-menu .type-list {
+			justify-content: center;
+			margin: 0 -201px;
+		}
+
+		header .pc-menu .type-list .title > a {
+			font-size: 20px;
+		}
+
+		header .pc-menu .type-list li a {
+			font-size: 16px;
+		}
+
+		header .pc-menu .input-group {
+			max-width: 400px;
+			padding: 10px 20px;
+		}
+
+		.input-group > .form-control {
+			padding: 7px 10px;
+			font-size: 16px;
+		}
+
+		header .pc-menu .box {
+			overflow-x: hidden;
+			padding: 70px 50px 80px 50px;
+		}
+
+		header .pc-menu .type-list .type-item {
+			padding: 30px 10px;
+		}
+
+		footer {
+			padding-top: 10vw;
+	}
+}
+
+	/* iphone */
+	@media only screen and (max-width: 430px) {
+		.swiper {
+			height: auto;
+		}
+
+		#index {
+			height: auto;
+		}
+
+		header .nav-box img {
+			width: 300px;
+		}
+
+		.swiper-wrapper {
+			height: 170vw;
+		}
+
+		.member-bar {
+			margin-right: -12px;
+			margin-top: -11px;
+		}
+
+		header .nav-box .nav-items-box {
+				padding-right: 0px;
+			}
+
+		.text-box label {
+			font-size: 57px;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		.text-box {
+			padding-top: 60px;
+		}
+
+		.text-box p {
+			font-size: 21px;
+		}
+
+		header .nav-box ul {
+			padding-right: 10px;
+			line-height: 2;
+		}
+
+		#search-produce > input {
+			padding: 10px 10px;
+			margin-bottom: 175px;
+			font-size: 16px;
+		}
+
+		.text-box.position-1 {
+				bottom: 60px;
+			}
+
+		.index_series { 
+			bottom: 20px;
+		}
+
+		.service {
+			padding: 64px 0;
+		}
+
+		.edm > .wrap {
+			padding: 60px 50px 45px 50px;
+		}
+
+		footer {
+			padding-top: 18vw;
 		}
 	}
-	@media only screen and (max-width: 768px) {
-      .text-box.position-1 {
-			padding: 0 20px;
+
+		@media only screen and (max-width: 1440px) {
+				.text-box.position-1 {
+				width: 100%;
+				bottom: 50px;
+			}
 		}
-  }
-  </style>
+		@media only screen and (max-width: 1100px) {
+			.text-box.position-1 {
+				bottom: 60px;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+				.text-box.position-1 {
+				padding: 0 20px;
+			}
+		}
+	</style>
 
-<body>
-	<section id="header" class="rema-col l12">
-		<!--跑馬燈部分-->
-		<div class="marquee">
-			<div class="mx-width">
-				<!-- 跑馬燈 -->
-				<div class="owl-carousel owl-theme marquee-con mx-width">
-					{#MARQUEE#}
+	<body>
+		<section id="header" class="rema-col l12">
+			<!--跑馬燈部分-->
+			<div class="marquee">
+				<div class="mx-width">
+					<!-- 跑馬燈 -->
+					<div class="owl-carousel owl-theme marquee-con mx-width">
+						{#MARQUEE#}
+					</div>
+					<!-- END跑馬燈 -->
 				</div>
-				<!-- END跑馬燈 -->
 			</div>
-		</div>
-		<!-- END跑馬燈部分-->
-		<!--頁首選單-->
-		{#CHANNELMENU#}
-	</section>
-	
-	<div id="index">
-		<div class="swiper mySwiper">
-			<div class="swiper-wrapper">
-				{#LB#}
-			</div>
-			<div class="arrow_l"><img src="{#TM#}20240425/images/arrow_l.png" /></div>
-			<div class="arrow_r"><img src="{#TM#}20240425/images/arrow_r.png" /></div>
-		</div>
-	</div>
-	<div class="service_wrap">
-		<div class="service">
-		  <div class="wrap">
-			<div class="article">
-			  <ul>
-				<li><img src="{#TM#}20240425/images/serviceicon_01.png" /></li>
-				<li>保證修補</li>
-				<li>
-				  若您購買的衣物出現破損，我們提供保證修補到好的服務，以確保您的裝備始終處於最佳狀態。<br />
-				  <br />
-				</li>
-			  </ul>
-			</div>
-			<div class="line"></div>
-			<div class="article">
-			  <ul>
-				<li><img src="{#TM#}20240425/images/serviceicon_02.png" /></li>
-				<li>靈活換貨</li>
-				<li>
-				  如果您對所購買的商品不完全滿意，無論是尺寸不合，風格不符或其他任何原因，我們提供的換貨服務，讓您能再次選擇。
-				</li>
-			  </ul>
-			</div>
-			<div class="line dex"></div>
-			<div class="article">
-			  <ul>
-				<li><img src="{#TM#}20240425/images/serviceicon_03.png" /></li>
-				<li>免費退貨</li>
-				<li>
-				  如果您需要退貨，我們提供免費退貨政策，在10天鑑賞期限內您可以毫無負擔地退回商品。<br />
-				  <br />
-				</li>
-			  </ul>
-			</div>
-			<div class="line"></div>
-			<div class="article">
-			  <ul>
-				<li><img src="{#TM#}20240425/images/serviceicon_04.png" /></li>
-				<li>除舊換新</li>
-				<li>
-				  為鼓勵持續更新您的運動裝備，我們提供除舊換新的服務，將您的舊衣物交回給我們，可以享受購買新衣物的優惠。
-				</li>
-			  </ul>
-			</div>
-		  </div>
-		</div>
-		<div class="edm">
-		  <div class="wrap">
-			<span>訂閱REMA電子報</span>
-			<div class="edm_input">
-			  <input type="email" name="email" placeholder="輸入您的電郵地址" />
-			</div>
-		  </div>
-		</div>
+			<!-- END跑馬燈部分-->
+			<!--頁首選單-->
+			{#CHANNELMENU#}
+		</section>
 		
-	  </div>
-	<!--頁尾-->
-	<footer>
-		<div class="max-width">
-		<ul class="d-flex flex-wrap">
-			{#footer#}
+		<div id="index">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					{#LB#}
+				</div>
+				<div class="arrow_l"><img src="{#TM#}20240425/images/arrow_l.png" /></div>
+				<div class="arrow_r"><img src="{#TM#}20240425/images/arrow_r.png" /></div>
+			</div>
+		</div>
+		<div class="service_wrap">
+			<div class="service">
+				<div class="wrap">
+				<div class="article">
+					<ul>
+					<li><img src="{#TM#}20240425/images/serviceicon_01.png" /></li>
+					<li>保證修補</li>
+					<li>
+						若您購買的衣物出現破損，我們提供保證修補到好的服務，以確保您的裝備始終處於最佳狀態。<br />
+						<br />
+					</li>
+					</ul>
+				</div>
+				<div class="line"></div>
+				<div class="article">
+					<ul>
+					<li><img src="{#TM#}20240425/images/serviceicon_02.png" /></li>
+					<li>靈活換貨</li>
+					<li>
+						如果您對所購買的商品不完全滿意，無論是尺寸不合，風格不符或其他任何原因，我們提供的換貨服務，讓您能再次選擇。
+					</li>
+					</ul>
+				</div>
+				<div class="line dex"></div>
+				<div class="article">
+					<ul>
+					<li><img src="{#TM#}20240425/images/serviceicon_03.png" /></li>
+					<li>免費退貨</li>
+					<li>
+						如果您需要退貨，我們提供免費退貨政策，在10天鑑賞期限內您可以毫無負擔地退回商品。<br />
+						<br />
+					</li>
+					</ul>
+				</div>
+				<div class="line"></div>
+				<div class="article">
+					<ul>
+					<li><img src="{#TM#}20240425/images/serviceicon_04.png" /></li>
+					<li>除舊換新</li>
+					<li>
+						為鼓勵持續更新您的運動裝備，我們提供除舊換新的服務，將您的舊衣物交回給我們，可以享受購買新衣物的優惠。
+					</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+			<div class="edm">
+				<div class="wrap">
+				<span>訂閱REMA電子報</span>
+				<div class="edm_input">
+					<input type="email" name="email" placeholder="輸入您的電郵地址" />
+				</div>
+				</div>
+			</div>
 			
-		</ul>
+			</div>
+		<!--頁尾-->
+		<footer>
+			<div class="max-width">
+			<ul class="d-flex flex-wrap">
+				{#footer#}
+				
+			</ul>
+			</div>
+			<div class="copyright d-flex justify-content-center">
+			© 2024 REMA INC.ALL RIGHTS RESERVED
+			</div>
+		</footer>
+		<section id="popupwindow-in">
+		</section>
+		<div id="SelectCountry" style="display:none;">
+			{#LANTYPE#}	
 		</div>
-		<div class="copyright d-flex justify-content-center">
-		© 2024 REMA INC.ALL RIGHTS RESERVED
-		</div>
-	</footer>
-	<section id="popupwindow-in">
-	</section>
-	<div id="SelectCountry" style="display:none;">
-		{#LANTYPE#}	
-	</div>
-	{#addbtscript#}
-	
-</body>
-
+		{#addbtscript#}
+	</body>
 </html>
-
 <script>
 	var swiper = new Swiper(".mySwiper", {
-	  loop: true,
-	  speed: 1000,
-	  autoplay: {
+		loop: true,
+		speed: 1000,
+		autoplay: {
 		delay: 50000,
 		disableOnInteraction: false,
-	  },
-	  navigation: {
+		},
+		navigation: {
 		nextEl: ".arrow_l",
 		prevEl: ".arrow_r",
-	  },
-	  on: {
+		},
+		on: {
 		init: function() {
-          updateCurrentSlide(this);
-        },
-        slideChange: function() {
-          updateCurrentSlide(this);
-        }
+					updateCurrentSlide(this);
+				},
+				slideChange: function() {
+					updateCurrentSlide(this);
+				}
 
-	  }
+		}
 	});
 	function updateCurrentSlide(swiper) {
 		const currentSlide = swiper.slides[swiper.activeIndex];
@@ -508,8 +514,8 @@
 		} else {
 			$('#index-header').removeClass('active');
 		}
-      // 在此處添加任何需要的操作，例如更新界面元素
-    }
+			// 在此處添加任何需要的操作，例如更新界面元素
+		}
 	document.addEventListener("mouseover", function(event) {
 		const menu = document.querySelector('.menu_open');
 		
@@ -520,28 +526,28 @@
 			$('.menu_open').css('display', 'none');
 		}
 	});
-  
+	
 	$('.menu-click').on('click', function() {
-	  $('.m_memu_wp').css('display', 'block');
-	  
+		$('.m_memu_wp').css('display', 'block');
+		
 	});
 	$('.xx').on('click', function() {
-	  $('.m_memu_wp').css('display', 'none');
-	  
+		$('.m_memu_wp').css('display', 'none');
+		
 	});
 	$('.m_memu_wp .wrap').on('click', function() {
-	  $('.page02').css('display', 'block');
-	  
+		$('.page02').css('display', 'block');
+		
 	});
 	$('.page02 .back').on('click', function() {
-	  $('.page02').css('display', 'none');
-	  
+		$('.page02').css('display', 'none');
+		
 	});
 
 
 	window.addEventListener('scroll', function() {
 		let element = document.getElementsByClassName("mySwiper");
-  		let bottom = element[0].getBoundingClientRect().bottom;
+			let bottom = element[0].getBoundingClientRect().bottom;
 
 		if(bottom <= 0) {
 			$('#index-header').addClass('black-color');
@@ -549,5 +555,4 @@
 			$('#index-header').removeClass('black-color');
 		}
 	});
-	
-  </script>
+</script>
