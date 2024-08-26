@@ -483,5 +483,5 @@ $strSendAPI[4]="https://www.hct.com.tw/Search/SearchGoods_n.aspx";
 /*嘉里大榮貨運*/
 $strSendAPI[5]="http://www.tjoin.com/search/stocksearch.asp?no=";
 /*順豐速運"*/
-$strSendAPI[6]="http://www.sf-express.com/tw/tc/dynamic_functions/waybill/#search/bill-number/";
+$strSendAPI[6]="https://htm.sf-express.com/tw/tc/dynamic_function/waybill/";
 ?>
