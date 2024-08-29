@@ -3423,20 +3423,20 @@ case "orderitemyun" :
 		}
 		$yun_no = $yun_no."|".$strSend[$yuntype]."|".$strSendAPI[$yuntype];
 		//寄發發貨信件 2020-11-17
-		$fsql->query( "SELECT COUNT(*) as t FROM {P}_shop_orderitems where orderid='{$orderid}'" );
-		if( $fsql->next_record() ){
-				$allord = $fsql->f("t");
-				if($allord == $noyun && $yun_mail=="0"){						
+		// $fsql->query( "SELECT COUNT(*) as t FROM {P}_shop_orderitems where orderid='{$orderid}'" );
+		// if( $fsql->next_record() ){
+		// 		$allord = $fsql->f("t");
+		// 		if($allord == $noyun && $yun_mail=="0"){						
 					
-					$msql->query( "SELECT * FROM {P}_shop_mailtemp WHERE tid='2' AND status='1'");//§쩺¼˪O
-						if($msql->next_record()){
-							$smsg = $memname."|".$GLOBALS['GLOBALS']['CONF'][SiteName]."|".time()."|".$OrderNo."|".$paytype."|".$paytotal."|".$GLOBALS['GLOBALS']['CONF'][SiteHttp]."|".$yun_no;
-							$from = $GLOBALS['GLOBALS']['CONF'][SiteEmail];
-							shopmail( $membermail, $from, $smsg, "2" );	
-							$msql->query("UPDATE {P}_shop_order SET yun_mail='1' WHERE orderid='{$orderid}'");
-						}
-				}
-		}
+		// 			$msql->query( "SELECT * FROM {P}_shop_mailtemp WHERE tid='2' AND status='1'");//§쩺¼˪O
+		// 				if($msql->next_record()){
+		// 					$smsg = $memname."|".$GLOBALS['GLOBALS']['CONF'][SiteName]."|".time()."|".$OrderNo."|".$paytype."|".$paytotal."|".$GLOBALS['GLOBALS']['CONF'][SiteHttp]."|".$yun_no;
+		// 					$from = $GLOBALS['GLOBALS']['CONF'][SiteEmail];
+		// 					shopmail( $membermail, $from, $smsg, "2" );	
+		// 					$msql->query("UPDATE {P}_shop_order SET yun_mail='1' WHERE orderid='{$orderid}'");
+		// 				}
+		// 		}
+		// }
 
 		echo "OK";
 		exit( );
