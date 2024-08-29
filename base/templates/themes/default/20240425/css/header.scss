@@ -164,7 +164,7 @@ header {
       width: 100%;
       padding: 30px 50px;
       @include rwd($mobile) {
-        padding: 20px 20px 0 20px;
+        padding: 20px 25px 0px 20px;
       }
     }
     .nav-items-box {
