@@ -171,11 +171,11 @@ header .nav-box {
 }
 header .nav-box .header-nav-box {
   width: 100%;
-  padding: 30px 30px 30px 50px;
+  padding: 30px 35px 30px 50px;
 }
 @media only screen and (max-width: 768px) {
   header .nav-box .header-nav-box {
-    padding: 20px 25px 0px 20px !important;
+    padding: 20px 30px 0px 20px !important;
   }
 }
 header .nav-box .nav-items-box {
@@ -540,13 +540,13 @@ header .mobile-menu .mobile-menu-category .mobile-menu-category-box.active {
 
 /* adjust */
 header .nav-box img {
-  width: 19.5vw;
+  width: 15vw;
   margin-right: 45px;
 }
 
 @media only screen and (max-width: 1200px) {
   header .nav-box img {
-    width: 19.5vw;
+    width: 15vw;
     margin-right: 45px;
   }
 }
@@ -554,7 +554,7 @@ header .nav-box img {
 
 @media only screen and (min-width: 431px) {
     body.safari header .nav-box img {
-      width: 18.5vw;
+      width: 22vw;
       margin-right: 45px;
   }
 }
