@@ -805,9 +805,10 @@ form.rema-input-type1 label {
 	padding-left: 10px;
 	/*overflow: hidden;*/
 }
+
 .member-bar {
 	float: right;
-	margin-right: -40px;
+	margin-right: -15px;
 }
 
 .item-con {
