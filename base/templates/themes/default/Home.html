@@ -133,7 +133,7 @@
 			
 		}
 		.text-box label {
-			font-size: 3vw;
+			font-size: 64px;
 		}
 		.text-box p {
 			font-size: 1.5vw;
@@ -141,7 +141,8 @@
 		.text-box.position-1 {
 			position: absolute;
 			width: 100%;
-			bottom: 0px;
+			bottom: 6%;
+			left: 4%;
 			text-align: left;
 			padding: 0 25px;
 			
@@ -178,12 +179,12 @@
 		}
 
 		.swiper-wrapper {
-			height: 100%;
-			width: 100vw;
+			height: 100vh;
+			width: auto;
 		}
 
 		.swiper {
-			height: 56vw;
+			height: 100vh;
 		}
 
 		.wrap {
@@ -191,22 +192,44 @@
 		}
 
 		.service_wrap {
-			padding-top: 54vw;
+			padding-top: 100vh;
 		}
 
 		footer {
 			padding-top: 5vw;
 		}
 
+		.member-bar {
+			float: right;
+			padding-right: 0px;
+			margin-top: -15px;
+			margin-right: -5px;
+		}
+
+		header .nav-box img {
+      width: 350px !important;
+      margin-right: 45px;
+  	}
+
+		.index_series {
+			bottom: 7%;
+			right: 6%;
+			font-size: 1.2rem;
+		}
+
+		header .nav-box .header-nav-box {
+    padding: 30px 50px !important;
+  }
+
 
 	/* ipad */
-		@media screen and (min-width: 431px) and (max-width: 1668px){
+		@media screen and (max-width: 1668px){
 		.swiper {
 			height: auto;
 		}
 
 		.text-box label {
-			font-size: 7vw;
+			font-size: 80px;
 			font-weight: 500;
 			line-height: 1.2;
 		}
@@ -216,26 +239,23 @@
 		}
 
 		.text-box {
-			padding-top: 95px;
+			padding-top: 80px;
 		}
 
 		.index_series {
-			bottom: 40px;
-			right: 50px;
-		}
-
-		.swiper-wrapper {
-			height: 70vw;
+			bottom: 6%;
+			right: 6%;
+			font-size: 1.3rem;
 		}
 
 		.member-bar {
 			float: right;
-			margin-right: 5px;
+			padding-right: 5px;
 			margin-top: -15px;
 		}
 
 		header .nav-box img {
-			width: 17vw;
+			width: 340px !important;
 		}
 
 		#index {
@@ -256,6 +276,7 @@
 
 		.text-box.position-1 {
 			padding: 0 40px;
+			bottom: 11%;
 		}
 
 		header .nav-box li {
@@ -287,7 +308,7 @@
 
 		header .pc-menu .box {
 			overflow-x: hidden;
-			padding: 70px 50px 80px 50px;
+			padding: 70px 50px;
 		}
 
 		header .pc-menu .type-list .type-item {
@@ -295,12 +316,40 @@
 		}
 
 		.service_wrap {
-    	padding-top: 64vw;
+    	padding-top: 100vh;
 		}
 
 		footer {
 			padding-top: 10vw;
 	}
+}
+
+/* macbook pro 13' */
+@media screen and (max-width: 1590px) {
+	header .nav-box img {
+			width: 280px !important;
+	}
+
+	.service_wrap {
+			padding-top: 100vh;
+	}
+
+	header .pc-menu .box {
+		padding: 30px 50px;
+	}
+
+	.text-box label {
+		font-size: 60px;
+	}
+
+	.text-box p {
+		font-size: 1.75vw;
+	}
+
+	.index_series {
+		font-size: .9rem;
+	}
+
 }
 
 	@media only screen and (max-width: 800px) {
@@ -312,7 +361,7 @@
 	/* iphone */
 	@media only screen and (max-width: 430px) {
 		.swiper {
-			height: auto;
+			height: 100vh;
 		}
 
 		#index {
@@ -320,15 +369,12 @@
 		}
 
 		header .nav-box img {
-			width: 300px;
-		}
-
-		.swiper-wrapper {
-			height: 170vw;
+			width: 280px !important;
+			margin-right: 0px !important;
 		}
 
 		.member-bar {
-			margin-right: -12px;
+			padding-right: -12px;
 			margin-top: -11px;
 		}
 
@@ -337,7 +383,7 @@
 			}
 
 		.text-box label {
-			font-size: 57px;
+			font-size: 50px;
 			font-weight: 500;
 			line-height: 1.2;
 		}
@@ -362,11 +408,13 @@
 		}
 
 		.text-box.position-1 {
-				bottom: 60px;
+				bottom: 6%;
+				left: 4%;
 			}
 
 		.index_series { 
-			bottom: 22px;
+			bottom: 6%;
+			right: 6%;
 			font-size: .9rem;
 			font-weight: 300;
 		}
@@ -380,7 +428,11 @@
 		}
 
 		.service_wrap {
-    	padding-top: 165vw;
+    	padding-top: 100vh;
+		}
+
+		header .nav-box .header-nav-box {
+			padding: 30px 25px !important
 		}
 
 		footer {
@@ -391,19 +443,31 @@
 		@media only screen and (max-width: 1440px) {
 				.text-box.position-1 {
 				width: 100%;
-				bottom: 50px;
+				bottom: 6%;
+				left: 4%;
 			}
 		}
 		@media only screen and (max-width: 1100px) {
 			.text-box.position-1 {
-				bottom: 40px;
+				bottom: 6%;
+				left: 4%;
 			}
 		}
 		@media only screen and (max-width: 768px) {
 				.text-box.position-1 {
 				padding: 0 20px;
+				bottom: 6%;
+				left: 4%;
 			}
 		}
+
+	/* iphone pro */
+	@media only screen and (max-width: 390px) {
+		header .nav-box img {
+			width: 250px !important;
+		}
+	}
+
 	</style>
 
 	<body>

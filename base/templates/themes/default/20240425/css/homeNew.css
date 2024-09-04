@@ -228,14 +228,15 @@ img {
 }
 .index_series {
   position: absolute;
-  bottom: 140px;
-  right: 6.5%;
+  bottom: 6%;
+  right: 4%;
   color: #fff;
   font-size: 1rem;
 }
 @media only screen and (max-width: 1440px) {
   .index_series {
-    bottom: 50px;
+    bottom: 6%;
+    right: 4%;
   }
 }
 /*選單展開*/
