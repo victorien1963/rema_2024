@@ -325,7 +325,7 @@ case "orderitemtuilist" :
 				if ( $itemtui != "0" )
 				{
 						//$fsql->query( "update {P}_shop_orderitems set iftui='0',itemtui='0',yuntime='0',ifyun='1' where id='{$itemid}'" );
-						$fsql->query( "update {P}_shop_orderitems set iftui='0',yuntime='0',ifyun='1' where id='{$itemid}'" );
+						$fsql->query( "update {P}_shop_orderitems set iftui='0',yuntime='0',ifyun='1',itemtui='0' where id='{$itemid}'" );
 						/*修改總訂單價格*/
 						$fsql->query( "update {P}_shop_order set goodstotal=goodstotal+{$realjine} where orderid='{$orderid}'" );
 						$getNewO = $fsql->getone( "SELECT goodstotal FROM {P}_shop_order where orderid='{$orderid}'" );
@@ -390,7 +390,7 @@ case "orderitemtuilist" :
 									$fsql->query( "UPDATE {P}_shop_order SET yunfei='{$oriyunfei}',multiyunfei='{$yunfei}',paytotal=paytotal+{$yunfei}-{$proprice},totaloof=totaloof+{$yunfei}-{$proprice},multiprice='{$multiprice}+{$yunfei}' WHERE orderid='{$orderid}'" );
 								}
 							}else{
-								$fsql->query( "UPDATE {P}_shop_order SET paytotal=paytotal-{$proprice},totaloof=totaloof-{$proprice},multiprice='{$multiprice}' WHERE orderid='{$orderid}'" );
+								$fsql->query( "UPDATE {P}_shop_order SET paytotal=paytotal-{$proprice},yunfei='{$oriyunfei}',multiyunfei='{$yunfei}',totaloof=totaloof-{$proprice},multiprice='{$multiprice}' WHERE orderid='{$orderid}'" );
 							}
 						
 						/*修改總訂單項目*/
@@ -469,7 +469,7 @@ case "orderitemtuilist" :
 			}else{
 				$yungoodstotal = $goodstotal- $cutprice;
 			}
-			
+
 			$getpricesymbol = $TWD["pricesymbol"];
 			$getpayid = $TWD["payid"];
 			$SYM = $fsql->getone( "SELECT pricecode,rate,point FROM {P}_base_currency WHERE pricesymbol='{$getpricesymbol}'" );
@@ -511,10 +511,13 @@ case "orderitemtuilist" :
 				}
 			}
 			
-			if($getyunfei == "0.00" && $yunfei > 0){
+			if($getyunfei == 0 && $yunfei > 0){
 				if($getsource=="" || $getsource =="0"){
 					$fsql->query( "UPDATE {P}_shop_order SET yunfei='{$oriyunfei}',multiyunfei='{$yunfei}',paytotal=paytotal+{$oriyunfei},totaloof=totaloof+{$oriyunfei} WHERE orderid='{$orderid}'" );
 				}
+				
+			} else{
+				$fsql->query( "UPDATE {P}_shop_order SET paytotal=paytotal-{$proprice},yunfei='{$oriyunfei}',multiyunfei='{$yunfei}',totaloof=totaloof-{$proprice},multiprice='{$multiprice}' WHERE orderid='{$orderid}'" );
 			}
 			
 			if($TWD["goodstotal"] == "0.00"){

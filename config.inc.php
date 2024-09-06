@@ -2,7 +2,7 @@
 
 #[資料庫參數]
 $dbHost="mariadb-rema";
-$dbName="remaspor_2020";
+$dbName="remaspor_2024";
 $dbUser="root";
 $dbPass="dsa951230";
 

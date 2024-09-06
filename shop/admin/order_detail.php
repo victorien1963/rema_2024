@@ -307,9 +307,13 @@ while ( $msql->next_record( ) )
     <td bgcolor="#FFFFFF"><?php echo number_format($paytotal,0);?> 元</td>
   </tr>
   <tr>
-    <td width="78" align="center" bgcolor="#F2F9FD">付款方式：</td>
-    <td width="230" bgcolor="#FFFFFF"><select id="chkpaytype"><?php echo $paytypestr;?></select></td>
-    <td width="78" align="center" bgcolor="#F2F9FD">原始付款：</td>
+    <td rowspan="2" width="78" align="center" bgcolor="#F2F9FD">付款方式：</td>
+    <td rowspan="2" width="230" bgcolor="#FFFFFF"><select id="chkpaytype"><?php echo $paytypestr;?></select></td>
+    <td width="78" align="center" bgcolor="#F2F9FD">退款金額：</td>
+    <td bgcolor="#FFFFFF"><?php echo number_format($oripay - $paytotal,0);?></td>
+  </tr>
+  <tr>
+	<td width="78" align="center" bgcolor="#F2F9FD">原始付款：</td>
     <td bgcolor="#FFFFFF"><?php echo $paystat;?> <?php echo number_format($oripay,0);?></td>
   </tr>
   <tr>
