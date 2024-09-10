@@ -95,13 +95,14 @@ if ( $msql->next_record( ) )
 		}elseif($getPromo["type"] == 2){
 			$cutpromoprice = round($totalcent * $getPromo["type_value"]);
 		}
+		
 		if( ($totalcent-$promoprice) <1500){
 			$oripay = $cutpromoprice + $yunfei;
 		}else{
 			if($totaljine != $goodstotal){
-				$oripay = $totalcent - $oripromoprice;
+				$oripay = $cutpromoprice - $oripromoprice;
 			}else{
-				$oripay = $totalcent - $promoprice;
+				$oripay = $cutpromoprice - $promoprice;
 			}
 		}
 }
