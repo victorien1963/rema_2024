@@ -2,6 +2,7 @@
 define( "ROOTPATH", "../../" );
 include( ROOTPATH."includes/admin.inc.php" );
 include( "language/".$sLan.".php" );
+include( "func/pos.inc.php" );
 needauth( 321 );
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -95,16 +96,47 @@ if ( $msql->next_record( ) )
 		}elseif($getPromo["type"] == 2){
 			$cutpromoprice = round($totalcent * $getPromo["type_value"]);
 		}
-		
-		if( ($totalcent-$promoprice) <1500){
-			$oripay = $cutpromoprice + $yunfei;
+
+		/*2017-03-25 計算運費*/
+		/*擷取錢幣符號*/
+		$TWD = $fsql->getone( "SELECT pricesymbol,goodstotal,yunfei,payid,source FROM {P}_shop_order WHERE orderid='{$orderid}'" );
+		$getsource = substr($TWD["source"],0,1);
+		$getyunfei = $TWD["yunfei"];
+		$goodstotal = $TWD["goodstotal"];
+		$getpricesymbol = $TWD["pricesymbol"];
+		$getpayid = $TWD["payid"];
+		$SYM = $fsql->getone( "SELECT pricecode,rate,point FROM {P}_base_currency WHERE pricesymbol='{$getpricesymbol}'" );
+		$getrate = $SYM["rate"];
+		$getpoint = $SYM["point"];
+		$getpricecode = $SYM["pricecode"];
+		if($getpricecode == "TWD"){
+			$fsql->query("select dgs from {P}_shop_yun where id='{$getpayid}'");
+			if($fsql->next_record()){
+				$dgs = $fsql->f("dgs");
+				list($setyunfei, $setyunprice) = explode("|",$dgs);
+				$oriyunfei = countyunfeip( $tweight, $cutpromoprice, $dgs, $getrate );//原始運費
+				$cutpromoyunfei = $getrate!="1"? round(($oriyunfei*$getrate),$getpoint):$oriyunfei;//多國用
+			}
 		}else{
-			if($totaljine != $goodstotal){
-				$oripay = $cutpromoprice - $oripromoprice;
-			}else{
-				$oripay = $cutpromoprice - $promoprice;
+			$fsql->query("select dgs from {P}_shop_yun where spec='{$getpricecode}'");
+			if($fsql->next_record()){
+				$dgs = $fsql->f("dgs");
+				list($setyunfei, $setyunprice) = explode("|",$dgs);
+				$oriyunfei = countyunfeip( $tweight, $cutpromoprice, $dgs, $getrate );//原始運費
+				$cutpromoyunfei = $getrate!="1"? round(($oriyunfei*$getrate),$getpoint):$oriyunfei;//多國用
 			}
 		}
+		
+		$oripay = $cutpromoprice - $disaccount + $cutpromoyunfei;
+		// if( ($totalcent-$promoprice) <1500){
+		// 	$oripay = $cutpromoprice + $yunfei;
+		// }else{
+		// 	if($totaljine != $goodstotal){
+		// 		$oripay = $cutpromoprice - $oripromoprice;
+		// 	}else{
+		// 		$oripay = $cutpromoprice - $promoprice;
+		// 	}
+		// }
 }
 
 /*修改載具*/
