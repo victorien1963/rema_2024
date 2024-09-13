@@ -82,11 +82,6 @@ a {
     width: 99%;
 }
 
-img {
-	width: 101%;
-	object-fit: cover;
-}
-
 #header {
 	position: fixed;
 	/* background-color: hsla(0, 0%, 100%, 1); */
