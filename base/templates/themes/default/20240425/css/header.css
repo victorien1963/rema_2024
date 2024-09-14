@@ -33,9 +33,6 @@ p {
   margin-bottom: 0;
 }
 
-.header-top {
-  padding-top: 170px;
-}
 @media only screen and (max-width: 768px) {
   .header-top {
     padding-top: 220px;
@@ -322,6 +319,7 @@ header .pc-menu .close-btn {
   margin-top: -10px;
   cursor: pointer;
 }
+
 @media only screen and (max-width: 1200px) {
   header .pc-menu .close-btn {
     position: absolute;
@@ -330,17 +328,7 @@ header .pc-menu .close-btn {
     font-size: 30px;
   }
 }
-header .pc-menu .type-tag {
-  width: -moz-fit-content;
-  width: auto;
-  margin-left: 390px;
-  display: none;
-}
-@media only screen and (max-width: 1350px) {
-  header .pc-menu .type-tag {
-    margin: auto;
-  }
-}
+
 header .pc-menu .type-tag.active {
   display: block;
 }
