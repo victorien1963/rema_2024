@@ -1928,12 +1928,6 @@ form.rema-input-type1 label {
 	}
 }
 
-
-#content1 {
-	/* padding-top: 91px; */
-	overflow: hidden;
-}
-
 /* 桌機版調整 */
 @media (min-width: 1001px) {
 	/* common------------------------------- */
@@ -1949,9 +1943,6 @@ form.rema-input-type1 label {
 	#content {
 		padding-top: 40px;
 		padding-bottom: 80px;
-	}
-	#content1 {
-		/* padding-top: 91px; */
 	}
 	/* 跑馬燈部分 */
 	.marquee {
@@ -2122,5 +2113,10 @@ form.rema-input-type1 label {
 	.font-s {
 		font-size: 16px;
 		line-height: 24px;
+	}
+
+	#content1 {
+		padding-top: 240px !important;
+		overflow: hidden;
 	}
 }
