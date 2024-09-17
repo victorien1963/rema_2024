@@ -954,3 +954,421 @@ html,
       margin-right: 45px;
   }
 } */
+
+
+
+/*
+20240916
+*/
+
+
+		html,
+		body {
+			position: relative;
+			height: fit-content;
+		}
+		
+		body {
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.swiper {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 0;
+		}
+		
+		.swiper-slide {
+			font-size: 18px;
+			background: url("./images/REMA_KV_B_231207.jpg");
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.m_memu_wp {
+			z-index: 1;
+		}
+		.text-box {
+			padding-top: 110px;
+			color: #fff;
+			font-family: "SF Pro Text", "Noto Sans TC", "蘋方體", "雅黑體";
+			text-align: center;
+			
+		}
+		.text-box label {
+			font-size: 64px;
+		}
+		.text-box p {
+			font-size: 1.5vw;
+		}
+		.text-box.position-1 {
+			position: absolute;
+			width: 100%;
+			bottom: 6%;
+			left: 4%;
+			text-align: left;
+			padding: 0 25px;
+			
+		}
+		header .member-bar svg,
+		header .member-bar i,
+		header .member-bar #cartnum {
+			transition: color 0.8s ease-in-out;
+			color: #fff;
+		}
+		header .nav-items-box {
+			transition: filter 0.8s ease-in-out;
+			filter: brightness(0) invert(1);
+		}
+		header.active .nav-items-box {
+			filter: brightness(1) invert(0);
+		}
+		header.active .member-bar svg,
+		header.active .member-bar i,
+		header.active .member-bar #cartnum {
+			color: #000;
+		}
+		header.black-color .member-bar svg,
+		header.black-color .member-bar i,
+		header.black-color .member-bar p,
+		header.active .member-bar #cartnum {
+			color: #000!important;
+		}
+		header.black-color .nav-items-box {
+			filter: brightness(1) invert(0)!important;
+		}
+		.close-btn i {
+			color: #000!important;
+		}
+
+		.swiper-wrapper {
+			height: 100vh;
+			width: auto;
+		}
+
+		.swiper {
+			height: 100vh;
+		}
+
+		.wrap {
+			padding: 5vw 0;
+		}
+
+		.service_wrap {
+			padding-top: 100vh;
+		}
+
+		footer {
+			padding-top: 5vw;
+		}
+
+		.member-bar {
+			float: right;
+			padding-right: 0px;
+			margin-top: -15px;
+			margin-right: -5px;
+		}
+
+		header .nav-box img {
+      width: 350px !important;
+      margin-right: 45px;
+  	}
+
+		.index_series {
+			bottom: 7%;
+			right: 6%;
+			font-size: 1.2rem;
+		}
+
+		header .nav-box .header-nav-box {
+    padding: 30px 50px !important;
+  }
+
+	header .pc-menu .type-tag {
+		width: -moz-fit-content;
+		width: auto;
+		margin-left: 19vw !important;
+		display: none;
+	}
+
+
+	/* ipad */
+		@media screen and (max-width: 1668px){
+		.swiper {
+			height: auto;
+		}
+
+		.text-box label {
+			font-size: 80px;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		.text-box p {
+			font-size: 2.75vw;
+		}
+
+		.text-box {
+			padding-top: 80px;
+		}
+
+		.index_series {
+			bottom: 6%;
+			right: 6%;
+			font-size: 1.3rem;
+		}
+
+		.member-bar {
+			float: right;
+			padding-right: 5px;
+			margin-top: -15px;
+		}
+
+		header .nav-box img {
+			width: 340px !important;
+		}
+
+		#index {
+			height: auto;
+		}
+
+		.wrap {
+			padding: 6rem 0 100px 0;
+		}
+
+		.arrow_l > img, .arrow_r > img {
+			width: 19px;
+		}
+
+		.arrow_l, .arrow_r {
+			top: 53.5%;
+		}
+
+		.text-box.position-1 {
+			padding: 0 40px;
+			bottom: 11%;
+		}
+
+		header .nav-box li {
+			font-size: 21px;
+		}
+
+		header .pc-menu .type-list {
+			justify-content: center;
+			margin: 0 -227px;
+		}
+
+		header .pc-menu .type-list .title > a {
+			font-size: 20px;
+		}
+
+		header .pc-menu .type-list li a {
+			font-size: 16px;
+		}
+
+		header .pc-menu .input-group {
+			max-width: 400px;
+			padding: 10px 20px;
+		}
+
+		.input-group > .form-control {
+			padding: 7px 10px;
+			font-size: 16px;
+		}
+
+		header .pc-menu .box {
+			overflow-x: hidden;
+			padding: 30px 50px 70px 50px;
+		}
+
+		header .pc-menu .type-list .type-item {
+			padding: 30px 10px;
+		}
+
+		.service_wrap {
+    	padding-top: 100vh;
+		}
+
+		footer {
+			padding-top: 10vw;
+	}
+
+		header .pc-menu .type-tag {
+		width: -moz-fit-content;
+		width: auto;
+		margin-left: 19.5vw !important;
+		display: none;
+	}
+}
+
+/* macbook pro 13' */
+@media screen and (max-width: 1590px) {
+	header .nav-box img {
+			width: 280px !important;
+	}
+
+	.service_wrap {
+			padding-top: 100vh;
+	}
+
+	header .pc-menu .box {
+		padding: 50px;
+	}
+
+	header .pc-menu .type-list {
+			justify-content: start;
+			margin: 0px -450px;
+			padding-left: 27vw;
+	}
+
+	header .pc-menu .input-group {
+			max-width: 400px;
+			padding: 20px;
+		}
+
+	.text-box label {
+		font-size: 60px;
+	}
+
+	.text-box p {
+		font-size: 1.75vw;
+	}
+
+	.index_series {
+		font-size: .9rem;
+	}
+
+}
+
+	@media only screen and (max-width: 800px) {
+		.service > .wrap > .article {
+			width: 30vw;
+	}
+}
+
+	/* iphone */
+	@media only screen and (max-width: 430px) {
+		.swiper {
+			height: 100vh;
+		}
+
+		#index {
+			height: auto;
+		}
+
+		header .nav-box img {
+			width: 280px !important;
+			margin-right: 0px !important;
+		}
+
+		.member-bar {
+			padding-right: -12px;
+			margin-top: -11px;
+		}
+
+		header .nav-box .nav-items-box {
+				padding-right: 0px;
+			}
+
+		.text-box label {
+			font-size: 50px;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		.text-box {
+			padding-top: 60px;
+		}
+
+		.text-box p {
+			font-size: 21px;
+		}
+
+		header .nav-box ul {
+			padding-right: 10px;
+			line-height: 2;
+		}
+
+		#search-produce > input {
+			padding: 10px 10px;
+			margin-bottom: 175px;
+			font-size: 16px;
+		}
+
+		.text-box.position-1 {
+				bottom: 6%;
+				left: 4%;
+			}
+
+		.index_series { 
+			bottom: 6%;
+			right: 6%;
+			font-size: .9rem;
+			font-weight: 300;
+		}
+
+		.service {
+			padding: 64px 0;
+		}
+
+		.edm > .wrap {
+			padding: 40px 50px 45px 50px;
+		}
+
+		.service_wrap {
+    	padding-top: 100vh;
+		}
+
+		header .nav-box .header-nav-box {
+			padding: 30px 25px !important
+		}
+
+		footer {
+			padding-top: 18vw;
+		}
+	}
+
+		@media only screen and (max-width: 1440px) {
+				.text-box.position-1 {
+				width: 100%;
+				bottom: 6%;
+				left: 4%;
+			}
+		}
+		@media only screen and (max-width: 1100px) {
+			.text-box.position-1 {
+				bottom: 6%;
+				left: 4%;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+				.text-box.position-1 {
+				padding: 0 20px;
+				bottom: 6%;
+				left: 4%;
+			}
+		}
+
+	/* iphone pro */
+	@media only screen and (max-width: 390px) {
+		header .nav-box img {
+			width: 250px !important;
+		}
+	}
+
