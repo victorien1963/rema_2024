@@ -95,8 +95,10 @@ if ( $msql->next_record( ) )
 			}
 		}elseif($getPromo["type"] == 2){
 			$cutpromoprice = round($totalcent * $getPromo["type_value"]);
+		} else {
+			$cutpromoprice = $totalcent;
 		}
-
+		
 		/*2017-03-25 計算運費*/
 		/*擷取錢幣符號*/
 		$TWD = $fsql->getone( "SELECT pricesymbol,goodstotal,yunfei,payid,source FROM {P}_shop_order WHERE orderid='{$orderid}'" );
@@ -127,7 +129,31 @@ if ( $msql->next_record( ) )
 			}
 		}
 		
+		/**
+		 * 原始付款（計算方式） ＝（商品總價+配送費用）－折價(餘/券)
+		 * 訂單總額（計算方式） ＝（商品總價+配送費用）－折價(券)
+		 * 退款金額（計算方式） ＝ 退貨商品總價 －（未滿2500訂單產生的運費）－該退貨商品的折價(券)
+		 */
+		/**
+		 * $cutpromoyunfei 原始商品總價
+		 * $cutpromoyunfei 原始運費計算
+		 * $disaccount 會員錢包餘額
+		 * $yunfei 退貨後運費
+		 * $goodstotal 退貨商品總價
+		 * $promoprice 折扣後金額
+		 */
+		
 		$oripay = $cutpromoprice - $disaccount + $cutpromoyunfei;
+		$orderTotal =  $goodstotal + $yunfei;
+
+		
+		// file_put_contents("msg1111.txt", print_r($cutpromoprice, 1) . "\n", FILE_APPEND);
+		// file_put_contents("msg1111.txt", print_r($disaccount, 1) . "\n", FILE_APPEND);
+		// file_put_contents("msg1111.txt", print_r($cutpromoyunfei, 1) . "\n", FILE_APPEND);
+		// file_put_contents("msg1111.txt", print_r($promoprice, 1) . "\n", FILE_APPEND);
+		// file_put_contents("msg1111.txt", print_r($oripay, 1) . "\n", FILE_APPEND);
+		// file_put_contents("msg1111.txt", print_r($paytotal, 1) . "\n", FILE_APPEND);
+		// file_put_contents("msg1111.txt", print_r($paytotal - $oripay, 1) . "\n", FILE_APPEND);
 		// if( ($totalcent-$promoprice) <1500){
 		// 	$oripay = $cutpromoprice + $yunfei;
 		// }else{
@@ -137,6 +163,8 @@ if ( $msql->next_record( ) )
 		// 		$oripay = $cutpromoprice - $promoprice;
 		// 	}
 		// }
+
+		
 }
 
 /*修改載具*/
@@ -259,6 +287,7 @@ if ( $msql->next_record( ) )
  
 <?php
 $msql->query( "select * from {P}_shop_orderitems where orderid='{$orderid}'" );
+$refundAmount = 0;
 while ( $msql->next_record( ) )
 {
 		$itemid = $msql->f( "id" );
@@ -280,6 +309,13 @@ while ( $msql->next_record( ) )
 		$colorname = $msql->f( "colorname" );
 		
 		if($iftui || $itemtui){
+			
+			if($getPromo["type"] == 2){
+				$jineValue = round($jine * $getPromo["type_value"]);
+			} else {
+				$jineValue = $jine;
+			}
+			$refundAmount += $jineValue;
 			$goods = "<del>".$goods."</del> <span style='color:red;'><退></span>";
 			$jine = "<del>".number_format($jine,0)."</del>";
 		}else{
@@ -321,6 +357,15 @@ while ( $msql->next_record( ) )
 		}
 		//$fsql->query( "update {P}_shop_order set totaloof='420',paytotal='420' where orderid='{$orderid}'" );
 }
+/**
+ * 退款金額
+ */
+$refundAmountPromoprice = 0;
+ if($getPromo["type"] == 1){
+	$refundAmountPromoprice = $promoprice;
+}
+$refundAmount = $refundAmount > 0 ? $refundAmount - $yunfei - $refundAmountPromoprice : 0;
+// $orderTotal =  $goodstotal + $yunfei;
 ?>
 </table>
 </div>
@@ -337,13 +382,13 @@ while ( $msql->next_record( ) )
     <td width="78" align="center" bgcolor="#F2F9FD">折價(餘/券)：</td>
     <td width="230" bgcolor="#FFFFFF"><?php echo number_format($disaccount,0);?>/<?php echo number_format($promoprice,0);?> 元</td>
     <td width="78" align="center" bgcolor="#F2F9FD">訂單總額：</td>
-    <td bgcolor="#FFFFFF"><?php echo number_format($paytotal,0);?> 元</td>
+    <td bgcolor="#FFFFFF"><?php echo number_format($orderTotal,0);?> 元</td>
   </tr>
   <tr>
     <td rowspan="2" width="78" align="center" bgcolor="#F2F9FD">付款方式：</td>
     <td rowspan="2" width="230" bgcolor="#FFFFFF"><select id="chkpaytype"><?php echo $paytypestr;?></select></td>
     <td width="78" align="center" bgcolor="#F2F9FD">退款金額：</td>
-    <td bgcolor="#FFFFFF"><?php echo number_format($oripay - $paytotal,0);?></td>
+    <td bgcolor="#FFFFFF"><?php echo number_format($refundAmount,0);?></td>
   </tr>
   <tr>
 	<td width="78" align="center" bgcolor="#F2F9FD">原始付款：</td>
