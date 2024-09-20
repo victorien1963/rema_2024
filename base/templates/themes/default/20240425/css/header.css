@@ -626,7 +626,7 @@ header .mobile-menu .mobile-menu-category .mobile-menu-category-box.active {
 		}
 		header .nav-items-box {
 			transition: filter 0.8s ease-in-out;
-			filter: brightness(0) invert(1);
+			filter: brightness(0) invert(0);
 		}
 		header.active .nav-items-box {
 			filter: brightness(1) invert(0);
@@ -675,6 +675,7 @@ header .mobile-menu .mobile-menu-category .mobile-menu-category-box.active {
 			padding-right: 0px;
 			margin-top: -15px;
 			margin-right: -5px;
+			filter: brightness(0) invert(0);
 		}
 
 		header .nav-box img {
@@ -962,5 +963,9 @@ header .mobile-menu .mobile-menu-category .mobile-menu-category-box.active {
 		header .nav-box img {
 			width: 250px !important;
 		}
+	}
+
+	#header_nav_switch, #header_icon_switch {
+		filter: brightness(0) invert(0);
 	}
 
