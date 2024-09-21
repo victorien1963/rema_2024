@@ -3886,7 +3886,12 @@ case "orderunpay" :
 			// 		$fsql->query( "update {P}_shop_order set disaccount='{$goodstotal}+{$yunfei}',paytotal='0' where orderid='{$orderid}'" );
 			// 	}
 			// }
-			$tuitotal = $alljine - $cutpromoyunfei;
+			$refundAmountPromoprice = 0;
+			if($getPromo["type"] == 1){
+				$refundAmountPromoprice = $promoprice;
+			}
+			
+			$tuitotal = $alljine - $cutpromoyunfei - $refundAmountPromoprice;
 			if(!$isalltui && $realpay<0){
 				$addtuitotal = abs($realpay);
 				$fsql->query( "update {P}_shop_order set disaccount='{$goodstotal}+{$yunfei}',paytotal='0' where orderid='{$orderid}'" );
