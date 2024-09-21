@@ -3808,6 +3808,7 @@ case "orderunpay" :
 		
 		//$goodstotal 是 退貨後剩餘的商品金額
 		
+		
 		/*僅退除退貨的金額*/
 		$msql->query( "select * from {P}_shop_orderitems where orderid='{$orderid}' AND itemtui='1' AND iftui='1'" );
 		while ( $msql->next_record( ) )
@@ -3825,34 +3826,70 @@ case "orderunpay" :
 		}
 		$addtuitotal = 0;
 		
+		/*2017-03-25 計算運費*/
+		/*擷取錢幣符號*/
+		$TWD = $fsql->getone( "SELECT pricesymbol,goodstotal,yunfei,payid,source FROM {P}_shop_order WHERE orderid='{$orderid}'" );
+		$getsource = substr($TWD["source"],0,1);
+		$getyunfei = $TWD["yunfei"];
+		$goodstotal = $TWD["goodstotal"];
+		$getpricesymbol = $TWD["pricesymbol"];
+		$getpayid = $TWD["payid"];
+		$SYM = $fsql->getone( "SELECT pricecode,rate,point FROM {P}_base_currency WHERE pricesymbol='{$getpricesymbol}'" );
+		$getrate = $SYM["rate"];
+		$getpoint = $SYM["point"];
+		$getpricecode = $SYM["pricecode"];
+		if($getpricecode == "TWD"){
+			$fsql->query("select dgs from {P}_shop_yun where id='{$getpayid}'");
+			if($fsql->next_record()){
+				$dgs = $fsql->f("dgs");
+				list($setyunfei, $setyunprice) = explode("|",$dgs);
+				$oriyunfei = countyunfeip( $tweight, $alljine, $dgs, $getrate );//原始運費
+				$cutpromoyunfei = $getrate!="1"? round(($oriyunfei*$getrate),$getpoint):$oriyunfei;//多國用
+			}
+		}else{
+			$fsql->query("select dgs from {P}_shop_yun where spec='{$getpricecode}'");
+			if($fsql->next_record()){
+				$dgs = $fsql->f("dgs");
+				list($setyunfei, $setyunprice) = explode("|",$dgs);
+				$oriyunfei = countyunfeip( $tweight, $alljine, $dgs, $getrate );//原始運費
+				$cutpromoyunfei = $getrate!="1"? round(($oriyunfei*$getrate),$getpoint):$oriyunfei;//多國用
+			}
+		}
+
 		if($alljine){
 			//如果是全退
-			if($isalltui){
-				//退還金額$tuitotal就是退貨商品的總額 加上 運費
-				//刷卡者刷退刷卡金額，餘額退還帳戶
-				if($payid == '1'){
-					$tuitotal = $totaloof+$yunfei;
-					//餘額退還帳戶
-				}else{
-					//全退到帳戶
-					$tuitotal = $totaloof+$disaccount+$yunfei;
-				}
-			}else{
-				//2018-03-13
-				//如果不是全退
-				if($totalcent>1500 && $goodstotal-$promoprice<1500){
-					$tuitotal = $alljine-$yunfei;
-				}else{
-					$tuitotal = $alljine;
-				}
+			// if($isalltui){
+			// 	//退還金額$tuitotal就是退貨商品的總額 加上 運費
+			// 	//刷卡者刷退刷卡金額，餘額退還帳戶
+			// 	if($payid == '1'){
+			// 		$tuitotal = $totaloof+$yunfei;
+			// 		//餘額退還帳戶
+			// 	}else{
+			// 		//全退到帳戶
+			// 		$tuitotal = $totaloof+$disaccount+$yunfei;
+			// 	}
+			// }else{
+			// 	//2018-03-13
+			// 	//如果不是全退
+			// 	// $tuitotal = $alljine - $cutpromoyunfei;
+			// 	// if($totalcent>1500 && $goodstotal-$promoprice<1500){
+			// 	// 	$tuitotal = $alljine-$yunfei;
+			// 	// }else{
+			// 	// 	$tuitotal = $alljine;
+			// 	// }
 				
-				//2018-08-30
-				//realpay<0 表示退款大於實際付款，表示有餘額付費，需補回剩餘餘額
-				//修改餘額付款，修改總付款為 0
-				if($realpay<0){
-					$addtuitotal = abs($realpay);
-					$fsql->query( "update {P}_shop_order set disaccount='{$goodstotal}+{$yunfei}',paytotal='0' where orderid='{$orderid}'" );
-				}
+			// 	//2018-08-30
+			// 	//realpay<0 表示退款大於實際付款，表示有餘額付費，需補回剩餘餘額
+			// 	//修改餘額付款，修改總付款為 0
+			// 	if($realpay<0){
+			// 		$addtuitotal = abs($realpay);
+			// 		$fsql->query( "update {P}_shop_order set disaccount='{$goodstotal}+{$yunfei}',paytotal='0' where orderid='{$orderid}'" );
+			// 	}
+			// }
+			$tuitotal = $alljine - $cutpromoyunfei;
+			if(!$isalltui && $realpay<0){
+				$addtuitotal = abs($realpay);
+				$fsql->query( "update {P}_shop_order set disaccount='{$goodstotal}+{$yunfei}',paytotal='0' where orderid='{$orderid}'" );
 			}
 		}else{
 			exit("發生錯誤: 應該先操作商品退貨流程！");
