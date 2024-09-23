@@ -20,4 +20,35 @@ $(document).ready(function(){
 		return false; 
 
    }); 
+   $('#registration-form').submit(function(){ 
+		$('#registration-form').ajaxSubmit({
+			url: PDV_RP+'post.php',
+			success: function(msg) {
+				switch(msg){									
+					case "OK":
+						if($("#nextstep")[0].value=="enter"){
+							window.location='index.php';
+						}else{
+							window.location='index.php';
+						}
+					break;
+					case "OK_NOMAIL":
+						if($("#nextstep")[0].value=="enter"){
+							window.location='index.php';
+						}else{
+							window.location='index.php';
+						}
+					break;
+					case "CHECK":
+						LoadMsg("會員註冊成功！您註冊的會員類型需要審核後才能登入，感謝您的註冊");
+					break;
+					default :
+						LoadMsg(msg);
+					break;
+				}
+				
+			}
+		}); 
+		return false; 
+   });
 });
