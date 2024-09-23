@@ -27,6 +27,10 @@ function LoadPopup_MemberLogin(){
 				if(msg == "islogin"){
 					window.location=PDV_RP+"member/";
 					return false; 
+				} else {
+					// 新版未登入
+					window.location=PDV_RP+"member/login.php";
+					return false; 
 				}
 				
 				$("#popupwindow-in").empty();
