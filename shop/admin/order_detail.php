@@ -86,17 +86,22 @@ if ( $msql->next_record( ) )
 		$totaljine = $getJine["SUM(jine)"];
 		$promocode =  $msql->f( "promocode" );
 		$getPromo = $fsql->getone( "select type,type_value,pricelimit from {P}_shop_promocode where `code`='{$promocode}' limit 0,1" );
+		$newprice = 0;
 		if($getPromo["type"] == 1){
 			if($totaljine>$getPromo["pricelimit"]){
 				$cutpromoprice = $totalcent - $getPromo["type_value"];
 				$oripromoprice = $getPromo["type_value"];
+				$newprice = $goodstotal - $getPromo["type_value"];
 			}else{
 				$cutpromoprice = $totalcent;
+				$newprice = $goodstotal;
 			}
 		}elseif($getPromo["type"] == 2){
 			$cutpromoprice = round($totalcent * $getPromo["type_value"]);
+			$newprice = round($goodstotal * $getPromo["type_value"]);
 		} else {
 			$cutpromoprice = $totalcent;
+			$newprice = $goodstotal;
 		}
 		
 		/*2017-03-25 計算運費*/
@@ -116,7 +121,7 @@ if ( $msql->next_record( ) )
 			if($fsql->next_record()){
 				$dgs = $fsql->f("dgs");
 				list($setyunfei, $setyunprice) = explode("|",$dgs);
-				$oriyunfei = countyunfeip( $tweight, $cutpromoprice, $dgs, $getrate );//原始運費
+				$oriyunfei = countyunfeip( $tweight, $totalcent, $dgs, $getrate );//原始運費
 				$cutpromoyunfei = $getrate!="1"? round(($oriyunfei*$getrate),$getpoint):$oriyunfei;//多國用
 			}
 		}else{
@@ -124,7 +129,7 @@ if ( $msql->next_record( ) )
 			if($fsql->next_record()){
 				$dgs = $fsql->f("dgs");
 				list($setyunfei, $setyunprice) = explode("|",$dgs);
-				$oriyunfei = countyunfeip( $tweight, $cutpromoprice, $dgs, $getrate );//原始運費
+				$oriyunfei = countyunfeip( $tweight, $totalcent, $dgs, $getrate );//原始運費
 				$cutpromoyunfei = $getrate!="1"? round(($oriyunfei*$getrate),$getpoint):$oriyunfei;//多國用
 			}
 		}
@@ -143,8 +148,8 @@ if ( $msql->next_record( ) )
 		 * $promoprice 折扣後金額
 		 */
 		
-		$oripay = $cutpromoprice - $disaccount + $cutpromoyunfei;
-		$orderTotal =  $goodstotal + $yunfei;
+		$oripay = $cutpromoprice + $cutpromoyunfei;
+		$orderTotal =  $newprice + $yunfei;
 
 		
 		// file_put_contents("msg1111.txt", print_r($cutpromoprice, 1) . "\n", FILE_APPEND);
@@ -364,7 +369,15 @@ $refundAmountPromoprice = 0;
  if($getPromo["type"] == 1){
 	$refundAmountPromoprice = $promoprice;
 }
-$refundAmount = $refundAmount > 0 ? $refundAmount - $yunfei - $refundAmountPromoprice : 0;
+
+if($cutpromoyunfei === 0) {
+	// 原始運費等於0 退款要扣運費
+	$refundAmount = $refundAmount > 0 ? $refundAmount - $yunfei - $refundAmountPromoprice : 0;	
+} else {
+	// 原始運費大於0 退款不需扣運費
+	$refundAmount = $refundAmount > 0 ? $refundAmount - $refundAmountPromoprice : 0;	
+}
+
 // $orderTotal =  $goodstotal + $yunfei;
 ?>
 </table>

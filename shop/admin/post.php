@@ -3843,7 +3843,7 @@ case "orderunpay" :
 			if($fsql->next_record()){
 				$dgs = $fsql->f("dgs");
 				list($setyunfei, $setyunprice) = explode("|",$dgs);
-				$oriyunfei = countyunfeip( $tweight, $alljine, $dgs, $getrate );//原始運費
+				$oriyunfei = countyunfeip( $tweight, $totalcent, $dgs, $getrate );//原始運費
 				$cutpromoyunfei = $getrate!="1"? round(($oriyunfei*$getrate),$getpoint):$oriyunfei;//多國用
 			}
 		}else{
@@ -3851,7 +3851,7 @@ case "orderunpay" :
 			if($fsql->next_record()){
 				$dgs = $fsql->f("dgs");
 				list($setyunfei, $setyunprice) = explode("|",$dgs);
-				$oriyunfei = countyunfeip( $tweight, $alljine, $dgs, $getrate );//原始運費
+				$oriyunfei = countyunfeip( $tweight, $totalcent, $dgs, $getrate );//原始運費
 				$cutpromoyunfei = $getrate!="1"? round(($oriyunfei*$getrate),$getpoint):$oriyunfei;//多國用
 			}
 		}
@@ -3890,8 +3890,12 @@ case "orderunpay" :
 			if($getPromo["type"] == 1){
 				$refundAmountPromoprice = $promoprice;
 			}
+			if($cutpromoyunfei === 0) {
+				$tuitotal = $alljine - $yunfei - $refundAmountPromoprice;
+			} else {
+				$tuitotal = $alljine - $refundAmountPromoprice;
+			}
 			
-			$tuitotal = $alljine - $cutpromoyunfei - $refundAmountPromoprice;
 			if(!$isalltui && $realpay<0){
 				$addtuitotal = abs($realpay);
 				$fsql->query( "update {P}_shop_order set disaccount='{$goodstotal}+{$yunfei}',paytotal='0' where orderid='{$orderid}'" );
