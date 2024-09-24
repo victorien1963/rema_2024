@@ -1,5 +1,5 @@
 pics
-
 error_log
 *.log
 /vendor
+config.inc.php
