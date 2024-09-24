@@ -33,7 +33,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/header.css?t=20240916" />
+	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/header.css?t=20240923" />
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/footer.css" />
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/apple-fonts.css" />
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/product.css" />
@@ -48,12 +48,34 @@
 	<script src="{#TM#}js/MemberFilter.js"></script>
 	<script src="{#TM#}js/InputStyle.js"></script>
 	<script src="{#TM#}js/MemberProfile.js"></script>
-	<script src="{#TM#}js/popupwindow.js?4"></script>
+	<script src="{#TM#}js/popupwindow.js?t=20240923"></script>
     <!-- wayhunt -->
 	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
 	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
 	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
-	<script type=text/javascript src="{#TM#}20240425/js/header.js"></script>
+	<script type=text/javascript src="{#TM#}20240425/js/header.js?t=20240923"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+		  document.getElementById('btn_registration').addEventListener('click', () => {
+			document.getElementById('login-form').style.display = 'none';
+			document.getElementById('registration-form').style.display = 'block';
+			document.getElementById('web_footer').style.display = 'block';
+		  });
+  
+		//   document.getElementById('btn_login').addEventListener('click', () => {
+		// 	document.getElementById('login-form').style.display = 'none';
+		// 	document.getElementById('header').style.display = 'none';
+		// 	document.getElementById('ad_banner').style.display = 'block';
+		// 	document.getElementById('web_footer').style.display = 'block';
+		//   });
+		});
+		document.addEventListener('DOMContentLoaded', function () {
+		  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+		  if (isSafari) {
+			  document.body.classList.add('safari');
+		  }
+		});
+	  </script>
 <!-reload-!>
 </head>
 
@@ -79,7 +101,7 @@
 			<div class="filter-con rema-col f3">
 				
 				<div class="filter-block">
-					<div class="filter-title font-l font-w-l">會員中心</div>
+					
 					{#ACCOUNTMENU#}
 				</div>
 			</div>

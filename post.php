@@ -4,7 +4,6 @@ include( ROOTPATH."includes/common.inc.php" );
 include( ROOTPATH."member/language/".$sLan.".php" );
 include (ROOTPATH."member/includes/member.inc.php" );
 $act = $_POST['act'];
-
 switch ( $act )
 {
 case "adminlogin" :
@@ -288,6 +287,7 @@ case "memberlogin" :
 	break;
 
 case "memberreg" :
+				
 				//$membertypeid = $_REQUEST['membertypeid'];
 				$membertypeid = 1;
 
@@ -323,6 +323,7 @@ case "memberreg" :
 				list($country, $countryid) = explode("_",$country);
 				
 				
+				
 				/*2016-04-06*/
 				/*if(!checkaddr($addr)){
 					echo "請填寫包含縣市區域的詳細地址";
@@ -331,18 +332,19 @@ case "memberreg" :
 				
 				if($name == ""){
 					echo $strRegNotice12;
-					exit();
+					exit( );
 				}
-				if(mb_strlen($addr,'utf-8')<=6){
-					echo $strRegNotice23;
-					exit();
-				}
+				// if(mb_strlen($addr,'utf-8')<=6){
+				// 	echo $strRegNotice23;
+				// 	exit( );
+				// }
 				
 				//if($mov == ""){
 				if ( !preg_match( "/^([\d+-]+)$/", $mov ) ){
 					echo $strRegNotice24;
 					exit();
 				}
+				
 				/**/
 				$fsql->query( "select * from {P}_member_type where membertypeid='{$membertypeid}'" );
 				if ( $fsql->next_record( ) )
@@ -385,11 +387,11 @@ case "memberreg" :
 								echo $strRegNotice7;
 								exit( );
 				}
-				if ( $password != $repass )
-				{
-								echo $strRegNotice8;
-								exit( );
-				}
+				// if ( $password != $repass )
+				// {
+				// 				echo $strRegNotice8;
+				// 				exit( );
+				// }
 				//if ( !preg_match( "/^[_.0-9a-z-]+@([0-9a-z][0-9a-z-]+.)+[a-z]{2,3}\$/i", $email ) )
 				//if(!filter_var($email, FILTER_VALIDATE_EMAIL))
 				if($email == "")

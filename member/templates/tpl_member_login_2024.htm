@@ -1,0 +1,123 @@
+<script src="{#CP#}js/login.js"></script>
+<div id="login-form" style="padding: 7%">
+    <form  action="/post.php" method="post" id="memberLogin"  class="px-5">
+        <input name="act" type="hidden" value="memberlogin">
+        <input type="hidden" name="from" value="{#REFERER#}">
+      <h5 class="pb-2">登入您的帳號</h5>
+      <div class="input-group input-group-sm mb-3 mt-3">
+        <div class="b-black d-flex w-100">
+          <input
+            type="text"
+            class="form-control form-control-sm px-0"
+            aria-label="login_acc"
+            aria-describedby="login_acc-sm"
+            placeholder="電子信箱地址"
+            name="muser"
+          >
+        </div>
+        <div class="b-black d-flex w-100 mt-4">
+          <input
+            type="text"
+            class="form-control form-control-sm px-0"
+            aria-label="login_pass"
+            aria-describedby="login_acc-sm"
+            placeholder="密碼"
+            name="mpass"
+          >
+          <div style="cursor: pointer">
+            <img src="{#TM#}20240425/images/eye.png" width="20" class="pt-2">
+          </div>
+        </div>
+      </div>
+      <div class="pt-5 d-sm-flex">
+        <button
+          type="submit"
+          class="btn btn-dark d-flex w-100 m-auto rounded-0 b-0 justify-content-center"
+          id="btn_login">
+            登入
+        </button>
+      </div>
+      <div id="loss2" class="pb-4 text-secondary fs-7 pt-4" style="cursor: pointer">忘記了密碼？</div>
+      <hr class="login_hr" />
+    </form>
+    <div class="rwd-login border-left-black px-5">
+      <h5 class="pb-2">註冊一個新帳戶</h5>
+      <div class="pt-4 d-sm-flex mt-2">
+        <button
+          type="button"
+          class="btn btn-dark d-flex w-100 m-auto rounded-0 b-0 justify-content-center"
+          id="btn_registration"
+        >
+            註冊
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <form id="registration-form" action="/post.php" method="post" name="regform" style="padding: 7%; display: none;">
+    <input name="act" type="hidden" id="act" value="memberreg" />
+	<input name="nextstep" type="hidden" id="nextstep" value="enter" />
+    <div class="rwd-login px-5">
+      <h5 id="rwd-register" class="pb-2">輸入個人資料</h5>
+      <div class="input-group input-group-sm mb-3 mt-3">
+        <div class="b-black d-flex w-100">
+          <input
+            type="text"
+            class="form-control form-control-sm px-0"
+            aria-label="register_acc"
+            aria-describedby="register_acc-sm"
+            placeholder="電子信箱地址"
+            name="email"
+          >
+        </div>
+        <div class="b-black d-flex w-100 mt-4">
+          <input
+          type="text"
+          class="form-control form-control-sm px-0"
+          aria-label="register_pass"
+          aria-describedby="register_acc-sm"
+          placeholder="密碼"
+          name="password"
+        >
+          <div style="cursor: pointer">
+            <img src="{#TM#}20240425/images/eye.png" width="20" class="pt-2">
+          </div>
+        </div>
+        <div class="b-black d-flex w-100 mt-4">
+          <input
+            type="text"
+            class="form-control form-control-sm px-0"
+            aria-label="register_name"
+            aria-describedby="register_name-sm"
+            placeholder="姓名"
+            name="name"
+          >
+        </div>
+        <div class="b-black d-flex w-100 mt-4">
+          <input
+            type="text"
+            class="form-control form-control-sm px-0"
+            aria-label="register_phone"
+            aria-describedby="register_phone-sm"
+            placeholder="手機號碼"
+            name="mov"
+          >
+        </div>
+      </div>
+      <div class="form-group form-check pt-4">
+        <input type="checkbox" class="form-check-input" id="newsCheck" name="orderpaper" value="1" checked="checked">
+        <label class="form-check-label" for="newsCheck">我願意收到Rema最新消息電子報</label>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input"  id="tongyi" value="1" checked="checked">
+        <label class="form-check-label" for="secretCheck">接受 <u><a href="{#RP#}page/html/" target="_blank">隱私權聲明</a></u></label>
+      </div>
+      <div class="pt-5 d-sm-flex">
+        <button
+          type="submit"
+          class="btn btn-dark d-flex w-100 m-auto rounded-0 b-0 justify-content-center">
+            建立帳戶
+        </button>
+      </div>
+    </div>
+  </form>

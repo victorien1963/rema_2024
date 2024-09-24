@@ -11,11 +11,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="{#TM#}css/owl.carousel.css">
     <link rel="stylesheet" href="{#TM#}css/owl.theme.default.css">
-	<link rel="stylesheet" href="{#TM#}css/HeaderAndFoot.css">
-	<link rel="stylesheet" href="{#TM#}css/InputStyle.css?1">
-	<link rel="stylesheet" href="{#TM#}css/PopupWindow.css?3">
-	<link rel="stylesheet" href="{#TM#}css/Checkout.css?2">
-
+	<link rel="stylesheet" href="{#TM#}css/HeaderAndFoot.css?1">
+	<link rel="stylesheet" href="{#TM#}css/filter.css">
+	<link rel="stylesheet" href="{#TM#}css/InputStyle.css">
+	<link rel="stylesheet" href="{#TM#}css/PopupWindow.css?2">
+	<link rel="stylesheet" href="{#TM#}css/EDM.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +38,7 @@
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/apple-fonts.css" />
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/product.css" />
     <link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/nav.css" />
+	<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/font_login.css" />
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -47,13 +48,35 @@
 	<script src="{#TM#}js/HeaderAndFoot.js"></script>
 	<script src="{#TM#}js/MemberFilter.js"></script>
 	<script src="{#TM#}js/InputStyle.js"></script>
-	<script src="{#TM#}js/popupwindow.js?5"></script>
-	<script src="{#TM#}js/Checkout.js"></script>
+	<script src="{#TM#}js/MemberProfile.js"></script>
+	<script src="{#TM#}js/popupwindow.js?t=20240923"></script>
     <!-- wayhunt -->
 	<script type=text/javascript src="{#RP#}base/js/form.js"></script>
 	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
 	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
 	<script type=text/javascript src="{#TM#}20240425/js/header.js?t=20240923"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+		  document.getElementById('btn_registration').addEventListener('click', () => {
+			document.getElementById('login-form').style.display = 'none';
+			document.getElementById('registration-form').style.display = 'block';
+			document.getElementById('web_footer').style.display = 'block';
+		  });
+  
+		//   document.getElementById('btn_login').addEventListener('click', () => {
+		// 	document.getElementById('login-form').style.display = 'none';
+		// 	document.getElementById('header').style.display = 'none';
+		// 	document.getElementById('ad_banner').style.display = 'block';
+		// 	document.getElementById('web_footer').style.display = 'block';
+		//   });
+		});
+		document.addEventListener('DOMContentLoaded', function () {
+		  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+		  if (isSafari) {
+			  document.body.classList.add('safari');
+		  }
+		});
+	  </script>
 <!-reload-!>
 </head>
 
@@ -74,93 +97,24 @@
 		{#CHANNELMENU#}
 	</section>
 	<section  id="content" class="header-top">
-		<div class="top-space rema-col"></div>
-		{#STARTORDER#}
-
-		
-		
-
-		
-		
-		
-		
+		{#LOGIN#}
 	</section>
-	<section id="popupwindow-in">		
+	<section id="popupwindow-in">
 	</section>
 	<!--頁尾-->
-	<section id="footer">
-		<div class="foot-con">
-			<div class="email rema-col l12">
-				<div class="email-con rema-col s12">
-					<div class="rema-col l2 s5 email-word">
-						<select name="order" id="paperorder">
-							<option value="1">訂閱電子報</option>
-							<option value="0">取消電子報</option>
-						</select>
-					</div>
-
-					{#ORDERPAPER#}
-
-
-				</div>
-			</div>
-			<div class="bottom-info rema-col l12">
-				<div class="footer-info">
-					<div class="contact footer-box">
-						<div class="footer-title">聯絡我們</div>
-						<div class="footer-con">
-							{#聯絡我們#}
-						</div>
-					</div>
-					<div class="location footer-box">
-						<div class="footer-title">選擇地區</div>
-						<div class="location-con footer-con">
-							<div class="country-select-bn">
-
-								<div  class="location-item" id="lantype">台灣 NT$</div>
-
-								<div id="SelectCountry" style="display:none;">
-
-									{#LANTYPE#}
-
-								</div>
-								
-							</div>
-						</div>
-					</div>
-					<div class="service footer-box">
-						<div class="footer-title">訂購及售後服務</div>
-						<div class="service-con footer-con">
-
-							{#BTMENUTWO#}
-
-						</div>
-					</div>
-					<div class="service footer-box mobile-hidden">
-						<div class="footer-title">關注Rema</div>
-						<div class="service-con footer-con">
-
-							{#VMENU#}
-
-						</div>
-					</div>
-					<div class="follow footer-box pc-disable">
-						<div class="footer-title pc-disable">關注Rema</div>
-						<div class="follow-con footer-con">
-
-							{#VMENU#}
-
-						</div>
-					</div>
-				</div>
-			</div>
+	<footer>
+		<div class="max-width">
+			<ul class="d-flex flex-wrap">
+			{#footer#}
+			</ul>
 		</div>
+		<div class="copyright d-flex justify-content-center">
+			© 2024 REMA INC.ALL RIGHTS RESERVED
 		</div>
-
-		<div class="copyright">
-			{#BTINFO#}
-		</div>
-	</section>
+	</footer>
+	<div id="SelectCountry" style="display:none;">
+		{#LANTYPE#}
+	</div>
 	{#addbtscript#}
 </body>
 </html>

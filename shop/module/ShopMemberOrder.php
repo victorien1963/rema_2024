@@ -451,8 +451,11 @@ function ShopMemberOrder(){
 			
 			$price=$multiprice? $multiprice:$price;
 			$jine=$multijine? $multijine:$jine;
+			if(!$iftui && !$itemtui){
+				$totaljine += $jine;
+			}
 			
-			$totaljine += $jine;
+			
 			
 			list($buysize, $buyprice, $buyspecid) = explode("^",$fsql->f('fz'));
 			//$ccode = $tsql->getone("select colorcode from {P}_shop_conspec where id='{$buyspecid}'");
