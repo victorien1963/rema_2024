@@ -1,5 +1,5 @@
 <script src="{#CP#}js/login.js"></script>
-<div id="login-form" style="padding: 0.5% 7% 20% 9%">
+<div id="login-form">
     <form  action="/post.php" method="post" id="memberLogin"  class="px-5">
         <input name="act" type="hidden" value="memberlogin">
         <input type="hidden" name="from" value="{#REFERER#}">
@@ -57,7 +57,7 @@
   <form id="registration-form" action="/post.php" method="post" name="regform" style="padding: 7%; display: none;">
     <input name="act" type="hidden" id="act" value="memberreg" />
 	<input name="nextstep" type="hidden" id="nextstep" value="enter" />
-    <div class="rwd-login px-5">
+    <div class="rwd-login">
       <h5 id="rwd-register" class="pb-2">輸入個人資料</h5>
       <div class="input-group input-group-sm mb-3 mt-3">
         <div class="b-black d-flex w-100">

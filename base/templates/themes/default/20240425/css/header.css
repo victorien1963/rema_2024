@@ -897,10 +897,6 @@ html,
     	padding-top: 100vh;
 		}
 
-		header .nav-box .header-nav-box {
-			padding: 30px 25px !important
-		}
-
 		footer {
 			padding-top: 18vw;
 		}
@@ -1353,7 +1349,7 @@ html,
 		}
 
 		header .nav-box .header-nav-box {
-			padding: 30px 25px !important
+			padding: 30px 25px 0px 25px !important;
 		}
 
 		footer {

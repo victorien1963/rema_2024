@@ -25,6 +25,11 @@ body > #shopping_flow {
     font-style: normal;
 }
 
+.form-check-input:checked {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
 /* #header {
     padding: 3% 7%;
 } */
@@ -415,6 +420,7 @@ body > #shopping_flow {
 
 #login-form {
     display: flex;
+    padding: 0.5% 4% 30% 11.5%;
 }
 
 #login-form > div {
@@ -431,7 +437,7 @@ body > #shopping_flow {
 
 #registration-form {
     display: flex;
-    padding: 0.5% 7% 13.75% 9% !important;
+    padding: 0.5% 7% 14% 13.5% !important;
 }
 
 #registration-form > .rwd-login {
@@ -635,6 +641,16 @@ body > #shopping_flow {
         }
 }
 
+@media only screen and (min-width: 2241px) and (max-width: 2560px) {
+    #login-form {
+        padding: 0.5% 4% 30% 16%;
+    }
+
+    #registration-form {
+        padding: 0.5% 7% 14% 18% !important;
+    }
+}
+
 /* macbook pro 13 inch */
 @media only screen and (min-width: 1440px) and (max-width: 1667px) {
     .progress-container {
@@ -729,6 +745,10 @@ body > #shopping_flow {
     #rwd-register {
         padding-bottom: 2.5rem !important;
     }
+
+    #login-form {
+        padding: 0.5% 4% 43% 4%;
+    }
     
     #login-form > div {
         width: 50%;
@@ -743,7 +763,7 @@ body > #shopping_flow {
     }
 
     #registration-form {
-        padding: 12% 5% 10% 10% !important;
+        padding: 0.5% 7% 23% 12.5% !important;
     }
 
     #registration-form > .rwd-login {
@@ -1032,11 +1052,12 @@ body > #shopping_flow {
     }
 
     #header {
-        padding: 20% 7%;
+        padding: 0%;
     }
 
     #login-form {
         display: block;
+        padding: 0.5% 4% 50% 4%;
     }
 
     #login-form > .rwd-login {
@@ -1047,7 +1068,7 @@ body > #shopping_flow {
 
     #registration-form {
         display: block;
-        padding: 2% 7% 5% 5% !important;
+        padding: 0% 5% 53% 5% !important;
     }
 
     #registration-form > .rwd-login {
@@ -1077,7 +1098,7 @@ body > #shopping_flow {
         width: 100%;
         border-top: 1.5px solid #e3e3e3;
         margin: 20px 0;
-        padding-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .exchange_hr {
@@ -1106,8 +1127,8 @@ body > #shopping_flow {
 
     #login-form > form {
         width: 100%;
-        padding-left: 2.75rem !important;
-        padding-right: 2.75rem !important;
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
     }
     
     #login-form > .rwd-login {
@@ -1116,6 +1137,8 @@ body > #shopping_flow {
 
     #registration-form > .rwd-login {
         width: 100%;
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
     }
 
     .border-left-black {
