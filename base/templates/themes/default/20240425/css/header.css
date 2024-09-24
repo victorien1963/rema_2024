@@ -844,7 +844,7 @@ header .mobile-menu .mobile-menu-category .mobile-menu-category-box.active {
 	header .pc-menu .type-list {
 			justify-content: start;
 			margin: 0px -450px 0px -180px;
-			/* padding-left: 27vw; */
+			padding-left: 0;
 	}
 
 	header .pc-menu .input-group {

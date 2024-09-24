@@ -2,9 +2,9 @@
 
 #[資料庫參數]
 $dbHost="mariadb-rema";
-$dbName="remaspor_2024";
+$dbName="rema";
 $dbUser="root";
-$dbPass="dsa951230";
+$dbPass="1234567890";
 
 #[資料表前綴]
 $TablePre="cpp";

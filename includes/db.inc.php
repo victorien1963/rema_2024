@@ -100,7 +100,7 @@ class dbbase_sql
 				function version( )
 				{
 					$val = mysql_get_server_info( );
-								return  $val === '11.4.2-MariaDB-ubu2404' ? 8.1 : $val;
+								return  8.1;
 				}
 
 				function seek( $pos )
