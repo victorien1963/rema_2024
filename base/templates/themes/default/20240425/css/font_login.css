@@ -420,7 +420,7 @@ body > #shopping_flow {
 
 #login-form {
     display: flex;
-    padding: 0.5% 4% 30% 11.5%;
+    padding: 0.5% 4% 20.4% 11.5%;
 }
 
 #login-form > div {
@@ -643,11 +643,11 @@ body > #shopping_flow {
 
 @media only screen and (min-width: 2241px) and (max-width: 2560px) {
     #login-form {
-        padding: 0.5% 4% 30% 16%;
+        padding: 0.5% 4% 31% 16%;
     }
 
     #registration-form {
-        padding: 0.5% 7% 14% 18% !important;
+        padding: 0.5% 7% 25.4% 18% !important;
     }
 }
 
