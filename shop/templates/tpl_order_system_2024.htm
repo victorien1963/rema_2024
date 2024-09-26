@@ -1,0 +1,864 @@
+<!-start->
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // 確保所有按鈕都存在
+      const btnReturns = document.getElementById('btn_returns');
+      const btnExchanges = document.getElementById('btn_exchanges');
+      const btnExchangePhone = document.getElementById('btn_exchange_phone');
+      const btnCancel = document.getElementById('btn_cancel');
+      const btnReturnSend = document.getElementById('btn_return_send');
+      const btnExchangeSend = document.getElementById('btn_exchange_send');
+
+      if (btnReturns) {
+        btnReturns.addEventListener('click', () => {
+          document.getElementById('shopping_content').style.display = 'none';
+          document.getElementById('shopping_return').style.display = 'block';
+        });
+      }
+
+      const showExchange = () => {
+        document.getElementById('shopping_content').style.display = 'none';
+        document.getElementById('shopping_exchange').style.display = 'block';
+      };
+
+      if (btnExchanges) {
+        btnExchanges.addEventListener('click', showExchange);
+      }
+
+      if (btnExchangePhone) {
+        btnExchangePhone.addEventListener('click', showExchange);
+      }
+
+      if (btnReturnSend) {
+        btnReturnSend.addEventListener('click', () => {
+          document.getElementById('shopping_content').style.display = 'block';
+          document.getElementById('shopping_return').style.display = 'none';
+        });
+      }
+
+      if (btnExchangeSend) {
+        btnExchangeSend.addEventListener('click', () => {
+          document.getElementById('shopping_content').style.display = 'block';
+          document.getElementById('shopping_exchange').style.display = 'none';
+        });
+      }
+
+      if (btnCancel) {
+        btnCancel.addEventListener('click', () => {
+          const shoppingReturn = document.getElementById('shopping_return');
+          const shoppingExchange = document.getElementById('shopping_exchange');
+
+          if (window.getComputedStyle(shoppingReturn).display === 'block') {
+            shoppingReturn.style.display = 'none';
+          }
+
+          if (window.getComputedStyle(shoppingExchange).display === 'block') {
+            shoppingExchange.style.display = 'none';
+          }
+
+          document.getElementById('shopping_content').style.display = 'block';
+        });
+      }
+
+      // Safari 檢查
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      if (isSafari) {
+        document.body.classList.add('safari');
+      }
+
+      // 在模態框顯示後再添加事件監聽器
+      $('#exampleModal').on('shown.bs.modal', function () {
+        const saveAddressBtn = document.getElementById('saveAddressBtn');
+        const inputAddress = document.getElementById('inputAddress');
+
+        if (saveAddressBtn) {
+          saveAddressBtn.addEventListener('click', () => {
+            const newAddress = inputAddress ? inputAddress.value : '';
+
+            // 保存新地址邏輯
+            console.log("保存的新地址: ", newAddress);
+
+            // 關閉模態框
+            $('#exampleModal').modal('hide');
+          });
+        }
+      });
+    });
+</script>
+
+<!-start->  
+<!-list->
+<div id="shopping_flow" class="d-flex">
+    <!-- shopping-content -->
+    <div id="shopping_content" class="col-shopping-content">
+      <div class="pt-2 fw-bold h5">
+        訂單查詢
+      </div>
+      <div class="bg-grey h-auto w-100 mt-3 px-5 pb-3">
+        <div class="px-3 py-2 w-100">
+          <div class="row" style="border-bottom: 1.5px solid rgb(201 201 201)">
+            <div class="h7 py-4_5 col-shopping my-auto">
+              訂單編號
+              <span>113022039299</span>
+            </div>
+            <div class="h7 py-4 col-shopping my-auto">
+              2024/02/20
+            </div>
+            <div class="h7 py-4 col-shopping my-auto">
+              <!-- 訂單狀態
+              <span>已取消</span> -->
+            </div>
+            <div
+              class="h7 col-4 justify-content-end exchange-rwd-phone my-auto"
+              style="padding: 1.25rem .25rem; display: flex;"
+            >
+              <button type="button" class="btn-black">取消</button>
+              <button type="button" class="btn-black mx-2" id="btn_returns">退貨</button>
+              <button type="button" class="btn-black" id="btn_exchanges">換貨</button>
+            </div>
+          </div>
+
+          <div id="shopping-state">
+            <div class="row">
+              <div class="h7 pt-4 col-3">
+                狀態
+              </div>
+            </div>
+            <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+              <div class="h7 pb-5 w-100">
+                <div class="progress-container">
+                  <div class="step completed">
+                    <div class="circle filled"></div>
+                    <div>收到訂單<br>02/20 19:49</div>
+                  </div>
+                  <div class="step">
+                    <div class="circle"></div>
+                    <div>訂單處理中</div><br>
+                  </div>
+                  <div class="step">
+                    <div class="circle"></div>
+                    <div>出貨中</div><br>
+                  </div>
+                  <div class="step">
+                    <div class="circle"></div>
+                    <div>配送進度查詢<br>貨號...</div>
+                  </div>
+                  <div class="progress-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+              <div class="h7 py-3 col-3">
+                商品明細
+              </div>
+            </div>
+            <div class="row shopping-produce">
+              <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
+                <div class="produce-image">
+                  <div class="bg-darkgrey pl-2">
+                    <img src="./images/clothes_001.png" width="160">
+                  </div>
+                </div>
+                <div class="produce-content">
+                  <h7 class="proce-data1">速度型長袖單車衣2.0</h7>
+                  <br>
+                  <h7 class="proce-data2">MCT026</h7>
+                  <br>
+                  <br class="closer">
+                  <h7>顏色 炭灰</h7>
+                  <br>
+                  <h7>尺寸 M</h7>
+                  <br>
+                  <h7>數量 1</h7>
+                  <div class="produce-price-rwd-phone" style="display: none;">
+                    <h7>NT 2,016</h7>
+                  </div>
+                </div>
+                <br>
+                <div class="px-3 text-center produce-price" style="width: 25%; padding-top: 1rem">
+                  <h7>NT 2,016</h7>
+                </div>
+              </div>
+              <div id="total-price" class="d-flex" style="width: 45%;">
+                <div class="pb-2 pt-0 pl-5" style="width: 78%; line-height: 1.8;">
+                  <h7>商品金額總計</h7>
+                  <br>
+                  <h7>物流費用(滿NT$2500享免運費)</h7>
+                  <br>
+                  <h7>線上帳戶餘額NT$0，本次折抵</h7>
+                  <br>
+                  <h7>電子折價券折扣金額</h7>
+                  <div class="my-3" style="border-top: 1px dashed #a8a8a8; height: 1px">
+                    <div class="py-3">總計</div>
+                  </div>
+                </div>
+                <div class="pb-2 pt-0 pe-3 total-price-rwd-ipad" style="width: 22%; line-height: 1.8;">
+                  <h7>NT$4,032</h7>
+                  <br>
+                  <h7>NT$0</h7>
+                  <br>
+                  <h7>NT$0</h7>
+                  <br>
+                  <h7>NT$0</h7>
+                  <br />
+                  <div class="my-3" style="border-top: 1px dashed #a8a8a8; height: 1px">
+                    <h5 class="py-3">NT$4,032</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row shopping-produce rwd-produce-iphone">
+              <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
+                <div class="produce-image">
+                  <div class="bg-darkgrey pl-2">
+                    <img src="./images/clothes_002.png" width="160">
+                  </div>
+                </div>
+                <div class="produce-content content-rwd-iphone">
+                  <h7 class="proce-data1">速度型長袖單車衣2.0</h7>
+                  <br>
+                  <h7 class="proce-data2">MCT026</h7>
+                  <br>
+                  <br class="closer">
+                  <h7>顏色 消光鉻綠</h7>
+                  <br>
+                  <h7>尺寸 S</h7>
+                  <br>
+                  <h7>數量 1</h7>
+                  <div class="produce-price-rwd-phone" style="display: none;">
+                    <h7>NT 2,016</h7>
+                  </div>
+                </div>
+                <br>
+                <div class="px-3 text-center produce-price" style="width: 25%; padding-top: .95rem">
+                  <h7>NT 2,016</h7>
+                </div>
+              </div>
+            </div>
+            <div
+              id="total-price-rwd-phone"
+              style="display: none; border-top: 1px solid rgb(201 201 201)"
+            >
+              <div class="pb-2 pt-0 pl-5 pr-0 col-9" style="line-height: 1.8;">
+                <h7>商品金額總計</h7>
+                <br>
+                <h7>物流費用(滿NT$2500享免運費)</h7>
+                <br>
+                <h7>線上帳戶餘額NT$0，本次折抵</h7>
+                <br>
+                <h7>電子折價券折扣金額</h7>
+                <div class="my-3" style="border-top: 1px dashed #a8a8a8; height: 1px">
+                  <div class="py-3">總計</div>
+                </div>
+              </div>
+              <div class="pb-2 pl-0 pt-0 pr-3 col-3" style="line-height: 1.8;">
+                <h7>NT$4,032</h7>
+                <br>
+                <h7>NT$0</h7>
+                <br>
+                <h7>NT$0</h7>
+                <br>
+                <h7>NT$0</h7>
+                <br />
+                <div class="my-3" style="border-top: 1px dashed #a8a8a8; height: 1px">
+                  <h5 class="py-3">NT$4,032</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="exchange-btn-rwd-phone"
+            class="h7 justify-content-end pb-4"
+            style="display: none"
+          >
+            <button type="button" class="btn-black">取消</button>
+            <button type="button" class="btn-black mx-2">退貨</button>
+            <button type="button" class="btn-black" id="btn_exchange_phone">換貨</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- shopping return -->
+    <div id="shopping_return" class="col-shopping-content" style="display: none;">
+      <div class="pt-2 fw-bold h5">
+        訂單查詢 > 申請退貨
+      </div>
+      <div class="bg-grey h-auto w-100 mt-3 px-5 pb-5">
+        <div class="px-3 py-2 w-100">
+          <div class="row" style="border-bottom: 1.5px solid rgb(201 201 201)">
+            <div class="h7 py-4_5 col-shopping my-auto">
+              訂單編號
+              <span>113022039299</span>
+            </div>
+            <div class="h7 py-4 col-shopping my-auto">
+              2024/02/20
+            </div>
+            <div class="h7 py-4 col-shopping my-auto">
+              <!-- 訂單狀態
+              <span>已發貨</span> -->
+            </div>
+            <div
+              class="h7 py-4 col-shopping justify-content-end exchange-rwd-imac my-auto"
+              style="padding: 1.25rem .25rem; display: flex"
+            >
+              <button type="button" class="btn-black">取消</button>
+              <button type="button" class="btn-black mx-2">退貨</button>
+              <button type="button" class="btn-black">換貨</button>
+            </div>
+          </div>
+
+          <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+            <div class="h7 py-3 col-3">
+              商品明細
+            </div>
+          </div>
+          <div class="row produce-content-rwd">
+            <div class="d-flex py-3">
+              <div class="d-flex py-2 produce-image">
+                <div class="input-group-text exchange-choose">
+                  <div class="form-check d-flex my-auto">
+                    <input type="checkbox" class="form-check-input" id="choose-exchange-2">
+                  </div>
+                </div>
+                <div class="bg-darkgrey">
+                  <img src="./images/clothes_001.png" width="160">
+                </div>
+              </div>
+              <div class="produce-content pl-5 ml-4">
+                <h7>速度型長袖單車衣2.0</h7>
+                <br>
+                <h7>MCT026</h7>
+                <br>
+                <br class="closer">
+                <h7>顏色 炭灰</h7>
+                <br>
+                <h7>尺寸 M</h7>
+                <br>
+                <h7>數量 1</h7>
+                <div class="produce-price-rwd-phone" style="display: none;">
+                  <h7>NT 2,016</h7>
+                </div>
+              </div>
+              <br>
+              <div class="produce-price-rwd-ipad px-3 text-center" style="width: 25%; padding-top: .9rem">
+                <h7>NT 2,016</h7>
+              </div>
+            </div>
+            <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
+              <div id="exchange-reason-ques" class="pt-4 pb-2 pl-5" style="width: 70%">
+                <h7 class="pt-2">要退還本商品的原因是什麼？</h7>
+                <div class="row pt-2">
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_1">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">與照片不符</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">不如預期</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_3">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">商品寄錯</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_4">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">太大</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_5">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">瑕疵</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_6">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">太小</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <hr class="exchange_hr">
+          </div>
+
+          <div class="row produce-content-rwd pb-4">
+            <div class="d-flex">
+              <div class="d-flex py-2 produce-image">
+                <div class="input-group-text exchange-choose" style="padding-bottom: 120% !important;">
+                  <div class="form-check d-flex my-auto">
+                    <input type="checkbox" class="form-check-input" id="choose-exchange-1">
+                  </div>
+                </div>
+                <div class="bg-darkgrey">
+                  <img src="./images/clothes_002.png" width="160">
+                </div>
+              </div>
+              <div class="produce-content pl-5 ml-4">
+                <h7>速度型長袖單車衣2.0</h7>
+                <br>
+                <h7>MCT026</h7>
+                <br>
+                <br class="closer">
+                <h7>顏色 消光鉻綠</h7>
+                <br>
+                <h7>尺寸 S</h7>
+                <br>
+                <h7>數量 1</h7>
+                <div class="produce-price-rwd-phone" style="display: none;">
+                  <h7>NT 2,016</h7>
+                </div>
+              </div>
+              <br>
+              <div class="px-3 text-center produce-price-rwd-ipad" style="width: 25%; padding-top: .9rem">
+                <h7>NT 2,016</h7>
+              </div>
+            </div>
+            <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
+              <div id="exchange-reason-ques" class="pt-1 pb-4" style="width: 70%">
+                <h7 class="py-2">要退還本商品的原因是什麼？</h7>
+                <div class="row pt-2">
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_7">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">與照片不符</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_8">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">不如預期</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_9">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">商品寄錯</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_10">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">太大</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_11">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">瑕疵</label>
+                    </div>
+                  </div>
+                  <div class="input-group-text exchange-reason col-6">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_12">
+                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">太小</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="user_address">
+            <div class="row" style="border-top: 1.5px solid rgb(201 201 201)">
+              <div class="h7 py-4 col-5">
+                取件地址
+              </div>
+              <div class="h7 py-4 col-2">
+                聯絡人
+              </div>
+              <div class="h7 py-4 col-3">
+                聯絡號碼
+              </div>
+              <div class="h7 py-4 col-2 text-right">
+                修改
+              </div>
+            </div>
+
+            <div class="row" style="border-top: 1.5px dashed rgb(201 201 201)">
+              <div class="h7 py-4 col-5">
+                新竹市東區建中路50號2樓
+              </div>
+              <div class="h7 py-4 col-2">
+                衷沛婷
+              </div>
+              <div class="h7 py-4 col-3">
+                0952887327
+              </div>
+              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                <img src="./images/icon_pen.svg" width="17" class="pr-1">
+              </button>
+            </div>
+          </div>
+
+          <div id="user_address_rwd_phone">
+            <div class="row py-2 pt-4" style="border-top: 1.5px solid rgb(201 201 201)">
+              <div class="h7 col-3">
+                取件地址
+              </div>
+              <div class="h7 col-8">
+                新竹市東區建中路50號2樓
+              </div>
+              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                <img src="./images/icon_pen.svg" width="17" class="pr-1">
+              </button>
+            </div>
+            <div class="row py-2">
+              <div class="h7 col-3">
+                聯絡人
+              </div>
+              <div class="h7 col-8">
+                衷沛婷
+              </div>
+              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                <img src="./images/icon_pen.svg" width="17" class="pr-1">
+              </button>
+            </div>
+            <div class="row py-2">
+              <div class="h7 col-3">
+                聯絡號碼
+              </div>
+              <div class="h7 col-8">
+                0952887327
+              </div>
+              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                <img src="./images/icon_pen.svg" width="17" class="pr-1">
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="row justify-content-center exchange-send"
+          >
+            <button
+              class="btn-black-filled"
+              id="btn_return_send"
+            >
+                申請完成
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- shopping exchange -->
+      <div id="shopping_exchange" class="col-shopping-content" style="display: none;">
+        <div class="pt-2 fw-bold h5">
+          訂單查詢 > 申請換貨
+        </div>
+        <div class="bg-grey h-auto w-100 mt-3 px-5 pb-5">
+          <div class="px-3 py-2 w-100">
+            <div class="row" style="border-bottom: 1.5px solid rgb(201 201 201)">
+              <div class="h7 py-4_5 col-shopping my-auto">
+                訂單編號
+                <span>113022039299</span>
+              </div>
+              <div class="h7 py-4 col-shopping my-auto">
+                2024/02/20
+              </div>
+              <div class="h7 py-4 col-shopping my-auto">
+                <!-- 訂單狀態
+                <span>已發貨</span> -->
+              </div>
+              <div
+                class="h7 py-4 col-shopping justify-content-end exchange-rwd-imac my-auto"
+                style="padding: 1.25rem .25rem; display: flex"
+              >
+                <button type="button" class="btn-black">取消</button>
+                <button type="button" class="btn-black mx-2">退貨</button>
+                <button type="button" class="btn-black">換貨</button>
+              </div>
+            </div>
+
+            <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+              <div
+                class="h7 my-auto py-4 col-12"
+                style="white-space-collapse: preserve-breaks;"
+              >換貨： 為了提供您更便捷的服務， 我們提供以下兩種換貨方式， 並請於購買日起 10天內辦理換貨。
+                
+                <span class="fw-bold text-secondary">1. 親送換貨：</span>您可將商品親自送至我們的民生店直營門市進行換貨。 選擇此方式可即時為您處理換貨事宜， 確保您的需求能迅速得到滿足。
+                <span class="fw-bold text-secondary">2. 郵寄換貨：</span>完成退貨申請後， 我們將安排快遞上門取件。 將需要換貨的商品和出貨單一起包裝好， 並在出貨單上註明所需更換的尺寸。 換貨商品將以運費到付的方式寄回給您。
+                
+                請在進行任何換貨操作前， 確認商品符合我們的換貨條件， 並保持商品的原始狀態及包裝。
+              </div>
+            </div>
+            <div class="row produce-content-rwd">
+              <div class="d-flex py-3">
+                <div class="d-flex py-2 produce-image">
+                  <div class="input-group-text exchange-choose">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input" id="choose-exchange-2">
+                    </div>
+                  </div>
+                  <div class="bg-darkgrey">
+                    <img src="./images/clothes_001.png" width="160">
+                  </div>
+                </div>
+                <div class="produce-content pl-5 ml-4">
+                  <h7>速度型長袖單車衣2.0</h7>
+                  <br>
+                  <h7>MCT026</h7>
+                  <br>
+                  <br class="closer">
+                  <h7>顏色 炭灰</h7>
+                  <br>
+                  <h7>尺寸 M</h7>
+                  <br>
+                  <h7>數量 1</h7>
+                  <div class="produce-price-rwd-phone" style="display: none;">
+                    <h7>NT 2,016</h7>
+                  </div>
+                </div>
+                <br>
+                <div class="produce-price-rwd-ipad px-3 text-center" style="width: 25%; padding-top: .9rem">
+                  <h7>NT 2,016</h7>
+                </div>
+              </div>
+              <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
+                <div id="exchange-reason-ques" class="pt-4 pb-2 pl-5" style="width: 70%">
+                  <h7 class="pt-2">要更換的尺寸</h7>
+                  <div class="row pt-2">
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_1">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XS</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">L</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_3">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">S</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_4">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XL</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_5">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">M</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_6">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">2L</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <hr class="exchange_hr">
+            </div>
+
+            <div class="row produce-content-rwd pb-4">
+              <div class="d-flex">
+                <div class="d-flex py-2 produce-image">
+                  <div class="input-group-text exchange-choose" style="padding-bottom: 120% !important;">
+                    <div class="form-check d-flex my-auto">
+                      <input type="checkbox" class="form-check-input" id="choose-exchange-1">
+                    </div>
+                  </div>
+                  <div class="bg-darkgrey">
+                    <img src="./images/clothes_002.png" width="160">
+                  </div>
+                </div>
+                <div class="produce-content pl-5 ml-4">
+                  <h7>速度型長袖單車衣2.0</h7>
+                  <br>
+                  <h7>MCT026</h7>
+                  <br>
+                  <br class="closer">
+                  <h7>顏色 消光鉻綠</h7>
+                  <br>
+                  <h7>尺寸 S</h7>
+                  <br>
+                  <h7>數量 1</h7>
+                  <div class="produce-price-rwd-phone" style="display: none;">
+                    <h7>NT 2,016</h7>
+                  </div>
+                </div>
+                <br>
+                <div class="px-3 text-center produce-price-rwd-ipad" style="width: 25%; padding-top: .9rem">
+                  <h7>NT 2,016</h7>
+                </div>
+              </div>
+              <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
+                <div id="exchange-reason-ques" class="pt-1 pb-4" style="width: 70%">
+                  <h7 class="py-2">要更換的尺寸</h7>
+                  <div class="row pt-2">
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_7">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XS</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_8">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">L</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_9">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">S</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_10">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XL</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_11">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">M</label>
+                      </div>
+                    </div>
+                    <div class="input-group-text exchange-reason col-6">
+                      <div class="form-check d-flex my-auto">
+                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_12">
+                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">2L</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="user_address">
+              <div class="row" style="border-top: 1.5px solid rgb(201 201 201)">
+                <div class="h7 py-4 col-5">
+                  取件地址
+                </div>
+                <div class="h7 py-4 col-2">
+                  聯絡人
+                </div>
+                <div class="h7 py-4 col-3">
+                  聯絡號碼
+                </div>
+                <div class="h7 py-4 col-2 text-right">
+                  修改
+                </div>
+              </div>
+
+              <div class="row" style="border-top: 1.5px dashed rgb(201 201 201)">
+                <div class="h7 py-4 col-5">
+                  新竹市東區建中路50號2樓
+                </div>
+                <div class="h7 py-4 col-2">
+                  衷沛婷
+                </div>
+                <div class="h7 py-4 col-4">
+                  0952887327
+                </div>
+                <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  <img src="./images/icon_pen.svg" width="17" class="pr-1">
+                </button>
+              </div>
+            </div>
+
+            <div id="user_address_rwd_phone">
+              <div class="row py-2 pt-4" style="border-top: 1.5px solid rgb(201 201 201)">
+                <div class="h7 col-3">
+                  取件地址
+                </div>
+                <div class="h7 col-8">
+                  新竹市東區建中路50號2樓
+                </div>
+                <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  <img src="./images/icon_pen.svg" width="17" class="pr-1">
+                </button>
+              </div>
+              <div class="row py-2">
+                <div class="h7 col-3">
+                  聯絡人
+                </div>
+                <div class="h7 col-8">
+                  衷沛婷
+                </div>
+                <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  <img src="./images/icon_pen.svg" width="17" class="pr-1">
+                </button> -->
+              </div>
+              <div class="row py-2">
+                <div class="h7 col-3">
+                  聯絡號碼
+                </div>
+                <div class="h7 col-8">
+                  0952887327
+                </div>
+                <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  <img src="./images/icon_pen.svg" width="17" class="pr-1">
+                </button> -->
+              </div>
+            </div>
+
+            <div
+              class="row justify-content-center exchange-send"
+            >
+              <button
+                class="btn-black-filled"
+                id="btn_exchange_send"
+              >
+                  申請完成
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>    
+<!-list->
+
+<!-m0->
+	
+<!-m0->
+
+<!-m1->
+
+<!-m1->
+
+<!-m2->
+
+<!-m2->
+
+
+
+<!-m3->
+
+													
+<!-m3->
+
+<!-menu->
+									
+<!-menu->
+
+<!-end->
+
+<!-end->
