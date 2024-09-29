@@ -1,5 +1,81 @@
 <!-start->
 <script>
+    $('document').ready(function() {
+        /**
+        * 不知道功能做啥照搬上來
+        * Safari 檢查(vic)
+        * 在模態框顯示後再添加事件監聽器(vic)
+        */
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        if (isSafari) {
+          document.body.classList.add('safari');
+        }
+        $('#exampleModal').on('shown.bs.modal', function () {
+          const saveAddressBtn = document.getElementById('saveAddressBtn');
+          const inputAddress = document.getElementById('inputAddress');
+
+          if (saveAddressBtn) {
+            saveAddressBtn.addEventListener('click', () => {
+              const newAddress = inputAddress ? inputAddress.value : '';
+
+              // 保存新地址邏輯
+              console.log("保存的新地址: ", newAddress);
+
+              // 關閉模態框
+              $('#exampleModal').modal('hide');
+            });
+          }
+        });
+        /**
+        * 退貨
+        */
+        $('.btn_returns').on('click', function() {
+          // document.getElementById('shopping_content').style.display = 'none';
+          // document.getElementById('shopping_return').style.display = 'block';
+          let shopping_flow = $(this).parents('.shopping_flow');
+          shopping_flow.find('.shopping_content').css('display', 'none');
+          shopping_flow.find('.shopping_return').css('display', 'block');
+        });
+        /**
+         * 換貨
+        */
+        $('.btn_exchanges').on('click', function() {
+          let shopping_flow = $(this).parents('.shopping_flow');
+          shopping_flow.find('.shopping_content').css('display', 'none');
+          shopping_flow.find('.shopping_exchange').css('display', 'block');
+        });
+        /**
+         * 手機換貨
+        */
+        $('.btn_exchange_phone').on('click', function() {
+          let shopping_flow = $(this).parents('.shopping_flow');
+          shopping_flow.find('.shopping_content').css('display', 'none');
+          shopping_flow.find('.shopping_exchange').css('display', 'block');
+        });
+        /**
+         * 取消按鈕沒製作
+        */
+        $('.btn_cancel').on('click', function() {
+
+        });
+        /**
+         * 退貨申請按鈕
+        */
+        $('.btn_return_send').on('click', function() {
+          let shopping_flow = $(this).parents('.shopping_flow');
+          shopping_flow.find('.shopping_content').css('display', 'block');
+          shopping_flow.find('.shopping_return').css('display', 'none');
+        });
+        /**
+         * 申請完成按鈕
+        */
+        $('.btn_exchange_send').on('click', function() {
+          let shopping_flow = $(this).parents('.shopping_flow');
+          shopping_flow.find('.shopping_content').css('display', 'block');
+          shopping_flow.find('.shopping_exchange').css('display', 'none');
+        });
+    });
+    /*
     document.addEventListener('DOMContentLoaded', (event) => {
       // 確保所有按鈕都存在
       const btnReturns = document.getElementById('btn_returns');
@@ -59,38 +135,78 @@
           document.getElementById('shopping_content').style.display = 'block';
         });
       }
-
-      // Safari 檢查
-      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-      if (isSafari) {
-        document.body.classList.add('safari');
-      }
-
-      // 在模態框顯示後再添加事件監聽器
-      $('#exampleModal').on('shown.bs.modal', function () {
-        const saveAddressBtn = document.getElementById('saveAddressBtn');
-        const inputAddress = document.getElementById('inputAddress');
-
-        if (saveAddressBtn) {
-          saveAddressBtn.addEventListener('click', () => {
-            const newAddress = inputAddress ? inputAddress.value : '';
-
-            // 保存新地址邏輯
-            console.log("保存的新地址: ", newAddress);
-
-            // 關閉模態框
-            $('#exampleModal').modal('hide');
-          });
-        }
-      });
     });
-</script>
+    */
 
+      
+</script>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">修改取件地址</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body px-4 pb-0">
+        <form id="editAddressForm">
+          <!-- Region Dropdowns -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col pr-0">
+                <select class="form-control">
+                  <option>臺灣</option>
+                </select>
+              </div>
+              <div class="col px-1">
+                <select class="form-control">
+                  <option>基隆市</option>
+                </select>
+              </div>
+              <div class="col pl-0">
+                <select class="form-control">
+                  <option>仁愛區</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Input -->
+          <div class="form-group">
+            <input type="text" class="form-control" id="inputAddress" placeholder="地址">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="郵遞區號">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="姓名">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="手機電話">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="其他電話">
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer m-auto pb-5">
+        <button id="confirmButton" type="button" class="btn-black-filled py-2">確認修改</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-start->  
 <!-list->
-<div id="shopping_flow" class="d-flex">
+<div class="shopping_flow d-flex">
     <!-- shopping-content -->
-    <div id="shopping_content" class="col-shopping-content">
+    <div class="shopping_content col-shopping-content">
       <div class="pt-2 fw-bold h5">
         訂單查詢
       </div>
@@ -112,9 +228,9 @@
               class="h7 col-4 justify-content-end exchange-rwd-phone my-auto"
               style="padding: 1.25rem .25rem; display: flex;"
             >
-              <button type="button" class="btn-black">取消</button>
-              <button type="button" class="btn-black mx-2" id="btn_returns">退貨</button>
-              <button type="button" class="btn-black" id="btn_exchanges">換貨</button>
+              <button type="button" class="btn_cancel btn-black">取消</button>
+              <button type="button" class="btn_returns btn-black mx-2">退貨</button>
+              <button type="button" class="btn_exchanges btn-black">換貨</button>
             </div>
           </div>
 
@@ -272,9 +388,9 @@
             class="h7 justify-content-end pb-4"
             style="display: none"
           >
-            <button type="button" class="btn-black">取消</button>
+            <button type="button" class="btn_cancel btn-black">取消</button>
             <button type="button" class="btn-black mx-2">退貨</button>
-            <button type="button" class="btn-black" id="btn_exchange_phone">換貨</button>
+            <button type="button" class="btn_exchange_phone btn-black">換貨</button>
           </div>
         </div>
       </div>
@@ -282,7 +398,7 @@
     </div>
 
     <!-- shopping return -->
-    <div id="shopping_return" class="col-shopping-content" style="display: none;">
+    <div class="shopping_return col-shopping-content" style="display: none;">
       <div class="pt-2 fw-bold h5">
         訂單查詢 > 申請退貨
       </div>
@@ -498,7 +614,7 @@
               <div class="h7 py-4 col-3">
                 0952887327
               </div>
-              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
               </button>
             </div>
@@ -512,7 +628,7 @@
               <div class="h7 col-8">
                 新竹市東區建中路50號2樓
               </div>
-              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
               </button>
             </div>
@@ -523,7 +639,7 @@
               <div class="h7 col-8">
                 衷沛婷
               </div>
-              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
               </button>
             </div>
@@ -534,7 +650,7 @@
               <div class="h7 col-8">
                 0952887327
               </div>
-              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
               </button>
             </div>
@@ -544,8 +660,7 @@
             class="row justify-content-center exchange-send"
           >
             <button
-              class="btn-black-filled"
-              id="btn_return_send"
+              class="btn_return_send btn-black-filled"
             >
                 申請完成
             </button>
@@ -555,7 +670,7 @@
     </div>
 
     <!-- shopping exchange -->
-      <div id="shopping_exchange" class="col-shopping-content" style="display: none;">
+      <div class="shopping_exchange col-shopping-content" style="display: none;">
         <div class="pt-2 fw-bold h5">
           訂單查詢 > 申請換貨
         </div>
@@ -778,7 +893,7 @@
                 <div class="h7 py-4 col-4">
                   0952887327
                 </div>
-                <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                 </button>
               </div>
@@ -792,7 +907,7 @@
                 <div class="h7 col-8">
                   新竹市東區建中路50號2樓
                 </div>
-                <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                 </button>
               </div>
@@ -803,7 +918,7 @@
                 <div class="h7 col-8">
                   衷沛婷
                 </div>
-                <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                 </button> -->
               </div>
@@ -814,7 +929,7 @@
                 <div class="h7 col-8">
                   0952887327
                 </div>
-                <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                 </button> -->
               </div>
@@ -824,8 +939,7 @@
               class="row justify-content-center exchange-send"
             >
               <button
-                class="btn-black-filled"
-                id="btn_exchange_send"
+                class="btn_exchange_send btn-black-filled"
               >
                   申請完成
               </button>
@@ -833,7 +947,7 @@
           </div>
         </div>
       </div>
-</div>    
+</div>
 <!-list->
 
 <!-m0->
