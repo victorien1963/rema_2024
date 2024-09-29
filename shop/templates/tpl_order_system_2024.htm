@@ -152,6 +152,7 @@
                 商品明細
               </div>
             </div>
+          <!-- 商品迴圈寫這 -->
             <div class="row shopping-produce">
               <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
                 <div class="produce-image">
@@ -175,12 +176,13 @@
                   </div>
                 </div>
                 <br>
-                <div class="px-3 text-center produce-price" style="width: 25%; padding-top: 1rem">
+                <div class="px-3 text-center produce-price" style="width: 23%; padding-top: 1rem">
                   <h7>NT 2,016</h7>
                 </div>
               </div>
+          <!-- 商品迴圈寫這 -->
               <div id="total-price" class="d-flex" style="width: 45%;">
-                <div class="pb-2 pt-0 pl-5" style="width: 78%; line-height: 1.8;">
+                <div class="pb-2 pt-0 pl-5" style="width: 76%; line-height: 1.8;">
                   <h7>商品金額總計</h7>
                   <br>
                   <h7>物流費用(滿NT$2500享免運費)</h7>
@@ -192,7 +194,7 @@
                     <div class="py-3">總計</div>
                   </div>
                 </div>
-                <div class="pb-2 pt-0 pe-3 total-price-rwd-ipad" style="width: 22%; line-height: 1.8;">
+                <div class="pb-2 pt-0 pe-0 total-price-rwd-ipad" style="width: 24%; line-height: 1.8;">
                   <h7>NT$4,032</h7>
                   <br>
                   <h7>NT$0</h7>
@@ -208,7 +210,7 @@
               </div>
             </div>
 
-            <div class="row shopping-produce rwd-produce-iphone">
+            <!-- <div class="row shopping-produce rwd-produce-iphone">
               <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
                 <div class="produce-image">
                   <div class="bg-darkgrey pl-2">
@@ -235,7 +237,7 @@
                   <h7>NT 2,016</h7>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div
               id="total-price-rwd-phone"
               style="display: none; border-top: 1px solid rgb(201 201 201)"
@@ -273,7 +275,7 @@
             style="display: none"
           >
             <button type="button" class="btn-black">取消</button>
-            <button type="button" class="btn-black mx-2">退貨</button>
+            <button type="button" class="btn-black mx-2" id="btn_returns">退貨</button>
             <button type="button" class="btn-black" id="btn_exchange_phone">換貨</button>
           </div>
         </div>
@@ -327,7 +329,7 @@
                   <img src="{#TM#}20240425/images/clothes_001.png" width="160">
                 </div>
               </div>
-              <div class="produce-content pl-5 ml-4">
+              <div class="produce-content-return pl-5 ml-4">
                 <h7>速度型長袖單車衣2.0</h7>
                 <br>
                 <h7>MCT026</h7>
@@ -343,48 +345,49 @@
                 </div>
               </div>
               <br>
-              <div class="produce-price-rwd-ipad px-3 text-center" style="width: 25%; padding-top: .9rem">
+              <div class="produce-price-rwd-ipad text-center" style="width: 25%; padding-top: .9rem">
                 <h7>NT 2,016</h7>
               </div>
             </div>
+
             <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
               <div id="exchange-reason-ques" class="pt-4 pb-2 pl-5" style="width: 70%">
                 <h7 class="pt-2">要退還本商品的原因是什麼？</h7>
                 <div class="row pt-2">
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_1">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">與照片不符</label>
+                      <input type="checkbox" class="form-check-input-reason my-0 h7 my-auto" id="reason_1">
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">與照片不符</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">不如預期</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">不如預期</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_3">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">商品寄錯</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">商品寄錯</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_4">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">太大</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">太大</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_5">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">瑕疵</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">瑕疵</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_6">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">太小</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">太小</label>
                     </div>
                   </div>
                 </div>
@@ -395,7 +398,7 @@
             <hr class="exchange_hr">
           </div>
 
-          <div class="row produce-content-rwd pb-4">
+          <!-- <div class="row produce-content-rwd pb-4">
             <div class="d-flex">
               <div class="d-flex py-2 produce-image">
                 <div class="input-group-text exchange-choose" style="padding-bottom: 120% !important;">
@@ -407,7 +410,7 @@
                   <img src="{#TM#}20240425/images/clothes_002.png" width="160">
                 </div>
               </div>
-              <div class="produce-content pl-5 ml-4">
+              <div class="produce-content-return pl-5 ml-4">
                 <h7>速度型長袖單車衣2.0</h7>
                 <br>
                 <h7>MCT026</h7>
@@ -434,43 +437,43 @@
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_7">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">與照片不符</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">與照片不符</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_8">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">不如預期</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">不如預期</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_9">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">商品寄錯</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">商品寄錯</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_10">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">太大</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">太大</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_11">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">瑕疵</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">瑕疵</label>
                     </div>
                   </div>
                   <div class="input-group-text exchange-reason col-6">
                     <div class="form-check d-flex my-auto">
                       <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_12">
-                      <label class="form-check-label pl-2 h7 my-auto" for="reason_1">太小</label>
+                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">太小</label>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div id="user_address">
             <div class="row" style="border-top: 1.5px solid rgb(201 201 201)">
@@ -607,7 +610,7 @@
                     <img src="{#TM#}20240425/images/clothes_001.png" width="160">
                   </div>
                 </div>
-                <div class="produce-content pl-5 ml-4">
+                <div class="produce-content-exchange pl-5 ml-4">
                   <h7>速度型長袖單車衣2.0</h7>
                   <br>
                   <h7>MCT026</h7>
@@ -623,7 +626,7 @@
                   </div>
                 </div>
                 <br>
-                <div class="produce-price-rwd-ipad px-3 text-center" style="width: 25%; padding-top: .9rem">
+                <div class="produce-price-rwd-ipad text-center" style="width: 25%; padding-top: .9rem">
                   <h7>NT 2,016</h7>
                 </div>
               </div>
@@ -633,38 +636,38 @@
                   <div class="row pt-2">
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_1">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XS</label>
+                        <input type="checkbox" class="form-check-input-reason my-0 h7 my-auto" id="reason_1">
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">XS</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">L</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">L</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_3">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">S</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">S</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_4">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XL</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">XL</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_5">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">M</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">M</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_6">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">2L</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">2L</label>
                       </div>
                     </div>
                   </div>
@@ -675,7 +678,7 @@
               <hr class="exchange_hr">
             </div>
 
-            <div class="row produce-content-rwd pb-4">
+            <!-- <div class="row produce-content-rwd pb-4">
               <div class="d-flex">
                 <div class="d-flex py-2 produce-image">
                   <div class="input-group-text exchange-choose" style="padding-bottom: 120% !important;">
@@ -714,43 +717,43 @@
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_7">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XS</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">XS</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_8">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">L</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">L</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_9">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">S</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">S</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_10">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XL</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">XL</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_11">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">M</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">M</label>
                       </div>
                     </div>
                     <div class="input-group-text exchange-reason col-6">
                       <div class="form-check d-flex my-auto">
                         <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_12">
-                        <label class="form-check-label pl-2 h7 my-auto" for="reason_1">2L</label>
+                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">2L</label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div id="user_address">
               <div class="row" style="border-top: 1.5px solid rgb(201 201 201)">

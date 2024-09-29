@@ -92,6 +92,7 @@
 	padding-left: 15px;
 }
 
+
 @media(max-width:1000px){
 	#filter{
 		display: none;
@@ -122,5 +123,15 @@
 	}
 	.product-main-con{
 		padding-left: 0px;
+	}
+}
+
+@media screen and (min-width: 431px) and (max-width: 1668px) {
+	.w-83 {
+		width: 83vw;
+	}
+
+	.filter-block{
+		width: 16vw;
 	}
 }
