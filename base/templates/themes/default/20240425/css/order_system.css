@@ -215,8 +215,7 @@ body > #shopping_flow {
 }
 
 .py-4_5 {
-    padding-top: 2.25rem !important; 
-    padding-bottom: 2.25rem !important; 
+    padding: 2.25rem 0rem !important; 
 }
 
 .h0 {
@@ -713,8 +712,7 @@ body > #shopping_flow {
 /* ipad */
 @media only screen and (min-width: 431px) and (max-width: 1668px) {
     .py-4_5 {
-        padding-top: 1.5rem !important; 
-        padding-bottom: 1.5rem !important; 
+        padding: 2.25rem 0rem !important; 
     }
 
     #web_footer {
