@@ -1,4 +1,7 @@
 <!-start->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script type=text/javascript src="{#CP#}js/order.js?6"></script>
+  <script language="javascript" src="{#CP#}js/ordertuidetail.js?6"></script>
 <script>
     $('document').ready(function() {
         /**
@@ -204,481 +207,19 @@
 </div>
 <!-start->  
 <!-list->
-<div class="shopping_flow d-flex">
-    <!-- shopping-content -->
-    <div class="shopping_content col-shopping-content">
-      <div class="pt-2 fw-bold h5">
-        訂單查詢
-      </div>
-      <div class="bg-grey h-auto w-100 mt-3 px-5 pb-3">
-        <div class="px-3 py-2 w-100">
-          <div class="row" style="border-bottom: 1.5px solid rgb(201 201 201)">
-            <div class="h7 py-4_5 col-shopping my-auto">
-              訂單編號
-              <span>{#OrderNo#}</span>
-            </div>
-            <div class="h7 py-4 col-shopping my-auto">
-              {#dtime#}
-            </div>
-            <div class="h7 py-4 col-shopping my-auto">
-              <!-- 訂單狀態
-              <span>已取消</span> -->
-            </div>
-            <div
-              class="h7 col-4 justify-content-end exchange-rwd-phone my-auto"
-              style="padding: 1.25rem .25rem; display: flex;"
-            >
-              <button type="button" class="btn_cancel btn-black">取消</button>
-              <button type="button" class="btn_returns btn-black mx-2">退貨</button>
-              <button type="button" class="btn_exchanges btn-black">換貨</button>
-            </div>
-          </div>
-
-          <div id="shopping-state">
-            <div class="row">
-              <div class="h7 pt-4 col-3">
-                狀態
-              </div>
-            </div>
-            <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
-              <div class="h7 pb-5 w-100">
-                <div class="progress-container">
-                  <div class="step completed">
-                    <div class="circle filled"></div>
-                    <div>收到訂單<br>02/20 19:49</div>
-                  </div>
-                  <div class="step">
-                    <div class="circle"></div>
-                    <div>訂單處理中</div><br>
-                  </div>
-                  <div class="step">
-                    <div class="circle"></div>
-                    <div>出貨中</div><br>
-                  </div>
-                  <div class="step">
-                    <div class="circle"></div>
-                    <div>配送進度查詢<br>貨號...</div>
-                  </div>
-                  <div class="progress-line"></div>
-                </div>
-              </div>
-            </div>
-            <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
-              <div class="h7 py-3 col-3">
-                商品明細
-              </div>
-            </div>
-          <!-- 商品迴圈寫這 -->
-            <div class="row shopping-produce">
-              <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
-                <div class="produce-image">
-                  <div class="bg-darkgrey pl-2">
-                    <img src="{#TM#}20240425/images/clothes_001.png" width="160">
-                  </div>
-                </div>
-                <div class="produce-content">
-                  <h7 class="proce-data1">速度型長袖單車衣2.0</h7>
-                  <br>
-                  <h7 class="proce-data2">MCT026</h7>
-                  <br>
-                  <br class="closer">
-                  <h7>顏色 炭灰</h7>
-                  <br>
-                  <h7>尺寸 M</h7>
-                  <br>
-                  <h7>數量 1</h7>
-                  <div class="produce-price-rwd-phone" style="display: none;">
-                    <h7>NT 2,016</h7>
-                  </div>
-                </div>
-                <br>
-                <div class="px-3 text-center produce-price" style="width: 23%; padding-top: 1rem">
-                  <h7>NT 2,016</h7>
-                </div>
-              </div>
-          <!-- 商品迴圈寫這 -->
-              <div id="total-price" class="d-flex" style="width: 45%;">
-                <div class="pb-2 pt-0 pl-5" style="width: 76%; line-height: 1.8;">
-                  <h7>商品金額總計</h7>
-                  <br>
-                  <h7>物流費用(滿{#getsymbol#} {#setyunfei#}元享免運費)</h7>
-                  <br>
-                  <h7>線上帳戶餘額{#getsymbol#} {#account#}元，本次抵用</h7>
-                  <br>
-                  <h7>電子折價券折扣金額</h7>
-                  <div class="my-3" style="border-top: 1px dashed #a8a8a8; height: 1px">
-                    <div class="py-3">總計</div>
-                  </div>
-                </div>
-                <div class="pb-2 pt-0 pe-3 total-price-rwd-ipad" style="width: 22%; line-height: 1.8;">
-                  <h7>{#pricesymbol#} {#totaljine#}</h7>
-                  <br>
-                  <h7>{#pricesymbol#} {#multiyunfei#}</h7>
-                  <br>
-                  <h7>{#pricesymbol#} {#disaccount#}</h7>
-                  <br>
-                  <h7>{#pricesymbol#} {#promoprice#}</h7>
-                  <br />
-                  <div class="my-3" style="border-top: 1px dashed #a8a8a8; height: 1px">
-                    <h5 class="py-3">{#pricesymbol#} {#tjine#}</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- <div class="row shopping-produce rwd-produce-iphone">
-              <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
-                <div class="produce-image">
-                  <div class="bg-darkgrey pl-2">
-                    <img src="{#TM#}20240425/images/clothes_002.png" width="160">
-                  </div>
-                </div>
-                <div class="produce-content content-rwd-iphone">
-                  <h7 class="proce-data1">速度型長袖單車衣2.0</h7>
-                  <br>
-                  <h7 class="proce-data2">MCT026</h7>
-                  <br>
-                  <br class="closer">
-                  <h7>顏色 消光鉻綠</h7>
-                  <br>
-                  <h7>尺寸 S</h7>
-                  <br>
-                  <h7>數量 1</h7>
-                  <div class="produce-price-rwd-phone" style="display: none;">
-                    <h7>NT 2,016</h7>
-                  </div>
-                </div>
-                <br>
-                <div class="px-3 text-center produce-price" style="width: 25%; padding-top: .95rem">
-                  <h7>NT 2,016</h7>
-                </div>
-              </div>
-            </div> -->
-            <div
-              id="total-price-rwd-phone"
-              style="display: none; border-top: 1px solid rgb(201 201 201)"
-            >
-              <div class="pb-2 pt-0 pl-5 pr-0 col-9" style="line-height: 1.8;">
-                <h7>商品金額總計</h7>
-                <br>
-                <h7>物流費用(滿NT$2500享免運費)</h7>
-                <br>
-                <h7>線上帳戶餘額NT$0，本次折抵</h7>
-                <br>
-                <h7>電子折價券折扣金額</h7>
-                <div class="my-3" style="border-top: 1px dashed #a8a8a8; height: 1px">
-                  <div class="py-3">總計</div>
-                </div>
-              </div>
-              <div class="pb-2 pl-0 pt-0 pr-3 col-3" style="line-height: 1.8;">
-                <h7>NT$4,032</h7>
-                <br>
-                <h7>NT$0</h7>
-                <br>
-                <h7>NT$0</h7>
-                <br>
-                <h7>NT$0</h7>
-                <br />
-                <div class="my-3" style="border-top: 1px dashed #a8a8a8; height: 1px">
-                  <h5 class="py-3">NT$4,032</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            id="exchange-btn-rwd-phone"
-            class="h7 justify-content-end pb-4"
-            style="display: none"
-          >
-            <button type="button" class="btn-black">取消</button>
-            <button type="button" class="btn-black mx-2">退貨</button>
-            <button type="button" class="btn-black" id="btn_exchange_phone">換貨</button>
-          </div>
-        </div>
-      </div>
-      
+<div x-data="order_data_set()" x-init="order_data_init()">
+  <template x-if="showOrderListLayout">
+    <div class="pt-2 fw-bold h5">
+      訂單查詢
     </div>
+  </template>
 
-    <!-- shopping return -->
-    <div class="shopping_return col-shopping-content" style="display: none;">
-      <div class="pt-2 fw-bold h5">
-        訂單查詢 > 申請退貨
-      </div>
-      <div class="bg-grey h-auto w-100 mt-3 px-5 pb-5">
-        <div class="px-3 py-2 w-100">
-          <div class="row" style="border-bottom: 1.5px solid rgb(201 201 201)">
-            <div class="h7 py-4_5 col-shopping my-auto">
-              訂單編號
-              <span>{#OrderNo#}</span>
-            </div>
-            <div class="h7 py-4 col-shopping my-auto">
-              {#dtime#}
-            </div>
-            <div class="h7 py-4 col-shopping my-auto">
-              <!-- 訂單狀態
-              <span>已發貨</span> -->
-            </div>
-            <div
-              class="h7 py-4 col-shopping justify-content-end exchange-rwd-imac my-auto"
-              style="padding: 1.25rem .25rem; display: flex"
-            >
-              <button type="button" class="btn-black">取消</button>
-              <button type="button" class="btn-black mx-2">退貨</button>
-              <button type="button" class="btn-black">換貨</button>
-            </div>
-          </div>
-
-          <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
-            <div class="h7 py-3 col-3">
-              商品明細
-            </div>
-          </div>
-          <div class="row produce-content-rwd">
-            <div class="d-flex py-3">
-              <div class="d-flex py-2 produce-image">
-                <div class="input-group-text exchange-choose">
-                  <div class="form-check d-flex my-auto">
-                    <input type="checkbox" class="form-check-input" id="choose-exchange-2">
-                  </div>
-                </div>
-                <div class="bg-darkgrey">
-                  <img src="{#TM#}20240425/images/clothes_001.png" width="160">
-                </div>
-              </div>
-              <div class="produce-content-return pl-5 ml-4">
-                <h7>速度型長袖單車衣2.0</h7>
-                <br>
-                <h7>MCT026</h7>
-                <br>
-                <br class="closer">
-                <h7>顏色 炭灰</h7>
-                <br>
-                <h7>尺寸 M</h7>
-                <br>
-                <h7>數量 1</h7>
-                <div class="produce-price-rwd-phone" style="display: none;">
-                  <h7>NT 2,016</h7>
-                </div>
-              </div>
-              <br>
-              <div class="produce-price-rwd-ipad text-center" style="width: 25%; padding-top: .9rem">
-                <h7>NT 2,016</h7>
-              </div>
-            </div>
-
-            <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
-              <div id="exchange-reason-ques" class="pt-4 pb-2 pl-5" style="width: 70%">
-                <h7 class="pt-2">要退還本商品的原因是什麼？</h7>
-                <div class="row pt-2">
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason my-0 h7 my-auto" id="reason_1">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">與照片不符</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">不如預期</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_3">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">商品寄錯</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_4">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">太大</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_5">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">瑕疵</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_6">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">太小</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <hr class="exchange_hr">
-          </div>
-
-          <!-- <div class="row produce-content-rwd pb-4">
-            <div class="d-flex">
-              <div class="d-flex py-2 produce-image">
-                <div class="input-group-text exchange-choose" style="padding-bottom: 120% !important;">
-                  <div class="form-check d-flex my-auto">
-                    <input type="checkbox" class="form-check-input" id="choose-exchange-1">
-                  </div>
-                </div>
-                <div class="bg-darkgrey">
-                  <img src="{#TM#}20240425/images/clothes_002.png" width="160">
-                </div>
-              </div>
-              <div class="produce-content-return pl-5 ml-4">
-                <h7>速度型長袖單車衣2.0</h7>
-                <br>
-                <h7>MCT026</h7>
-                <br>
-                <br class="closer">
-                <h7>顏色 消光鉻綠</h7>
-                <br>
-                <h7>尺寸 S</h7>
-                <br>
-                <h7>數量 1</h7>
-                <div class="produce-price-rwd-phone" style="display: none;">
-                  <h7>NT 2,016</h7>
-                </div>
-              </div>
-              <br>
-              <div class="px-3 text-center produce-price-rwd-ipad" style="width: 25%; padding-top: .9rem">
-                <h7>NT 2,016</h7>
-              </div>
-            </div>
-            <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
-              <div id="exchange-reason-ques" class="pt-1 pb-4" style="width: 70%">
-                <h7 class="py-2">要退還本商品的原因是什麼？</h7>
-                <div class="row pt-2">
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_7">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">與照片不符</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_8">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">不如預期</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_9">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">商品寄錯</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_10">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">太大</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_11">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">瑕疵</label>
-                    </div>
-                  </div>
-                  <div class="input-group-text exchange-reason col-6">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_12">
-                      <label class="form-check-label ps-2 h7 my-auto" for="reason_1">太小</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <div id="user_address">
-            <div class="row" style="border-top: 1.5px solid rgb(201 201 201)">
-              <div class="h7 py-4 col-5">
-                取件地址
-              </div>
-              <div class="h7 py-4 col-2">
-                聯絡人
-              </div>
-              <div class="h7 py-4 col-3">
-                聯絡號碼
-              </div>
-              <div class="h7 py-4 col-2 text-right">
-                修改
-              </div>
-            </div>
-
-            <div class="row" style="border-top: 1.5px dashed rgb(201 201 201)">
-              <div class="h7 py-4 col-5">
-                新竹市東區建中路50號2樓
-              </div>
-              <div class="h7 py-4 col-2">
-                衷沛婷
-              </div>
-              <div class="h7 py-4 col-3">
-                0952887327
-              </div>
-              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
-              </button>
-            </div>
-          </div>
-
-          <div id="user_address_rwd_phone">
-            <div class="row py-2 pt-4" style="border-top: 1.5px solid rgb(201 201 201)">
-              <div class="h7 col-3">
-                取件地址
-              </div>
-              <div class="h7 col-8">
-                新竹市東區建中路50號2樓
-              </div>
-              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
-              </button>
-            </div>
-            <div class="row py-2">
-              <div class="h7 col-3">
-                聯絡人
-              </div>
-              <div class="h7 col-8">
-                衷沛婷
-              </div>
-              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
-              </button>
-            </div>
-            <div class="row py-2">
-              <div class="h7 col-3">
-                聯絡號碼
-              </div>
-              <div class="h7 col-8">
-                0952887327
-              </div>
-              <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="row justify-content-center exchange-send"
-          >
-            <button
-              class="btn_return_send btn-black-filled"
-            >
-                申請完成
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- shopping exchange -->
-      <div class="shopping_exchange col-shopping-content" style="display: none;">
-        <div class="pt-2 fw-bold h5">
-          訂單查詢 > 申請換貨
-        </div>
-        <div class="bg-grey h-auto w-100 mt-3 px-5 pb-5">
-          <div class="px-3 py-2 w-100">
+  <div id="shopping_flow" class="flex">
+    <div id="shopping_content" class="col-shopping-content"
+      @click="switchShowOrderDetailLayout(event,{#orderIndex#})">
+      <template x-if="showOrderListLayout">
+        <div  class="bg-grey h-auto w-100 mt-3 px-5">
+          <div class="px-3 pt-2 w-100 pb-0">
             <div class="row" style="border-bottom: 1.5px solid rgb(201 201 201)">
               <div class="h7 py-4_5 col-shopping my-auto">
                 訂單編號
@@ -689,268 +230,887 @@
               </div>
               <div class="h7 py-4 col-shopping my-auto">
                 <!-- 訂單狀態
-                <span>已發貨</span> -->
+          <span>已取消</span> -->
               </div>
-              <div
-                class="h7 py-4 col-shopping justify-content-end exchange-rwd-imac my-auto"
-                style="padding: 1.25rem .25rem; display: flex"
-              >
-                <button type="button" class="btn-black">取消</button>
-                <button type="button" class="btn-black mx-2">退貨</button>
-                <button type="button" class="btn-black">換貨</button>
+              <div class="h7 col-4 justify-content-end exchange-rwd-phone my-auto"
+                style="padding: 1.25rem .25rem; display: flex;">
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
+                  <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odlook !== '---' || orderList[{#orderIndex#}].orderdata.iftui ==='1' ">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.iftui ==='1' ? '已取消' : '取消' "
+                    id="delete_{#orderid#}" type="button" class="btn-grey" disabled>取消</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                  <button @click="goReturnOrder({#orderIndex#})" id="btn_returns" type="button"
+                    class="btn-black mx-2">退貨</button>
+                </template>
+
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.tuitime ==='---' ? '退貨' : '已退貨' "
+                    id="btn_returns" type="button" class="btn-grey mx-2" disabled>退貨</button>
+                </template>
+
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                  <button @click="goCHGOrder({#orderIndex#})" id="btn_exchanges" type="button"
+                    class="btn-black">換貨</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.chgtime ==='---' ? '換貨' : '已換貨' "
+                    id="btn_exchanges" type="button" class="btn-grey" disabled>換貨</button>
+                </template>
+
               </div>
             </div>
 
-            <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
-              <div
-                class="h7 my-auto py-4 col-12"
-                style="white-space-collapse: preserve-breaks;"
-              >換貨： 為了提供您更便捷的服務， 我們提供以下兩種換貨方式， 並請於購買日起 10天內辦理換貨。
-                
-                <span class="fw-bold text-secondary">1. 親送換貨：</span>您可將商品親自送至我們的民生店直營門市進行換貨。 選擇此方式可即時為您處理換貨事宜， 確保您的需求能迅速得到滿足。
-                <span class="fw-bold text-secondary">2. 郵寄換貨：</span>完成退貨申請後， 我們將安排快遞上門取件。 將需要換貨的商品和出貨單一起包裝好， 並在出貨單上註明所需更換的尺寸。 換貨商品將以運費到付的方式寄回給您。
-                
-                請在進行任何換貨操作前， 確認商品符合我們的換貨條件， 並保持商品的原始狀態及包裝。
-              </div>
-            </div>
-            <div class="row produce-content-rwd">
-              <div class="d-flex py-3">
-                <div class="d-flex py-2 produce-image">
-                  <div class="input-group-text exchange-choose">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input" id="choose-exchange-2">
-                    </div>
-                  </div>
-                  <div class="bg-darkgrey">
-                    <img src="{#TM#}20240425/images/clothes_001.png" width="160">
-                  </div>
-                </div>
-                <div class="produce-content-exchange pl-5 ml-4">
-                  <h7>速度型長袖單車衣2.0</h7>
-                  <br>
-                  <h7>MCT026</h7>
-                  <br>
-                  <br class="closer">
-                  <h7>顏色 炭灰</h7>
-                  <br>
-                  <h7>尺寸 M</h7>
-                  <br>
-                  <h7>數量 1</h7>
-                  <div class="produce-price-rwd-phone" style="display: none;">
-                    <h7>NT 2,016</h7>
-                  </div>
-                </div>
-                <br>
-                <div class="produce-price-rwd-ipad text-center" style="width: 25%; padding-top: .9rem">
-                  <h7>NT 2,016</h7>
-                </div>
-              </div>
-              <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
-                <div id="exchange-reason-ques" class="pt-4 pb-2 pl-5" style="width: 70%">
-                  <h7 class="pt-2">要更換的尺寸</h7>
-                  <div class="row pt-2">
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason my-0 h7 my-auto" id="reason_1">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">XS</label>
-                      </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">L</label>
-                      </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_3">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">S</label>
-                      </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_4">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">XL</label>
-                      </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_5">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">M</label>
-                      </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_6">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">2L</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <hr class="exchange_hr">
-            </div>
+            <template x-if="orderList[{#orderIndex#}].orderdata.showOrderDetailLayout">
+              <div id="shopping-state">
 
-            <!-- <div class="row produce-content-rwd pb-4">
-              <div class="d-flex">
-                <div class="d-flex py-2 produce-image">
-                  <div class="input-group-text exchange-choose" style="padding-bottom: 120% !important;">
-                    <div class="form-check d-flex my-auto">
-                      <input type="checkbox" class="form-check-input" id="choose-exchange-1">
-                    </div>
-                  </div>
-                  <div class="bg-darkgrey">
-                    <img src="{#TM#}20240425/images/clothes_002.png" width="160">
+                <div class="row">
+                  <div class="h7 pt-4 col-3">
+                    狀態
                   </div>
                 </div>
-                <div class="produce-content pl-5 ml-4">
-                  <h7>速度型長袖單車衣2.0</h7>
-                  <br>
-                  <h7>MCT026</h7>
-                  <br>
-                  <br class="closer">
-                  <h7>顏色 消光鉻綠</h7>
-                  <br>
-                  <h7>尺寸 S</h7>
-                  <br>
-                  <h7>數量 1</h7>
-                  <div class="produce-price-rwd-phone" style="display: none;">
-                    <h7>NT 2,016</h7>
-                  </div>
-                </div>
-                <br>
-                <div class="px-3 text-center produce-price-rwd-ipad" style="width: 25%; padding-top: .9rem">
-                  <h7>NT 2,016</h7>
-                </div>
-              </div>
-              <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
-                <div id="exchange-reason-ques" class="pt-1 pb-4" style="width: 70%">
-                  <h7 class="py-2">要更換的尺寸</h7>
-                  <div class="row pt-2">
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_7">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">XS</label>
+                <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+                  <div class="h7 pb-5 w-100">
+                    <div class="progress-container">
+                      <div class="step completed">
+                        <div class="circle"
+                          :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odtime !== '---' ? '#b3b3b3' : ''}">
+                        </div>
+                        <div>收到訂單<br>{#odtime#}</div>
                       </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_8">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">L</label>
+                      <div class="step">
+                        <div class="circle"
+                          :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odlook !== '---' ? '#b3b3b3' : ''}">
+                        </div>
+                        <div>訂單處理中<br>{#odlook#}</div>
                       </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_9">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">S</label>
+                      <div class="step">
+                        <div class="circle"
+                          :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odyun !== '---' ? '#b3b3b3' : ''}">
+                        </div>
+                        <div>出貨中<br>{#odyun#}</div>
                       </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_10">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">XL</label>
+                      <div class="step">
+                        <div class="circle"
+                          :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odyunno !== '---' && orderList[{#orderIndex#}].orderdata.odyun !== '---' ? '#b3b3b3' : ''}">
+                        </div>
+                        <div>配送進度查詢<br>貨號{#odyunno#}</div>
                       </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_11">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">M</label>
-                      </div>
-                    </div>
-                    <div class="input-group-text exchange-reason col-6">
-                      <div class="form-check d-flex my-auto">
-                        <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_12">
-                        <label class="form-check-label ps-2 h7 my-auto" for="reason_1">2L</label>
-                      </div>
+                      <div class="progress-line"></div>
                     </div>
                   </div>
                 </div>
+                <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+                  <div class="h7 py-3 col-3 details">
+                    商品明細
+                  </div>
+                </div>
+                <template x-for="pdItem in orderList[{#orderIndex#}].orderItems">
+                  <div class="row shopping-produce">
+                    <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
+                      <div class="produce-image">
+                        <div class="bg-darkgrey pl-2">
+                          <img :src="pdItem.srcs" width="160">
+                        </div>
+                      </div>
+                      <div class="produce-content">
+                        <h7 x-text="pdItem.goods" class="proce-data1"></h7>
+                        <br>
+                        <h7 x-text="pdItem.bn" class="proce-data2"></h7>
+                        <br>
+                        <br class="closer">
+                        <h7>顏色 </h7><h7 x-text="pdItem.colorname"></h7>
+                        <br>
+                        <h7>尺寸 </h7><h7 x-text="pdItem.size"></h7>
+                        <br>
+                        <h7>數量 </h7><h7 x-text="pdItem.nums"></h7>
+                        <div class="produce-price-rwd-phone" style="display: none;">
+                          <h7 x-text="`${pdItem.pricesymbol} ${pdItem.jine}`"></h7>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="text-center produce-price" style="width: 25%; padding-top: 1rem">
+                        <h7 x-text="`${pdItem.pricesymbol}${pdItem.jine}`"></h7>
+                      </div>
+                    </div>
+                    <!--<template x-if="pdItem.show_total_proce_layout === 'flex'">-->
+                      <div id="total-price" class="d-flex" style="width: 45% ;">
+                        <div class="pb-2 pl-5" style="width: 78%; line-height: 1.8;">
+                          <h7>商品金額總計</h7>
+                          <br>
+                          <h7
+                            x-text="`物流費用(滿${orderList[{#orderIndex#}].orderdata.getsymbol}${orderList[{#orderIndex#}].orderdata.setyunfei}享免運費)`">
+                          </h7>
+                          <br>
+                          <h7
+                            x-text="`線上帳戶餘額${orderList[{#orderIndex#}].orderdata.getsymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.account)}，本次抵用`">
+                          </h7>
+                          <br>
+                          <h7>電子折價券折扣金額</h7>
+                          <div class="my-3" style="border-top: 1px dashed #a8a8a8;">
+                            <div class="py-3">總計</div>
+                          </div>
+                        </div>
+                        <div class="pb-2 pe-3 total-price-rwd-ipad" style="width: 22%;">
+                          <h7
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].totaljine}`">
+                          </h7>
+                          <br>
+                          <h7
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.multiyunfei}`">
+                          </h7>
+                          <br>
+                          <h7
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.disaccount}`">
+                          </h7>
+                          <br>
+                          <h7
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.promoprice}`">
+                          </h7>
+                          <br />
+                          <div id="total-prices" class="my-3" style="border-top: 1px dashed #a8a8a8;">
+                            <h5
+                              x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.tjine}`"
+                              class="py-3"></h5>
+                          </div>
+                        </div>
+                        <hr class="total-price-hr">
+                      </div>
+                    <!--</template>-->
+                  </div>
+                </template>
+                <div id="total-price-rwd-phone" style="display: none; border-top: 1px solid rgb(201 201 201)">
+                  <div class="pb-2 pt-0 pl-5 pr-0 col-9" style="line-height: 1.8;">
+                      <h7>商品金額總計</h7>
+                      <br>
+                      <h7
+                        x-text="`物流費用(滿${orderList[{#orderIndex#}].orderdata.getsymbol}${orderList[{#orderIndex#}].orderdata.setyunfei}享免運費)`">
+                      </h7>
+                      <br>
+                      <h7
+                        x-text="`線上帳戶餘額${orderList[{#orderIndex#}].orderdata.getsymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.account)}，本次抵用`">
+                      </h7>
+                      <br>
+                      <h7>電子折價券折扣金額</h7>
+                      <div class="my-3">
+                        <div class="pt-3" style="border-top: 1px dashed #a8a8a8;"">總計</div>
+                      </div>
+                  </div>
+                  <div class="pb-2 pl-0 pt-0 pr-3 col-3" style="line-height: 1.8;">
+                    <h7
+                          x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].totaljine}`">
+                        </h7>
+                        <br>
+                        <h7
+                          x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.multiyunfei}`">
+                        </h7>
+                        <br>
+                        <h7
+                          x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.disaccount)}`">
+                        </h7>
+                        <br>
+                        <h7
+                          x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.promoprice}`">
+                        </h7>
+                        <br />
+                        <div class="my-3">
+                          <h5
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.tjine}`"
+                            class="pt-3" style="border-top: 1px dashed #a8a8a8;"></h5>
+                        </div>
+                  </div>
+                </div>
               </div>
-            </div> -->
+            </template>
+            <div id="exchange-btn-rwd-phone" class="h7 justify-content-end pb-4" >
+              <template
+              x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
+              <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
+            </template>
+            <template
+              x-if="orderList[{#orderIndex#}].orderdata.odlook !== '---' || orderList[{#orderIndex#}].orderdata.iftui ==='1' ">
+              <button x-text="orderList[{#orderIndex#}].orderdata.iftui ==='1' ? '已取消' : '取消' "
+                id="delete_{#orderid#}" type="button" class="btn-grey " disabled>取消</button>
+            </template>
+            <template
+              x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+              <button @click="goReturnOrder({#orderIndex#})" id="btn_returns" type="button"
+                class="btn-black mx-2">退貨</button>
+            </template>
 
-            <div id="user_address">
-              <div class="row" style="border-top: 1.5px solid rgb(201 201 201)">
-                <div class="h7 py-4 col-5">
-                  取件地址
-                </div>
-                <div class="h7 py-4 col-2">
-                  聯絡人
-                </div>
-                <div class="h7 py-4 col-3">
-                  聯絡號碼
-                </div>
-                <div class="h7 py-4 col-2 text-right">
-                  修改
-                </div>
-              </div>
+            <template
+              x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+              <button x-text="orderList[{#orderIndex#}].orderdata.tuitime ==='---' ? '退貨' : '已退貨' "
+                id="btn_returns" type="button" class="btn-grey mx-2" disabled>退貨</button>
+            </template>
 
-              <div class="row" style="border-top: 1.5px dashed rgb(201 201 201)">
-                <div class="h7 py-4 col-5">
-                  新竹市東區建中路50號2樓
-                </div>
-                <div class="h7 py-4 col-2">
-                  衷沛婷
-                </div>
-                <div class="h7 py-4 col-4">
-                  0952887327
-                </div>
-                <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
-                </button>
-              </div>
-            </div>
-
-            <div id="user_address_rwd_phone">
-              <div class="row py-2 pt-4" style="border-top: 1.5px solid rgb(201 201 201)">
-                <div class="h7 col-3">
-                  取件地址
-                </div>
-                <div class="h7 col-8">
-                  新竹市東區建中路50號2樓
-                </div>
-                <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
-                </button>
-              </div>
-              <div class="row py-2">
-                <div class="h7 col-3">
-                  聯絡人
-                </div>
-                <div class="h7 col-8">
-                  衷沛婷
-                </div>
-                <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
-                </button> -->
-              </div>
-              <div class="row py-2">
-                <div class="h7 col-3">
-                  聯絡號碼
-                </div>
-                <div class="h7 col-8">
-                  0952887327
-                </div>
-                <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
-                </button> -->
-              </div>
-            </div>
-
-            <div
-              class="row justify-content-center exchange-send"
-            >
-              <button
-                class="btn_exchange_send btn-black-filled"
-              >
-                  申請完成
-              </button>
+            <template
+              x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+              <button @click="goCHGOrder({#orderIndex#})" id="btn_exchanges" type="button"
+                class="btn-black">換貨</button>
+            </template>
+            <template
+              x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+              <button x-text="orderList[{#orderIndex#}].orderdata.chgtime ==='---' ? '換貨' : '已換貨' "
+                id="btn_exchanges" type="button" class="btn-grey" disabled>換貨</button>
+            </template>
             </div>
           </div>
         </div>
+      </template>
+    </div>
+
+
+    <!-- shopping return -->
+    <template x-if="orderList[{#orderIndex#}].orderdata.showOrderReturnLayout">
+      <div id="shopping_return" class="col-shopping-content" style="display: block;">
+        <form action="" method="post" id="sendtuiform_{#orderid#}" onsubmit="event.preventDefault();">
+          <input type="hidden" name="orderid" value="{#orderid#}" />
+          <input type="hidden" name="act" value="itemtui" />
+
+          <div class="pt-2 fw-bold h5">
+            訂單查詢 > 申請退貨
+          </div>
+          <div class="bg-grey h-auto w-100 mt-3 px-5 pb-5">
+            <div class="px-3 py-2 w-100 pb-0">
+              <div class="row" style="border-bottom: 1.5px solid rgb(201 201 201)">
+                <div class="h7 py-4_5 col-shopping my-auto">
+                  訂單編號
+                  <span>{#OrderNo#}</span>
+                </div>
+                <div class="h7 py-4 col-shopping my-auto">
+                  {#dtime#}
+                </div>
+                <div class="h7 py-4 col-shopping my-auto">
+                  <!-- 訂單狀態
+                  <span>已發貨</span> -->
+                </div>
+                <div class="h7 py-4 col-shopping justify-content-end exchange-rwd-imac my-auto"
+                style="padding: 1.25rem .25rem; display: flex;">
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
+                  <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odlook !== '---' || orderList[{#orderIndex#}].orderdata.iftui ==='1' ">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.iftui ==='1' ? '已取消' : '取消' "
+                    id="delete_{#orderid#}" type="button" class="btn-grey" disabled>取消</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                  <button @click="goReturnOrder({#orderIndex#})" id="btn_returns" type="button"
+                    class="btn-black mx-2">退貨</button>
+                </template>
+
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.tuitime ==='---' ? '退貨' : '已退貨' "
+                    id="btn_returns" type="button" class="btn-grey mx-2" disabled>退貨</button>
+                </template>
+
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                  <button @click="goCHGOrder({#orderIndex#})" id="btn_exchanges" type="button"
+                    class="btn-black">換貨</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.chgtime ==='---' ? '換貨' : '已換貨' "
+                    id="btn_exchanges" type="button" class="btn-grey" disabled>換貨</button>
+                </template>
+
+              </div>
+              </div>
+
+              <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+                <div class="h7 py-3 col-3 details">
+                  商品明細
+                </div>
+              </div>
+
+              <template x-for="pdItem in orderList[{#orderIndex#}].orderItems">
+
+                <div class="row produce-content-rwd">
+                  <div class="d-flex py-3">
+                    <div class="d-flex py-2 produce-image">
+                      <div class="input-group-text exchange-choose">
+                        <div class="form-check d-flex my-auto">
+                          <input type="checkbox" class="form-check-input" name="tuilist[]" :value="pdItem.itemid">
+                        </div>
+                      </div>
+                      <div class="bg-darkgrey">
+                        <img :src="pdItem.srcs" width="160">
+                      </div>
+                    </div>
+                    <div class="produce-content-return ml-4">
+                      <h7 x-text="pdItem.goods"></h7>
+                      <br>
+                      <h7 x-text="pdItem.bn"></h7>
+                      <br>
+                      <br class="closer">
+                      <h7>顏色 </h7><h7 x-text="pdItem.colorname"></h7>
+                      <br>
+                      <h7>尺寸 </h7><h7 x-text="pdItem.size"></h7>
+                      <br>
+                      <h7>數量 </h7><h7 x-text="pdItem.nums"></h7>
+                      <div class="produce-price-rwd-phone" style="display: none;">
+                        <h7 x-text="`${pdItem.pricesymbol} ${pdItem.jine}`"></h7>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="produce-price-rwd-ipad text-center" style="width: 25%; padding-top: .9rem">
+                      <h7 x-text="`${pdItem.pricesymbol} ${pdItem.jine}`"></h7>
+                    </div>
+                  </div>
+                  <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
+                    <div id="exchange-reason-ques" class="pt-4 pb-2 pl-5" style="width: 70%">
+                      <h7 class="pt-2">要退還本商品的原因是什麼？</h7>
+                      <div class="row pt-2">
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_1"
+                              name="tuinote[]" value="與照片不符">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_1">與照片不符</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2"
+                              name="tuinote[]" value="不如預期">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_2">不如預期</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_3"
+                              name="tuinote[]" value="商品寄錯">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_3">商品寄錯</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_4"
+                              name="tuinote[]" value="太大">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_4">太大</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_5"
+                              name="tuinote[]" value="瑕疵">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_5">瑕疵</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_6"
+                              name="tuinote[]" value="太小">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_6">太小</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+              <div>
+                <hr class="exchange_hr">
+              </div>
+
+              <div id="user_address">
+                <div class="row" style="border-top: 1.5px solid rgb(201 201 201)">
+                  <div class="h7 py-4 col-5">
+                    取件地址
+                  </div>
+                  <div class="h7 py-4 col-2">
+                    聯絡人
+                  </div>
+                  <div class="h7 py-4 col-3">
+                    聯絡號碼
+                  </div>
+                  <div class="h7 py-4 col-2 text-right">
+                    修改
+                  </div>
+                </div>
+
+                <div class="row" style="border-top: 1.5px dashed rgb(201 201 201)">
+                  <input name="s_addr" :value="orderList[{#orderIndex#}].orderdata.s_addr" type="hidden">
+                  <input name="s_name" :value="orderList[{#orderIndex#}].orderdata.s_name" type="hidden">
+                  <input name="s_mobi" :value="orderList[{#orderIndex#}].orderdata.s_mobi" type="hidden">
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_addr" class="h7 py-4 col-5">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 py-4 col-5">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editAddr"
+                        x-model="orderList[{#orderIndex#}].orderdata.editAddr" type="text">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_name" class="h7 py-4 col-2">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 py-4 col-2">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editName"
+                        x-model="orderList[{#orderIndex#}].orderdata.editName" type="text">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_mobi" class="h7 py-4 col-4">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 py-4 col-4">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editMobi"
+                        x-model="orderList[{#orderIndex#}].orderdata.editMobi" type="text">
+                    </div>
+                  </template>
+
+
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
+                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
+                    </button>
+                  </template>
+
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                      <img src="{#TM#}20240425/images/x.png" width="17" class="pr-1">
+                    </button>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                      <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
+                    </button>
+                  </template>
+
+                </div>
+              </div>
+
+
+
+              <div id="user_address_rwd_phone">
+                <div class="row py-2 pt-4" style="border-top: 1.5px solid rgb(201 201 201)">
+                  <div class="h7 col-3">
+                    取件地址
+                  </div>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_addr" class="h7 col-8">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 col-8">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editAddr"
+                        x-model="orderList[{#orderIndex#}].orderdata.editAddr" type="text">
+                    </div>
+                  </template>
+
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
+                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
+                    </button>
+                  </template>
+
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                      <img src="{#TM#}20240425/images/x.png" width="17" class="pr-1">
+                    </button>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                      <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
+                    </button>
+                  </template>
+                </div>
+                <div class="row py-2">
+                  <div class="h7 col-3">
+                    聯絡人
+                  </div>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_name" class="h7 col-8">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 col-8">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editName"
+                        x-model="orderList[{#orderIndex#}].orderdata.editName" type="text">
+                    </div>
+                  </template>
+                  <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                    <img src="./images/icon_pen.svg" width="17" class="pr-1">
+                  </button> -->
+                </div>
+                <div class="row py-2">
+                  <div class="h7 col-3">
+                    聯絡號碼
+                  </div>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_mobi" class="h7 col-8">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 col-8">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editMobi"
+                        x-model="orderList[{#orderIndex#}].orderdata.editMobi" type="text">
+                    </div>
+                  </template>
+                  <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                    <img src="./images/icon_pen.svg" width="17" class="pr-1">
+                  </button> -->
+                </div>
+              </div>
+
+
+
+
+
+              <div class="row justify-content-center exchange-send">
+                <button @click="cancelReturnOrder({#orderIndex#})" class="btn-black-filled" id="btn_return_send">
+                  取消申請
+                </button>
+                <button @click="sendReturn({#orderid#})" class="btn-black-filled" class="shop-bn return-submit">
+                  申請完成
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
+    </template>
+
+    <!-- shopping exchange -->
+    <template x-if="orderList[{#orderIndex#}].orderdata.showOrderCHGLayout">
+      <div id="shopping_exchange" class="col-shopping-content" style="display:block;">
+        <form action="" method="post" id="sendchgform_{#orderid#}" onsubmit="event.preventDefault();">
+          <input type="hidden" name="orderid" value="{#orderid#}" />
+          <input type="hidden" name="act" value="itemchg" />
+
+          <div class="pt-2 fw-bold h5">
+            訂單查詢 > 申請換貨
+          </div>
+          <div class="bg-grey h-auto w-100 mt-3 px-5 pb-5">
+            <div class="px-3 py-2 w-100 pb-0">
+              <div class="row" style="border-bottom: 1.5px solid rgb(201 201 201)">
+                <div class="h7 py-4_5 col-shopping my-auto">
+                  訂單編號
+                  <span>{#OrderNo#}</span>
+                </div>
+                <div class="h7 py-4 col-shopping my-auto">
+                  {#dtime#}
+                </div>
+                <div class="h7 py-4 col-shopping my-auto">
+                  <!-- 訂單狀態
+                  <span>已發貨</span> -->
+                </div>
+                <div class="h7 py-4 col-shopping justify-content-end exchange-rwd-imac my-auto"
+                style="padding: 1.25rem .25rem; display: flex;">
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
+                  <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odlook !== '---' || orderList[{#orderIndex#}].orderdata.iftui ==='1' ">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.iftui ==='1' ? '已取消' : '取消' "
+                    id="delete_{#orderid#}" type="button" class="btn-grey" disabled>取消</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                  <button @click="goReturnOrder({#orderIndex#})" id="btn_returns" type="button"
+                    class="btn-black mx-2">退貨</button>
+                </template>
+
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.tuitime ==='---' ? '退貨' : '已退貨' "
+                    id="btn_returns" type="button" class="btn-grey mx-2" disabled>退貨</button>
+                </template>
+
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                  <button @click="goCHGOrder({#orderIndex#})" id="btn_exchanges" type="button"
+                    class="btn-black">換貨</button>
+                </template>
+                <template
+                  x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                  <button x-text="orderList[{#orderIndex#}].orderdata.chgtime ==='---' ? '換貨' : '已換貨' "
+                    id="btn_exchanges" type="button" class="btn-grey" disabled>換貨</button>
+                </template>
+                </div>
+              </div>
+
+              <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+                <div class="h7 my-auto py-4 col-12" style="white-space-collapse: preserve-breaks;">換貨：
+                  為了提供您更便捷的服務，
+                  我們提供以下兩種換貨方式， 並請於購買日起 10天內辦理換貨。
+
+                  <span class="fw-bold text-secondary">1. 親送換貨：</span>您可將商品親自送至我們的民生店直營門市進行換貨。 選擇此方式可即時為您處理換貨事宜，
+                  確保您的需求能迅速得到滿足。
+                  <span class="fw-bold text-secondary">2. 郵寄換貨：</span>完成退貨申請後， 我們將安排快遞上門取件。 將需要換貨的商品和出貨單一起包裝好，
+                  並在出貨單上註明所需更換的尺寸。 換貨商品將以運費到付的方式寄回給您。
+
+                  請在進行任何換貨操作前， 確認商品符合我們的換貨條件， 並保持商品的原始狀態及包裝。
+                </div>
+              </div>
+
+              <template x-for="pdItem in orderList[{#orderIndex#}].orderItems">
+
+                <div class="row produce-content-rwd">
+                  <div class="d-flex py-3">
+                    <div class="d-flex py-2 produce-image">
+                      <div class="input-group-text exchange-choose">
+                        <div class="form-check d-flex my-auto">
+                          <input type="checkbox" class="form-check-input" name="chglist[]" :value="pdItem.itemid">
+                        </div>
+                      </div>
+                      <div class="bg-darkgrey">
+                        <img :src="pdItem.srcs" width="160">
+                      </div>
+                    </div>
+                    <div class="produce-content-exchange ml-4">
+                      <h7 x-text="pdItem.goods"></h7>
+                      <br>
+                      <h7 x-text="pdItem.bn"></h7>
+                      <br>
+                      <br class="closer">
+                      <h7>顏色 </h7><h7 x-text="pdItem.colorname"></h7>
+                      <br>
+                      <h7>尺寸 </h7><h7 x-text="pdItem.size"></h7>
+                      <br>
+                      <h7>數量 </h7><h7 x-text="pdItem.nums"></h7>
+                      <div class="produce-price-rwd-phone" style="display: none;">
+                        <h7 x-text="`${pdItem.pricesymbol} ${pdItem.jine}`"></h7>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="produce-price-rwd-ipad text-center" style="width: 25%; padding-top: .9rem">
+                      <h7 x-text="`${pdItem.pricesymbol} ${pdItem.jine}`"></h7>
+                    </div>
+                  </div>
+                  <div class="d-flex exchange-rwd-ipad" style="width: 45%;">
+                    <div id="exchange-reason-ques" class="pt-4 pb-2 pl-5" style="width: 70%">
+                      <h7 class="pt-2">要更換的尺寸</h7>
+                      <div class="row pt-2">
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="radio" class="form-check-input-reason mb-0 h7 my-auto" id="reason_1"
+                              :name="`chgnote[${pdItem.itemid}]`" value="XS">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XS</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="radio" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2"
+                              :name="`chgnote[${pdItem.itemid}]`" value="L">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_2">L</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="radio" class="form-check-input-reason mb-0 my-auto" id="reason_3"
+                              :name="`chgnote[${pdItem.itemid}]`" value="S">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_3">S</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="radio" class="form-check-input-reason mb-0 my-auto" id="reason_4"
+                              :name="`chgnote[${pdItem.itemid}]`" value="XL">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_4">XL</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="radio" class="form-check-input-reason mb-0 my-auto" id="reason_5"
+                              :name="`chgnote[${pdItem.itemid}]`" value="M">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_5">M</label>
+                          </div>
+                        </div>
+                        <div class="input-group-text exchange-reason col-6">
+                          <div class="form-check d-flex my-auto">
+                            <input type="radio" class="form-check-input-reason mb-0 my-auto" id="reason_6"
+                              :name="`chgnote[${pdItem.itemid}]`" value="2L">
+                            <label class="form-check-label pl-2 h7 my-auto" for="reason_6">2L</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <hr class="exchange_hr">
+                </div>
+
+              </template>
+
+
+              <div id="user_address">
+                <div class="row" style="border-top: 1.5px solid rgb(201 201 201)">
+                  <div class="h7 py-4 col-5">
+                    取件地址
+                  </div>
+                  <div class="h7 py-4 col-2">
+                    聯絡人
+                  </div>
+                  <div class="h7 py-4 col-3">
+                    聯絡號碼
+                  </div>
+                  <div class="h7 py-4 col-2 text-right">
+                    修改
+                  </div>
+                </div>
+
+                <div class="row" style="border-top: 1.5px dashed rgb(201 201 201)">
+                  <input name="s_addr" :value="orderList[{#orderIndex#}].orderdata.s_addr" type="hidden">
+                  <input name="s_name" :value="orderList[{#orderIndex#}].orderdata.s_name" type="hidden">
+                  <input name="s_mobi" :value="orderList[{#orderIndex#}].orderdata.s_mobi" type="hidden">
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_addr" class="h7 py-4 col-5">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 py-4 col-5">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editAddr"
+                        x-model="orderList[{#orderIndex#}].orderdata.editAddr" type="text">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_name" class="h7 py-4 col-2">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 py-4 col-2">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editName"
+                        x-model="orderList[{#orderIndex#}].orderdata.editName" type="text">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_mobi" class="h7 py-4 col-4">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 py-4 col-4">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editMobi"
+                        x-model="orderList[{#orderIndex#}].orderdata.editMobi" type="text">
+                    </div>
+                  </template>
+
+
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
+                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
+                    </button>
+                  </template>
+
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                      <img src="{#TM#}20240425/images/x.png" width="17" class="pr-1">
+                    </button>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                      <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
+                    </button>
+                  </template>
+                </div>
+              </div>
+
+
+              <div id="user_address_rwd_phone">
+                <div class="row py-2 pt-4" style="border-top: 1.5px solid rgb(201 201 201)">
+                  <div class="h7 col-3">
+                    取件地址
+                  </div>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_addr" class="h7 col-8">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 col-8">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editAddr"
+                        x-model="orderList[{#orderIndex#}].orderdata.editAddr" type="text">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
+                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
+                    </button>
+                  </template>
+
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                      <img src="{#TM#}20240425/images/x.png" width="17" class="pr-1">
+                    </button>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                      <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
+                    </button>
+                  </template>
+                </div>
+                <div class="row py-2">
+                  <div class="h7 col-3">
+                    聯絡人
+                  </div>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_name" class="h7 col-8">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 col-8">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editName"
+                        x-model="orderList[{#orderIndex#}].orderdata.editName" type="text">
+                    </div>
+                  </template>
+                </div>
+                <div class="row py-2">
+                  <div class="h7 col-3">
+                    聯絡號碼
+                  </div>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                    <div x-text="orderList[{#orderIndex#}].orderdata.s_mobi" class="h7 col-8">
+                    </div>
+                  </template>
+                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
+                    <div class="h7 col-8">
+                      <input x-text="orderList[{#orderIndex#}].orderdata.editMobi"
+                        x-model="orderList[{#orderIndex#}].orderdata.editMobi" type="text">
+                    </div>
+                  </template>
+                </div>
+              </div>
+
+
+              <div class="row justify-content-center exchange-send">
+                <button @click="cancelCHGOrder({#orderIndex#})" class="btn-black-filled" id="btn_return_send">
+                  取消換貨
+                </button>
+                <button @click="sendCHG({#orderid#})" class="btn-black-filled" id="btn_exchange_send">
+                  申請換貨
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </template>
+  </div>
+
 </div>
+
 <!-list->
 
 <!-m0->
