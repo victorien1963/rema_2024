@@ -13,6 +13,9 @@
         if (isSafari) {
           document.body.classList.add('safari');
         }
+        $(document).on('click', '#editAddressBtn', function () {
+    $('#exampleModal').modal('show'); // 显示模态框
+});
         $('#exampleModal').on('shown.bs.modal', function () {
           const saveAddressBtn = document.getElementById('saveAddressBtn');
           const inputAddress = document.getElementById('inputAddress');
@@ -29,6 +32,11 @@
             });
           }
         });
+
+        
+      document.getElementById('confirmButton').addEventListener('click', function () {
+        $('#exampleModal').modal('hide');
+      });
         /**
         * 退貨
         */
@@ -143,68 +151,7 @@
 
       
 </script>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">修改取件地址</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
 
-      <!-- Modal Body -->
-      <div class="modal-body px-4 pb-0">
-        <form id="editAddressForm">
-          <!-- Region Dropdowns -->
-          <div class="form-group">
-            <div class="row">
-              <div class="col pr-0">
-                <select class="form-control">
-                  <option>臺灣</option>
-                </select>
-              </div>
-              <div class="col px-1">
-                <select class="form-control">
-                  <option>基隆市</option>
-                </select>
-              </div>
-              <div class="col pl-0">
-                <select class="form-control">
-                  <option>仁愛區</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- Address Input -->
-          <div class="form-group">
-            <input type="text" class="form-control" id="inputAddress" placeholder="地址">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="郵遞區號">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="姓名">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="手機電話">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="其他電話">
-          </div>
-        </form>
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="modal-footer m-auto pb-5">
-        <button id="confirmButton" type="button" class="btn-black-filled py-2">確認修改</button>
-      </div>
-    </div>
-  </div>
-</div>
 <!-start->  
 <!-list->
 <div x-data="order_data_set()" x-init="order_data_init()">
@@ -676,8 +623,11 @@
                     </div>
                   </template>
 
-
-                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                  <button id="editAddressBtn"
+                  class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
+                </button>
+                  <!--<template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
                     <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
                       class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
@@ -693,7 +643,7 @@
                     <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
                       <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
                     </button>
-                  </template>
+                  </template>-->
 
                 </div>
               </div>
@@ -716,7 +666,11 @@
                     </div>
                   </template>
 
-                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                  <button id="editAddressBtn"
+                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
+                    </button>
+                  <!--<template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
                     <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
                       class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
@@ -732,7 +686,7 @@
                     <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
                       <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
                     </button>
-                  </template>
+                  </template>-->
                 </div>
                 <div class="row py-2">
                   <div class="h7 col-3">
@@ -777,9 +731,9 @@
 
 
               <div class="row justify-content-center exchange-send">
-                <button @click="cancelReturnOrder({#orderIndex#})" class="btn-black-filled" id="btn_return_send">
+                <!--<button @click="cancelReturnOrder({#orderIndex#})" class="btn-black-filled" id="btn_return_send">
                   取消申請
-                </button>
+                </button>-->
                 <button @click="sendReturn({#orderid#})" class="btn-black-filled" class="shop-bn return-submit">
                   申請完成
                 </button>
@@ -1006,8 +960,11 @@
                     </div>
                   </template>
 
-
-                  <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
+                  <button id="editAddressBtn"
+                  class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
+                </button>
+                  <!--<template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
                     <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
                       class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
@@ -1023,7 +980,7 @@
                     <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
                       <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
                     </button>
-                  </template>
+                  </template>-->
                 </div>
               </div>
 
@@ -1043,6 +1000,13 @@
                         x-model="orderList[{#orderIndex#}].orderdata.editAddr" type="text">
                     </div>
                   </template>
+
+
+                  <button id="editAddressBtn"
+                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
+                    </button>
+                  <!--
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
                     <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
                       class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
@@ -1059,7 +1023,7 @@
                     <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
                       <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
                     </button>
-                  </template>
+                  </template>-->
                 </div>
                 <div class="row py-2">
                   <div class="h7 col-3">
@@ -1095,9 +1059,9 @@
 
 
               <div class="row justify-content-center exchange-send">
-                <button @click="cancelCHGOrder({#orderIndex#})" class="btn-black-filled" id="btn_return_send">
+                <!--<button @click="cancelCHGOrder({#orderIndex#})" class="btn-black-filled" id="btn_return_send">
                   取消換貨
-                </button>
+                </button>-->
                 <button @click="sendCHG({#orderid#})" class="btn-black-filled" id="btn_exchange_send">
                   申請換貨
                 </button>
@@ -1108,6 +1072,69 @@
       </div>
     </template>
   </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">修改取件地址</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body px-4 pb-0">
+        <form id="editAddressForm">
+          <!-- Region Dropdowns -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col pr-0">
+                <select class="form-control">
+                  <option>臺灣</option>
+                </select>
+              </div>
+              <div class="col px-1">
+                <select class="form-control">
+                  <option>基隆市</option>
+                </select>
+              </div>
+              <div class="col pl-0">
+                <select class="form-control">
+                  <option>仁愛區</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Input -->
+          <div class="form-group">
+            <input type="text" class="form-control" id="inputAddress" placeholder="地址">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="郵遞區號">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="姓名">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="手機電話">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="其他電話">
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer m-auto pb-5">
+        <button id="confirmButton" type="button" class="btn-black-filled py-2">確認修改</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 
