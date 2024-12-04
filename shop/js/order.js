@@ -102,3 +102,78 @@ $(document).ready(function(){
 
 });
 
+function order_data_set() {
+	return {
+	  showOrderListLayout: true,
+	  orderList: orderList,
+	  switchShowOrderDetailLayout(event,orderIndex) {
+		event.stopPropagation();
+		this.orderList[orderIndex].orderdata.showOrderDetailLayout =
+		  !this.orderList[orderIndex].orderdata.showOrderDetailLayout;
+		console.log(this.orderList[orderIndex].orderdata);
+	  },
+	  goReturnOrder(orderIndex) {
+		this.orderList[orderIndex].orderdata.showOrderReturnLayout = true;
+		this.showOrderListLayout = false;
+	  },
+	  cancelReturnOrder(orderIndex) {
+		this.orderList[orderIndex].orderdata.showOrderReturnLayout = false;
+		this.showOrderListLayout = true;
+	  },
+	  goCHGOrder(orderIndex) {
+		this.orderList[orderIndex].orderdata.showOrderCHGLayout = true;
+		this.showOrderListLayout = false;
+	  },
+	  cancelCHGOrder(orderIndex) {
+		this.orderList[orderIndex].orderdata.showOrderCHGLayout = false;
+		this.showOrderListLayout = true;
+	  },
+	  sendReturn(orderId) {
+		$("#sendtuiform_" + orderId).ajaxSubmit({
+		  url: PDV_RP + "shop/post.php",
+		  success: function (msg) {
+			if (msg == "OK") {
+			  alert("申請完成");
+			  window.location.reload();
+			} else {
+			  alert(msg);
+			}
+		  },
+		});
+	  },
+	  sendCHG(orderId) {
+		$("#sendchgform_" + orderId).ajaxSubmit({
+		  url: PDV_RP + "shop/post.php",
+		  success: function (msg) {
+			if (msg == "OK") {
+			  alert("申請換貨完成");
+			  window.location.reload();
+			} else {
+			  alert(msg);
+			}
+		  },
+		});
+	  },
+	  cancelEditContact(orderIndex) {
+		this.orderList[orderIndex].orderdata.editContact = false;
+		this.orderList[orderIndex].orderdata.editAddr =
+		  this.orderList[orderIndex].orderdata.s_addr;
+		this.orderList[orderIndex].orderdata.editName =
+		  this.orderList[orderIndex].orderdata.s_name;
+		this.orderList[orderIndex].orderdata.editMobi =
+		  this.orderList[orderIndex].orderdata.s_mobi;
+	  },
+	  saveEditContact(orderIndex) {
+		this.orderList[orderIndex].orderdata.s_addr =
+		  this.orderList[orderIndex].orderdata.editAddr;
+		this.orderList[orderIndex].orderdata.s_name =
+		  this.orderList[orderIndex].orderdata.editName;
+		this.orderList[orderIndex].orderdata.s_mobi =
+		  this.orderList[orderIndex].orderdata.editMobi;
+		this.orderList[orderIndex].orderdata.editContact = false;
+	  },
+	};
+  }
+  
+  function order_data_init() {}
+
