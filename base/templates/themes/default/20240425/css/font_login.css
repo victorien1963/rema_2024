@@ -657,6 +657,27 @@ body > #shopping_flow {
         #login-form {
             padding: 3.5% 4% 20.4% 9%;
         }
+
+        #login-form > form, #login-form > .rwd-login, #registration-form > .rwd-login {
+            width: 37.25% !important;
+        }
+
+        #registration-form > .rwd-login {
+            padding-right: 1.25rem !important;
+            /* padding-left: 3rem !important; */
+        }
+
+        #login-form > form > .input-group {
+            margin-top: 0rem !important;
+        }
+
+        #login-form > form > .input-group > div {
+            margin-top: 0.5rem !important;
+        }
+
+        .rwd-login > .input-group > div {
+            margin-top: 0.5rem !important;
+        }
 }
 
 @media only screen and (min-width: 2241px) and (max-width: 2560px) {
@@ -985,6 +1006,18 @@ body > #shopping_flow {
         position: relative;
         z-index: 2;
         margin-top: 0.5rem;
+    }
+
+    #login-form > form > .input-group {
+        margin-top: 0rem !important;
+    }
+
+    #login-form > form > .input-group > div {
+        margin-top: 0.5rem !important;
+    }
+
+    .rwd-login > .input-group > div {
+        margin-top: 0.5rem !important;
     }
 }
 
@@ -1428,8 +1461,8 @@ body > #shopping_flow {
     }
 
     #shopping_flow {
-        padding-top: 2rem;
-        padding-left: 1.5rem;
+        /* padding-top: 2rem; */
+        /* padding-left: 1.5rem; */
         width: 100%;
     }
 
@@ -1606,7 +1639,7 @@ body > #shopping_flow {
 
     #total-price-rwd-phone > div {
         line-height: 1.2 !important;
-        padding: 1rem 0rem 2.5rem 0rem !important;
+        padding: 1rem 0rem 1rem 0rem !important;
     }
 
     .exchange-rwd-imac {
@@ -2091,7 +2124,7 @@ body > #shopping_flow {
     background-color: transparent;
     text-align: center;
     user-select: none;
-    width: 80px;
+    width: 60px;
     height: 30px;
 }
 
@@ -2771,7 +2804,7 @@ select.form-control, input.form-control {
     }
 
     #registration-form {
-        padding: 2% 5% 10% 13% !important;
+        padding: 2% 5% 10% 14.5% !important;
     }
 
     #registration-form > .rwd-login {
@@ -2781,6 +2814,10 @@ select.form-control, input.form-control {
     #registration-form > .rwd-login > .input-group > .b-black {
         padding: .25rem 0rem;
         margin-top: .25rem !important;
+    }
+
+    .rwd-login > .input-group {
+        margin-top: 0rem !important;
     }
 
     #ad_slogans {
@@ -2831,6 +2868,7 @@ select.form-control, input.form-control {
 
     .bg-darkgrey {
         height: 150px;
+        width: 120px;
         padding-top: 0rem !important;
         padding-left: 0rem !important;
     }
@@ -2855,7 +2893,7 @@ select.form-control, input.form-control {
     }
 
     .col-shopping-content {
-        width: 86%;
+        width: 88%;
         padding-top: 0rem;
         margin-left: auto;
         margin-right: auto;
@@ -2879,13 +2917,14 @@ select.form-control, input.form-control {
 
     .shopping-produce > div:nth-child(1) {
         width: 55% !important;
-        padding-top: 1rem !important;
+        height: 100%;
+        padding: 1rem 0.5rem 3.25rem .5rem;
     }
 
     .shopping-produce > div:nth-child(2) {
         width: 45% !important;
         padding-top: 1rem !important;
-        padding: 1rem 0.5rem .25rem .5rem;
+        padding: 1rem 0.5rem 3.5rem .5rem;
     }
 
     #exchange-reason-ques {
@@ -2933,6 +2972,26 @@ select.form-control, input.form-control {
 
     .img-logo {
         left: 5%;
+    }
+
+    #login-form > form > .input-group {
+        margin-top: 0rem !important;
+    }
+
+    .order-title{
+        padding-left: 4rem;
+    }
+
+    #shopping_content > div > div > .row {
+        border-bottom: 0px solid transparent !important;
+    }
+
+    #shopping-state > .row:nth-child(1) {
+        border-top: 1px solid rgb(201 201 201);
+    }
+
+    .btn-grey {
+        width: 80px;
     }
 }
 
@@ -6243,6 +6302,7 @@ select.form-control, input.form-control {
     .shopping-produce > div:nth-child(1) {
         width: 100% !important;
         padding-top: 1rem !important;
+
     }
 
     .shopping-produce > div:nth-child(2) {
@@ -6368,7 +6428,7 @@ select.form-control, input.form-control {
         width: 100%;
         border-top: 1px solid #adadad;
         margin: 20px 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .exchange_hr {
@@ -6380,7 +6440,8 @@ select.form-control, input.form-control {
 
     .bg-darkgrey {
         height: 140px;
-        margin-left: .5rem;
+        width: 103px;
+        margin-left: 0rem;
         padding-top: .75rem;
         padding-left: .25rem;
     }
@@ -6593,7 +6654,7 @@ select.form-control, input.form-control {
     }
 
     #shopping_flow {
-        padding-top: 8rem;
+        /* padding-top: 8rem; */
     }
 
     #shopping_content > .bg-grey > div > .row > .h8:nth-child(1) {
@@ -6682,7 +6743,7 @@ select.form-control, input.form-control {
     }
 
     #shopping_content > .bg-grey {
-        padding: 0rem 1.25rem 1rem 1rem !important;
+        padding: 0rem 1rem 1rem 1rem !important;
     }
 
     #shopping_content > div:nth-child(2) > div {
@@ -6723,7 +6784,7 @@ select.form-control, input.form-control {
     }
 
     .produce-image {
-        width: 34% !important;
+        width: 33% !important;
         padding-top: .5rem;
         padding-bottom: 0rem;
     }
@@ -6939,6 +7000,22 @@ select.form-control, input.form-control {
         width: 30% !important;
     }
 
+    #login-form > form > .input-group {
+        margin-top: 0rem !important;
+    }
+
+    .order-title {
+        padding-left: 1rem;
+    }
+
+    #shopping_content > div > div > .row {
+        border-bottom: 0px solid transparent !important;
+    }
+
+    #shopping-state > .row:nth-child(1) {
+        border-top: 1px solid rgb(201 201 201);
+    }
+
 }
 
 .modal {
@@ -7000,6 +7077,10 @@ select.form-control, input.form-control {
 }
 
 @media only screen and (min-width: 1668px) and (max-width: 2560px) {
+    .rwd-login > .input-group {
+        margin-top: 0 !important;
+    }
+
     #registration-form {
         display: flex;
         padding: 3.5% 11% 20% 11% !important ;

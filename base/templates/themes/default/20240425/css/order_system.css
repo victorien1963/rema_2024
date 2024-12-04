@@ -1028,7 +1028,7 @@ body > #shopping_flow {
 /* Safari */
 @media only screen and (min-width: 431px) and (max-width: 1668px) {
     #filter {
-        width: 23vw;
+        width: 11vw;
     }
 
     #filter > .rema-col {
@@ -1392,8 +1392,8 @@ body > #shopping_flow {
     }
 
     #shopping_flow {
-        padding-top: 2rem;
-        padding-left: 1.5rem;
+        /* padding-top: 2rem; */
+        /* padding-left: 1.5rem; */
         width: 100%;
     }
 

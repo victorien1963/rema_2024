@@ -143,14 +143,14 @@
     });
   });
 </script>
+<div class="order-title pt-2 fw-bold h5">
+  訂單查詢
+</div>
 
 <!-start->  
 <!-list->
 <div x-data="order_data_set()" x-init="order_data_init()">
   <template x-if="showOrderListLayout">
-    <div class="pt-2 fw-bold h5">
-      訂單查詢
-    </div>
   </template>
 
   <div id="shopping_flow" class="flex">
@@ -295,7 +295,7 @@
                           <br>
                           <h7>電子折價券折扣金額</h7>
                           <div class="my-3" style="border-top: 1px dashed #a8a8a8;">
-                            <div class="py-3">總計</div>
+                            <div class="pt-3">總計</div>
                           </div>
                         </div>
                         <div class="pb-2 pe-3 total-price-rwd-ipad" style="width: 22%;">
@@ -318,7 +318,7 @@
                           <div id="total-prices" class="my-3" style="border-top: 1px dashed #a8a8a8;">
                             <h5
                               x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.tjine}`"
-                              class="py-3"></h5>
+                              class="pt-3 mb-0"></h5>
                           </div>
                         </div>
                         <hr class="total-price-hr">

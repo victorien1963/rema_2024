@@ -4822,7 +4822,7 @@ body > #shopping_flow {
     }
 
     #shopping_flow {
-        padding-top: 8rem;
+        /* padding-top: 8rem; */
     }
 
     #shopping_content > .bg-grey > div > .row > .h8:nth-child(1) {
