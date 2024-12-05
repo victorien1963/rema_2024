@@ -680,8 +680,8 @@ body > #shopping_flow {
         }
 
         .bg-darkgrey {
-            height: 7.5vw !important;
-            width: 142px !important;
+            height: 7.25vw !important;
+            width: 133px !important;
         }
 }
 
@@ -712,6 +712,11 @@ body > #shopping_flow {
 
     .rwd-login > .d-sm-flex {
         padding-top: 2rem !important;
+    }
+
+    .bg-darkgrey {
+        height: 6.75vw !important;
+        width: 145px !important;
     }
 }
 
@@ -7129,6 +7134,7 @@ select.form-control, input.form-control {
 
     .produce-image {
         padding-top: 1.5rem;
+        padding-bottom: 3rem;
     }
 
     .produce-content-rwd > div:nth-child(1) {
