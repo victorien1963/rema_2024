@@ -678,6 +678,11 @@ body > #shopping_flow {
         .rwd-login > .input-group > div {
             margin-top: 0.5rem !important;
         }
+
+        .bg-darkgrey {
+            height: 7.5vw !important;
+            width: 142px !important;
+        }
 }
 
 @media only screen and (min-width: 2241px) and (max-width: 2560px) {
@@ -3142,6 +3147,10 @@ select.form-control, input.form-control {
     .produce-price { 
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .col-shopping:nth-child(3) {
+        
     }
 }
 
@@ -7107,8 +7116,8 @@ select.form-control, input.form-control {
 
     .bg-darkgrey {
         background-color: #e6e6e6;
-        height: 7.5vw;
-        width: max-content;
+        height: 6.75vw;
+        width: 145px;
         padding-top: .5rem;
         padding-left: .5rem;
         margin-top: .5rem;
@@ -7128,5 +7137,9 @@ select.form-control, input.form-control {
 
     .produce-content {
         padding-left: 4rem !important;
+    }
+
+    #total-price {
+        padding-left: 3rem !important;
     }
 }
