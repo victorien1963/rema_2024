@@ -142,12 +142,38 @@
       }
     });
   });
-</script>
-<div class="order-title pt-2 fw-bold h5">
-  訂單查詢
-</div>
 
-<!-start->  
+  document.addEventListener("DOMContentLoaded", function () {
+    // 取得相關的按鈕和目標元素
+    const btnReturns = document.getElementById("btn_returns");
+    const btnExchanges = document.getElementById("btn_exchanges");
+    const backToOrder = document.getElementById("back_to_order");
+    const orderTitles = document.querySelectorAll(".order-title");
+
+    // 定義隱藏 order-title 的函數
+    const hideOrderTitles = () => {
+      orderTitles.forEach((title) => {
+        title.style.display = "none";
+      });
+    };
+
+    // 定義顯示 order-title 的函數
+    const showOrderTitles = () => {
+      orderTitles.forEach((title) => {
+        title.style.display = "";
+      });
+    };
+
+    // 綁定點擊事件
+    btnReturns.addEventListener("click", hideOrderTitles);
+    btnExchanges.addEventListener("click", hideOrderTitles);
+    backToOrder.addEventListener("click", showOrderTitles);
+  });
+
+  
+</script>
+
+<!-start->
 <!-list->
 <div x-data="order_data_set()" x-init="order_data_init()">
   <template x-if="showOrderListLayout">
@@ -173,6 +199,7 @@
               </div>
               <div class="h7 col-4 justify-content-end exchange-rwd-phone my-auto"
                 style="padding: 1.25rem .25rem; display: flex;">
+                <!-- 取消按鈕 id="back_to_order" -->
                 <template
                   x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
                   <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
@@ -515,44 +542,44 @@
                       <div class="row pt-2">
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
-                            <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_1"
+                            <input type="checkbox" class="form-check-input-reason h7 my-auto" id="reason_1"
                               name="tuinote[]" value="與照片不符">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_1">與照片不符</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_1">與照片不符</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
-                            <input type="checkbox" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2"
+                            <input type="checkbox" class="form-check-input-reason h7 my-auto" id="reason_2"
                               name="tuinote[]" value="不如預期">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_2">不如預期</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_2">不如預期</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
-                            <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_3"
+                            <input type="checkbox" class="form-check-input-reason my-auto" id="reason_3"
                               name="tuinote[]" value="商品寄錯">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_3">商品寄錯</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_3">商品寄錯</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
-                            <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_4"
+                            <input type="checkbox" class="form-check-input-reason my-auto" id="reason_4"
                               name="tuinote[]" value="太大">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_4">太大</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_4">太大</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
-                            <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_5"
+                            <input type="checkbox" class="form-check-input-reason my-auto" id="reason_5"
                               name="tuinote[]" value="瑕疵">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_5">瑕疵</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_5">瑕疵</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
-                            <input type="checkbox" class="form-check-input-reason mb-0 my-auto" id="reason_6"
+                            <input type="checkbox" class="form-check-input-reason my-auto" id="reason_6"
                               name="tuinote[]" value="太小">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_6">太小</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_6">太小</label>
                           </div>
                         </div>
                       </div>
@@ -575,7 +602,7 @@
                   <div class="h7 py-4 col-3">
                     聯絡號碼
                   </div>
-                  <div class="h7 py-4 col-2 text-right">
+                  <div class="h7 py-4 col-2 text-end">
                     修改
                   </div>
                 </div>
@@ -616,23 +643,23 @@
                   </template>
 
                   <button id="editAddressBtn"
-                  class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                   <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                 </button>
                   <!--<template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
                     <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
-                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                     </button>
                   </template>
 
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
-                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-end btn-black-icon">
                       <img src="{#TM#}20240425/images/x.png" width="17" class="pr-1">
                     </button>
                   </template>
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
-                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-end btn-black-icon">
                       <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
                     </button>
                   </template>-->
@@ -659,23 +686,23 @@
                   </template>
 
                   <button id="editAddressBtn"
-                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                     </button>
                   <!--<template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
                     <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
-                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                     </button>
                   </template>
 
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
-                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-end btn-black-icon">
                       <img src="{#TM#}20240425/images/x.png" width="17" class="pr-1">
                     </button>
                   </template>
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
-                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-end btn-black-icon">
                       <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
                     </button>
                   </template>-->
@@ -694,7 +721,7 @@
                         x-model="orderList[{#orderIndex#}].orderdata.editName" type="text">
                     </div>
                   </template>
-                  <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  <!-- <button id="editAddressBtn" class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                     <img src="./images/icon_pen.svg" width="17" class="pr-1">
                   </button> -->
                 </div>
@@ -712,7 +739,7 @@
                         x-model="orderList[{#orderIndex#}].orderdata.editMobi" type="text">
                     </div>
                   </template>
-                  <!-- <button id="editAddressBtn" class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  <!-- <button id="editAddressBtn" class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                     <img src="./images/icon_pen.svg" width="17" class="pr-1">
                   </button> -->
                 </div>
@@ -726,7 +753,7 @@
                 <!--<button @click="cancelReturnOrder({#orderIndex#})" class="btn-black-filled" id="btn_return_send">
                   取消申請
                 </button>-->
-                <button @click="sendReturn({#orderid#})" class="btn-black-filled" class="shop-bn return-submit">
+                <button @click="sendReturn({#orderid#})" class="btn-black-filled w-auto" class="shop-bn return-submit">
                   申請完成
                 </button>
               </div>
@@ -797,14 +824,12 @@
               </div>
 
               <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
-                <div class="h7 my-auto py-4 col-12" style="white-space-collapse: preserve-breaks;">換貨：
-                  為了提供您更便捷的服務，
-                  我們提供以下兩種換貨方式， 並請於購買日起 10天內辦理換貨。
+                <div class="h7 my-auto py-4 pt-0 col-12" style="white-space-collapse: preserve-breaks;">
+                  換貨： 為了提供您更便捷的服務，我們提供以下兩種換貨方式， 並請於購買日起 10天內辦理換貨。
 
-                  <span class="fw-bold text-secondary">1. 親送換貨：</span>您可將商品親自送至我們的民生店直營門市進行換貨。 選擇此方式可即時為您處理換貨事宜，
-                  確保您的需求能迅速得到滿足。
-                  <span class="fw-bold text-secondary">2. 郵寄換貨：</span>完成退貨申請後， 我們將安排快遞上門取件。 將需要換貨的商品和出貨單一起包裝好，
-                  並在出貨單上註明所需更換的尺寸。 換貨商品將以運費到付的方式寄回給您。
+                  <span class="fw-bold text-secondary">1. 親送換貨：</span>您可將商品親自送至我們的民生店直營門市進行換貨。 選擇此方式可即時為您處理換貨事宜，確保您的需求能迅速得到滿足。
+                  <span class="fw-bold text-secondary">2. 郵寄換貨：</span>完成退貨申請後， 我們將安排快遞上門取件。 將需要換貨的商品和出貨單一起包裝好，並在出貨單上註明所需更換的尺寸。 換貨商品將以運費到付的方式
+                  寄回給您。
 
                   請在進行任何換貨操作前， 確認商品符合我們的換貨條件， 並保持商品的原始狀態及包裝。
                 </div>
@@ -850,44 +875,44 @@
                       <div class="row pt-2">
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
-                            <input type="radio" class="form-check-input-reason mb-0 h7 my-auto" id="reason_1"
+                            <input type="radio" class="form-check-input-reason h7 my-auto" id="reason_1"
                               :name="`chgnote[${pdItem.itemid}]`" value="XS">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_1">XS</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_1">XS</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
-                            <input type="radio" class="form-check-input-reason mb-0 h7 my-auto" id="reason_2"
+                            <input type="radio" class="form-check-input-reason h7 my-auto" id="reason_2"
                               :name="`chgnote[${pdItem.itemid}]`" value="L">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_2">L</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_2">L</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
                             <input type="radio" class="form-check-input-reason mb-0 my-auto" id="reason_3"
                               :name="`chgnote[${pdItem.itemid}]`" value="S">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_3">S</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_3">S</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
                             <input type="radio" class="form-check-input-reason mb-0 my-auto" id="reason_4"
                               :name="`chgnote[${pdItem.itemid}]`" value="XL">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_4">XL</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_4">XL</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
                             <input type="radio" class="form-check-input-reason mb-0 my-auto" id="reason_5"
                               :name="`chgnote[${pdItem.itemid}]`" value="M">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_5">M</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_5">M</label>
                           </div>
                         </div>
                         <div class="input-group-text exchange-reason col-6">
                           <div class="form-check d-flex my-auto">
                             <input type="radio" class="form-check-input-reason mb-0 my-auto" id="reason_6"
                               :name="`chgnote[${pdItem.itemid}]`" value="2L">
-                            <label class="form-check-label pl-2 h7 my-auto" for="reason_6">2L</label>
+                            <label class="form-check-label pl-2 h7 ms-2 my-auto" for="reason_6">2L</label>
                           </div>
                         </div>
                       </div>
@@ -912,7 +937,7 @@
                   <div class="h7 py-4 col-3">
                     聯絡號碼
                   </div>
-                  <div class="h7 py-4 col-2 text-right">
+                  <div class="h7 py-4 col-2 text-end">
                     修改
                   </div>
                 </div>
@@ -953,23 +978,23 @@
                   </template>
 
                   <button id="editAddressBtn"
-                  class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                  class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                   <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                 </button>
                   <!--<template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
                     <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
-                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                     </button>
                   </template>
 
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
-                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-end btn-black-icon">
                       <img src="{#TM#}20240425/images/x.png" width="17" class="pr-1">
                     </button>
                   </template>
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
-                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-end btn-black-icon">
                       <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
                     </button>
                   </template>-->
@@ -995,24 +1020,24 @@
 
 
                   <button id="editAddressBtn"
-                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                     </button>
                   <!--
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact === false">
                     <button @click="orderList[{#orderIndex#}].orderdata.editContact = true" id="editAddressBtn"
-                      class="h7 col-1 text-right btn-black-icon" data-toggle="modal" data-target="#exampleModal">
+                      class="h7 col-1 text-end btn-black-icon" data-toggle="modal" data-target="#exampleModal">
                       <img src="{#TM#}20240425/images/icon_pen.svg" width="17" class="pr-1">
                     </button>
                   </template>
 
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
-                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                    <button @click="cancelEditContact({#orderIndex#})" class="h7 col-1 text-end btn-black-icon">
                       <img src="{#TM#}20240425/images/x.png" width="17" class="pr-1">
                     </button>
                   </template>
                   <template x-if="orderList[{#orderIndex#}].orderdata.editContact">
-                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-right btn-black-icon">
+                    <button @click="saveEditContact({#orderIndex#})" class="h7 col-1 text-end btn-black-icon">
                       <img src="{#TM#}20240425/images/check.png" width="17" class="pr-1">
                     </button>
                   </template>-->
@@ -1054,7 +1079,7 @@
                 <!--<button @click="cancelCHGOrder({#orderIndex#})" class="btn-black-filled" id="btn_return_send">
                   取消換貨
                 </button>-->
-                <button @click="sendCHG({#orderid#})" class="btn-black-filled" id="btn_exchange_send">
+                <button @click="sendCHG({#orderid#})" class="btn-black-filled w-auto" id="btn_exchange_send">
                   申請換貨
                 </button>
               </div>

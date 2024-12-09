@@ -645,6 +645,10 @@ body > #shopping_flow {
     width: 19px !important;
 }
 
+/* #OrderSystem > div > div:nth-child(2) > .order-title {
+    display: none;
+} */
+
 @media only screen and (min-width: 2240px) {
         #web_footer {
             padding-top: 35vh;
@@ -683,6 +687,14 @@ body > #shopping_flow {
             height: 7.25vw !important;
             width: 133px !important;
         }
+
+        .col-shopping-content {
+            width: 70.75% !important;
+        }
+
+        .produce-image {
+            width: 25.5% !important;
+        }
 }
 
 @media only screen and (min-width: 2241px) and (max-width: 2560px) {
@@ -715,8 +727,16 @@ body > #shopping_flow {
     }
 
     .bg-darkgrey {
-        height: 6.75vw !important;
+        height: 7.5vw !important;
         width: 145px !important;
+    }
+
+    #shopping_return > form > div, #shopping_exchange > form > div {
+        width: 90.5% !important;
+    }
+
+    .produce-image {
+        width: 28% !important;
     }
 }
 
@@ -1234,7 +1254,7 @@ body > #shopping_flow {
     }
 
     .bg-darkgrey {
-        height: 140px;
+        height: 138px;
         margin-left: .5rem;
         padding-top: .75rem;
         padding-left: .25rem;
@@ -1847,7 +1867,7 @@ body > #shopping_flow {
     transform: rotate(45deg);
 }
 
-.exchange-reason > div > input[type="checkbox"].form-check-input-reason {
+.exchange-reason > div > input[type="radio"].form-check-input-reason {
     width: 20px;
     height: 20px;
     background-color: transparent;
@@ -1859,12 +1879,12 @@ body > #shopping_flow {
     position: relative;
 }
 
-.exchange-reason > div > input[type="checkbox"].form-check-input-reason:checked {
+.exchange-reason > div > input[type="radio"].form-check-input-reason:checked {
     background-color: #999 !important;
     border-color: #999 !important;
 }
 
-.exchange-reason > div > input[type="checkbox"].form-check-input-reason:checked::before {
+.exchange-reason > div > input[type="radio"].form-check-input-reason:checked::before {
     content: "";
     position: absolute;
     top: 0.25px;
@@ -7125,7 +7145,7 @@ select.form-control, input.form-control {
         width: 145px;
         padding-top: .5rem;
         padding-left: .5rem;
-        margin-top: .5rem;
+        margin-top: .25rem;
     }
 
     .bg-darkgrey > img {
