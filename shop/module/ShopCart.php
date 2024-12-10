@@ -117,6 +117,7 @@ function ShopCart(){
 		$CARTSTR=$_COOKIE["SHOPCART"];
 		$array=explode('#',$CARTSTR);
 		$tnums=sizeof($array)-1;
+		$orderList=array();
 		$tjine=0;
 		$kk=0;
 		
@@ -269,7 +270,7 @@ function ShopCart(){
 					'pricesymbol' => $getsymbol,
 					'picgid' => $subpicid? "_".$subpicid:"",
 					);
-						
+					$orderList[$t]['orderdata'] = $var;
 					$str.=ShowTplTemp($TempArr["list"],$var);
 					
 					if($getdata){
@@ -843,7 +844,7 @@ function ShopCart(){
 			);
 		
 		$str = ShowTplTemp($str,$var);
-
+		$str .= "<script>var orderList = " . json_encode($orderList, JSON_UNESCAPED_UNICODE) . ";</script>";
 		return $str;
 
 }
