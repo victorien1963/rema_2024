@@ -2814,6 +2814,7 @@ select.form-control, input.form-control {
         height: 195px;
         border-right: 1px solid #a8a8a8;
         padding-top: 1.25rem !important;
+        padding-left: 0rem !important;
     }
     
     body > #login-form {
@@ -2904,7 +2905,7 @@ select.form-control, input.form-control {
     }
 
     .bg-darkgrey > img {
-        width: 120px;
+        width: 100px;
         padding-top: 10px;
     }
 
@@ -2923,7 +2924,7 @@ select.form-control, input.form-control {
     }
 
     .col-shopping-content {
-        width: 88%;
+        width: 84.5%;
         padding-top: 0rem;
         margin-left: auto;
         margin-right: auto;
@@ -2960,6 +2961,7 @@ select.form-control, input.form-control {
     #exchange-reason-ques {
         padding-top: 1.7rem !important;
         width: 85% !important;
+        margin-left: .5rem !important;
     }
 
     #exchange-btn-rwd-phone {
@@ -3009,7 +3011,7 @@ select.form-control, input.form-control {
     }
 
     .order-title{
-        padding-left: 4rem;
+        padding-left: 4.75rem;
     }
 
     #shopping_content > div > div > .row {
@@ -3022,6 +3024,12 @@ select.form-control, input.form-control {
 
     .btn-grey {
         width: 80px;
+    }
+
+    #shopping_return > form > .bg-grey, #shopping_exchange > form > .bg-grey {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+        padding-bottom: .5rem !important;
     }
 }
 
@@ -6091,7 +6099,7 @@ select.form-control, input.form-control {
 
 @media only screen and (min-width: 725px) and (max-width: 1024px) {
     body.safari .produce-image {
-        width: 27% !important;
+        width: 30% !important;
     }
 
     /* .produce-price {
@@ -6111,7 +6119,7 @@ select.form-control, input.form-control {
 
     .bg-darkgrey {
         padding-left: 0rem;
-        height: 15vw;
+        height: 14vw;
     }
 
     .produce-price-rwd-ipad {
@@ -6155,6 +6163,18 @@ select.form-control, input.form-control {
 
     #user_address > .row > .h7 {
         font-size: 1.8vw !important;
+        display: flex;
+    }
+
+    #user_address > .row > .h7:nth-child(4) {
+        justify-content: end;
+    }
+
+    #user_address > .row > .h7 > img {
+        margin-bottom: auto;
+        padding-top: 1.75rem;
+        padding-left: 1.75rem;
+        width: 91%;
     }
 }
 
@@ -6321,7 +6341,7 @@ select.form-control, input.form-control {
     }
 
     .col-shopping-content {
-        width: 85%;
+        width: 84.5%;
         padding-top: 0rem;
     }
 
