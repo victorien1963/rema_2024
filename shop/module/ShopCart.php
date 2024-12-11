@@ -170,6 +170,7 @@ function ShopCart(){
 			
 		/*商品加購 2014-02-22 END*/
 		
+		/*2024-12-11 (John紀錄) 抓取購買的物品清單List */
 		for($t=0;$t<$tnums;$t++){
 				$fff=explode('|',$array[$t]);
 				list($gid, $subpicid)=explode("-",$fff[0]);
@@ -295,6 +296,8 @@ function ShopCart(){
 				//header( "Location:cart.php?isre=1" );
 				$str.=ShowTplTemp($TempArr["err1"],$var);
 		}
+		/*2024-12-11 (John紀錄) 抓取購買的物品清單List END*/
+		
 		//$tjine=number_format($tjine,2,'.','');
 		
 		
@@ -844,7 +847,7 @@ function ShopCart(){
 			);
 		
 		$str = ShowTplTemp($str,$var);
-		$str .= "<script>var orderList = " . json_encode($orderList, JSON_UNESCAPED_UNICODE) . ";</script>";
+		//$str .= "<script>var orderList = " . json_encode($orderList, JSON_UNESCAPED_UNICODE) . ";</script>";
 		return $str;
 
 }

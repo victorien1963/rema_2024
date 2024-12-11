@@ -1,31 +1,34 @@
 <!-start->
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-<script type=text/javascript src="{#CP#}js/shopcartorder.js?6"></script>
 <!-start->
 
 <!-m0->
 <div id="shopping_cart_amount">購物籃( {#tnums#} )</div>
 
-    <div x-data="order_data_set()" x-init="order_data_init()" id="shopping_cart" class="">
+
+    <div id="shopping_cart" class="">
       <!-- product items in the cart -->
         <div id="produce_items" class="row mx-0">
+          <!-m0->
+          <!-list->
           <div class="col-3 product_card">
             <div class="product_img" style="background-image: url('')"></div>
             <div class="product_info">
               <div class="x_mark">⨉</div>
-              <div class="p_name" x-text="orderList[0].orderdata.goodsname"></div>
-              <div class="p_price" x-text="orderList[0].orderdata.goodsname"></div>
-              <div class="p_detail" x-text="orderList[0].orderdata.goodsname"></div>
+              <div class="p_name" >{#goodsname#}</div>
+              <div class="p_price" >{#goodsname#}</div>
+              <div class="p_detail" >{#goodsname#}</div>
               <div>
                 <form id='amout_form' method='POST' action='#'>
                   <label for=""></label>
-                  <input type='button' value='－' class='qtyminus' onclick="alert(orderList[0].orderdata.goodsname)"/>
+                  <input type='button' value='－' class='qtyminus' />
                   <input type='text' name='quantity' value='1' class='qty' />
                   <input type='button' value='＋' class='qtyplus' />
                 </form>
               </div>
             </div>
           </div>
+          <!-list->
+          <!-m1->
           <!-- product items in the cart -->
         </div>
 
@@ -53,6 +56,8 @@
 		
     </div>
 
+   
+    
     <div id="delivery_options" style="display: none;">
       <form class="options_delivery_form">
         <div class="options_title">付款與配送 Taiwan Shipping</div>
@@ -358,6 +363,4 @@
         如果未收到，請查看垃圾郵件或確認您提供的信箱是否正確。
       </div>
     </div>
-								
-
-	<!-m0->	
+    <!-m1->
