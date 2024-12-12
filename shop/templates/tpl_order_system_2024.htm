@@ -16,8 +16,8 @@
     const btnExchangePhone = document.getElementById('btn_exchange_phone');
     const btnCancel = document.getElementById('btn_cancel');
     */
-    const btnReturnSend = document.getElementById('btn_return_send');
-    const btnExchangeSend = document.getElementById('btn_exchange_send');
+    //const btnReturnSend = document.getElementById('btn_return_send');
+    //const btnExchangeSend = document.getElementById('btn_exchange_send');
     /*
     const btnBackToOrder = document.getElementById('back_to_order');
     const btnBackToOrder2 = document.getElementById('back_to_order2');
@@ -68,7 +68,7 @@
       });
     }
       */
-
+/*
     // 點擊「退貨完成」按鈕，返回主要購物頁面
     if (btnReturnSend) {
       btnReturnSend.addEventListener('click', () => {
@@ -82,6 +82,7 @@
         showPage('shopping_content');
       });
     }
+      */
 /*
     // 點擊「取消」按鈕，返回主要購物頁面
     if (btnBackToOrder) {
@@ -443,8 +444,7 @@
 
     <!-- shopping return -->
     <template x-if="orderList[{#orderIndex#}].orderdata.showOrderReturnLayout">
-      
-      <div id="shopping_return" class="col-shopping-content"">
+      <div id="shopping_return" class="col-shopping-content" style="display: block;">
         <form action="" method="post" id="sendtuiform_{#orderid#}" onsubmit="event.preventDefault();">
           <input type="hidden" name="orderid" value="{#orderid#}" />
           <input type="hidden" name="act" value="itemtui" />
@@ -772,7 +772,7 @@
 
     <!-- shopping exchange -->
     <template x-if="orderList[{#orderIndex#}].orderdata.showOrderCHGLayout">
-      <div id="shopping_exchange" class="col-shopping-content" style="display:none;">
+      <div id="shopping_exchange" class="col-shopping-content" style="display:block;">
         <form action="" method="post" id="sendchgform_{#orderid#}" onsubmit="event.preventDefault();">
           <input type="hidden" name="orderid" value="{#orderid#}" />
           <input type="hidden" name="act" value="itemchg" />
