@@ -27,8 +27,7 @@
               </div>
             </div>
           </div>
-          <!-list->
-          <!-m1->
+          
           <!-- product items in the cart -->
         </div>
 
@@ -53,10 +52,10 @@
             </div>
           </div>
         </div>
-		
+        
     </div>
-
-   
+<!-list->
+<!-m1->
     
     <div id="delivery_options" style="display: none;">
       <form class="options_delivery_form">
@@ -267,8 +266,8 @@
     </div>
     <div id="order_info_content" class="row p-3">
       <div class="col-2">
-        <div class="t_amonts"><span class="font-weight-bold">2</span> 商品</div>
-        <div class="t_delivery">配送 (商品滿2,500免運)</div>
+        <div class="t_amonts"><span class="font-weight-bold">{#tnums#}</span> 商品</div>
+        <div class="t_delivery">配送 (商品滿{#pricesymbol#} {#setyunfei#}免運)</div>
         <div class="t_balances">餘額抵⽤</div>
         <div class="t_discount_code">輸入折扣碼</div>
         <input type='text' name='discount_code' value='' class='discount_code' />
@@ -278,9 +277,9 @@
         <span class="text-danger small my-auto">無效</span>
       </div>
       <div class="col-1 text-right">
-        <div class="t_amonts">$ 2,280</div>
-        <div class="t_delivery">$ 85</div>
-        <div class="t_balances">- $ 200</div>
+        <div class="t_amonts">{#pricesymbol#} {#tjine#}</div>
+        <div class="t_delivery">{#pricesymbol#} {#yunfei#}</div>
+        <div class="t_balances">-{#pricesymbol#} {#disaccount#}</div>
         <br />
         <div class="">- $ 100</div>
         <br />
@@ -291,21 +290,21 @@
     <div id="order_info_content_checked" class="row p-3" style="display: none;">
       <div class="col-2">
         <div class="t_amonts_checked"><span class="font-weight-bold">2</span> 商品</div>
-        <div class="t_delivery_checked">配送 (商品滿2,500免運)</div>
+        <div class="t_delivery_checked">配送 (商品滿{#pricesymbol#} {#setyunfei#}免運)</div>
         <div class="t_balances_checked">餘額抵⽤</div>
         <div class="t_discount_checked">折扣</div>
       </div>
       <div class="col-1 text-right">
-        <div class="t_amonts_checked_value">$ 2,280</div>
-        <div class="t_delivery_checked_value">$ 85</div>
-        <div class="t_balances_checked_value">- $ 200</div>
+        <div class="t_amonts_checked_value">{#pricesymbol#} {#tjine#}</div>
+        <div class="t_delivery_checked_value">{#pricesymbol#} {#yunfei#}</div>
+        <div class="t_balances_checked_value">-{#pricesymbol#} {#disaccount#}</div>
         <div class="t_discount_checked_value">- $ 100</div>
       </div>
     </div>
 
     <div id="total_prices" class="row">
       <div class="col-2 h5 font-weight-bolder">總金額</div>
-      <div class="col-1 text-right h5 font-weight-bolder">NT$ 2,280
+      <div class="col-1 text-right h5 font-weight-bolder">{#pricesymbol#} {#tjine#}
         <br />
         <small class="text-right">• 含營業稅</small>
       </div>
@@ -313,7 +312,7 @@
 
     <div id="total_prices_checked" class="row" style="display: none;">
       <div class="col-2 h5 font-weight-bolder">總金額</div>
-      <div class="col-1 text-right h5 font-weight-bolder">NT$ 2,280
+      <div class="col-1 text-right h5 font-weight-bolder">{#pricesymbol#} {#tjine#}
         <br />
         <div class="text-right checked-info-text">• 含營業稅</div>
       </div>
@@ -339,6 +338,7 @@
       </div>
       <div class="col-9"></div>
     </div>
+
 
     <div id="checked_continue_step3" class="row" style="display: none;">
       <div class="col-1 h-100">
