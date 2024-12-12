@@ -57,6 +57,71 @@
 	<script type=text/javascript src="{#RP#}base/js/custom.js"></script>
 	<script type=text/javascript src="{#RP#}shop/js/cart.js"></script>
 	<script type=text/javascript src="{#TM#}20240425/js/header.js?t=20240923"></script>
+	<script>
+		// 獲取容器和標題元素
+		const orderLists = document.getElementById('order-lists');
+		const orderTitle = document.querySelector('.order-title');
+		
+		// 使用事件代理監聽按鈕點擊事件
+		orderLists.addEventListener('click', (event) => {
+				const targetId = event.target.id; // 獲取點擊元素的 ID
+		
+				if (targetId === 'btn_returns') {
+						orderTitle.textContent = '訂單查詢 > 申請退貨';
+				} else if (targetId === 'btn_exchanges') {
+						orderTitle.textContent = '訂單查詢 > 申請換貨';
+				} else if (targetId === 'back_to_order') {
+						orderTitle.textContent = '訂單查詢';
+				}
+		});
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const orderLists = document.getElementById('order-lists');
+			const orderTitle = document.querySelector('.order-title');
+
+			// 定義一個函數，用來處理按鈕點擊事件
+			function handleButtonClick(event) {
+				const target = event.target;
+
+				// 確保只處理按鈕點擊
+				if (!target.matches('button')) return;
+
+				// 根據按鈕內容或 class 判斷按鈕類型
+				if (target.id === 'btn_returns' && target.textContent.trim() === '退貨') {
+					orderTitle.textContent = '訂單查詢 > 申請退貨';
+				} else if (target.id === 'btn_exchanges' && target.textContent.trim() === '換貨') {
+					orderTitle.textContent = '訂單查詢 > 申請換貨';
+				} else if (target.id === 'back_to_order') {
+					orderTitle.textContent = '訂單查詢';
+				}
+			}
+
+			// 初次加載時立即掃描按鈕，並綁定事件
+			function bindInitialButtons() {
+				const btnReturns = document.querySelectorAll('#btn_returns');
+				const btnExchanges = document.querySelectorAll('#btn_exchanges');
+				const backToOrder = document.querySelectorAll('#back_to_order');
+
+				// 對每個匹配到的按鈕綁定事件
+				[...btnReturns, ...btnExchanges, ...backToOrder].forEach((button) => {
+					button.addEventListener('click', handleButtonClick);
+				});
+			}
+
+			// 使用 MutationObserver 檢測 DOM 是否有變化
+			const observer = new MutationObserver(() => {
+				// 重新掃描並綁定新按鈕
+				bindInitialButtons();
+			});
+
+			// 監聽整個 body 的子元素變化
+			observer.observe(document.body, { childList: true, subtree: true });
+
+			// 初始化階段：立即綁定已有的按鈕事件
+			bindInitialButtons();
+		});
+	</script>
 	<style>
 		@media (max-width: 1000px) {
 			.rema-col {
@@ -103,9 +168,6 @@
 				</div>
 			</section>
 			<section id="OrderSystem" class="flex-fill w-100 mb-5">
-				<div class="order-title pt-2 fw-bold h5">
-					訂單查詢
-				</div>
 				<div class="rema-col f20 s12 w-100">
 					<div class="rema-col f20 s12 xs12 font-l font-w-l"> 
 						<div class="mobile-nav font-s font-w-m">
@@ -118,8 +180,9 @@
 							<div><a href="{#RP#}member/member_account.php?chk=c">載具歸戶</a></div>
 						</div>
 					</div>
-					<div class="w-100">
-						{#SHOPORDER#}
+					<div class="w-100" id="order-lists">
+						<div class="order-title pt-2 fw-bold h5">訂單查詢</div>
+							{#SHOPORDER#}
 					</div>
 				</div>
 				

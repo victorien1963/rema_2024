@@ -1146,7 +1146,7 @@ body > #shopping_flow {
         height: 20px !important;
     }
 
-    body.safari #shopping_content > .bg-grey {
+    body.safari #shopping_content > div > .bg-grey {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
         padding-bottom: 0rem !important;
@@ -3011,7 +3011,7 @@ select.form-control, input.form-control {
     }
 
     .order-title{
-        padding-left: 4.75rem;
+        padding-left: 5rem;
     }
 
     #shopping_content > div > div > .row {
@@ -7058,9 +7058,9 @@ select.form-control, input.form-control {
         margin-top: 0rem !important;
     }
 
-    .order-title {
+    /* .order-title {
         padding-left: 1rem;
-    }
+    } */
 
     #shopping_content > div > div > .row {
         border-bottom: 0px solid transparent !important;
