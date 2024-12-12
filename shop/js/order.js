@@ -114,6 +114,7 @@ function order_data_set() {
 	  },
 	  goReturnOrder(orderIndex) {
 		this.orderList[orderIndex].orderdata.showOrderReturnLayout = true;
+		this.orderList[orderIndex].orderdata.showOrderCHGLayout = false;
 		this.showOrderListLayout = false;
 	  },
 	  cancelReturnOrder(orderIndex) {
@@ -122,6 +123,7 @@ function order_data_set() {
 	  },
 	  goCHGOrder(orderIndex) {
 		this.orderList[orderIndex].orderdata.showOrderCHGLayout = true;
+		this.orderList[orderIndex].orderdata.showOrderReturnLayout = false;
 		this.showOrderListLayout = false;
 	  },
 	  cancelCHGOrder(orderIndex) {
