@@ -87,196 +87,150 @@
     <div id="shopping_content" class="col-shopping-content"
       @click="switchShowOrderDetailLayout(event,{#orderIndex#})">
       <template x-if="showOrderListLayout">
-        <div>
-            <div  class="bg-grey h-auto w-100 mt-3 px-5">
-              <div class="px-3 pt-2 w-100 pb-0">
-                <div class="row">
-                  <div class="h7 py-4_5 col-shopping my-auto">
-                    訂單編號
-                    <span>{#OrderNo#}</span>
-                  </div>
-                  <div class="h7 py-4 col-shopping my-auto">
-                    {#dtime#}
-                  </div>
-                  <div class="h7 py-4 col-shopping my-auto">
-                    <!-- 訂單狀態
-              <span>已取消</span> -->
-                  </div>
-                  <div class="h7 col-4 justify-content-end exchange-rwd-phone my-auto"
-                    style="padding: 1.25rem .25rem; display: flex;">
-                    <!-- 取消按鈕 id="back_to_order" -->
-                    <template
-                      x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
-                      <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
-                    </template>
-                    <template
-                      x-if="orderList[{#orderIndex#}].orderdata.odlook !== '---' || orderList[{#orderIndex#}].orderdata.iftui ==='1' ">
-                      <button x-text="orderList[{#orderIndex#}].orderdata.iftui ==='1' ? '已取消' : '取消' "
-                        id="delete_{#orderid#}" type="button" class="btn-grey" disabled>取消</button>
-                    </template>
-                    <template
-                      x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
-                      <button @click="goReturnOrder({#orderIndex#})" id="btn_returns" type="button"
-                        class="btn-black mx-2">退貨</button>
-                    </template>
-
-                    <template
-                      x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
-                      <button x-text="orderList[{#orderIndex#}].orderdata.tuitime ==='---' ? '退貨' : '已退貨' "
-                        id="btn_returns" type="button" class="btn-grey mx-2" disabled>退貨</button>
-                    </template>
-
-                    <template
-                      x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
-                      <button @click="goCHGOrder({#orderIndex#})" id="btn_exchanges" type="button"
-                        class="btn-black">換貨</button>
-                    </template>
-                    <template
-                      x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
-                      <button x-text="orderList[{#orderIndex#}].orderdata.chgtime ==='---' ? '換貨' : '已換貨' "
-                        id="btn_exchanges" type="button" class="btn-grey" disabled>換貨</button>
-                    </template>
-
-                  </div>
+          <div  class="bg-grey h-auto w-100 mt-3 px-5">
+            <div class="px-3 pt-2 w-100 pb-0">
+              <div class="row">
+                <div class="h7 py-4_5 col-shopping my-auto">
+                  訂單編號
+                  <span>{#OrderNo#}</span>
                 </div>
+                <div class="h7 py-4 col-shopping my-auto">
+                  {#dtime#}
+                </div>
+                <div class="h7 py-4 col-shopping my-auto">
+                  <!-- 訂單狀態
+            <span>已取消</span> -->
+                </div>
+                <div class="h7 col-4 justify-content-end exchange-rwd-phone my-auto"
+                  style="padding: 1.25rem .25rem; display: flex;">
+                  <!-- 取消按鈕 id="back_to_order" -->
+                  <template
+                    x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
+                    <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
+                  </template>
+                  <template
+                    x-if="orderList[{#orderIndex#}].orderdata.odlook !== '---' || orderList[{#orderIndex#}].orderdata.iftui ==='1' ">
+                    <button x-text="orderList[{#orderIndex#}].orderdata.iftui ==='1' ? '已取消' : '取消' "
+                      id="delete_{#orderid#}" type="button" class="btn-grey" disabled>取消</button>
+                  </template>
+                  <template
+                    x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                    <button @click="goReturnOrder({#orderIndex#})" id="btn_returns" type="button"
+                      class="btn-black mx-2">退貨</button>
+                  </template>
 
-                <template x-if="orderList[{#orderIndex#}].orderdata.showOrderDetailLayout">
-                  <div id="shopping-state">
+                  <template
+                    x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                    <button x-text="orderList[{#orderIndex#}].orderdata.tuitime ==='---' ? '退貨' : '已退貨' "
+                      id="btn_returns" type="button" class="btn-grey mx-2" disabled>退貨</button>
+                  </template>
 
-                    <div class="row">
-                      <div class="h7 pt-4 col-3">
-                        狀態
+                  <template
+                    x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                    <button @click="goCHGOrder({#orderIndex#})" id="btn_exchanges" type="button"
+                      class="btn-black">換貨</button>
+                  </template>
+                  <template
+                    x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                    <button x-text="orderList[{#orderIndex#}].orderdata.chgtime ==='---' ? '換貨' : '已換貨' "
+                      id="btn_exchanges" type="button" class="btn-grey" disabled>換貨</button>
+                  </template>
+
+                </div>
+              </div>
+
+              <template x-if="orderList[{#orderIndex#}].orderdata.showOrderDetailLayout">
+                <div id="shopping-state">
+
+                  <div class="row">
+                    <div class="h7 pt-4 col-3">
+                      狀態
+                    </div>
+                  </div>
+                  <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+                    <div class="h7 pb-5 w-100">
+                      <div class="progress-container">
+                        <div class="step completed">
+                          <div class="circle"
+                            :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odtime !== '---' ? '#b3b3b3' : ''}">
+                          </div>
+                          <div>收到訂單<br>{#odtime#}</div>
+                        </div>
+                        <div class="step">
+                          <div class="circle"
+                            :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odlook !== '---' ? '#b3b3b3' : ''}">
+                          </div>
+                          <div>訂單處理中<br>{#odlook#}</div>
+                        </div>
+                        <div class="step">
+                          <div class="circle"
+                            :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odyun !== '---' ? '#b3b3b3' : ''}">
+                          </div>
+                          <div>出貨中<br>{#odyun#}</div>
+                        </div>
+                        <div class="step">
+                          <div class="circle"
+                            :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odyunno !== '---' && orderList[{#orderIndex#}].orderdata.odyun !== '---' ? '#b3b3b3' : ''}">
+                          </div>
+                          <div>配送進度查詢<br>貨號{#odyunno#}</div>
+                        </div>
+                        <div class="progress-line"></div>
                       </div>
                     </div>
-                    <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
-                      <div class="h7 pb-5 w-100">
-                        <div class="progress-container">
-                          <div class="step completed">
-                            <div class="circle"
-                              :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odtime !== '---' ? '#b3b3b3' : ''}">
-                            </div>
-                            <div>收到訂單<br>{#odtime#}</div>
+                  </div>
+                  <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
+                    <div class="h7 py-3 col-3 details">
+                      商品明細
+                    </div>
+                  </div>
+                  <template x-for="pdItem in orderList[{#orderIndex#}].orderItems">
+                    <div class="row shopping-produce">
+                      <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
+                        <div class="produce-image">
+                          <div class="bg-darkgrey pl-2">
+                            <img :src="pdItem.srcs" width="160">
                           </div>
-                          <div class="step">
-                            <div class="circle"
-                              :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odlook !== '---' ? '#b3b3b3' : ''}">
-                            </div>
-                            <div>訂單處理中<br>{#odlook#}</div>
+                        </div>
+                        <div class="produce-content">
+                          <h7 x-text="pdItem.goods" class="proce-data1"></h7>
+                          <br>
+                          <h7 x-text="pdItem.bn" class="proce-data2"></h7>
+                          <br>
+                          <br class="closer">
+                          <h7>顏色 </h7><h7 x-text="pdItem.colorname"></h7>
+                          <br>
+                          <h7>尺寸 </h7><h7 x-text="pdItem.size"></h7>
+                          <br>
+                          <h7>數量 </h7><h7 x-text="pdItem.nums"></h7>
+                          <div class="produce-price-rwd-phone" style="display: none;">
+                            <h7 x-text="`${pdItem.pricesymbol} ${pdItem.jine}`"></h7>
                           </div>
-                          <div class="step">
-                            <div class="circle"
-                              :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odyun !== '---' ? '#b3b3b3' : ''}">
-                            </div>
-                            <div>出貨中<br>{#odyun#}</div>
-                          </div>
-                          <div class="step">
-                            <div class="circle"
-                              :style="{ 'background-color': orderList[{#orderIndex#}].orderdata.odyunno !== '---' && orderList[{#orderIndex#}].orderdata.odyun !== '---' ? '#b3b3b3' : ''}">
-                            </div>
-                            <div>配送進度查詢<br>貨號{#odyunno#}</div>
-                          </div>
-                          <div class="progress-line"></div>
+                        </div>
+                        <br>
+                        <div class="text-center produce-price" style="width: 25%; padding-top: 1rem">
+                          <h7 x-text="`${pdItem.pricesymbol}${pdItem.jine}`"></h7>
                         </div>
                       </div>
-                    </div>
-                    <div class="row" style="border-bottom: 1px solid rgb(201 201 201)">
-                      <div class="h7 py-3 col-3 details">
-                        商品明細
-                      </div>
-                    </div>
-                    <template x-for="pdItem in orderList[{#orderIndex#}].orderItems">
-                      <div class="row shopping-produce">
-                        <div class="d-flex" style="width: 55%; border-right: 1px solid #a8a8a8;">
-                          <div class="produce-image">
-                            <div class="bg-darkgrey pl-2">
-                              <img :src="pdItem.srcs" width="160">
+                      <!--<template x-if="pdItem.show_total_proce_layout === 'flex'">-->
+                        <div id="total-price" class="d-flex" style="width: 45% ;">
+                          <div class="pb-2 pl-5" style="width: 78%; line-height: 1.8;">
+                            <h7>商品金額總計</h7>
+                            <br>
+                            <h7
+                              x-text="`物流費用(滿${orderList[{#orderIndex#}].orderdata.getsymbol}${orderList[{#orderIndex#}].orderdata.setyunfei}享免運費)`">
+                            </h7>
+                            <br>
+                            <h7
+                              x-text="`線上帳戶餘額${orderList[{#orderIndex#}].orderdata.getsymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.account)}，本次抵用`">
+                            </h7>
+                            <br>
+                            <h7>電子折價券折扣金額</h7>
+                            <div class="my-3" style="border-top: 1px dashed #a8a8a8;">
+                              <div class="pt-3">總計</div>
                             </div>
                           </div>
-                          <div class="produce-content">
-                            <h7 x-text="pdItem.goods" class="proce-data1"></h7>
-                            <br>
-                            <h7 x-text="pdItem.bn" class="proce-data2"></h7>
-                            <br>
-                            <br class="closer">
-                            <h7>顏色 </h7><h7 x-text="pdItem.colorname"></h7>
-                            <br>
-                            <h7>尺寸 </h7><h7 x-text="pdItem.size"></h7>
-                            <br>
-                            <h7>數量 </h7><h7 x-text="pdItem.nums"></h7>
-                            <div class="produce-price-rwd-phone" style="display: none;">
-                              <h7 x-text="`${pdItem.pricesymbol} ${pdItem.jine}`"></h7>
-                            </div>
-                          </div>
-                          <br>
-                          <div class="text-center produce-price" style="width: 25%; padding-top: 1rem">
-                            <h7 x-text="`${pdItem.pricesymbol}${pdItem.jine}`"></h7>
-                          </div>
-                        </div>
-                        <!--<template x-if="pdItem.show_total_proce_layout === 'flex'">-->
-                          <div id="total-price" class="d-flex" style="width: 45% ;">
-                            <div class="pb-2 pl-5" style="width: 78%; line-height: 1.8;">
-                              <h7>商品金額總計</h7>
-                              <br>
-                              <h7
-                                x-text="`物流費用(滿${orderList[{#orderIndex#}].orderdata.getsymbol}${orderList[{#orderIndex#}].orderdata.setyunfei}享免運費)`">
-                              </h7>
-                              <br>
-                              <h7
-                                x-text="`線上帳戶餘額${orderList[{#orderIndex#}].orderdata.getsymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.account)}，本次抵用`">
-                              </h7>
-                              <br>
-                              <h7>電子折價券折扣金額</h7>
-                              <div class="my-3" style="border-top: 1px dashed #a8a8a8;">
-                                <div class="pt-3">總計</div>
-                              </div>
-                            </div>
-                            <div class="pb-2 pe-3 total-price-rwd-ipad" style="width: 22%;">
-                              <h7
-                                x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].totaljine}`">
-                              </h7>
-                              <br>
-                              <h7
-                                x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.multiyunfei}`">
-                              </h7>
-                              <br>
-                              <h7
-                                x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.disaccount}`">
-                              </h7>
-                              <br>
-                              <h7
-                                x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.promoprice}`">
-                              </h7>
-                              <br />
-                              <div id="total-prices" class="my-3" style="border-top: 1px dashed #a8a8a8;">
-                                <h5
-                                  x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.tjine}`"
-                                  class="pt-3 mb-0"></h5>
-                              </div>
-                            </div>
-                            <hr class="total-price-hr">
-                          </div>
-                        <!--</template>-->
-                      </div>
-                    </template>
-                    <div id="total-price-rwd-phone" style="display: none; border-top: 1px solid rgb(201 201 201)">
-                      <div class="pb-2 pt-0 pl-5 pr-0 col-9" style="line-height: 1.8;">
-                          <h7>商品金額總計</h7>
-                          <br>
-                          <h7
-                            x-text="`物流費用(滿${orderList[{#orderIndex#}].orderdata.getsymbol}${orderList[{#orderIndex#}].orderdata.setyunfei}享免運費)`">
-                          </h7>
-                          <br>
-                          <h7
-                            x-text="`線上帳戶餘額${orderList[{#orderIndex#}].orderdata.getsymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.account)}，本次抵用`">
-                          </h7>
-                          <br>
-                          <h7>電子折價券折扣金額</h7>
-                          <div class="my-3">
-                            <div class="pt-3" style="border-top: 1px dashed #a8a8a8;"">總計</div>
-                          </div>
-                      </div>
-                      <div class="pb-2 pl-0 pt-0 pr-3 col-3" style="line-height: 1.8;">
-                        <h7
+                          <div class="pb-2 pe-3 total-price-rwd-ipad" style="width: 22%;">
+                            <h7
                               x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].totaljine}`">
                             </h7>
                             <br>
@@ -285,58 +239,102 @@
                             </h7>
                             <br>
                             <h7
-                              x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.disaccount)}`">
+                              x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.disaccount}`">
                             </h7>
                             <br>
                             <h7
                               x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.promoprice}`">
                             </h7>
                             <br />
-                            <div class="my-3">
+                            <div id="total-prices" class="my-3" style="border-top: 1px dashed #a8a8a8;">
                               <h5
                                 x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.tjine}`"
-                                class="pt-3" style="border-top: 1px dashed #a8a8a8;"></h5>
+                                class="pt-3 mb-0"></h5>
                             </div>
-                      </div>
+                          </div>
+                          <hr class="total-price-hr">
+                        </div>
+                      <!--</template>-->
+                    </div>
+                  </template>
+                  <div id="total-price-rwd-phone" style="display: none; border-top: 1px solid rgb(201 201 201)">
+                    <div class="pb-2 pt-0 pl-5 pr-0 col-9" style="line-height: 1.8;">
+                        <h7>商品金額總計</h7>
+                        <br>
+                        <h7
+                          x-text="`物流費用(滿${orderList[{#orderIndex#}].orderdata.getsymbol}${orderList[{#orderIndex#}].orderdata.setyunfei}享免運費)`">
+                        </h7>
+                        <br>
+                        <h7
+                          x-text="`線上帳戶餘額${orderList[{#orderIndex#}].orderdata.getsymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.account)}，本次抵用`">
+                        </h7>
+                        <br>
+                        <h7>電子折價券折扣金額</h7>
+                        <div class="my-3">
+                          <div class="pt-3" style="border-top: 1px dashed #a8a8a8;"">總計</div>
+                        </div>
+                    </div>
+                    <div class="pb-2 pl-0 pt-0 pr-3 col-3" style="line-height: 1.8;">
+                      <h7
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].totaljine}`">
+                          </h7>
+                          <br>
+                          <h7
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.multiyunfei}`">
+                          </h7>
+                          <br>
+                          <h7
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${Math.floor(orderList[{#orderIndex#}].orderdata.disaccount)}`">
+                          </h7>
+                          <br>
+                          <h7
+                            x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.promoprice}`">
+                          </h7>
+                          <br />
+                          <div class="my-3">
+                            <h5
+                              x-text="`${orderList[{#orderIndex#}].orderdata.pricesymbol}${orderList[{#orderIndex#}].orderdata.tjine}`"
+                              class="pt-3" style="border-top: 1px dashed #a8a8a8;"></h5>
+                          </div>
                     </div>
                   </div>
-                </template>
-                <div id="exchange-btn-rwd-phone" class="h7 justify-content-end pb-4" >
-                  <template
-                  x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
-                  <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
-                </template>
-                <template
-                  x-if="orderList[{#orderIndex#}].orderdata.odlook !== '---' || orderList[{#orderIndex#}].orderdata.iftui ==='1' ">
-                  <button x-text="orderList[{#orderIndex#}].orderdata.iftui ==='1' ? '已取消' : '取消' "
-                    id="delete_{#orderid#}" type="button" class="btn-grey " disabled>取消</button>
-                </template>
-                <template
-                  x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
-                  <button @click="goReturnOrder({#orderIndex#})" id="btn_returns" type="button"
-                    class="btn-black mx-2">退貨</button>
-                </template>
-
-                <template
-                  x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
-                  <button x-text="orderList[{#orderIndex#}].orderdata.tuitime ==='---' ? '退貨' : '已退貨' "
-                    id="btn_returns" type="button" class="btn-grey mx-2" disabled>退貨</button>
-                </template>
-
-                <template
-                  x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
-                  <button @click="goCHGOrder({#orderIndex#})" id="btn_exchanges" type="button"
-                    class="btn-black">換貨</button>
-                </template>
-                <template
-                  x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
-                  <button x-text="orderList[{#orderIndex#}].orderdata.chgtime ==='---' ? '換貨' : '已換貨' "
-                    id="btn_exchanges" type="button" class="btn-grey" disabled>換貨</button>
-                </template>
                 </div>
+              </template>
+              <div id="exchange-btn-rwd-phone" class="h7 justify-content-end pb-4" >
+                <template
+                x-if="orderList[{#orderIndex#}].orderdata.odlook === '---' && orderList[{#orderIndex#}].orderdata.iftui !=='1' ">
+                <button id="delete_{#orderid#}" type="button" class="btn-black">取消</button>
+              </template>
+              <template
+                x-if="orderList[{#orderIndex#}].orderdata.odlook !== '---' || orderList[{#orderIndex#}].orderdata.iftui ==='1' ">
+                <button x-text="orderList[{#orderIndex#}].orderdata.iftui ==='1' ? '已取消' : '取消' "
+                  id="delete_{#orderid#}" type="button" class="btn-grey " disabled>取消</button>
+              </template>
+              <template
+                x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                <button @click="goReturnOrder({#orderIndex#})" id="btn_returns" type="button"
+                  class="btn-black mx-2">退貨</button>
+              </template>
+
+              <template
+                x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                <button x-text="orderList[{#orderIndex#}].orderdata.tuitime ==='---' ? '退貨' : '已退貨' "
+                  id="btn_returns" type="button" class="btn-grey mx-2" disabled>退貨</button>
+              </template>
+
+              <template
+                x-if="orderList[{#orderIndex#}].orderdata.odyun !== '---' && orderList[{#orderIndex#}].orderdata.tuitime === '---' && orderList[{#orderIndex#}].orderdata.chgtime === '---'">
+                <button @click="goCHGOrder({#orderIndex#})" id="btn_exchanges" type="button"
+                  class="btn-black">換貨</button>
+              </template>
+              <template
+                x-if="orderList[{#orderIndex#}].orderdata.odyun === '---' || orderList[{#orderIndex#}].orderdata.tuitime !== '---' || orderList[{#orderIndex#}].orderdata.chgtime !== '---'">
+                <button x-text="orderList[{#orderIndex#}].orderdata.chgtime ==='---' ? '換貨' : '已換貨' "
+                  id="btn_exchanges" type="button" class="btn-grey" disabled>換貨</button>
+              </template>
               </div>
             </div>
-        </div>
+          </div>
       </template>
     </div>
 
