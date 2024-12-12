@@ -5,26 +5,7 @@
   <script type=text/javascript src="{#CP#}js/order.js?6"></script>
   <script language="javascript" src="{#CP#}js/ordertuidetail.js?6"></script>
   <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-      // 按鈕選取
-      /*
-      const btnReturns = document.getElementById('btn_returns');
-      const btnReturnPhone = document.getElementById('btn_return_phone');
-      const btnExchanges = document.getElementById('btn_exchanges');
-      const btnExchangePhone = document.getElementById('btn_exchange_phone');
-      const btnCancel = document.getElementById('btn_cancel');
-      */
-      //const btnReturnSend = document.getElementById('btn_return_send');
-      //const btnExchangeSend = document.getElementById('btn_exchange_send');
-      /*
-      const btnBackToOrder = document.getElementById('back_to_order');
-      const btnBackToOrder2 = document.getElementById('back_to_order2');
-      const btnGoToReturn = document.getElementById('go_to_return');
-      const btnGoToReturn2 = document.getElementById('go_to_return2');
-      const btnGoToExchange = document.getElementById('go_to_exchange');
-      const btnGoToExchange2 = document.getElementById('go_to_exchange2');
-      */
-
+    document.addEventListener('DOMContentLoaded', (event) => {
       // 顯示特定頁面並隱藏其他頁面
       const showPage = (pageId) => {
         document.getElementById('shopping_content').style.display = 'none'; // 隱藏主要頁面
@@ -32,144 +13,68 @@
         document.getElementById('shopping_exchange').style.display = 'none'; // 隱藏換貨頁面
         document.getElementById(pageId).style.display = 'block'; // 顯示指定的頁面
       };
-  /*
-      // 點擊「退貨」按鈕，顯示退貨頁面
-      if (btnReturns) {
-        btnReturns.addEventListener('click', () => {
-          showPage('shopping_return');
+  
+      // 綁定按鈕事件
+      const orderLists = document.getElementById('order-lists');
+      const orderTitle = document.querySelector('.order-title');
+  
+      if (orderLists) {
+        orderLists.addEventListener('click', (event) => {
+          const targetId = event.target.id;
+  
+          // 根據按鈕 ID 切換頁面
+          if (targetId === 'btn_exchanges') {
+            orderTitle.textContent = '訂單查詢 > 申請換貨';
+            showPage('shopping_exchange'); // 顯示換貨頁面
+          } else if (targetId === 'btn_returns') {
+            orderTitle.textContent = '訂單查詢 > 申請退貨';
+            showPage('shopping_return'); // 顯示退貨頁面
+          // } else if (targetId === 'back_to_order') {
+          //   orderTitle.textContent = '訂單查詢';
+          //   showPage('shopping_content'); // 顯示主要頁面
+          }
         });
       }
-
-      if (btnReturnPhone) {
-        btnReturnPhone.addEventListener('click', () => {
-          showPage('shopping_return');
-        });
-      }
-
-      // 點擊「換貨」按鈕，顯示換貨頁面
-      const showExchange = () => {
-        showPage('shopping_exchange');
-      };
-
-      if (btnExchanges) {
-        btnExchanges.addEventListener('click', showExchange);
-      }
-
-      if (btnExchangePhone) {
-        btnExchangePhone.addEventListener('click', showExchange);
-      }
-
-      // 點擊「取消」按鈕，返回主要購物頁面
-      if (btnCancel) {
-        btnCancel.addEventListener('click', () => {
-          showPage('shopping_content');
-        });
-      }
-        */
-  /*
-      // 點擊「退貨完成」按鈕，返回主要購物頁面
-      if (btnReturnSend) {
-        btnReturnSend.addEventListener('click', () => {
-          showPage('shopping_content');
-        });
-      }
-
-      // 點擊「換貨完成」按鈕，返回主要購物頁面
-      if (btnExchangeSend) {
-        btnExchangeSend.addEventListener('click', () => {
-          showPage('shopping_content');
-        });
-      }
-        */
-  /*
-      // 點擊「取消」按鈕，返回主要購物頁面
-      if (btnBackToOrder) {
-        btnBackToOrder.addEventListener('click', () => {
-          showPage('shopping_content');
-        });
-      }
-
-      if (btnBackToOrder2) {
-        btnBackToOrder2.addEventListener('click', () => {
-          showPage('shopping_content');
-        });
-      }
-
-
-      if (btnGoToReturn) {
-        btnGoToReturn.addEventListener('click', () => {
-          showPage('shopping_return');
-        });
-      }
-
-      if (btnGoToReturn2) {
-        btnGoToReturn2.addEventListener('click', () => {
-          showPage('shopping_return');
-        });
-      }
-
-      if (btnBackToOrder2) {
-        btnBackToOrder2.addEventListener('click', () => {
-          showPage('shopping_return');
-        });
-      }
-
-      if (btnGoToExchange) {
-        btnGoToExchange.addEventListener('click', () => {
-          showPage('shopping_exchange');
-        });
-      }
-
-      if (btnGoToExchange2) {
-        btnGoToExchange2.addEventListener('click', () => {
-          showPage('shopping_exchange');
-        });
-      }
-  */
+  
       // Safari 特定處理
       const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
       if (isSafari) {
         document.body.classList.add('safari');
       }
-
+  
       // Modal 彈出框的邏輯
       $('#exampleModal').on('shown.bs.modal', function () {
         const saveAddressBtn = document.getElementById('saveAddressBtn');
         const inputAddress = document.getElementById('inputAddress');
-
+  
         if (saveAddressBtn) {
           saveAddressBtn.addEventListener('click', () => {
             const newAddress = inputAddress ? inputAddress.value : '';
-            console.log("保存的新地址: ", newAddress);
+            console.log('保存的新地址: ', newAddress);
             $('#exampleModal').modal('hide');
           });
         }
       });
     });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // 取得相關的按鈕和目標元素
-      /*const btnReturns = document.getElementById("btn_returns");
-      const btnExchanges = document.getElementById("btn_exchanges");
-      const backToOrder = document.getElementById("back_to_order");
-      */
-      const orderTitles = document.querySelectorAll(".order-title");
-
+  
+    document.addEventListener('DOMContentLoaded', function () {
+      const orderTitles = document.querySelectorAll('.order-title');
+  
       // 定義隱藏 order-title 的函數
       const hideOrderTitles = () => {
         orderTitles.forEach((title) => {
-          title.style.display = "none";
+          title.style.display = 'none';
         });
       };
-
+  
       // 定義顯示 order-title 的函數
       const showOrderTitles = () => {
         orderTitles.forEach((title) => {
-          title.style.display = "";
+          title.style.display = '';
         });
       };
     });
-  </script>
+  </script>  
 </head>
 
 <!-start->
