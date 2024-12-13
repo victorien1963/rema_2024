@@ -118,6 +118,7 @@ function ShopCart(){
 		$array=explode('#',$CARTSTR);
 		$tnums=sizeof($array)-1;
 		$orderList=array();
+		$orderTotalInfo=array();
 		$tjine=0;
 		$kk=0;
 		
@@ -778,6 +779,7 @@ function ShopCart(){
 			$var["checkcard"] = $checkcard;
 			
 			$str.=ShowTplTemp($TempArr["m1"],$var);
+			$orderTotalInfo=$var;
 			
 			$var["checkyun"]=$checkyun;
 			$var["hidecheckyun"]=$checkyun=="disabled"? "style='display:none;'":"";
@@ -845,6 +847,7 @@ function ShopCart(){
 		
 		$str = ShowTplTemp($str,$var);
 		$str .= "<script>var orderList = " . json_encode($orderList, JSON_UNESCAPED_UNICODE) . ";</script>";
+		$str .= "<script>var orderInfo = " . json_encode($orderTotalInfo, JSON_UNESCAPED_UNICODE) . ";</script>";
 		return $str;
 
 }

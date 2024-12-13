@@ -5,31 +5,34 @@
 
 <!-m0->
 <div id="shopping_cart_amount">購物籃( {#tnums#} )</div>
-
-    <div x-data="order_data_set()" x-init="order_data_init()" id="shopping_cart" class="">
+<div x-data="order_data_set()" x-init="order_data_init()">
+    <div id="shopping_cart" class="">
       <!-- product items in the cart -->
         <div id="produce_items" class="row mx-0">
+          <template x-for="pdItem in orderList">
           <div class="col-3 product_card">
             <div class="product_img" style="background-image: url('')"></div>
             <div class="product_info">
               <div class="x_mark">⨉</div>
-              <div class="p_name" x-text="orderList[0].orderdata.goodsname"></div>
-              <div class="p_price" x-text="orderList[0].orderdata.goodsname"></div>
-              <div class="p_detail" x-text="orderList[0].orderdata.goodsname"></div>
+              <div class="p_name" x-text="pdItem.orderdata.goodsname"></div>
+              <div class="p_price" x-text="pdItem.orderdata.pricesymbol + pdItem.orderdata.jine"></div>
+              <div class="p_detail" x-text="pdItem.orderdata.buysize+ ' | ' + pdItem.orderdata.colorname"></div>
               <div>
                 <form id='amout_form' method='POST' action='#'>
                   <label for=""></label>
-                  <input type='button' value='－' class='qtyminus' onclick="alert(orderList[0].orderdata.goodsname)"/>
-                  <input type='text' name='quantity' value='1' class='qty' />
-                  <input type='button' value='＋' class='qtyplus' />
+                  <input type='button' value='－'  @click="goReturnOrder(0)"/>
+                  <input type='text' name='quantity'  x-model='pdItem.orderdata.acc'  />
+                  <input type='button' value='＋'  />
                 </form>
               </div>
             </div>
           </div>
+        </template>
           <!-- product items in the cart -->
         </div>
 
         <div id="produce_items_iphone_rwd" style="display:none">
+          <template x-for="pdItem in orderList">
           <div class="row">
             <div class="col-6 product_card">
               <div class="product_img" style="background-image: url('')"></div>
@@ -37,18 +40,19 @@
             <div class="col-6 product_info d-flex">
               <div class="mt-auto pb-2">
                 <div class="x_mark">⨉</div>
-                <div class="p_name">{#goodsname#}</div>
-                <div class="p_price">{#pricesymbol#}{#jine#} </div>
-                <div class="p_detail">{#buysize#} | {#colorname#}</div>
+                <div class="p_name" x-text="pdItem.orderdata.goodsname"></div>
+              <div class="p_price" x-text="pdItem.orderdata.pricesymbol + pdItem.orderdata.jine"></div>
+              <div class="p_detail" x-text="pdItem.orderdata.buysize+ ' | ' + pdItem.orderdata.colorname"></div>
                 <form id='amout_form' method='POST' action='#'>
                   <label for=""></label>
                   <input type='button' value='－' class='qtyminus' />
-                  <input type='text' name='quantity' value='1' class='qty' />
+                  <input type='text' name='quantity'  x-model='pdItem.orderdata.acc'  />
                   <input type='button' value='＋' class='qtyplus' />
                 </form>
               </div>
             </div>
           </div>
+          </template>
         </div>
 		
     </div>
@@ -260,10 +264,10 @@
     <div class="order_info">
       訂單資訊
     </div>
-    <div id="order_info_content" class="row p-3">
+    <div  id="order_info_content" class="row p-3">
       <div class="col-2">
-        <div class="t_amonts"><span class="font-weight-bold">2</span> 商品</div>
-        <div class="t_delivery">配送 (商品滿2,500免運)</div>
+        <div class="t_amonts"><span class="font-weight-bold">{#tnums#}</span> 商品</div>
+        <div class="t_delivery" x-text="'配送 (商品滿'+orderInfo.setyunfei + '免運)'">配送 (商品滿2,500免運)</div>
         <div class="t_balances">餘額抵⽤</div>
         <div class="t_discount_code">輸入折扣碼</div>
         <input type='text' name='discount_code' value='' class='discount_code' />
@@ -273,9 +277,9 @@
         <span class="text-danger small my-auto">無效</span>
       </div>
       <div class="col-1 text-right">
-        <div class="t_amonts">$ 2,280</div>
-        <div class="t_delivery">$ 85</div>
-        <div class="t_balances">- $ 200</div>
+        <div class="t_amonts" x-text="orderInfo.pricesymbol + orderInfo.oritjine"></div>
+        <div class="t_delivery" x-text="orderInfo.pricesymbol + orderInfo.yunfei"></div>
+        <div class="t_balances" x-text="'-' + orderInfo.pricesymbol + orderInfo.disaccount"></div>
         <br />
         <div class="">- $ 100</div>
         <br />
@@ -359,5 +363,5 @@
       </div>
     </div>
 								
-
+  </div>
 	<!-m0->	
