@@ -1622,6 +1622,7 @@ body > #shopping_flow {
 
     .produce-content-rwd > div:nth-child(1) {
         padding-top: .75rem !important;
+        padding-left: 0rem !important;
     }
 
     .produce-content-rwd > div {
@@ -6838,7 +6839,7 @@ select.form-control, input.form-control {
     }
 
     .produce-image {
-        width: 33% !important;
+        width: 41% !important;
         padding-top: .5rem;
         padding-bottom: 0rem;
     }
@@ -6850,6 +6851,10 @@ select.form-control, input.form-control {
 
     .produce-content-rwd > div:nth-child(1) {
         padding-top: .75rem !important;
+    }
+
+    .produce-content-rwd > div:nth-child(2) {
+        margin-bottom: 1rem !important;
     }
 
     .produce-content-rwd > div {
@@ -6912,7 +6917,7 @@ select.form-control, input.form-control {
     }
 
     #exchange-reason-ques {
-        padding-left: 2.25rem !important;
+        padding-left: 1.75rem !important;
         padding-top: 1.5rem !important;
     }
 
@@ -7058,16 +7063,35 @@ select.form-control, input.form-control {
         margin-top: 0rem !important;
     }
 
-    /* .order-title {
-        padding-left: 1rem;
-    } */
-
     #shopping_content > div > div > .row {
         border-bottom: 0px solid transparent !important;
     }
 
     #shopping-state > .row:nth-child(1) {
         border-top: 1px solid rgb(201 201 201);
+    }
+
+    .order-title {
+        padding-left: 1rem;
+        padding-top: 1rem !important;
+    }
+
+    #shopping_return > form > .bg-grey, #shopping_exchange > form > .bg-grey {
+        padding-right: .5rem !important;
+        padding-left: .5rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    #editAddressBtn {
+        font-size: 1.8vw !important;
+        display: flex;
+        padding-left: .9rem;
+        padding-right: 0.25rem;
+        padding-top: .25rem;
+    }
+
+    .exchange-choose {
+        padding-right: 1rem !important;
     }
 
 }
