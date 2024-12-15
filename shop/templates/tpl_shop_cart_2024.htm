@@ -9,7 +9,7 @@
     <div id="shopping_cart" class="">
       <!-- product items in the cart -->
         <div id="produce_items" class="row mx-0">
-          <template x-for="pdItem in orderList">
+          <template x-for="(pdItem, index) in orderList" :key="index">
           <div class="col-3 product_card">
             <div class="product_img" style="background-image: url('')"></div>
             <div class="product_info">
@@ -20,9 +20,9 @@
               <div>
                 <form id='amout_form' method='POST' action='#'>
                   <label for=""></label>
-                  <input type='button' value='－'  @click="goReturnOrder(0)"/>
+                  <input type='button' value='－'  @click="minusItem(index)"/>
                   <input type='text' name='quantity'  x-model='pdItem.orderdata.acc'  />
-                  <input type='button' value='＋'  />
+                  <input type='button' value='＋'  @click="addItem(index)"/>
                 </form>
               </div>
             </div>
@@ -45,9 +45,9 @@
               <div class="p_detail" x-text="pdItem.orderdata.buysize+ ' | ' + pdItem.orderdata.colorname"></div>
                 <form id='amout_form' method='POST' action='#'>
                   <label for=""></label>
-                  <input type='button' value='－' class='qtyminus' />
+                  <input type='button' value='－'  @click="minusItem(index)" />
                   <input type='text' name='quantity'  x-model='pdItem.orderdata.acc'  />
-                  <input type='button' value='＋' class='qtyplus' />
+                  <input type='button' value='＋' @click="addItem(index)" />
                 </form>
               </div>
             </div>
@@ -267,7 +267,7 @@
     <div  id="order_info_content" class="row p-3">
       <div class="col-2">
         <div class="t_amonts"><span class="font-weight-bold">{#tnums#}</span> 商品</div>
-        <div class="t_delivery" x-text="'配送 (商品滿'+orderInfo.setyunfei + '免運)'">配送 (商品滿2,500免運)</div>
+        <div class="t_delivery" x-text="'配送 (商品滿'+orderInfo.setyunfei + '免運)'"></div>
         <div class="t_balances">餘額抵⽤</div>
         <div class="t_discount_code">輸入折扣碼</div>
         <input type='text' name='discount_code' value='' class='discount_code' />
@@ -290,21 +290,21 @@
     <div id="order_info_content_checked" class="row p-3" style="display: none;">
       <div class="col-2">
         <div class="t_amonts_checked"><span class="font-weight-bold">2</span> 商品</div>
-        <div class="t_delivery_checked">配送 (商品滿2,500免運)</div>
+        <div class="t_delivery_checked" x-text="'配送 (商品滿'+orderInfo.setyunfei + '免運)'"></div>
         <div class="t_balances_checked">餘額抵⽤</div>
         <div class="t_discount_checked">折扣</div>
       </div>
       <div class="col-1 text-right">
-        <div class="t_amonts_checked_value">$ 2,280</div>
-        <div class="t_delivery_checked_value">$ 85</div>
-        <div class="t_balances_checked_value">- $ 200</div>
+        <div class="t_amonts_checked_value" x-text="orderInfo.pricesymbol + orderInfo.oritjine"></div>
+        <div class="t_delivery_checked_value" x-text="orderInfo.pricesymbol + orderInfo.yunfei"></div>
+        <div class="t_balances_checked_value" x-text="'-' + orderInfo.pricesymbol + orderInfo.disaccount"></div>
         <div class="t_discount_checked_value">- $ 100</div>
       </div>
     </div>
 
     <div id="total_prices" class="row">
       <div class="col-2 h5 font-weight-bolder">總金額</div>
-      <div class="col-1 text-right h5 font-weight-bolder">NT$ 2,280
+      <div class="col-1 text-right h5 font-weight-bolder" x-text="orderInfo.pricesymbol + (orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)">
         <br />
         <small class="text-right">• 含營業稅</small>
       </div>
@@ -312,7 +312,7 @@
 
     <div id="total_prices_checked" class="row" style="display: none;">
       <div class="col-2 h5 font-weight-bolder">總金額</div>
-      <div class="col-1 text-right h5 font-weight-bolder">NT$ 2,280
+      <div class="col-1 text-right h5 font-weight-bolder" x-text="orderInfo.pricesymbol + (orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)">
         <br />
         <div class="text-right checked-info-text">• 含營業稅</div>
       </div>
