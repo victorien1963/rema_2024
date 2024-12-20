@@ -150,6 +150,18 @@ function IndexAddrB(str)
 $(document).ready(function(){
 	$('#OrderForm').submit(function(){
 		alert('送出表單');
+		alert('s_name:' + $("#s_name")[0].value);
+		alert('s_addr:' +$("#s_addr")[0].value);
+		alert('payid:' +$("#payid")[0].value);
+		alert('marketname:' +$("#marketname").val());
+		alert('store_service_num:' +$("#store_service_num").val());
+		alert('marketaddr:' +$("#marketaddr").val());
+		alert('postpayname:' +$("#postpayname").val());
+		alert('cardid:' +$("#cardid").val());
+		alert('s_mobi:' +$("#s_mobi").val());
+		alert('act:' +$("#act").val());
+		alert('tjine:' +$("#tjine").val());
+		alert('urlstr:' +$("#urlstr").val());
 		/*LoadMsg("送出訂單");
 		return false;*/
 		
@@ -195,12 +207,19 @@ $(document).ready(function(){
 					window.location=PDV_RP+'shop/cart.php';
 					return false;
 				}
+
+				
+		alert('noa:' +noa);
+		
+		alert('nob:' +nob);
 				if(noa || nob){
 					$("#addrnote").val("1");
 					var addrnote = 1;
+					alert('addrnote:' + addrnote);
 				}else{
 					$("#addrnote").val("0");
 					var addrnote = 0;
+					alert('addrnote0:' + addrnote);
 				}
 
 				if($("#s_mobi")[0].value==""){

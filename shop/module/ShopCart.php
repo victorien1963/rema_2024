@@ -119,6 +119,7 @@ function ShopCart(){
 		$tnums=sizeof($array)-1;
 		$orderList=array();
 		$orderTotalInfo=array();
+		$deliveryInfo=array();
 		$jdepromocode ='';
 		$tjine=0;
 		$kk=0;
@@ -825,6 +826,24 @@ function ShopCart(){
 		 	);
 		$str.=ShowTplTemp($TempArr["end"],$var);
 		$jdepromocode=URIAuthcode($geturlstr,"GO");
+
+		$var=array(
+			'sname' => '',
+			'market' => '',
+			'marketname' => '',
+			'marketaddr' => '',
+			'sphone' => '',
+			'stel' => '',
+			'scountry' => '臺灣',
+			'scity' => '',
+			'szone' => '',
+			'spostal' => '',
+			'sdetailaddr' => '',
+			'saddr' => '',
+			'spayid' => '',
+		 	);
+
+		$deliveryInfo=$var;
 		
 		$GLOBALS["addscript"] = $GLOBALS['GLOBALS']['SHOPCONF']['yahooCode'];
 		
@@ -849,6 +868,7 @@ function ShopCart(){
 		$str = ShowTplTemp($str,$var);
 		$str .= "<script>var orderList = " . json_encode($orderList, JSON_UNESCAPED_UNICODE) . ";</script>";
 		$str .= "<script>var orderInfo = " . json_encode($orderTotalInfo, JSON_UNESCAPED_UNICODE) . ";</script>";
+		$str .= "<script>var deliveryInfo = " . json_encode($deliveryInfo, JSON_UNESCAPED_UNICODE) . ";</script>";
 		$str .= "<script>var jdepromocode = " . json_encode($jdepromocode, JSON_UNESCAPED_UNICODE) . ";</script>";
 		return $str;
 

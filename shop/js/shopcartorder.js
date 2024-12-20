@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	
 	// 參考 cart.js $(".gostart").click
-	$("#checked_continue_btn_step3").click(function(){
+	
+	$("#checked_continue_btn_step3_JohnStopWork").click(function(){
 				
 		
 
@@ -11,7 +12,7 @@ $(document).ready(function(){
 		var sourceyunfei = orderInfo.yunfei
 		var sourcediscount = orderInfo.disaccount;
 		var promocode=jdepromocode;
-		
+
 		//ad5df3FKLMrti-zMegUK1r-6i5xp_UVtaZdsEPx_Qy-gHY0smK5PZw
 		//c8c0dh-YkYYlwK04uEy2oXHzg9PzI2dIDNkPNB8fkQHLWoTNiAp9UQ
 		alert(getpaytotal);
@@ -121,11 +122,28 @@ $(document).ready(function(){
 	
 
 });
+
+
+$(document).ready(function(){
+	$('#OrderForm').submit(function(){
+
+		//urlstr  就等於 jdepromocode =>是從shopcart 傳到startorder
+
+		var sourceyun = $("#s_name").val();
+
+		alert(sourceyun);
+
+
+
+
+	}); 
+});
 function order_data_set() {
 	return {
 	  showOrderListLayout: true,
 	  orderList: orderList,
 	  orderInfo: orderInfo,
+	  deliveryInfo: deliveryInfo,
 	  jdepromocode :jdepromocode,
 	  minusItem(orderIndex) {
 		if(this.orderList[orderIndex].orderdata.acc>1)
