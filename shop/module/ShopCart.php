@@ -119,6 +119,7 @@ function ShopCart(){
 		$tnums=sizeof($array)-1;
 		$orderList=array();
 		$orderTotalInfo=array();
+		$jdepromocode ='';
 		$tjine=0;
 		$kk=0;
 		
@@ -823,7 +824,7 @@ function ShopCart(){
 			'pricesymbol' => $getsymbol,
 		 	);
 		$str.=ShowTplTemp($TempArr["end"],$var);
-		
+		$jdepromocode=URIAuthcode($geturlstr,"GO");
 		
 		$GLOBALS["addscript"] = $GLOBALS['GLOBALS']['SHOPCONF']['yahooCode'];
 		
@@ -848,6 +849,7 @@ function ShopCart(){
 		$str = ShowTplTemp($str,$var);
 		$str .= "<script>var orderList = " . json_encode($orderList, JSON_UNESCAPED_UNICODE) . ";</script>";
 		$str .= "<script>var orderInfo = " . json_encode($orderTotalInfo, JSON_UNESCAPED_UNICODE) . ";</script>";
+		$str .= "<script>var jdepromocode = " . json_encode($jdepromocode, JSON_UNESCAPED_UNICODE) . ";</script>";
 		return $str;
 
 }

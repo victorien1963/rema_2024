@@ -149,7 +149,7 @@ function IndexAddrB(str)
 
 $(document).ready(function(){
 	$('#OrderForm').submit(function(){
-		
+		alert('送出表單');
 		/*LoadMsg("送出訂單");
 		return false;*/
 		
@@ -367,6 +367,8 @@ if( $('input:checked[name="receiptinfo"]').length == 0 ){
 	$("#postpayname").val(checkText);
 
 	if( $('input:radio:checked[name="receiptinfo"]').val() == 2 && $('input:radio:checked[name="receipt_info_second"]').val() == 2 ){
+		
+		alert('第一種');
 		var p=$("#mobicode").val();
 		var w=$("#remobicode").val();
 
@@ -458,7 +460,7 @@ if( $('input:checked[name="receiptinfo"]').length == 0 ){
 				}
 			});
 	}else{
-
+		alert('第二種');
 		$('#OrderForm').ajaxSubmit({
 			url: 'post.php',
 			data: {'addrnote': addrnote},

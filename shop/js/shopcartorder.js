@@ -1,50 +1,123 @@
 $(document).ready(function(){
 	
-	$(".delchk").click(function(){
-		var getdelid = this.id.substr(7);
-		//alert("刪除訂單編號"+getdelid);
+	// 參考 cart.js $(".gostart").click
+	$("#checked_continue_btn_step3").click(function(){
+				
 		
-		if(PDV_LAN == "en"){
-			var cText = "Are You Sure You Want To Cancel?";
-		}else if(PDV_LAN == "zh_cn"){
-			var cText = "你确定要删除这笔订单？";
+
+		var getpaytotal = (orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount);
+		var payid = $('input[name=delivery]:checked').val();
+		var sourceyun = $('input[name=delivery_method]:checked').val();
+		var sourceyunfei = orderInfo.yunfei
+		var sourcediscount = orderInfo.disaccount;
+		var promocode=jdepromocode;
+		
+		//ad5df3FKLMrti-zMegUK1r-6i5xp_UVtaZdsEPx_Qy-gHY0smK5PZw
+		//c8c0dh-YkYYlwK04uEy2oXHzg9PzI2dIDNkPNB8fkQHLWoTNiAp9UQ
+		alert(getpaytotal);
+		alert(sourceyun);
+		alert(jdepromocode);
+		/*
+		var payid = $('input[name=payment]:checked').val();
+		var source = $('input[name=source]:checked').val();
+		var sourceyun = $('input[name=sourceyun]:checked').val();
+		var sourceyunfei = $('#sourceyunfei').val();
+		var sourcediscount = $('#sourcediscount').val();
+
+		if( payid == 2  ){
+			if(getpaytotal >0){
+				var promocode = $("#promocode2").val();
+			}else{
+				var promocode = this.id;
+			}
 		}else{
-			var cText = "你確定要刪除這筆訂單？";
+			var promocode = this.id;
 		}
+			$.ajax({
+				type: "POST",
+				url:PDV_RP+"post.php",
+				data: "act=setcookie&cookietype=addnew&cookiename=PAYMENT&getnums="+payid,
+				success: function(msg){
+					if(typeof source=="undefined"){
+						window.location=PDV_RP+'shop/startorder.php?promocode='+promocode;
+					}else{
+						window.location=PDV_RP+'shop/startorder.php?source='+source+'&sourceyun='+sourceyun+'&sourceyunfei='+sourceyunfei+'&sourcediscount='+sourcediscount+'&promocode='+promocode;
+					}
+				}
+			});
+*/
+
+		/*  20241216 後續結合優惠需要用到
+		var promotype = $('#promotype').val();
+		var promotypecode = $('#promotypecode').val();
 		
-		if(confirm(cText))
-		{
+		if(typeof payid == "undefined"){
+			LoadMsg("請選擇付款方式");
+			return false
+		}
+		if(promotype == 2){
+			$("#Attention2").css({display:"block"});
+			$("#autostart2").fancybox({padding:0, 'showCloseButton':false}).trigger('click');
+			$("#fancybox-wrap").css({width:"780px"});
+			$("#fancybox-content").css({width:"780px"});
+			$("#gopromo2").click(function(){
+				window.location=PDV_RP+'shop/cart.php?promotypecode='+promotypecode+'&payid='+payid;
+			});
+			return false
+		}else if(promotype == 3){
+			$("#Attention3").css({display:"block"});
+			$("#autostart3").fancybox({padding:0, 'showCloseButton':false}).trigger('click');
+			$("#fancybox-wrap").css({width:"780px"});
+			$("#fancybox-content").css({width:"780px"});
+			$("#gopromo3").click(function(){
+				window.location=PDV_RP+'shop/cart.php?promotypecode='+promotypecode+'&payid='+payid;
+			});
+			return false
+		}else if(promotype == 1){
+			$("#Attention1").css({display:"block"});
+			$("#autostart1").fancybox({padding:0, 'showCloseButton':false}).trigger('click');
+			$("#fancybox-wrap").css({width:"780px"});
+			$("#fancybox-content").css({width:"780px"});
+			$("#gopromo1").click(function(){
+				var promosize = $('#promosize').val();
+				if(promosize == 0){
+					alert("請選擇贈品尺寸！");
+					return false
+				}
+				window.location=PDV_RP+'shop/cart.php?promotypecode='+promotypecode+'&promospec='+promosize+'&payid='+payid;
+			});
+			return false
+		}else{
+			var getpaytotal = $("#tjine").val();
+			var payid = $('input[name=payment]:checked').val();
+			var source = $('input[name=source]:checked').val();
+			var sourceyun = $('input[name=sourceyun]:checked').val();
+			var sourceyunfei = $('#sourceyunfei').val();
+			var sourcediscount = $('#sourcediscount').val();
+			
+			if( payid == 2  ){
+				if(getpaytotal >0){
+					var promocode = $("#promocode2").val();
+				}else{
+					var promocode = this.id;
+				}
+			}else{
+				var promocode = this.id;
+			}
 				$.ajax({
 					type: "POST",
-					url:PDV_RP+"shop/post.php",
-					data: "act=ordertui&orderid="+getdelid,
+					url:PDV_RP+"post.php",
+					data: "act=setcookie&cookietype=addnew&cookiename=PAYMENT&getnums="+payid,
 					success: function(msg){
-						if(msg=="OK"){
-							alert("訂單已經取消！");
-							location.reload();
-						}else if(msg=="1000"){
-							alert("訂單不存在");
-							$.fancybox.close();
-						}else if(msg=="1001"){
-							alert("訂單已付款，不能取消");
-							$.fancybox.close();
-						}else if(msg=="1002"){
-							alert("訂單已配送，不能取消");
-							$.fancybox.close();
-						}else if(msg=="1003"){
-							alert("訂單已完成，不能取消");
-							$.fancybox.close();
-						}else if(msg=="1004"){
-							alert("訂單中部分商品已配送，不能取消");
-							$.fancybox.close();
+						if(typeof source=="undefined"){
+							window.location=PDV_RP+'shop/startorder.php?promocode='+promocode;
 						}else{
-							alert(msg);
+							window.location=PDV_RP+'shop/startorder.php?source='+source+'&sourceyun='+sourceyun+'&sourceyunfei='+sourceyunfei+'&sourcediscount='+sourcediscount+'&promocode='+promocode;
 						}
 					}
 				});
 			}
-		
-	});
+	*/});
 	
 
 });
@@ -53,6 +126,7 @@ function order_data_set() {
 	  showOrderListLayout: true,
 	  orderList: orderList,
 	  orderInfo: orderInfo,
+	  jdepromocode :jdepromocode,
 	  minusItem(orderIndex) {
 		if(this.orderList[orderIndex].orderdata.acc>1)
 		{
