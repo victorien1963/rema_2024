@@ -841,6 +841,10 @@ function ShopCart(){
 			'sdetailaddr' => '',
 			'saddr' => '',
 			'spayid' => '',
+			'store_service_num' => '',
+			'mk_name' => '',
+			'mk_mobi' => '',
+			'shipinfo' => ''
 		 	);
 
 		$deliveryInfo=$var;

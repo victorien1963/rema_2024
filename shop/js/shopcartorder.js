@@ -129,9 +129,222 @@ $(document).ready(function(){
 
 		//urlstr  就等於 jdepromocode =>是從shopcart 傳到startorder
 
-		var sourceyun = $("#s_name").val();
+		//var sourceyun = $("#s_name").val();
 
-		alert(sourceyun);
+		//alert(sourceyun);
+
+		/*
+		$("#addrnote").val("0");
+		var addrnote = 0;
+		*/
+
+		const deliveryMethod = $('input[name="delivery_method"]:checked').val();
+
+    	// 根據選擇的配送方法和付款方式更新選項
+    	if (deliveryMethod) {
+        if (deliveryMethod === 'convenience_store') {
+            $("#shipinfo").val("2");
+        } else if (deliveryMethod === 'home_delivery') {
+            $("#shipinfo").val("1");
+        }
+
+		if( $("#shipinfo").val() == 1 ){
+			var noa = IndexAddr("000"+$("#s_addr")[0].value);
+			
+			if($("#s_name")[0].value==""){
+				if(PDV_LAN == "en"){
+					LoadMsg("Please fill in your name.");
+				}else if(PDV_LAN == "zh_cn"){
+					LoadMsg("请填写收货人姓名");
+				}else{
+					LoadMsg("請填寫收貨人姓名");
+				}
+				return false;
+			}
+			
+			if($("#s_addr")[0].value==""){
+				if(PDV_LAN == "en"){
+					LoadMsg("Please fill in your address.");
+				}else if(PDV_LAN == "zh_cn"){
+					LoadMsg("请填写收货人地址");
+				}else{
+					LoadMsg("請填寫收貨人地址");
+				}
+				return false;
+			}
+			
+			if($("#payid")[0].value==2 && noa && Number($("#tjine")[0].value)>0){
+				LoadMsg("外離島無法使用貨到付款，請改用信用卡付款，敬請見諒。");
+				window.location=PDV_RP+'shop/cart.php';
+				return false;
+			}
+			var nob = IndexAddrB("000"+$("#s_addr")[0].value);
+			
+			if($("#payid")[0].value==2 && nob){
+				LoadMsg("偏遠地區無法使用貨到付款，請改用信用卡付款，敬請見諒。");
+				window.location=PDV_RP+'shop/cart.php';
+				return false;
+			}
+			if(noa || nob){
+				$("#addrnote").val("1");
+				var addrnote = 1;
+				alert('addrnote:' + addrnote);
+			}else{
+				$("#addrnote").val("0");
+				var addrnote = 0;
+				alert('addrnote0:' + addrnote);
+			}
+
+			if($("#s_mobi")[0].value==""){
+				
+				if(PDV_LAN == "en"){
+					LoadMsg("Please fill in the contact number.");
+				}else if(PDV_LAN == "zh_cn"){
+					LoadMsg("请填写联络电话");
+				}else{
+					LoadMsg("請填寫聯絡電話");
+				}
+				return false;
+			}
+		}else if($("#shipinfo").val() == 2){
+				
+			var nosa = IndexAddr("000"+$("#marketaddr").val());
+			if(nosa){
+				LoadMsg("外離島無法使用超商取貨，請改用宅配寄送，敬請見諒。");
+				return false;
+			}
+
+			
+			if( $("#marketname").val() == "" ){
+				LoadMsg("請填寫 超商門市名稱！");
+				return false;
+			}
+			if( $("#store_service_num").val() == "" ){
+				LoadMsg("請填寫 服務編號！");
+				return false;
+			}
+			if( $("#marketaddr").val() == "" ){
+				LoadMsg("請填寫 超商門市地址！");
+				return false;
+			}
+			if( $("#mk_name").val() == "" ){
+				LoadMsg("請填寫 取貨人姓名！");
+				return false;
+			}
+			if( $("#mk_mobi").val() == "" ){
+				LoadMsg("請填寫 行動電話！");
+				return false;
+			}
+		}
+
+
+
+
+
+    	}
+		else{
+			LoadMsg("請選擇配送資訊！");
+				return false;
+		}
+
+
+
+
+		if($("#tjine")[0].value=="" || Number($("#tjine")[0].value)<0){
+			LoadMsg("您的購物車中沒有商品或商品金額錯誤，不能送出訂單");
+			return false;
+		}
+
+
+		if($("#payid")[0].value==""){
+			LoadMsg("請選擇付款方式");
+			return false;
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+		$('#OrderForm').ajaxSubmit({
+			url: 'post.php',
+			data: {'addrnote': addrnote},
+			success: function(msg) {
+				
+				msg = String(msg);
+				
+		/*LoadMsg(msg);
+		return false;*/
+				if( msg.substr(0,2)=="OK" ){
+					$('div#notice').hide();
+					//清除cookie
+					$.ajax({
+						type: "POST",
+						url:PDV_RP+"post.php",
+						data: "act=setcookie&cookietype=empty&cookiename=SHOPCART",
+						success: function(msg){
+						}
+					});
+					
+					//判斷是否付款
+					if(msg.substr(3,5)=="PAYED"){
+						var orderid=msg.substr(9);
+						$().alertwindow("訂單送出並付款成功","orderdetail.php?orderid="+orderid);
+					}else{
+						var orderid=msg.substr(3);
+						setTimeout('window.location="orderpay.php?orderid='+orderid+'";',500);
+					}
+				}else if(msg=="1000"){
+					LoadMsg("您的購物車中沒有商品");
+				}else if(msg=="1001"){
+					LoadMsg("請選擇配送區域");
+				}else if(msg=="1002"){
+					LoadMsg("請選擇付款方法");
+				}else if(msg=="1003"){
+					LoadMsg("您尚未登入，不能從會員帳戶扣款付款訂單");
+				}else if(msg=="1004"){
+					LoadMsg("請選擇配送方法");
+				}else if(msg=="1005"){
+					LoadMsg("您尚未登入，不能送出訂單");
+				}else if(msg=="1006"){
+					LoadMsg("訂購錯誤，請洽詢客服人員為您處理！");
+				}else if(msg=="1007"){
+					LoadMsg("60秒內僅能送出訂單一次！");
+				} else if(msg=="1008") {
+					LoadMsg("網路不穩請重新再試一次");
+				} else {
+					/*刪除庫存不足之訂購資料*/
+					var listmsg = msg.split("_");
+					var gid = listmsg[0];
+					var fz = listmsg[1];
+					
+					$.ajax({
+						type: "POST",
+						url:PDV_RP+"post.php",
+						data: "act=setcookie&cookietype=del&cookiename=SHOPCART&gid="+gid+"&fz="+fz,
+						success: function(msg){
+							
+							msg = String(msg);
+							
+							if(msg=="OK"){
+								LoadMsgToUrl(listmsg[2],PDV_RP+'shop/cart.php');
+							}else{
+								LoadMsg("ERROR:"+msg);
+							}
+						}
+					});
+					
+				}
+			}
+		});/**/
+
+		return false;
 
 
 
@@ -164,3 +377,32 @@ function order_data_set() {
 
 
   function order_data_init() {}
+
+
+
+  function IndexAddr(str)
+{
+	var sum = "";
+	//var noaddr = ["琉球","澎湖","馬公","西嶼","望安鄉","七美鄉","白沙鄉","湖西鄉","金門縣","金沙鎮","金湖鎮","金寧鄉","金寧鎮","金城鎮","烈嶼","烏坵","馬祖","南竿","北竿","東引"];
+	var noaddr = ["澎湖","馬公","西嶼","望安鄉","七美鄉","白沙鄉","湖西鄉","金門縣","金沙鎮","金湖鎮","金寧鄉","金寧鎮","金城鎮","烈嶼","烏坵","馬祖","南竿","北竿","東引"];
+	for (var i=0;i<=20;i++){	
+		var s = str.indexOf(noaddr[i]);
+		if(s >= 0){
+			sum = s;
+		}
+	}
+	return(sum);
+}
+
+function IndexAddrB(str)
+{
+	var sum = "";
+	/*var noaddr = ["南澳鄉","大同鄉","蘇澳鎮","瑞芳區","貢寮區","雙溪區","平溪區","石門區","大溪鎮","復興鄉","尖石鄉","五峰鄉","泰安鄉","和平區","鹿谷鄉","集集鎮","信義鄉","仁愛鄉","古坑鄉","大埔鄉","阿里山鄉","中埔鄉","竹崎鄉","梅山鄉","番路鄉","玉井區","左鎮區","楠西區","南化區","龍崎區","內門區","杉林區","甲仙區","六龜區","茂林區","桃源區","關仔嶺","旗山區","美濃","田寮區","來義鄉","泰武鄉","獅子鄉","春日鄉","恆春鎮","枋山鄉","車城鄉","牡丹鄉","滿州鄉","瑞穗鄉","長濱鄉","大武鄉","金峰鄉","達仁鄉","太麻里鄉"];
+	for (var i=0;i<=55;i++){	
+		var s = str.indexOf(noaddr[i]);
+		if(s >= 0){
+			sum = s;
+		}
+	}*/
+	return(sum);
+}

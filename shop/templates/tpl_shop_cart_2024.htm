@@ -91,7 +91,7 @@
       <form id="recipient_info_credit_card_address">
         <div class="d-flex">
           <label>真實姓名</label>
-          <input type="text" name="recipient_name" placeholder="輸入真實姓名" x-model="deliveryInfo.sname"/>
+          <input type="text" name="recipient_name" placeholder="輸入真實姓名" x-model="deliveryInfo.mk_name"/>
         </div>
         <div id="mart_options" class="d-flex">
           <div class="mart_options_title">超商</div>
@@ -114,7 +114,7 @@
         </div>
         <div class="d-flex">
           <label>⼿機號碼</label>
-          <input type="text" name="phone_number" placeholder="輸入有效手機" x-model="deliveryInfo.sphone"/>
+          <input type="text" name="phone_number" placeholder="輸入有效手機" x-model="deliveryInfo.mk_mobi"/>
         </div>
       </form>
     </div>
@@ -131,7 +131,7 @@
         <div id="city_option" class="d-flex city_option">
           <div class="city_option_title">城市</div>
           <select id="city_option" name="city_option" x-model="deliveryInfo.scity">
-            <option value="" class="city_option"></option>
+            <option value="桃園市" class="city_option">桃園市</option>
           </select>
           <div class="text-danger place_limited">• 限本島</div>
         </div>
@@ -139,7 +139,7 @@
           <div id="the_region_options" class="d-flex">
             <div class="the_region_options_title">地區</div>
             <select id="the_region_options" name="the_region_options" x-model="deliveryInfo.szone">
-              <option value="region" class="the_region_options"></option>
+              <option value="大園區" class="the_region_options">大園區</option>
             </select>
           </div>
           <div class="d-flex post_code">
@@ -344,6 +344,19 @@
       <div class="col-1 h-100">
         <button id="checked_continue_btn_step3">繼續</button>
       </div>
+
+      <input name="marketname" type="hidden" id="marketname" x-bind:value="deliveryInfo.marketname" /> 
+      <input name="marketaddr" type="hidden" id="marketaddr" x-bind:value="deliveryInfo.marketaddr" /> 
+      <input name="mk_name" type="hidden" id="mk_name" x-bind:value="deliveryInfo.mk_name" /> 
+      <input name="mk_mobi" type="hidden" id="mk_mobi" x-bind:value="deliveryInfo.mk_mobi" /> 
+      <input name="markets" type="hidden" id="markets" x-bind:value="deliveryInfo.market" />
+      <input type="hidden" name="shipinfo" id="shipinfo" value="">
+
+      
+      <input type="hidden" name="receiptinfo" id="receiptinfo" value="2">
+      <input type="hidden" name="receipt_info_second" id="receipt_info_second" value="1">
+
+
       <input name="s_name" type="hidden" id="s_name" x-bind:value="deliveryInfo.sname" /> 
 			                    <input name="s_addr" type="hidden" id="s_addr" x-bind:value="deliveryInfo.saddr" />
 			                    <input name="s_country" type="hidden" id="s_country" x-bind:value="deliveryInfo.scountry" />
@@ -353,7 +366,7 @@
 			                    <input name="act" type="hidden" id="act" value="orderformsubmit">
 								<input type="hidden" id="tjine" x-bind:value='(orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)' >
 								<input type="hidden" name="payid" id="payid" x-bind:value="deliveryInfo.spayid">
-								<input type="hidden" name="urlstr" id="urlstr" value="">
+								<input type="hidden" name="urlstr" id="urlstr" x-bind:value="jdepromocode">
 								<input type="hidden" name="postpayname" id="postpayname" value="">
 								<input type="hidden" name="addrtnote" id="addrnote" value="">
 								<input type="hidden" name="cardid" id="cardid" value="visa">
