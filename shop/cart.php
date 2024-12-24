@@ -4,15 +4,15 @@ include(ROOTPATH."includes/common.inc.php");
 include("language/".$sLan.".php");
 include("includes/shop.inc.php");
 
-//©w¸q¼Ò²Õ¦W©M­¶­±¦W
+//ï¿½wï¿½qï¿½Ò²Õ¦Wï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½W
 
 if(islogin()){
-	PageSet("shop","cart");
+	PageSet("shop","cartNew");
 }else{
 	PageSet("member","login");
 }
 
-//¿é¥X
+//ï¿½ï¿½X
 PrintPage();
 
 ?>
