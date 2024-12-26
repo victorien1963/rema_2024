@@ -129,9 +129,11 @@ $(document).ready(function(){
 
 		//urlstr  就等於 jdepromocode =>是從shopcart 傳到startorder
 
-		//var sourceyun = $("#s_name").val();
+		var cityText = $('#Province option:selected').text();
+		alert('cityText' + cityText);
 
-		//alert(sourceyun);
+		$("#s_addr").val(cityText+deliveryInfo.saddr);
+
 
 		/*
 		$("#addrnote").val("0");
@@ -351,6 +353,35 @@ $(document).ready(function(){
 
 	}); 
 });
+
+$(document).ready(function() {
+    // 這裡放置你希望在 DOM 完全加載後執行的代碼
+	alert('province');
+	$.ajax({
+		type: "POST",
+		url: PDV_RP+"member/post.php",
+		data: "act=getzonelist&pid=1",
+		success: function(msg){
+			pList.data = new Array();
+			$("#zonelist").html(msg);
+			if(PDV_LAN == "en"){
+				var constr = "Please Select";
+			}else if(PDV_LAN == "zh_cn"){
+				var constr = "请选择";
+			}else{
+				var constr = "請選擇";
+			}
+			$("#Province").html("<option value='s'> "+constr+"</option>"+"<option value='t'> 測試</option>"+pList.getOptionString('s'));
+			//$('#Province').selectpicker('refresh');
+		}
+	
+ });
+
+});
+
+
+
+
 function order_data_set() {
 	return {
 	  showOrderListLayout: true,

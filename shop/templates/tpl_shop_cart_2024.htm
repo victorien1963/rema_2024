@@ -1,5 +1,8 @@
 <!-start->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<script language="javascript" src="{#RP#}member/js/zone.js"></script>
+<script language="javascript" src="{#RP#}member/js/memberset.js?1"></script>
 <script type=text/javascript src="{#CP#}js/shopcartorder.js?6"></script>
 <!-start->
 
@@ -130,16 +133,22 @@
         </div>
         <div id="city_option" class="d-flex city_option">
           <div class="city_option_title">城市</div>
+          <!--
           <select id="city_option" name="city_option" x-model="deliveryInfo.scity">
             <option value="桃園市" class="city_option">桃園市</option>
+          </select>-->
+          <select id="Province" onKeyUp='if(window.event.keyCode==13) document.zoneid.focus();'  onChange="provinceSelChange(newaddform.zoneid,newaddform.Province.value,'{#zoneid#}',newaddform.postcode,newaddform.addr,newaddform.Province)" name="city_option" x-model="deliveryInfo.scity">
           </select>
           <div class="text-danger place_limited">• 限本島</div>
         </div>
         <div class="d-flex region_and_post">
           <div id="the_region_options" class="d-flex">
             <div class="the_region_options_title">地區</div>
+            <!--
             <select id="the_region_options" name="the_region_options" x-model="deliveryInfo.szone">
               <option value="大園區" class="the_region_options">大園區</option>
+            </select>-->
+            <select id="zoneid" name="the_region_options" x-model="deliveryInfo.szone">
             </select>
           </div>
           <div class="d-flex post_code">
