@@ -1092,6 +1092,10 @@ select#region_options {
     text-align: end;
 }
 
+.small, small {
+    font-size: .8em !important;
+}
+
 @media only screen and (min-width: 2560px) {
     .address_rwd {
         display: none;
@@ -2375,7 +2379,7 @@ select#region_options {
     }
     
     #recipient_info_overseas_form > div:nth-child(5) > input {
-        padding-left: 17.5%;
+        padding-left: 6%;
     }
 
     #recipient_info_overseas_form > div:nth-child(6) {
@@ -2479,14 +2483,14 @@ select#region_options {
     }
 
     #checked_continue > .col-1, #checked_continue_step2 > .col-1, #checked_continue_step3 > .col-1 {
-        flex: 0 0 35%;
-        max-width: 35%;
-        height: 100%;
+        flex: 0 0 35% !important;
+        max-width: 35% !important;
+        height: 100% !important;
     }
 
     #checked_continue > .col-2, #checked_continue_step2 > .col-2, #checked_continue_step3 > .col-2 {
-        flex: 0 0 65%;
-        max-width: 65%;
+        flex: 0 0 65% !important;
+        max-width: 65% !important;
         padding-right: 1.25rem !important;
     }
 
@@ -2612,6 +2616,7 @@ select#region_options {
         border-left: 1px solid transparent;
         border-right: 1px solid transparent;
         font-size: 1rem;
+        font-family: inherit !important;
     }
 
     #amout_form > .amout_countser {
@@ -2623,6 +2628,7 @@ select#region_options {
         margin-top: 0;
         background: transparent;
         text-align: center;
+        font-family: inherit !important;
     }
 
     .product_info > div {
@@ -2673,7 +2679,7 @@ select#region_options {
         font-weight: 500;
         position: absolute;
         right: 3%;
-        top: 14%;
+        top: 14.5%;
         cursor: pointer;
     }
 

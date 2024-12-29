@@ -305,17 +305,20 @@
 
     <div id="total_prices" class="row">
       <div class="col-2 h5 font-weight-bolder">總金額</div>
-      <div class="col-1 text-right h5 font-weight-bolder" x-text="orderInfo.pricesymbol + (orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)">
-        <br />
-        <small class="text-right">• 含營業稅</small>
+      <div class="col-1 text-right h5 font-weight-bolder">
+        <div class="fw-bolder" x-text="orderInfo.pricesymbol + (orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)"></div>
+        <!-- <br /> -->
+        <small class="text-right fw-normal" stlye="font-size: 80%">• 含營業稅</small>
       </div>
     </div>
 
     <div id="total_prices_checked" class="row" style="display: none;">
       <div class="col-2 h5 font-weight-bolder">總金額</div>
-      <div class="col-1 text-right h5 font-weight-bolder" x-text="orderInfo.pricesymbol + (orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)">
-        <br />
-        <div class="text-right checked-info-text">• 含營業稅</div>
+      <div class="col-1 text-right h5 font-weight-bolder" ">
+        <div class="fw-bolder" x-text="orderInfo.pricesymbol + (orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)"></div>
+        <!-- <br /> -->
+        <small class="text-right fw-normal" stlye="font-size: 80%">• 含營業稅</small>
+      </div>
       </div>
     </div>
 
@@ -341,37 +344,37 @@
     </div>
 
     <div id="checked_continue_step3" class="row" style="display: none;">
-      <form id="OrderForm" method="post" action="">
-      <div class="col-1 h-100">
-        <button id="checked_continue_btn_step3">繼續</button>
-      </div>
+      <form id="OrderForm" class="col-1 h-100" method="post" action="">
+        <div class="h-100 w-100">
+          <button id="checked_continue_btn_step3">繼續</button>
+        </div>
 
-      <input name="marketname" type="hidden" id="marketname" x-bind:value="deliveryInfo.marketname" /> 
-      <input name="marketaddr" type="hidden" id="marketaddr" x-bind:value="deliveryInfo.marketaddr" /> 
-      <input name="mk_name" type="hidden" id="mk_name" x-bind:value="deliveryInfo.mk_name" /> 
-      <input name="mk_mobi" type="hidden" id="mk_mobi" x-bind:value="deliveryInfo.mk_mobi" /> 
-      <input name="markets" type="hidden" id="markets" x-bind:value="deliveryInfo.market" />
-      <input type="hidden" name="shipinfo" id="shipinfo" value="">
+        <input name="marketname" type="hidden" id="marketname" x-bind:value="deliveryInfo.marketname" /> 
+        <input name="marketaddr" type="hidden" id="marketaddr" x-bind:value="deliveryInfo.marketaddr" /> 
+        <input name="mk_name" type="hidden" id="mk_name" x-bind:value="deliveryInfo.mk_name" /> 
+        <input name="mk_mobi" type="hidden" id="mk_mobi" x-bind:value="deliveryInfo.mk_mobi" /> 
+        <input name="markets" type="hidden" id="markets" x-bind:value="deliveryInfo.market" />
+        <input type="hidden" name="shipinfo" id="shipinfo" value="">
 
-      
-      <input type="hidden" name="receiptinfo" id="receiptinfo" value="2">
-      <input type="hidden" name="receipt_info_second" id="receipt_info_second" value="1">
+        
+        <input type="hidden" name="receiptinfo" id="receiptinfo" value="2">
+        <input type="hidden" name="receipt_info_second" id="receipt_info_second" value="1">
 
 
-      <input name="s_name" type="hidden" id="s_name" x-bind:value="deliveryInfo.sname" /> 
-                <input name="s_addr" type="hidden" id="s_addr" x-bind:value="deliveryInfo.saddr" />
-                <input name="s_country" type="hidden" id="s_country" x-bind:value="deliveryInfo.scountry" />
-                <input name="s_postcode" type="hidden" id="s_postcode" x-bind:value="deliveryInfo.spostal" />
-                <input name="s_mobi" type="hidden" id="s_mobi"  x-bind:value="deliveryInfo.sphone" />
-                <input name="s_tel" type="hidden" id="s_tel" x-bind:value="deliveryInfo.stel" />
-                <input name="act" type="hidden" id="act" value="orderformsubmit">
-								<input type="hidden" id="tjine" x-bind:value='(orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)' >
-								<input type="hidden" name="payid" id="payid" x-bind:value="deliveryInfo.spayid">
-								<input type="hidden" name="urlstr" id="urlstr" x-bind:value="jdepromocode">
-								<input type="hidden" name="postpayname" id="postpayname" value="">
-								<input type="hidden" name="addrtnote" id="addrnote" value="">
-								<input type="hidden" name="cardid" id="cardid" value="visa">
-    </form>
+        <input name="s_name" type="hidden" id="s_name" x-bind:value="deliveryInfo.sname" /> 
+        <input name="s_addr" type="hidden" id="s_addr" x-bind:value="deliveryInfo.saddr" />
+        <input name="s_country" type="hidden" id="s_country" x-bind:value="deliveryInfo.scountry" />
+        <input name="s_postcode" type="hidden" id="s_postcode" x-bind:value="deliveryInfo.spostal" />
+        <input name="s_mobi" type="hidden" id="s_mobi"  x-bind:value="deliveryInfo.sphone" />
+        <input name="s_tel" type="hidden" id="s_tel" x-bind:value="deliveryInfo.stel" />
+        <input name="act" type="hidden" id="act" value="orderformsubmit">
+        <input type="hidden" id="tjine" x-bind:value='(orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)' >
+        <input type="hidden" name="payid" id="payid" x-bind:value="deliveryInfo.spayid">
+        <input type="hidden" name="urlstr" id="urlstr" x-bind:value="jdepromocode">
+        <input type="hidden" name="postpayname" id="postpayname" value="">
+        <input type="hidden" name="addrtnote" id="addrnote" value="">
+        <input type="hidden" name="cardid" id="cardid" value="visa">
+      </form>
       <div class="col-2 text-right">
         <button id="prepage_step3">上一頁</button>
       </div>
