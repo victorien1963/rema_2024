@@ -34,6 +34,52 @@ body > #shopping_flow {
     padding: 3% 7%;
 } */
 
+  
+  .exchange-reason input[type="checkbox"]:checked {
+    accent-color: #999; /* 如果瀏覽器支援 accent-color */
+  }
+  
+  .exchange-reason input[type="checkbox"]:checked ~ .form-check {
+    background-color: #999; /* 改變父層背景 */
+  }
+  
+  /* 最後保險，針對父層設置背景顏色 */
+  .exchange-reason input[type="checkbox"]:checked ~ .input-group-text {
+    background-color: #999 !important; /* 使用 !important 提升優先級 */
+  }
+
+  /* 隱藏原生 checkbox */
+.exchange-reason input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none; /* 支援舊版 Safari */
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999; /* 外框 */
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  /* 當被選中時改變背景和勾勾顏色 */
+  .exchange-reason input[type="checkbox"]:checked {
+    background-color: #999; /* 背景顏色 */
+    position: relative;
+  }
+  
+  .exchange-reason input[type="checkbox"]:checked::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0px;
+    left: 4px;
+}
+
+
 .form-control {
     border: 0px !important;
 }
@@ -695,6 +741,15 @@ body > #shopping_flow {
         .produce-image {
             width: 25.5% !important;
         }
+
+        .bg-darkgrey {
+            padding: 0 !important;
+        }
+
+        .bg-darkgrey > img {
+            width: 127px;
+            height: 162px;
+        }
 }
 
 @media only screen and (min-width: 2241px) and (max-width: 2560px) {
@@ -737,6 +792,15 @@ body > #shopping_flow {
 
     .produce-image {
         width: 28% !important;
+    }
+
+    .bg-darkgrey {
+        padding: 0rem !important;
+    }
+
+    .bg-darkgrey > img {
+        width: 145px;
+        height: 191px;
     }
 }
 
@@ -1828,6 +1892,9 @@ body > #shopping_flow {
         width: 30% !important;
     }
 
+    .t_discount_checked_value {
+        padding: 0;
+    }
 }
 
 
@@ -2906,8 +2973,9 @@ select.form-control, input.form-control {
     }
 
     .bg-darkgrey > img {
-        width: 100px;
-        padding-top: 10px;
+        width: 106px;
+        padding-top: 0px;
+        height: 142px;
     }
 
     #side_bar, .shopping-flow-select, .ad_subs_shopping {
@@ -6112,6 +6180,11 @@ select.form-control, input.form-control {
         width: 1.7vw !important;
     }
 
+    .input-group-text input[type=checkbox], .input-group-text input[type=radio] {
+        height: 1.7vw !important;
+        width: 1.7vw !important;
+    }
+
     .produce-content-return {
         padding-right: 0rem !important;
         padding-left: 1.5rem !important;
@@ -6497,12 +6570,13 @@ select.form-control, input.form-control {
         height: 140px;
         width: 103px;
         margin-left: 0rem;
-        padding-top: .75rem;
-        padding-left: .25rem;
+        padding-top: 0rem;
+        padding-left: 0rem;
     }
 
     .bg-darkgrey > img {
-        width: 103px !important;
+        width: 102px !important;
+        height: 139px;
     }
     
     #login-form > div {
@@ -7187,13 +7261,9 @@ select.form-control, input.form-control {
         background-color: #e6e6e6;
         height: 6.75vw;
         width: 145px;
-        padding-top: .5rem;
-        padding-left: .5rem;
+        padding-top: 0rem;
+        padding-left: 0rem;
         margin-top: .25rem;
-    }
-
-    .bg-darkgrey > img {
-        width: 6vw;
     }
 
     .produce-image {

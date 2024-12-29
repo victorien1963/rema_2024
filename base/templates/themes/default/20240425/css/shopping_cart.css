@@ -38,9 +38,9 @@ input:focus-visible, button:focus-visible, button:focus {
     text-wrap: nowrap;
 }
 
-#header {
+/* #header {
     padding: 3% 7%;
-}
+} */
 
 .img-logo {
     position: absolute;
@@ -293,8 +293,9 @@ input.qtyminus {
 }
 
 .discount_code, .discount_birth {
-    border: 1px solid #000;
+    border: 1px solid #000 !important;
     height: 1.75rem;
+    width: 71% !important;
 }
 
 #checked_continue, #checked_continue_step2, #checked_continue_step3 {
@@ -1066,6 +1067,7 @@ select#region_options {
 #checked_continue > .col-2, #checked_continue_step2 > .col-2, #checked_continue_step3 > .col-2 {
     flex: 0 0 13%;
     max-width: 13%;
+    text-align: end;
 }
 
 .x_mark {
@@ -1086,6 +1088,9 @@ select#region_options {
     display: none;
 }
 
+#order_info_content_checked > .col-1 {
+    text-align: end;
+}
 
 @media only screen and (min-width: 2560px) {
     .address_rwd {
@@ -1164,6 +1169,18 @@ select#region_options {
     .x_mark {
         right: 3%;
         bottom: 17%;
+    }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
+    }
+
+    #total_prices > .col-1 > div {
+        text-align: end;
     }
 }
 
@@ -1314,6 +1331,18 @@ select#region_options {
         bottom: 6.75vw;
         font-size: 1.25rem;
     }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
+    }
+
+    #total_prices > .col-1 > div {
+        text-align: end;
+    }
 }
 
 
@@ -1459,6 +1488,18 @@ select#region_options {
         bottom: 8vw;
         font-size: 1.25rem;
     }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
+    }
+
+    #total_prices > .col-1 > div {
+        text-align: end;
+    }
 }
 
 /* macbook pro 13 inch */
@@ -1582,6 +1623,18 @@ select#region_options {
         right: 3%;
         bottom: 8.75vw;
         font-size: 1.25rem;
+    }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
+    }
+
+    #total_prices > .col-1 > div {
+        text-align: end;
     }
 }
 
@@ -1778,6 +1831,18 @@ select#region_options {
         right: 3%;
         bottom: 9.75vw;
         font-size: 1.25rem;
+    }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
+    }
+
+    #total_prices > .col-1 > div {
+        text-align: end;
     }
 }
 
@@ -2011,6 +2076,18 @@ select#region_options {
         bottom: 10.5vw;
         font-size: 1.25rem;
     }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
+    }
+
+    #total_prices > .col-1 > div {
+        text-align: end;
+    }
 }
 
 /* ipad */
@@ -2237,6 +2314,18 @@ select#region_options {
         bottom: 15vw;
         font-size: 1.25rem;
     }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
+    }
+
+    #total_prices > .col-1 > div {
+        text-align: end;
+    }
 }
 
 /* iphone pro max */
@@ -2386,6 +2475,7 @@ select#region_options {
         flex: 0 0 40% !important;
         max-width: 40% !important;
         padding-right: 2rem !important;
+        text-align: end !important;
     }
 
     #checked_continue > .col-1, #checked_continue_step2 > .col-1, #checked_continue_step3 > .col-1 {
@@ -2510,6 +2600,35 @@ select#region_options {
         padding-top: .5rem;
     }
 
+    #amout_form > .amout_counts {
+        width: 40px;
+        height: 35px;
+        padding: 0px;
+        border: 1px solid #000;
+        margin-top: 0;
+        margin-top: 0;
+        background: transparent;
+        text-align: center;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        font-size: 1rem;
+    }
+
+    #amout_form > .amout_countser {
+        width: 40px;
+        height: 35px;
+        padding: 0px;
+        border: 1px solid #000;
+        margin-top: 0;
+        margin-top: 0;
+        background: transparent;
+        text-align: center;
+    }
+
+    .product_info > div {
+        padding-bottom: 0.2rem !important;
+    }
+
     .options_title {
         font-size: 18px;
         padding-top: 1rem;
@@ -2553,9 +2672,23 @@ select#region_options {
     .x_mark {
         font-weight: 500;
         position: absolute;
-        right: 12%;
-        top: 1%;
+        right: 3%;
+        top: 14%;
         cursor: pointer;
+    }
+
+    .discount_code, .discount_birth {
+        border: 1px solid #000 !important;
+        height: 1.75rem;
+        width: 66% !important;
+    }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
     }
 }
 
@@ -2871,5 +3004,23 @@ select#region_options {
         right: 12%;
         top: 1%;
         cursor: pointer;
+    }
+
+    .discount_code, .discount_birth {
+        border: 1px solid #000 !important;
+        height: 1.75rem;
+        width: 66% !important;
+    }
+
+    #order_info_content > .col-2 > div {
+        text-align: start;
+    }
+
+    #order_info_content > .col-1 > div {
+        text-align: end;
+    }
+
+    #total_prices > .col-1 > div {
+        text-align: end;
     }
 }

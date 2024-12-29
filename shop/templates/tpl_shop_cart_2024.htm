@@ -1,4 +1,5 @@
 <!-start->
+<link type="text/css" rel="stylesheet" href="{#TM#}20240425/css/shopping_cart.css" />
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 <script type=text/javascript src="{#CP#}js/shopcartorder.js?6"></script>
 <!-start->
@@ -20,9 +21,9 @@
               <div>
                 <form id='amout_form' method='POST' action='#'>
                   <label for=""></label>
-                  <input type='button' value='－'  @click="minusItem(index)"/>
-                  <input type='text' name='quantity'  x-model='pdItem.orderdata.acc'  />
-                  <input type='button' value='＋'  @click="addItem(index)"/>
+                  <input class="amout_countser" type='button' value='－'  @click="minusItem(index)"/>
+                  <input class="amout_counts" type='text' name='quantity'  x-model='pdItem.orderdata.acc'  />
+                  <input class="amout_countser" type='button' value='＋'  @click="addItem(index)"/>
                 </form>
               </div>
             </div>
@@ -45,9 +46,9 @@
               <div class="p_detail" x-text="pdItem.orderdata.buysize+ ' | ' + pdItem.orderdata.colorname"></div>
                 <form id='amout_form' method='POST' action='#'>
                   <label for=""></label>
-                  <input type='button' value='－'  @click="minusItem(index)" />
-                  <input type='text' name='quantity'  x-model='pdItem.orderdata.acc'  />
-                  <input type='button' value='＋' @click="addItem(index)" />
+                  <input class="amout_countser" type='button' value='－'  @click="minusItem(index)" />
+                  <input class="amout_counts" type='text' name='quantity'  x-model='pdItem.orderdata.acc'  />
+                  <input class="amout_countser" type='button' value='＋' @click="addItem(index)" />
                 </form>
               </div>
             </div>
@@ -358,12 +359,12 @@
 
 
       <input name="s_name" type="hidden" id="s_name" x-bind:value="deliveryInfo.sname" /> 
-			                    <input name="s_addr" type="hidden" id="s_addr" x-bind:value="deliveryInfo.saddr" />
-			                    <input name="s_country" type="hidden" id="s_country" x-bind:value="deliveryInfo.scountry" />
-			                    <input name="s_postcode" type="hidden" id="s_postcode" x-bind:value="deliveryInfo.spostal" />
-			                    <input name="s_mobi" type="hidden" id="s_mobi"  x-bind:value="deliveryInfo.sphone" />
-			                    <input name="s_tel" type="hidden" id="s_tel" x-bind:value="deliveryInfo.stel" />
-			                    <input name="act" type="hidden" id="act" value="orderformsubmit">
+                <input name="s_addr" type="hidden" id="s_addr" x-bind:value="deliveryInfo.saddr" />
+                <input name="s_country" type="hidden" id="s_country" x-bind:value="deliveryInfo.scountry" />
+                <input name="s_postcode" type="hidden" id="s_postcode" x-bind:value="deliveryInfo.spostal" />
+                <input name="s_mobi" type="hidden" id="s_mobi"  x-bind:value="deliveryInfo.sphone" />
+                <input name="s_tel" type="hidden" id="s_tel" x-bind:value="deliveryInfo.stel" />
+                <input name="act" type="hidden" id="act" value="orderformsubmit">
 								<input type="hidden" id="tjine" x-bind:value='(orderInfo.oritjine+orderInfo.yunfei-orderInfo.disaccount)' >
 								<input type="hidden" name="payid" id="payid" x-bind:value="deliveryInfo.spayid">
 								<input type="hidden" name="urlstr" id="urlstr" x-bind:value="jdepromocode">
